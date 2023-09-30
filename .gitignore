@@ -12,3 +12,5 @@
 **/node_modules/
 
 PrimeIod/ClientApp/documentation
+PrimeIod/WebApi/GeneratedFiles
+

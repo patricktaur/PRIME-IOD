@@ -1,0 +1,63 @@
+24Sep2023
+Pat
+C:\Development\Prime-IOD\PrimeIod\ClientApp>
+npm init -y
+npm install @angular/cli --save-dev
+>npx ng new prime-iod
+	Node.js version v14.20.1 detected.
+	The Angular CLI requires a minimum of v16.13.
+nvm install 18
+
+nvm use 18.18.0
+npx new prime-iod --standalone
+
+ng new prime-iod --standalone
+-- not installed
+
+npm install -g @angular/cli
+ng new prime-iod --standalone
+	installed
+
+
+ng generate module dashboards --route dashboards --module ./app-shell/app-shell.module
+
+dotnet new listbasiclazy -m app-shell  -gn AppShell 
+
+dotnet new listbasiclazy -m main-dashboard  -gn MainDashboard 
+
+created a component: app-app-header-menu with --standalone flag and placed it in another component's template:
+
+<app-app-header-menu> </app-app-header-menu>
+
+Why is this error:
+1. If 'app-app-header-menu' is an Angular component, then verify that it is part of this module.       
+2. If 'app-app-header-menu' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+11       <app-app-header-menu> </app-app-header-menu>
+
+
+28Sep2023:
+
+dotnet ef dbcontext scaffold "Server=(localdb)\mssqllocaldb;Database=PrimeIod;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o GeneratedFiles -t tblUser -t tblRole -t tblUserRole
+
+
+
+dotnet new prismStudy -o C:\Development\p935-icon-prism-core\Prism -g Crm -sg Study -m TblCrmProjectGovernanceData
+
+dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g User -sg User -m TblUser
+
+created a redp in github
+https://github.com/patricktaur/PRIME-IOD.git
+
+git remote add origin https://github.com/patricktaur/PRIME-IOD.git
+
+git pull origin main
+
+git add Notes.txt
+
+Pat - 30Sep2023
+dotnet ef dbcontext scaffold "Server=(localdb)\mssqllocaldb;Database=PrimeIod;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o GeneratedFiles -t tblFteDemand -t tblFteAssignment -t tblFteTimeSheet -t tblEmployee
+
+dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g Common -sg Employee -m TblEmployee
+
+dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g Fte -sg Demand -m TblFteDemand

@@ -1,0 +1,8 @@
+Convering notes for Colin - Requirement Document email
+
+1. Please let us know if all your requirements are covered in the document.  A confirmation from you will help us to go ahead with estimation of timelines ancd costs.
+
+2. Please review items identified in italics.  We can revise the document 
+
+Msg 2809, Level 16, State 1, Line 6
+The request for procedure 'tblCDSDevelopmentCategoryCodelist' failed because 'tblCDSDevelopmentCategoryCodelist' is a table object.

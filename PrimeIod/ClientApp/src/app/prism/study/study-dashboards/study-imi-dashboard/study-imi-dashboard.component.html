@@ -1,0 +1,36 @@
+<table class="table mb-0 study-dashboard">
+  <tr>
+    <td>Project Review #</td>
+    <td>Sponsor</td>
+    <td>Protocol Name</td>
+    <!-- <td>Region</td>
+    <td>Portfolio</td> -->
+      <!-- <td>CDMS</td> -->
+    <td>IMI PD</td>
+    <td>IMI PM</td>
+    <td>Status</td>
+    <td>IMI Involvement Begins</td>
+    <td>FPI</td>
+    <td>IMI Involvement Ends</td>
+    <td>Project Score</td>
+  </tr>
+
+  <tr>
+    <td>{{ studyDashboard?.reviewIndex }}</td>
+    <td>{{ studyDashboard?.sponsor }}</td>
+    <td>{{ studyDashboard?.studyName }}</td>
+    <!-- <td>{{ studyDashboard?.region }}</td>
+    <td>{{ studyDashboard?.portfolio }}</td> -->
+
+    <!-- <td>{{ studyDashboard?.cdms }}</td> -->
+    <td>{{ studyDashboard?.currentDmpmManager }}</td>
+    <td>{{ studyDashboard?.currentDmpm }}</td>
+    <td>{{ studyDashboard?.studyStatusText }}</td>
+    <td>{{ studyDashboard?.imiInvolvementBegins | date: 'dd-MMM-yyyy' }}</td>
+    <td>{{ studyDashboard?.fpiText }}</td>
+    <td>{{ studyDashboard?.imiInvolvementEnds | date: 'dd-MMM-yyyy' }}</td>
+    <td>
+      <app-cell [record]="studyDashboard" [column]="column"></app-cell>
+    </td>
+  </tr>
+</table>

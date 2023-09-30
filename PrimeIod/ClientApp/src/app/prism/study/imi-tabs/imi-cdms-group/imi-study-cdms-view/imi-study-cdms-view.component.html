@@ -1,0 +1,52 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<table class="table table-sm small table-striped">
+    <tbody>
+        <tr>
+            <td>CDMS Lead Name</td>
+            <td>{{ record?.cdmsLeadNameDisplayName }}</td>
+        </tr>
+        <tr>
+            <td>Covering CDMS Lead Name</td>
+            <td>{{ record?.coveringCdmsLeadNameDisplayName }}</td>
+        </tr>
+        <tr>
+            <td>CDMS Version</td>
+            <td>{{ record?.cdmsVersionPDescription }}</td>
+        </tr>
+        <tr>
+            <td>CDMS URL (only required for Rave and Veeva CDMS)</td>
+            <td>{{ record?.cdmsUrl }}</td>
+        </tr>
+        <tr>
+            <td>Sponsor-owned/Sponsor-contracted URL/Vault</td>
+            <td>{{ getYesOrNoStatus(record?.sponsorUrl) }}</td>
+        </tr>
+        <tr>
+            <td>Actual Number of Unique CRFs</td>
+            <td>{{ record?.actualNumberOfUniqueCrfs }}</td>
+        </tr>
+        <tr>
+            <td>Edit Checks Completed (including CFs)</td>
+            <td>{{ record?.editChecksCompleted }}</td>
+        </tr>
+        <tr>
+            <td>Edit Check Specification Errors (including CFs)</td>
+            <td>{{ record?.editChecksErrorsInDvsCdmsReview }}</td>
+        </tr>
+        <tr>
+            <td>Edit Checks Failed (including CFs) Round 1 Validation only</td>
+            <td>{{ record?.editChecksFailedRound1ValidationOnly }}</td>
+        </tr>
+        <tr>
+            <td>CDMS Comments</td>
+            <td>{{ record?.cdmsComments }}</td>
+        </tr>
+        <tr>
+            <td>Custom Functions</td>
+            <td>{{ record?.customFunctions }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <span class="alert alert-info">Last Updated on: {{ record?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+<app-last-saved [auditFields]="record"></app-last-saved>

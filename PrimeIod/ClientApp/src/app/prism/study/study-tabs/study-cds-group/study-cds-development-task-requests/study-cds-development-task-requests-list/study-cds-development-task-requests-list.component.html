@@ -1,0 +1,28 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<!-- <app-cds-dev-req-dashboard (itemClicked)="onItemClicked($event)"></app-cds-dev-req-dashboard> -->
+<!-- <br /> -->
+<app-study-cds-development-task-requests-filters
+  [selectedFilters]="selectedFilters"
+  (filterChange)="onFilterChange($event)"
+  (resetFilters)="onResetFilters()"
+></app-study-cds-development-task-requests-filters>
+<button type="button" class="btn btn-primary" (click)="add()"
+  [appMenuAccess]="menuAccessLink">
+  New Development Request
+</button>
+<app-data-table-shell
+  [records]="filteredRecords"
+  [columns]="columns"
+  [showColumnManager]="false"
+  [showFooterActions]="showFooterActions"
+  (raiseEvent)="onRaiseEvent($event)"
+  [pageNumber]="selectedFilters?.pageNumber"
+  [pageSize]="selectedFilters?.pageSize"
+  (pageOptionsChanged)="pageOptionsChanged($event)"
+  [viewMode]="isViewMode"
+>
+</app-data-table-shell>
+<div class="alert alert-info" role="alert"><b>Note: Task Missing? Check the Programming Section!</b><br />
+  Can't find a particular task? It's possible that it was removed by the Study/Tasks/Programming section. Whenever an item in the Programming section is marked as "Required," a corresponding development task is created here. However, if that item is later marked as "Not Required," then the previous item is removed from this section. To recover the lost item including the earlier saved data, simply mark that item as "Required" in the Study/Tasks/Programming section and Save. The item will reappear here.</div>
+<!-- <p>records: {{ records | json }}</p>
+<p>selectedFilters: {{ selectedFilters | json }}</p> -->

@@ -1,0 +1,49 @@
+<app-loader [isLoading]="loading"></app-loader>
+<h4>{{ title }}</h4>
+
+<hr />
+
+<form [formGroup]="form">
+  <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <div class="alert alert-warning" role="alert" *ngIf="showOtherUserAlert()">
+    Last actioned by: {{ record?.updatedByDisplayName }}. Action buttons not available for other users.
+  </div>
+  <div class="alert alert-warning" role="alert" *ngIf="iconNumberInStudy.length > 0">
+    Unable to Submit for Approval. Study Icon Number: {{ iconNumberInStudy }} exists.
+  </div>
+
+  <button type="button" class="btn btn-default" (click)="back()">Back</button>
+
+  <app-confirmation-shell
+    *ngIf="ApprovedOrRejectedButton"
+    [message]="'Approve Request: ' + recId + ' ?, Caution! Study will be created and cannot be undone.'"
+    [labelText]="'Approve'"
+    [responseValue]="recId"
+    (response)="validateAndApprove()"
+  >
+  </app-confirmation-shell>
+
+  <app-confirmation-shell
+    *ngIf="ApprovedOrRejectedButton"
+    [message]="'Reject Request: ' + recId + ' ?'"
+    [labelText]="'Reject'"
+    [responseValue]="recId"
+    (response)="reject()"
+    [disabled]="!this.canReject()"
+    [toolTip]="'Comments required'"
+  >
+  </app-confirmation-shell>
+
+  <app-confirmation-shell
+    *ngIf="undoRejectButton"
+    [message]="'Undo Reject, Request: ' + recId + ' ?'"
+    [labelText]="'Undo Reject'"
+    [responseValue]="recId"
+    (response)="undoReject()"
+  >
+  </app-confirmation-shell>
+
+  
+</form>
+<!-- <p>record: {{ record | json }}</p> -->
+

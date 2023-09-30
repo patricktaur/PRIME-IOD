@@ -1,0 +1,55 @@
+<div class="row" *ngIf="displayParamParentSelectDropDown">
+  <div class="col-3">
+    <label class="form-label">Code List Group</label>
+  </div>
+  <div class="col-9">
+    <ng-select
+      [multiple]="false"
+      [clearable]="false"
+      [(ngModel)]="selectParamParId"
+      (ngModelChange)="onParamParentChange($event)"
+      [disabled]="parentSelectDropDownDisabled"
+    >
+      <ng-option *ngFor="let rec of paramParents" [value]="rec.recId">{{ rec.description }}</ng-option>
+    </ng-select>
+    <div class="alert alert-warning" role="alert" *ngIf="showSelectUserAlert()">
+      Select ...
+    </div>
+  </div>
+</div>
+
+<div style="height: 150px;overflow: scroll;">
+  <!-- change height to increase the number of visible row  -->
+  <table class="table table-sm table-hover small">
+    <thead>
+      <tr>
+        <th align="center" data-toggle="tooltip" data-placement="top" title="Hide All">
+          Order No.
+        </th>
+        <th align="left">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="clickable"
+        [class.highlighted]="item.recId === selectedChildId"
+        (click)="rowSelected(item)"
+        *ngFor="let item of paramChildItems; let i = index"
+      >
+        <td>
+          {{ item.orderNumber }}
+        </td>
+        <td>
+          {{ item.description }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- <p>paramChildItems: {{paramChildItems | json}}</p> -->
+
+<!-- <p>childItemId : {{childItemId}}</p> -->
+<!-- <p>childItemId : {{childItemId}}</p> -->
+<!-- <p>parId: {{ selectParamParId }}</p>
+<p>showSelectUserAlert: {{showSelectUserAlert()}}</p> -->

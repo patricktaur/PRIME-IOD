@@ -1,0 +1,21 @@
+﻿Subject: PRISM CDS Delivery Request  Alert For {StudyIconNumber} – {TaskId} – {DeliveryCategory} Delivery Task Created
+
+Hi {ToUsers},
+<br/><br/>
+
+PRISM CDS Delivery Request Alert For {StudyIconNumber} - {TaskId} - {DeliveryCategory} Delivery Task Created.<br />
+<br />
+Created By: <b> {LoginUserName} </b><br />
+<br />
+Due Date: <b>{DueDate}</b><br />
+<br/>
+Delivery Detail: <b> {DeliveryDetail} </b><br />
+<br/>
+
+Delivery Request Task <b>{TaskId}</b> is created. <br />
+<br />
+
+link: {LinktoTask}<br />
+<br />
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

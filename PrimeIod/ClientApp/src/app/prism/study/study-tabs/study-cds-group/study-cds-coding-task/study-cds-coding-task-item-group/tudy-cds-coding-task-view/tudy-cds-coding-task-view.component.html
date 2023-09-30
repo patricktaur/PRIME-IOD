@@ -1,0 +1,57 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<table class="table table-sm  small table-striped">
+  <tbody>
+    <tr>
+      <td>Coding Category</td>
+      <td>{{ record?.codingTaskCategoryPDescription }}</td>
+    </tr>
+    <tr>
+      <td>Coding Detail</td>
+      <td>{{ record?.codingTaskDetail }}</td>
+    </tr>
+    <tr>
+      <td>Coding Priority</td>
+      <td>{{ record?.codingPriorityPDescription }}</td>
+    </tr>
+    <tr>
+      <td>Due Date</td>
+      <td>{{ record?.dueDate | date: 'dd-MMM-yyyy' }}</td>
+    </tr>
+    <tr>
+      <td>Recurring Frequency</td>
+      <td>{{ record?.recurringFrequencySummary }}</td>
+    </tr>
+    <tr>
+      <td>Completed Date</td>
+      <td>{{ record?.completedDate | date: 'dd-MMM-yyyy' }}</td>
+    </tr>
+    <tr>
+      <td>Completed By</td>
+      <td>{{ record?.completedByDisplayName }}</td>
+    </tr>
+    <tr>
+      <td>Primary Coding Specialist</td>
+      <td>{{ record?.codingSpecialistAssignedToDisplayName }}</td>
+    </tr>
+    <tr>
+      <td>Secondary Coding Specialist</td>
+      <td>{{ record?.secondaryCodingSpecialistAssignedToDisplayName }}</td>
+    </tr>
+    <tr>
+      <td>Requestor</td>
+      <td>{{ record?.requestorDisplayName }}</td>
+    </tr>
+    <tr>
+      <td>Link To Task Instruction</td>
+      <td>{{ record?.linkToDocumentation }}</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>{{ record?.comments }}</td>
+    </tr>
+  </tbody>
+</table>
+<app-last-saved [auditFields]="record"></app-last-saved>
+
+<!-- <p>{{ record | json }}</p> -->

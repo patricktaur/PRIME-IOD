@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Search</label>
+      <input class="form-control" placeholder="ICON Number or Protocol Name" type="text" [formControl]="filterForm" />
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">CDMS (DM + IMI)</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.cdms"
+        [multiple]="true"
+        placeholder="CDMS (DM + IMI)"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.cdms" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Task Group Title</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.taskGroupTitle"
+        [multiple]="true"
+        placeholder="Task Group Title"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.taskGroupTitle" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Task Status</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.taskStatus"
+        [multiple]="true"
+        placeholder="Task Status"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.taskStatus" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>

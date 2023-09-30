@@ -1,0 +1,1141 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>icon-prism-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">icon-prism-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>EmailTokenLoginComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/login/email-token-login/email-token-login.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-email-token-login</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./email-token-login.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./email-token-login.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#canEnterEMail">canEnterEMail</a>
+                            </li>
+                            <li>
+                                <a href="#canSubmitEMailToken">canSubmitEMailToken</a>
+                            </li>
+                            <li>
+                                <a href="#emailLoginForm">emailLoginForm</a>
+                            </li>
+                            <li>
+                                <a href="#errorEMailTokenLogin">errorEMailTokenLogin</a>
+                            </li>
+                            <li>
+                                <a href="#isLoading">isLoading</a>
+                            </li>
+                            <li>
+                                <a href="#noRolesAssigned">noRolesAssigned</a>
+                            </li>
+                            <li>
+                                <a href="#tokenGenerated">tokenGenerated</a>
+                            </li>
+                            <li>
+                                <a href="#userRoles">userRoles</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createEMailLoginForm">createEMailLoginForm</a>
+                            </li>
+                            <li>
+                                <a href="#generateEMailToken">generateEMailToken</a>
+                            </li>
+                            <li>
+                                <a href="#login">login</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#reLogin">reLogin</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, i18nService: <a href="../injectables/I18nService.html">I18nService</a>, authenticationService: <a href="../injectables/AuthenticationService.html">AuthenticationService</a>, toastService: <a href="../injectables/ToastService.html">ToastService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>i18nService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/I18nService.html" target="_self" >I18nService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authenticationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthenticationService.html" target="_self" >AuthenticationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ToastService.html" target="_self" >ToastService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createEMailLoginForm"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            createEMailLoginForm
+                        </b>
+                        <a href="#createEMailLoginForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createEMailLoginForm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateEMailToken"></a>
+                    <span class="name">
+                        <b>
+                            generateEMailToken
+                        </b>
+                        <a href="#generateEMailToken"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>generateEMailToken()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="login"></a>
+                    <span class="name">
+                        <b>
+                            login
+                        </b>
+                        <a href="#login"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>login(loginForm: <a href="https://angular.io/api/forms/FormGroup" target="_blank">FormGroup</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>loginForm</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reLogin"></a>
+                    <span class="name">
+                        <b>
+                            reLogin
+                        </b>
+                        <a href="#reLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>reLogin()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="canEnterEMail"></a>
+                        <span class="name">
+                            <b>
+                            canEnterEMail</b>
+                            <a href="#canEnterEMail"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="canSubmitEMailToken"></a>
+                        <span class="name">
+                            <b>
+                            canSubmitEMailToken</b>
+                            <a href="#canSubmitEMailToken"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="emailLoginForm"></a>
+                        <span class="name">
+                            <b>
+                            emailLoginForm</b>
+                            <a href="#emailLoginForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="errorEMailTokenLogin"></a>
+                        <span class="name">
+                            <b>
+                            errorEMailTokenLogin</b>
+                            <a href="#errorEMailTokenLogin"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string | undefined</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLoading"></a>
+                        <span class="name">
+                            <b>
+                            isLoading</b>
+                            <a href="#isLoading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="noRolesAssigned"></a>
+                        <span class="name">
+                            <b>
+                            noRolesAssigned</b>
+                            <a href="#noRolesAssigned"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tokenGenerated"></a>
+                        <span class="name">
+                            <b>
+                            tokenGenerated</b>
+                            <a href="#tokenGenerated"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userRoles"></a>
+                        <span class="name">
+                            <b>
+                            userRoles</b>
+                            <a href="#userRoles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/login/email-token-login/email-token-login.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, OnDestroy } from &#x27;@angular/core&#x27;;
+import { FormGroup, FormBuilder, Validators, FormControl } from &#x27;@angular/forms&#x27;;
+import { Router, ActivatedRoute } from &#x27;@angular/router&#x27;;
+
+import { Logger, I18nService, AuthenticationService, untilDestroyed } from &#x27;@app/core&#x27;;
+import { finalize } from &#x27;rxjs/operators&#x27;;
+import { ToastService } from &#x27;@app/shared/services/toast.service&#x27;;
+
+const log &#x3D; new Logger(&#x27;Login&#x27;);
+
+@Component({
+  selector: &#x27;app-email-token-login&#x27;,
+  templateUrl: &#x27;./email-token-login.component.html&#x27;,
+  styleUrls: [&#x27;./email-token-login.component.scss&#x27;]
+})
+export class EmailTokenLoginComponent implements OnInit, OnDestroy {
+  isLoading &#x3D; false;
+  errorEMailTokenLogin: string | undefined;
+  emailLoginForm!: FormGroup;
+  tokenGenerated: boolean &#x3D; false;
+
+  canEnterEMail: boolean &#x3D; true;
+  canSubmitEMailToken: boolean &#x3D; false;
+  userRoles: any;
+  noRolesAssigned: boolean;
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private formBuilder: FormBuilder,
+    private i18nService: I18nService,
+    private authenticationService: AuthenticationService,
+    private toastService: ToastService
+  ) {
+    this.createEMailLoginForm();
+  }
+
+  ngOnInit() {}
+
+  ngOnDestroy() {}
+
+  private createEMailLoginForm() {
+    this.emailLoginForm &#x3D; this.formBuilder.group({
+      username: new FormControl(&#x27;&#x27;, [Validators.required, Validators.email]),
+      password: new FormControl(&#x27;&#x27;, [
+        Validators.required,
+        Validators.min(0),
+        Validators.max(999999),
+        Validators.minLength(6)
+      ]),
+      remember: new FormControl(true),
+      role: [&#x27;all&#x27;, Validators.required]
+    });
+
+    this.emailLoginForm.valueChanges.subscribe(() &#x3D;&gt; {
+      this.errorEMailTokenLogin &#x3D; &#x27;&#x27;;
+    });
+  }
+
+  reLogin() {
+    this.tokenGenerated &#x3D; false;
+    this.emailLoginForm.reset;
+  }
+  generateEMailToken() {
+    // this.authenticationService.generateToken(this.emailLoginForm.value.username, &#x27;&#x27;).subscribe((res: any) &#x3D;&gt; {
+    //   if (res) {
+    //     //console.log(&#x27;OTP sent&#x27;);
+    //     this.canEnterEMail &#x3D; false;
+    //     this.canSubmitEMailToken &#x3D; true;
+    //   } else {
+    //     this.errorEMailTokenLogin &#x3D;
+    //       &#x27;Failed to generate token.  Confirm that the email is correct and it is registered. &#x27;;
+    //     console.log(&#x27;Failed to generate Token&#x27;);
+    //   }
+    // });
+
+    this.authenticationService.generateToken(this.emailLoginForm.value.username, &#x27;&#x27;).subscribe(
+      res &#x3D;&gt; {
+        this.userRoles &#x3D; res;
+        if (this.userRoles) {
+          this.tokenGenerated &#x3D; true;
+          this.toastService.show(&#x27;Token sent to your email &#x27; + this.emailLoginForm.value.username, {
+            classname: &#x27;bg-success text-light&#x27;,
+            delay: 3000
+          });
+          this.userRoles &#x3D; res;
+          console.log(&#x27;res: &#x27; + JSON.stringify(res));
+        } else {
+          this.noRolesAssigned &#x3D; true;
+        }
+      },
+      err &#x3D;&gt; {
+        this.errorEMailTokenLogin &#x3D; &#x27;Token could not be generated. &#x27; + err.error.error_description;
+      }
+    );
+  }
+
+  login(loginForm: FormGroup) {
+    this.isLoading &#x3D; true;
+    const login$ &#x3D; this.authenticationService.pwdLogin(loginForm.value);
+    login$
+      .pipe(
+        finalize(() &#x3D;&gt; {
+          loginForm.markAsPristine();
+          this.isLoading &#x3D; false;
+        }),
+        untilDestroyed(this)
+      )
+      .subscribe(
+        (credentials: any) &#x3D;&gt; {
+          log.debug(&#x60;${credentials.username} successfully logged in&#x60;);
+          this.toastService.show(&#x27;Login request successful.&#x27;, { classname: &#x27;bg-success text-light&#x27;, delay: 3000 });
+
+          this.router.navigate([this.route.snapshot.queryParams.redirect || &#x27;/&#x27;], { replaceUrl: true });
+        },
+        (error: any) &#x3D;&gt; {
+          log.debug(&#x60;Login error: ${error}&#x60;);
+          this.errorEMailTokenLogin &#x3D; error.error.error_description;
+        }
+      );
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;card col-md-12 mt-3 mx-auto&quot;&gt;
+  &lt;div class&#x3D;&quot;card-body&quot;&gt;
+    &lt;label class&#x3D;&quot;d-block&quot;&gt;Generate Login Token:&lt;/label&gt;
+    &lt;form [formGroup]&#x3D;&quot;emailLoginForm&quot; novalidate&gt;
+      &lt;div class&#x3D;&quot;alert alert-danger&quot; [hidden]&#x3D;&quot;!errorEMailTokenLogin || isLoading&quot; translate&gt;
+        {{ errorEMailTokenLogin }}
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;label class&#x3D;&quot;d-block&quot;&gt;
+          &lt;input
+            type&#x3D;&quot;text&quot;
+            class&#x3D;&quot;form-control&quot;
+            formControlName&#x3D;&quot;username&quot;
+            autocomplete&#x3D;&quot;email&quot;
+            [placeholder]&#x3D;&quot;&#x27;EMail&#x27; | translate&quot;
+            [attr.disabled]&#x3D;&quot;tokenGenerated ? &#x27;&#x27; : null&quot;
+          /&gt;
+          &lt;span hidden translate&gt;EMail&lt;/span&gt;
+          &lt;small
+            [hidden]&#x3D;&quot;emailLoginForm.controls.username.valid || emailLoginForm.controls.username.untouched&quot;
+            class&#x3D;&quot;text-danger&quot;
+            translate
+          &gt;
+            Email required.
+          &lt;/small&gt;
+        &lt;/label&gt;
+        &lt;div *ngIf&#x3D;&quot;tokenGenerated&quot;&gt;
+          &lt;label class&#x3D;&quot;d-block small&quot;&gt;Please enter the token sent to your email id.&lt;/label&gt;
+          &lt;label class&#x3D;&quot;d-block&quot;&gt;
+            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;password&quot; [placeholder]&#x3D;&quot;&#x27;Token&#x27; | translate&quot; /&gt;
+            &lt;span hidden translate&gt;OTP&lt;/span&gt;
+            &lt;small
+              [hidden]&#x3D;&quot;emailLoginForm.controls.password.valid || emailLoginForm.controls.password.untouched&quot;
+              class&#x3D;&quot;text-danger&quot;
+              translate
+            &gt;
+              Token required.
+            &lt;/small&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div *ngIf&#x3D;&quot;noRolesAssigned&quot;&gt;
+          &lt;label class&#x3D;&quot;d-block small&quot;&gt;No Roles assigned to this user. Token could not be generated.&lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;form-check&quot;&gt;
+          &lt;label class&#x3D;&quot;form-check-label&quot;&gt;
+            &lt;input type&#x3D;&quot;checkbox&quot; class&#x3D;&quot;form-check-input&quot; formControlName&#x3D;&quot;remember&quot; /&gt;
+            &lt;span translate&gt;Remember me&lt;/span&gt;
+          &lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;!tokenGenerated&quot;&gt;
+        &lt;button
+          class&#x3D;&quot;btn btn-primary w-100&quot;
+          (click)&#x3D;&quot;generateEMailToken()&quot;
+          [disabled]&#x3D;&quot;!emailLoginForm.controls.username.valid&quot;
+        &gt;
+          &lt;span&gt;Generate Token&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;tokenGenerated&quot;&gt;
+        &lt;div *ngIf&#x3D;&quot;userRoles&quot;&gt;
+          &lt;label class&#x3D;&quot;d-block small&quot;&gt;Select a role:&lt;/label&gt;
+          &lt;select class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;role&quot;&gt;
+            &lt;option [ngValue]&#x3D;&quot;&#x27;all&#x27;&quot;&gt;All&lt;/option&gt;
+            &lt;option *ngFor&#x3D;&quot;let role of userRoles&quot; [ngValue]&#x3D;&quot;role&quot;&gt;{{ role }}&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;br /&gt;
+        &lt;button
+          class&#x3D;&quot;btn btn-primary w-100&quot;
+          (click)&#x3D;&quot;login(emailLoginForm)&quot;
+          [disabled]&#x3D;&quot;!emailLoginForm.controls.password.valid&quot;
+        &gt;
+          &lt;span&gt;Submit Token&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-default btn-xs&quot; (click)&#x3D;&quot;reLogin()&quot;&gt;
+          &lt;i class&#x3D;&quot;fas fa-step-backward&quot;&gt;&lt;/i&gt;Back
+        &lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-default btn-xs &quot; (click)&#x3D;&quot;generateEMailToken()&quot;&gt;Resend Email&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./email-token-login.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="card col-md-12 mt-3 mx-auto">  <div class="card-body">    <label class="d-block">Generate Login Token:</label>    <form [formGroup]="emailLoginForm" novalidate>      <div class="alert alert-danger" [hidden]="!errorEMailTokenLogin || isLoading" translate>        {{ errorEMailTokenLogin }}      </div>      <div class="form-group">        <label class="d-block">          <input            type="text"            class="form-control"            formControlName="username"            autocomplete="email"            [placeholder]="\'EMail\' | translate"            [attr.disabled]="tokenGenerated ? \'\' : null"          />          <span hidden translate>EMail</span>          <small            [hidden]="emailLoginForm.controls.username.valid || emailLoginForm.controls.username.untouched"            class="text-danger"            translate          >            Email required.          </small>        </label>        <div *ngIf="tokenGenerated">          <label class="d-block small">Please enter the token sent to your email id.</label>          <label class="d-block">            <input type="text" class="form-control" formControlName="password" [placeholder]="\'Token\' | translate" />            <span hidden translate>OTP</span>            <small              [hidden]="emailLoginForm.controls.password.valid || emailLoginForm.controls.password.untouched"              class="text-danger"              translate            >              Token required.            </small>          </label>        </div>        <div *ngIf="noRolesAssigned">          <label class="d-block small">No Roles assigned to this user. Token could not be generated.</label>        </div>        <div class="form-check">          <label class="form-check-label">            <input type="checkbox" class="form-check-input" formControlName="remember" />            <span translate>Remember me</span>          </label>        </div>      </div>      <div *ngIf="!tokenGenerated">        <button          class="btn btn-primary w-100"          (click)="generateEMailToken()"          [disabled]="!emailLoginForm.controls.username.valid"        >          <span>Generate Token</span>        </button>      </div>      <div *ngIf="tokenGenerated">        <div *ngIf="userRoles">          <label class="d-block small">Select a role:</label>          <select class="form-control" formControlName="role">            <option [ngValue]="\'all\'">All</option>            <option *ngFor="let role of userRoles" [ngValue]="role">{{ role }}</option>          </select>        </div>        <br />        <button          class="btn btn-primary w-100"          (click)="login(emailLoginForm)"          [disabled]="!emailLoginForm.controls.password.valid"        >          <span>Submit Token</span>        </button>        <button type="button" class="btn btn-default btn-xs" (click)="reLogin()">          <i class="fas fa-step-backward"></i>Back        </button>        <button type="button" class="btn btn-default btn-xs " (click)="generateEMailToken()">Resend Email</button>      </div>    </form>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssumptionsComponent', 'selector': 'app-assumptions'},{'name': 'CellComponent', 'selector': 'app-cell'},{'name': 'ColumnManagerComponent', 'selector': 'app-column-manager'},{'name': 'ConfirmationModalComponent', 'selector': 'app-confirmation-modal'},{'name': 'DataTableBaseComponent', 'selector': 'app-data-table-base'},{'name': 'DataTableShellComponent', 'selector': 'app-data-table-shell'},{'name': 'DataTableShellNDynamicFiltersComponent', 'selector': 'app-data-table-shell-n-dynamic-filters'},{'name': 'DetailsComponent', 'selector': 'app-details'},{'name': 'DropDownComponent', 'selector': 'app-drop-down'},{'name': 'EmailTokenLoginComponent', 'selector': 'app-email-token-login'},{'name': 'FilterOneComponent', 'selector': 'app-filter-one'},{'name': 'FilterTwoComponent', 'selector': 'app-filter-two'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoaderComponent', 'selector': 'app-loader'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NoaccessComponent', 'selector': 'app-noaccess'},{'name': 'NotRegisteredComponent', 'selector': 'app-not-registered'},{'name': 'OmrReportComponent', 'selector': 'app-omr-report'},{'name': 'PaginationControlComponent', 'selector': 'pagination-control'},{'name': 'ProjectReviewComplianceComponent', 'selector': 'app-project-review-compliance'},{'name': 'ProjectReviewComplianceListComponent', 'selector': 'app-project-review-compliance-list'},{'name': 'ReportBaseComponent', 'selector': 'app-report-base'},{'name': 'ReportDownloadComponent', 'selector': 'app-report-download'},{'name': 'ReportShellComponent', 'selector': 'app-report-shell'},{'name': 'ReportsMenuComponent', 'selector': 'app-reports-menu'},{'name': 'RisksMenuComponent', 'selector': 'app-risks-menu'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesFormComponent', 'selector': 'app-roles-form'},{'name': 'ShellComponent', 'selector': 'app-shell'},{'name': 'SmsOtpLoginComponent', 'selector': 'app-sms-otp-login'},{'name': 'StudyComponent', 'selector': 'app-study'},{'name': 'StudyFiltersComponent', 'selector': 'app-study-filters'},{'name': 'StudyFilterShellComponent', 'selector': 'app-study-filter-shell'},{'name': 'StudyMenuComponent', 'selector': 'app-study-menu'},{'name': 'StudyReviewFilterComponent', 'selector': 'app-study-review-filter'},{'name': 'TblAnnouncementsEditComponent', 'selector': 'app-tbl-announcements-edit'},{'name': 'TblAnnouncementsListComponent', 'selector': 'app-tbl-announcements'},{'name': 'TblParamEditComponent', 'selector': 'app-tbl-param-edit'},{'name': 'TblParamListComponent', 'selector': 'app-tbl-param'},{'name': 'TblStudyEditComponent', 'selector': 'app-tbl-study-edit'},{'name': 'TblStudyListCachedComponent', 'selector': 'app-tbl-study-cached'},{'name': 'TblStudyListComponent', 'selector': 'app-tbl-study'},{'name': 'TblTaskCategoryEditComponent', 'selector': 'app-tbl-task-category-edit'},{'name': 'TblTaskCategoryListComponent', 'selector': 'app-tbl-task-category'},{'name': 'TblUserEditComponent', 'selector': 'app-tbl-user-edit'},{'name': 'TblUserListComponent', 'selector': 'app-tbl-user'},{'name': 'TextBoxComponent', 'selector': 'app-text-box'},{'name': 'ToastComponent', 'selector': 'app-toast'},{'name': 'UpdateSwToastComponent', 'selector': 'app-update-sw-toast'},{'name': 'UserFormComponent', 'selector': 'app-user-form'},{'name': 'UserNamePwdLoginComponent', 'selector': 'app-user-name-pwd-login'},{'name': 'UsersComponent', 'selector': 'app-users'}];
+    var DIRECTIVES = [{'name': 'HasPermissionsDirective', 'selector': '[appHasPermissions]'},{'name': 'PlaceholderDirective', 'selector': '[appPlaceholder]'}];
+    var ACTUAL_COMPONENT = {'name': 'EmailTokenLoginComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'EmailTokenLoginComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

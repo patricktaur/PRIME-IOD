@@ -1,0 +1,16 @@
+<div class="input-group">
+  <input
+    class="form-control "
+    [formControl]="formControl"
+    [formlyAttributes]="field"
+    ngbDatepicker
+    #d="ngbDatepicker"
+  />
+  <div class="input-group-append">
+    <button class="p-2" style="border: 0;" (click)="d.toggle()" type="button" [disabled]="to.disabled">
+      <i class="bi bi-calendar3"></i>
+    </button>
+  </div>
+</div>
+
+<!-- x:{{*ngIf="formState.disabled"}} -->

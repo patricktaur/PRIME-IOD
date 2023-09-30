@@ -1,0 +1,310 @@
+[
+  {
+    "year": "2022",
+    "months": [
+      {
+        "id": 0,
+        "month": "Jan",
+        "forecast": null,
+        "actual": null
+      },
+      {
+        "id": 0,
+        "month": "Feb",
+        "forecast": null,
+        "actual": null
+      },
+      {
+        "id": 0,
+        "month": "Mar",
+        "forecast": 1,
+        "actual": 1
+      },
+      {
+        "id": 0,
+        "month": "Apr",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "May",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Jun",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Jul",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Aug",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Sep",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Oct",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Nov",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Dec",
+        "forecast": 1,
+        "actual": 0
+      }
+    ]
+  },
+  {
+    "year": "2023",
+    "months": [
+      {
+        "id": 0,
+        "month": "Jan",
+        "forecast": 1,
+        "actual": 1
+      },
+      {
+        "id": 0,
+        "month": "Feb",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Mar",
+        "forecast": 1,
+        "actual": 1
+      },
+      {
+        "id": 0,
+        "month": "Apr",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "May",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Jun",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Jul",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Aug",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Sep",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Oct",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Nov",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Dec",
+        "forecast": 1,
+        "actual": 0
+      }
+    ]
+  },
+  {
+    "year": "2024",
+    "months": [
+      {
+        "id": 0,
+        "month": "Jan",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Feb",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Mar",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Apr",
+        "forecast": 3,
+        "actual": 2
+      },
+      {
+        "id": 0,
+        "month": "May",
+        "forecast": 1,
+        "actual": 1
+      },
+      {
+        "id": 0,
+        "month": "Jun",
+        "forecast": 1,
+        "actual": 1
+      },
+      {
+        "id": 0,
+        "month": "Jul",
+        "forecast": 1,
+        "actual": 1
+      },
+      {
+        "id": 0,
+        "month": "Aug",
+        "forecast": 1,
+        "actual": 1
+      },
+      {
+        "id": 0,
+        "month": "Sep",
+        "forecast": 1,
+        "actual": 1
+      },
+      {
+        "id": 0,
+        "month": "Oct",
+        "forecast": 1,
+        "actual": 1
+      },
+      {
+        "id": 0,
+        "month": "Nov",
+        "forecast": 1,
+        "actual": 1
+      },
+      {
+        "id": 0,
+        "month": "Dec",
+        "forecast": 1,
+        "actual": 0
+      }
+    ]
+  },
+  {
+    "year": "2025",
+    "months": [
+      {
+        "id": 0,
+        "month": "Jan",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Feb",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Mar",
+        "forecast": 1,
+        "actual": 1
+      },
+      {
+        "id": 0,
+        "month": "Apr",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "May",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Jun",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Jul",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Aug",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Sep",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Oct",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Nov",
+        "forecast": 1,
+        "actual": 0
+      },
+      {
+        "id": 0,
+        "month": "Dec",
+        "forecast": 1,
+        "actual": 0
+      }
+    ]
+  }
+]

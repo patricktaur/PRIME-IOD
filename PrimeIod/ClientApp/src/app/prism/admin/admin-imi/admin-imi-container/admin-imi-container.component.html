@@ -1,0 +1,28 @@
+
+<ul class="nav nav-pills nav-fill pb-3">
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'imi-cdms-tasks'" 
+    routerLinkActive="active"
+    appMenuAccessLink
+  >IMI CDMS Tasks</li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'imi-cdms-tasks-groups'" 
+    routerLinkActive="active"
+    appMenuAccessLink
+  >IMI CDMS Task Groups</li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'imi-cdms-and-cdms-type'" 
+    routerLinkActive="active"
+    appMenuAccessLink
+  >IMI CDMS & CDMS Type</li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'imi-review-categories-codelist'" 
+    routerLinkActive="active"
+    appMenuAccessLink
+  >IMI Review Category Code List</li>
+</ul>
+<router-outlet></router-outlet>

@@ -1,0 +1,18 @@
+<table class="table table-sm table-hover small table-striped">
+  <thead>
+    <tr>
+      <th *ngFor="let item of dashboardItems" align="center" [ngStyle]="getStyle(item)" [title]="getTitle(item)">
+        {{ item?.displayText }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <!-- <ngb-highlight [result]="rec.studyIconNumber" [term]="searchTerm"></ngb-highlight><br /> -->
+      <td [ngStyle]="getStyle(item)" align="center" class="text-truncate" *ngFor="let item of dashboardItems">
+        <a class="btn stretched-link " (click)="onItemClicked(item)" *ngIf="canDrillDown(item)"></a>
+        {{ item?.value }}
+      </td>
+    </tr>
+  </tbody>
+</table>

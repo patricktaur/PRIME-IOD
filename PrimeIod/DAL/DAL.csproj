@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>2.7.2</Version>
+    <Description>Data Access Layer</Description>
+    <Copyright>Copyright © 2020 www.claritytechnologies.com</Copyright>
+    <PackageProjectUrl>https://www.claritytechnologies.com/Shopify</PackageProjectUrl>
+    <Company>claritytechnologies</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="OpenIddict" Version="2.0.1" />
+    <PackageReference Include="OpenIddict.EntityFrameworkCore" Version="2.0.1" />
+  </ItemGroup>
+
+   <ItemGroup>
+    <ProjectReference Include="..\Computations\Computations.csproj" />
+    <ProjectReference Include="..\Helpers\Helpers.csproj" />
+  </ItemGroup>
+  
+  
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="27.1.0" />
+      <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+</ItemGroup>
+
+</Project>

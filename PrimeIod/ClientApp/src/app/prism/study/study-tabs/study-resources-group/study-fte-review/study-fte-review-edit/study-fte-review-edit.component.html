@@ -1,0 +1,14 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<h4>{{ title }}</h4>
+
+<hr />
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <button type="submit" class="btn btn-primary submit-button me-1" [disabled]="!(form.valid && form.dirty)">Save</button>
+  <button type="button" class="btn btn-default me-1" (click)="options.resetModel()">Undo</button>
+  <button type="button" class="btn btn-default" (click)="back()">Back</button>
+  <app-last-saved [auditFields]="record"></app-last-saved>
+
+</form>
+
+<!-- <p>record: {{ record | json }}</p>    -->

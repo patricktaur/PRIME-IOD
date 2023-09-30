@@ -1,0 +1,25 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<app-study-cds-val-task-filters
+  [selectedFilters]="selectedFilters"
+  (filterChange)="onFilterChange($event)"
+  (resetFilters)="onResetFilters()"
+></app-study-cds-val-task-filters>
+<app-data-table-shell
+  [records]="filteredRecords"
+  [columns]="columns"
+  [showColumnManager]="false"
+  [showFooterActions]="false"
+  (raiseEvent)="onRaiseEvent($event)"
+  [pageNumber]="selectedFilters?.pageNumber"
+  [pageSize]="selectedFilters?.pageSize"
+  (pageOptionsChanged)="pageOptionsChanged($event)"
+  [viewMode]="isViewMode"
+>
+  <div header>
+    <!-- <h4>
+      {{ title }}
+    </h4> -->
+  </div>
+  <div footer-actions class="form-group"></div>
+</app-data-table-shell>
+<!-- <p>records: {{ records | json }}</p>  -->

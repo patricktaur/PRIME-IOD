@@ -1,0 +1,136 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<table class="table table-sm small table-striped">
+	<tbody>
+		<tr>
+			<td>CDMS Lead Name</td>
+			<td>{{ record.cdmsLeadNameDisplayName }}</td>
+		</tr>
+        <tr>
+			<td>Covering CDMS Lead Name</td>
+			<td>{{ record.secondCdmsLeadDisplayName }}</td>
+		</tr>
+        <tr>
+			<td>CDMS Version</td>
+			<td>{{ record.cdmsVersionPDescription }}</td>
+		</tr>
+        <!-- <tr>
+			<td>CDMS URL (only required for Rave and Veeva CDMS)</td>
+			<td>{{ record.cdmsUrlText }}</td>
+		</tr> -->
+        <tr>
+            <td>CDMS URL (only required for Rave and Veeva CDMS)</td>
+            <td>{{ record.cdmsUrl }}</td>
+        </tr>
+        <!-- <tr>
+            <td>CDMS URL (only required for Rave and Veeva CDMS)</td>
+            <td>{{ record.cdmsUrlVeeva }}</td>
+        </tr> -->
+        <tr>
+            <td>Sponsor-owned/Sponsor-contracted URL/Vault</td>
+            <td>{{ getYesOrNOStatus(record.sponsorUrl) }}</td>
+        </tr>
+        <tr>
+            <td>Actual Number of Unique CRFs</td>
+            <td>{{ record.actualNumberOfUniqueCrfs }}</td>
+        </tr>
+        <tr>
+            <td>Edit Checks Completed (including CFs)</td>
+            <td>{{ record.editChecksCompleted }}</td>
+        </tr>
+        <tr>
+            <td>Edit Check Specification Errors (including CFs)</td>
+            <td>{{ record.editChecksErrorsInDvsCdmsReview }}</td>
+        </tr>
+        <tr>
+            <td>Edit Checks Failed (including CFs) Round 1 Validation only</td>
+            <td>{{ record.editChecksFailedRound1ValidationOnly }}</td>
+        </tr>
+        <tr>
+            <td>CDMS Comments</td>
+            <td>{{ record.cdmsComments }}</td>
+        </tr>
+        <tr>
+            <td>Custom Functions</td>
+            <td>{{ record.customFunctions }}</td>
+        </tr>
+        <tr>
+            <td>Type of Inetegration Used</td>
+        </tr>
+        <tr>
+            <table>
+                <thead>
+                    <th>Applicable</th>
+                    <th>Description</th>
+                    <th>Vendor Name</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of record.childIntegration">
+                        <td>{{ item.applicable }}</td>
+                        <td>{{ item.typeOfIntegrationUsedPDescription }}</td>
+                        <td>{{ item.vendorName }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </tr>
+        <tr>
+            <td>Other Integration (Specify 1)</td>
+            <td>{{ record.otherIntegrationSpecify1 }}</td>
+        </tr>
+        <tr>
+            <td>Other Integration (Specify 1) Vendor Name</td>
+            <td>{{ record.otherIntegrationSpecify1VendorName }}</td>
+        </tr>
+        <tr>
+            <td>Other Integration (Specify 2)</td>
+            <td>{{ record.otherIntegrationSpecify2 }}</td>
+        </tr>
+        <tr>
+            <td>Other Integration (Specify 2) Vendor Name</td>
+            <td>{{ record.otherIntegrationSpecify2VendorName }}</td>
+        </tr>
+        <tr>
+            <td>Split Go-live</td>
+            <td>{{ getYesOrNOStatus(record.splitGoLive) }}</td>
+        </tr>
+        <tr>
+            <td>OMR Database Setup Completed</td>
+            <td>{{ getYesOrNOStatus(record.omrdbSetupCompleted) }}</td>
+        </tr>
+        <tr>
+            <td>Visit Date Field Name</td>
+            <td>{{ record.visitDateFieldName }}</td>
+        </tr>
+        <tr>
+            <td>Does this study use OC/OptiCON?</td>
+            <td>{{ getYesOrNOStatus(record.ocOptIcon) }}</td>
+        </tr>
+        <tr>
+            <td>OMR Subject Disposition Form Used in the Study</td>
+            <td>{{ getYesOrNOStatus(record.omrsubjectdispositionCompleted) }}</td>
+        </tr>
+        <tr>
+            <td>CORE CRF Standards</td>
+            <td>{{ record.coreCrfStandardsPDescription }}</td>
+        </tr>
+        <tr>
+            <td>CORE CRF Standards usage Comments</td>
+            <td>{{ record.comment }}</td>
+        </tr>
+        <tr>
+            <td>Universal CRF Spec Tool Used</td>
+            <td>{{ record.universalCrfspecToolUsed }}</td>
+        </tr>
+        <tr>
+            <td>ICON Standard Roles and Permissions used</td>
+            <td>{{ record.iconStandardRolesAndPermissionUsedDescription }}</td>
+        </tr>
+        <tr>
+            <td>Update Timelines</td>
+            <td>{{ getYesOrNOStatus(record.updateTimelines) }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <span class="alert alert-info">Last Updated on: {{ record?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+<app-last-saved [auditFields]="record"></app-last-saved>

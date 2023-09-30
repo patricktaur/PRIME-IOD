@@ -1,0 +1,18 @@
+<ul class="nav nav-pills  pb-3">
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'request-list'" 
+    routerLinkActive="active"
+    appMenuAccessLink
+    >Request
+  </li>
+  <!-- *appHasPermissions="'rol.Admin'" -->
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'approval-list'" 
+    routerLinkActive="active" 
+    appMenuAccessLink
+      >Approval
+  </li>
+</ul>
+<router-outlet></router-outlet>

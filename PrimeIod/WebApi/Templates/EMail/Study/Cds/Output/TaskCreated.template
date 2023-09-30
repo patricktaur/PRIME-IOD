@@ -1,0 +1,21 @@
+﻿Subject: PRISM CDS Output Request  Alert For {StudyIconNumber} – {TaskId} – {OutputCategory} Output Task Created
+
+Hi {ToUsers},
+<br/><br/>
+
+PRISM CDS Output Request Alert For {StudyIconNumber} - {TaskId} - {OutputCategory} Output Task Created.<br />
+<br />
+Created By: <b> {LoginUserName} </b><br />
+<br />
+Due Date: <b>{DueDate}</b><br />
+<br/>
+Output Detail: <b> {OutputDetail} </b><br />
+<br/>
+
+Output Request Task <b>{TaskId}</b> is created. <br />
+<br />
+
+link: {LinktoTask}<br />
+<br />
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

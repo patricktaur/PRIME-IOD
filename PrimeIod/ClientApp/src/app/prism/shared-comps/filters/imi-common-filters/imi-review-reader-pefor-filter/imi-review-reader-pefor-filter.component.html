@@ -1,0 +1,86 @@
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Search</label>
+      <input class="form-control" placeholder="ICON Number or Protocol Name" type="text" [formControl]="filterForm" />
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Sponsors</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Sponsor"
+        [(ngModel)]="selectedFilters.sponsor"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.sponsor" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">IMI PM (Reviewed by)</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.reviewedByProjectManagers"
+        [multiple]="true"
+        placeholder="IMI PM - Reviewed By"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.reviewProjectManager" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">IMI PD (Reviewed by)</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.reviewedByProjectDirectors"
+        [multiple]="true"
+        placeholder="Reviewed by IMI Project Director"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.reviewProjectDirector" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Watch List</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.watchList"
+        placeholder="Watch List"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'Yes'">Yes</ng-option>
+        <ng-option [value]="'No'">No</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Escalated</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.escalated"
+        placeholder="Escalated"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'Yes'">Yes</ng-option>
+        <ng-option [value]="'No'">No</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>

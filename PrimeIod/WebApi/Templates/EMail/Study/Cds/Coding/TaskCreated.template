@@ -1,0 +1,21 @@
+﻿Subject: PRISM CDS Coding Request  Alert For {StudyIconNumber} – {TaskId} – {CodingCategory} Coding Task Created
+
+Hi {ToUsers},
+<br/><br/>
+
+PRISM CDS Coding Request Alert For {StudyIconNumber} - {TaskId} - {CodingCategory} Coding Task Created.<br />
+<br />
+Created By: <b> {LoginUserName} </b><br />
+<br />
+Due Date: <b>{DueDate}</b><br />
+<br/>
+Coding Detail: <b> {CodingDetail} </b><br />
+<br/>
+
+Coding Request Task <b>{TaskId}</b> is created. <br />
+<br />
+
+link: {LinktoTask}<br />
+<br />
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

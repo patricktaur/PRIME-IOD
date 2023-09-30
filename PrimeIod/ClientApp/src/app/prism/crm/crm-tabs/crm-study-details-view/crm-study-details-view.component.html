@@ -1,0 +1,120 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<h5
+  style="background: #128474;
+	color: white !important;
+	border-color: #128474;padding:10px;margin-bottom: 10px;"
+>
+  CRM Description
+</h5>
+<table class="table table-sm small table-striped">
+	<tbody>
+		<tr>
+			<td>Study Name</td>
+			<td>{{ record.studyName }}</td>
+		</tr>
+        <tr>
+			<td>Sponsor</td>
+			<td>{{ record.sponsorPDescription }}</td>
+		</tr>
+        <tr>
+			<td>Study Name/Sponsor Study Code</td>
+			<td>{{ record.sponsorStudyNumber }}</td>
+		</tr>
+        <tr>
+            <td>GPM</td>
+            <td>{{ record.gpm }}</td>
+        </tr>
+        <tr>
+            <td>CTM</td>
+            <td>{{ record.ctm }}</td>
+        </tr>
+        <tr>
+            <td>Central Monitoring Status</td>
+            <td>{{ record.centralMonitoringStatusCpDescription }}</td>
+        </tr>
+        <tr>
+            <td>CDA/CM</td>
+            <td>{{ record.cdaCmName }}</td>
+        </tr>
+        <tr>
+            <td>Clinical Risk Manager</td>
+            <td>{{ record.clinicalRiskManager }}</td>
+        </tr>
+        <tr>
+            <td>Analytics Development Lead</td>
+            <td>{{ record.analyticsDevelopmentLead }}</td>
+        </tr>
+        <tr>
+            <td>Central Monitoring Platform</td>
+            <td>{{ record.centralMonitoringPlatformDescription }}</td>
+        </tr>
+        <tr>
+            <td>Current No. of KRI</td>
+            <td>{{ record.currentNoOfKri }}</td>
+        </tr> 
+        <tr>
+            <td>Subject Similarity KRI (Y/N)</td>
+            <td>{{ record.subjectSimilarityKriCpDescription }}</td>
+        </tr>
+        <tr>
+            <td>ESDV analysis (Y/N)</td>
+            <td>{{ record.esdvAnalysisCpDescription }}</td>
+        </tr>
+        <tr>
+            <td>QTL</td>
+            <td>{{ record.qtlCpDescription }}</td>
+        </tr>
+        <tr>
+            <td>CDMS/EDC System</td>
+            <td>{{ record.cdmsEdcSystem }}</td>
+        </tr>
+        <tr>
+            <td>ICON DM Contracted</td>
+            <td>{{ record.iconDmContractedCpDescription }}</td>
+        </tr>  
+        <tr>
+            <td>DM Vendor (if not ICON)</td>
+            <td>{{ record.dmVendor }}</td>
+        </tr>
+        <tr>
+            <td>DM PM point of contact</td>
+            <td>{{ record.dmpmPointOfContact }}</td>
+        </tr>
+        <tr>
+            <td>CDL point of contact</td>
+            <td>{{ record.cdlPointOfContact }}</td>
+        </tr>
+        <tr>
+            <td>Sites planned</td>
+            <td>{{ record.sitesPlanned }}</td>
+        </tr>
+        <tr>
+            <td>Subjects planned</td>
+            <td>{{ record.subjectsPlanned }}</td>
+        </tr>
+        <tr>
+            <td>Therapeutic Area</td>
+            <td>{{ record.therapeuticAreaPDescription }}</td>
+        </tr>
+        <tr>
+            <td>Indication</td>
+            <td>{{ record.indication }}</td>
+        </tr>
+        <tr>
+            <td>Protocol Phase</td>
+            <td>{{ record.protocolPhasePDescription }}</td>
+        </tr>
+        <tr>
+            <td>TMF</td>
+            <td>{{ record.tmfPDescription }}</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>{{ record.notes }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <span class="alert alert-info">Last Updated on: {{ record?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+<app-last-saved [auditFields]="record"></app-last-saved>
+<!-- <p>record: {{ record | json }}</p> -->

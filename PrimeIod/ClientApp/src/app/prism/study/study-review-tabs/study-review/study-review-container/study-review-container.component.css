@@ -1,0 +1,11 @@
+ngb-tabset ul.nav-tabs li a.nav-link.active {
+  background-color: transparent;
+}
+
+ngb-tabset ul.nav-tabs li a.nav-link {
+  background-color: #ff0000;
+}
+
+.scrolling-wrapper {
+  overflow-x: auto;
+}

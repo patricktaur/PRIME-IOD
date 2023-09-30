@@ -1,0 +1,35 @@
+<app-study-filters
+  [records]="records"
+  (filterChange)="onFilterOneChange($event)"
+  (searchTextChange)="onSearchTextChange($event)"
+></app-study-filters>
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Deliverable Type</label>
+      <ng-select
+        [multiple]="true"
+        placeholder="Deliverable Type"
+        [(ngModel)]="DeliveryTypeFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.deliverableType" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Outcome</label>
+      <ng-select
+        [multiple]="true"
+        placeholder="Outcome"
+        [(ngModel)]="OutComeFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.outCome" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>

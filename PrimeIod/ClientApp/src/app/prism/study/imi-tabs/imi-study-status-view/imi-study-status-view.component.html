@@ -1,0 +1,30 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<h5>Study Status</h5>
+<hr />
+<table class="table table-sm small table-striped">
+    <tbody>
+        <tr>
+            <td>Study Status</td>
+            <td>{{ studystatus.studyStatusPDescription }}</td>
+        </tr>
+        <tr>
+            <td>Study On-Hold</td>
+            <td>{{ studystatus.studyOnHoldPDescription }}</td>
+        </tr>
+        <tr>
+            <td>Date Study On-Hold</td>
+            <td>{{ studystatus.dateStudyOnHold | date: 'd-MMM-y' }}</td>
+        </tr>
+        <tr>
+            <td>Study Cancelled</td>
+            <td>{{ studystatus.studyCancelledPDescription }}</td>
+        </tr>
+        <tr>
+            <td>Date Study Cancelled</td>
+            <td>{{ studystatus.dateStudyStopped | date: 'd-MMM-y' }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <span class="alert alert-info">Last Updated on: {{ studystatus?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+<app-last-saved [auditFields]="studystatus"></app-last-saved>

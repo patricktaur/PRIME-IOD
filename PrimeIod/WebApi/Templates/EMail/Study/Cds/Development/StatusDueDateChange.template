@@ -1,0 +1,19 @@
+﻿Subject:PRISM CDS Development Request Change Alert - {StudyIconNumber} - {TaskId} - {DevelopmentCategory} - Development Status modified from [{CurrentStatus}]  to [{RevisedStatus}]'
+
+Hi {ToUsers},
+<br/><br/>
+PRISM CDS Development Request Change Alert - - {StudyIconNumber} - {TaskId} - {DevelopmentCategory} - Development Status modified from [{CurrentStatus}]  to [{RevisedStatus}]<br />
+  <br />        
+Last Updated By: <b> {LoginUserName} </b><br />
+<br/>
+Due Date: <b>{DueDate}</b><br />
+<br/>
+Development Detail: <b> {DevelopmentDetail} </b><br />
+<br/>
+Development Request TaskId <b>{TaskId}</b> is modified. <br />
+<br />
+link: <b>  {LinktoTask} <br /> </b> 
+<br />
+        
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

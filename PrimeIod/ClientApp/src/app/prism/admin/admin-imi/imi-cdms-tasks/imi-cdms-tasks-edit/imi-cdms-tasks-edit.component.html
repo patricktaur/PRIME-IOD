@@ -1,0 +1,23 @@
+<app-loader [isLoading]="loading"></app-loader>
+<h5>{{ title }}</h5>
+
+<hr />
+<!-- (ngSubmit)="submit()" -->
+<form [formGroup]="form">
+  <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+
+  <button type="button" class="btn btn-default" (click)="back()">Back</button>
+  <button type="submit" class="btn btn-primary submit-button" (click)="submit()">
+    Save
+  </button>
+  <button type="button" class="btn btn-default" (click)="options.resetModel()">Undo</button>
+  <app-confirmation-shell
+    [message]="'Do you want to Remove Order Number: ' + OrderNumber + ' ?'"
+    [labelText]="'Remove'"
+    [responseValue]="recId"
+    (response)="deleteRecord($event)"
+  >
+  </app-confirmation-shell>
+</form>
+
+<!-- <p>record: {{ record | json }}</p> -->

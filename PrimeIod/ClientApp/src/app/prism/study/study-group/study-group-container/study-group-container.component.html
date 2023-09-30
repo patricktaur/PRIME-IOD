@@ -1,0 +1,39 @@
+<div class="row bg-icon-light small  me-n4  mb-3 px-2 pt-0 border-bottom  mt-n4 d-flex justify-content-around">
+  <div class="col-2 text-center pe-0 ps-0">
+    <table class="table mt-0 mb-0" style="border: none !important;">
+    <tr>
+      <td>
+        <h6>Study Icon Number</h6>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ng-select
+          [title]="lockedMessage"
+          class=" align-self-center study-dropdown me-3"
+          #IconNumbersDropDown
+          placeholder="Icon Number"
+          [(ngModel)]="selectedStudy"
+          [clearable]="false"
+          (change)="onStudySelected()"
+          [disabled]="studyEditMode"
+        >
+          <ng-option *ngFor="let rec of studyIconNumbers" [value]="rec.studyId">{{ rec.studyIconNumber }}</ng-option>
+        </ng-select>
+      </td>
+    </tr>
+  </table>
+    
+    <!-- <router-outlet name="dashboard"></router-outlet> -->
+    </div>
+    <div class="col-10 text-center study-dashboard pe-0 ps-0">
+    <app-study-dashboard-container></app-study-dashboard-container>
+  </div>
+</div>
+
+<!-- <div class="row   mb-3 px-2 border-bottom  mt-n3">
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div> -->
+<router-outlet></router-outlet>

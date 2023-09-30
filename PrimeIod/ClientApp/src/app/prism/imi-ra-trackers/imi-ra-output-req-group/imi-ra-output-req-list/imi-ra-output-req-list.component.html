@@ -1,0 +1,52 @@
+<app-loader [isLoading]="isLoading"></app-loader>
+
+<div class="bg-icon-light me-n5 ms-n5 px-3 py-3 border-bottom border-top">
+  <div class="row">
+    <div class="col">
+      <!-- [requiredPermissions]="requiredPermissions" -->
+
+      <app-imi-ra-output-req-filters
+        [selectedFilters]="selectedFilters"
+        (filterChange)="onFilterChange($event)"
+      ></app-imi-ra-output-req-filters>
+    </div>
+  </div>
+</div>
+<button type="button" class="btn btn-primary my-3" (click)="add()">
+  New IMI R&A Output Request
+</button>
+<app-imi-ra-batch-actions
+  (batchActionButtonClicked)="batchActionModeChanged($event)"
+  [batchActionOptions]="batchActionOptions"
+  (process)="processBatchActions($event)"
+  [batchActionMode]="batchActionMode"
+></app-imi-ra-batch-actions>
+<div class="row">
+  <div class="table-responsive">
+    <app-data-table-base
+      [columns]="columns"
+      [records]="records"
+      [pageNumber]="1"
+      [pageSize]="selectedFilters?.pageSize"
+      (raiseEvent)="onRaiseEvent($event)"
+    ></app-data-table-base>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2">
+    <app-column-manager-shell [columns]="columns"></app-column-manager-shell>
+  </div>
+  <div class="col-md-10">
+    <pagination-control
+      [page]="selectedFilters.pageNumber"
+      [pageSize]="selectedFilters.pageSize"
+      [collectionSize]="recordCount"
+      (onPageChange)="onPageChange($event)"
+    ></pagination-control>
+  </div>
+</div>
+<app-server-response-messages
+  [serverResponseMessages]="serverResponses"
+  [messageBoxHeight]="200"
+></app-server-response-messages>
+<!-- <p>records: {{ records | json }}</p> -->

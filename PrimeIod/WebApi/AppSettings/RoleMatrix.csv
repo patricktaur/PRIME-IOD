@@ -1,0 +1,190 @@
+RoleId ->,Redirect To,Status,,,1801,207,1812,1803,1820,201,202,206,,1804,203,1819,1807,204,208,,1818,1810,1805,1806,1813,1814,1815,1816,1821,1822,1820,1830,1831,1832,1833,1834,1835,1840,1841
+CompCode,,,Title,"Access options (E=Edit, ESR=Edit if user is in Study Resource 
+(User is assigned to that role in that respective study).
+, V=View, N= Not visiable)",Admin,Viewer,Clarity Team,DM Director,DM Oversight,DMPM,CDL,CDC,Operations Lead,CDMS Manager,CDMS Lead,CDMS Programmer,CDS Manager,CDPL,CDS Programmer,CDS Validation,Coding Manager,Coding Specialist,QR,LL,IMI TPM,IMI PM,IMI CDPL,IMI CDP,IMI PD,IMI R&A Programmer,Report Request,Central Monitor,Clinical Data Analyst,Sr. Clinical Data Analyst,Clinical Risk Manager,Sr. Clinical Risk Manager,Sr. Director - CRM,Analytics Develpoment Lead,Director CRM- ADL
+dm-study-members,,UP,Home -DM Study Members,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+cds-dashboard,,RFU,Home -CDS Dashboards,V/N,V,N,N,V,V,V,V,V,,N,N,N,V,V,V,,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+dm-study-list,,UP,Home -DM studies,V/N,V,V,V,V,V,V,V,V,,V,V,V,V,V,V,,V,V,V,V,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+imi-study-list,,RFU,Home -IMI Studies,V/N,V,N,V,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+crm-study-list,,UP,Home -CRM Studies,V/N,V,N,V,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,V,V,V,V,V,V,V,V
+study-edit,,UP,Study - Project - Edit,E/N,E,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-proj-review-sign-off,,RFU,Study - Project Review - Review Signoff,E/V/N,E,V,N,E,E,R,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-proj-review-categories,,RFU,Study - Project Review - Project Status Cateogries,E/V/N,E,V,N,E,E,R,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-proj-review-issue-tracker,,RFU,Study - Project Review - Project Issue Tracker,E/V/N,E,V,N,E,E,R,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-proj-review-history,,RFU,Study - Project Review - Project History,V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-proj-review-offline-checks,,RFU,Study - Project Review - Offline checks,E/V/N,E,V,N,E,E,R,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-pro-review-issue-list-archived,,RFU,Study - Project Review - Archived Reviews - Project Review Sign Off,E/V/N,V,V,N,V,E,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-proj-review-archived-list,,RFU,Study - Project Review - Archived Reviews - Project Issue List,E/V/N,V,V,N,V,E,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-proj-review-history-archived-list,,RFU,Study - Project Review - Archived Reviews - Archived Project Review History,E/V/N,V,V,N,V,E,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-proj-review-timelines-archived,,RFU,Study - Project Review - Archived Reviews - Timelines History,E/V/N,V,V,N,V,E,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-description,assumptions,UP,Study - Description - Study Details,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,V,,V,V,V,V,V,V,V,V,V,N,N,V,V,V,V,V,V,V,V
+study-other-icon-departments,,UP,Study - Description - Other Icon Departments,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,V,,V,V,V,V,V,V,V,V,V,N,N,V,V,V,V,V,V,V,V
+study-assumptions,,RFU,Study - Description - Assumptions,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,V,,V,V,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N,N,N
+study-resources,,RFU,Study - Resources - Resources,E/V/N,E,V,N,E,E,E,V,V,,V,V,V,V,V,V,,E,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-fte-resources,,RFU,Study - Resources - FTE Resources,E/V/N,E,V,N,E,E,R,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-timelines,,RFU,Study - Timelines - Timelines,E/V/N,E,V,N,E,E,R,R,V,,V,V,V,V,V,V,,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-deliverables,,RFU,Study - Timelines - Deliverables,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-celgene-deliverables,,RFU,Celgene Deliverables,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-interim-locks,,RFU,Study - Timelines - Interim Locks,E/V/N,E,V,N,E,E,R,E,E,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-status,,RFU,Study - Status / Pageflow - Study Status,E/V/N,E,V,N,E,E,R,R,V,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-pageflow,,RFU,Study - Status / Pageflow - Page Flow,E/V/N,E,V,N,E,E,R,R,V,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-external-data,,RFU,Study - External Data,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-database-lock-dashboard,,RFU,Study - Database Lock Dashboard,E/V/N,E,V,N,E,E,R,V,V,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-task-database-build,,RFU,Study - Tasks - Database Build,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-task-programming,,RFU,Study - Tasks - Programming,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-task-data-processing,,RFU,Study - Tasks - Data Processing,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-cdms,,RFU,Study - CDMS - CDMS,E/V/N,E,V,N,V,V,V,V,V,,E,E,E,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-cdms-cppc,,RFU,Study - CDMS - CDMS CPPC,E/V/N,E,V,N,V,V,V,V,V,,E,E,E,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-cdms-tracker,,RFU,Study - CDMS - CDMS Tracker,E/V/N,E,V,N,E,E,R,R,R,,E,E,E,V,V,N,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-cdms-clininfo-tracker,,RFU,Study - CDMS - Clininfo CDMS Tracker,E/V/N,E,V,N,E,E,R,R,R,,E,E,E,V,V,N,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-cds,,RFU,Study - CDS - CDS,E/V/N,E,V,N,E,E,V,V,V,,V,V,V,E,E,E,,E,E,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-cds-development-request,,RFU,Study - CDS - Development Request,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,E,E,E,,E,E,V,V,E,E,E,E,E,N,N,N,N,N,N,N,N,N,N
+study-cds-output-request,,RFU,Study - CDS - Output Request,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,E,E,E,,E,E,V,V,E,E,E,E,E,N,N,N,N,N,N,N,N,N,N
+study-cds-delivery-request,,RFU,Study - CDS - Delivery Request,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,E,E,E,,E,E,V,V,E,E,E,E,E,N,N,N,N,N,N,N,N,N,N
+study-cds-coding-request,,RFU,Study - CDS - Coding Request,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,E,E,E,,E,E,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-cds-programming-instructions,,RFU,Study - CDS - Programming Instructions,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,E,E,E,,E,E,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-quality-review,,RFU,Study - Quality - Quality Review,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,N,,V,V,E,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-kpis,,RFU,Study - Quality - KPIs,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,N,,V,E,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-kpi-dashboard,,RFU,Study - Quality - KPIs,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,N,,V,E,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-edc-access,,RFU,Study - Quality - EDC User Access,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,N,,V,E,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-tmf-qc,,RFU,Study - Quality - TMF QC,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,V,V,N,,V,E,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-local-labs,,RFU,Study - Local Lab,E/V/N,E,V,N,E,V,V,V,V,,V,V,V,V,V,N,,V,V,V,E,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-fte-computations,,RFU,Study - FTE Computations,E/V/N,E,V,N,E,V,V,V,V,,V,V,V,V,V,N,,V,V,V,E,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-info,,RFU,Study - Info,E/V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,N,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+study-imi-review-signoff,,RFU,Study - IMI Review - Signoff,E/V/N,E,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,V,V,V,V,N,N,N,N,N,N,N,N
+study-imi-review-categories,,RFU,Study - IMI Review - Review Categories,E/V/N,E,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,V,V,V,V,N,N,N,N,N,N,N,N
+study-imi-project-issue-tracker,,RFU,Study - IMI Review - Project Issue Tracker,E/V/N,E,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,V,V,V,V,N,N,N,N,N,N,N,N
+study-imi-project review-history,,RFU,Study - IMI Review - Project Review History,V/N,E,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,V,V,V,V,N,N,N,N,N,N,N,N
+study-imi-details,,RFU,Study - IMI Details,E/V/N,E,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,V,V,V,V,N,N,N,N,N,N,N,N
+study-imi-assumptions,,RFU,Study - IMI Assumptions,E/V/N,E,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,V,V,V,V,N,N,N,N,N,N,N,N
+study-imi-resources,,RFU,Study - IMI Resources,E/V/N,E,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,V,V,N,N,N,N,N,N,N,N,N,N
+study-imi-timelines,,RFU,Study - IMI Timelines,E/V/N,E,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,V,V,V,V,N,N,N,N,N,N,N,N
+study-imi-status,,RFU,Study - IMI Study Status,E/V/N,E,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,E,E,V,V,N,N,N,N,N,N,N,N
+study-imi-cdms,,RFU,Study - IMI Study Status,E/V/N,E,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,E,E,V,V,N,N,N,N,N,N,N,N
+study-imi-cdms-tracker,,RFU,Study - IMI Study Status,E/V/N,E,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,E,E,V,V,N,N,N,N,N,N,N,N
+study-imi-r&a-development-request,,RFU,Study - IMI Trackers - IMI R&A Development Request,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,E,E,N,E,N,N,N,N,N,N,N,N
+study-imi-r&a-output-request,,RFU,Study - IMI Trackers - IMI R&A Output Request,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,E,E,N,E,N,N,N,N,N,N,N,N
+study-crm-award,,UP,Study - CRM Study Award,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,R,R,R,E,E,E,V,V
+study-crm-description,,UP,Study - CRM Description,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,R,R,R,E,E,E,V,V
+study-crm-timelines,,UP,Study - CRM Timelines,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,R,R,R,E,E,E,V,V
+study-crm-resources,,UP,Study - CRM Resources,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,R,R,R,E,E,E,V,V
+study-crm-budget,,UP,Study - CRM Budget,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,R,R,R,E,E,E,V,V
+study-crm-analysis-planning,,UP,Study - CRM Analysis Planning,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,R,R,R,E,E,E,V,V
+study-crm-project-governance-setup,,UP,Study - CRM Project Goverance - Setup,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,R,R,R,E,E,E,V,V
+study-crm-project-governance-on-ongoing,,UP,Study - CRM Project Goverance - OnGoing,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,R,R,R,E,E,E,V,V
+study-crm-project-governance-analysis,,UP,Study - CRM Project Goverance - Analysis,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,R,R,R,E,E,E,V,V
+study-crm-project-governance-closure,,UP,Study - CRM Project Goverance - Closure,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,R,R,R,E,E,E,V,V
+cds-development-request,,RFU,CDS & Coding Trackers - Development Request,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,E,E,E,,E,E,V,V,E,E,E,E,E,N,N,N,N,N,N,N,N,N,N
+cds-output-request,,RFU,CDS & Coding Trackers - Output Request,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,E,E,E,,E,E,V,V,E,E,E,E,E,N,N,N,N,N,N,N,N,N,N
+cds-delivery-request,,RFU,CDS & Coding Trackers - Delivery Request,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,E,E,E,,E,E,V,V,E,E,E,E,E,N,N,N,N,N,N,N,N,N,N
+cds-instruction-request,,RFU,CDS & Coding Trackers - Instruction Request,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,E,E,E,,E,E,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+cds-coding-request,,RFU,CDS & Coding Trackers - Coding Request,E/V/N,E,V,N,E,E,R,R,R,,V,V,V,E,E,E,,E,E,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+imi-r&a-tracker-development-request,,RFU,IMI R&A Trackers - IMI R&A Development Request,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,E,E,N,E,N,N,N,N,N,N,N,N
+imi-r&a-tracker-output-request,,RFU,IMI R&A Trackers - IMI R&A Output Request,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,E,E,E,N,E,N,N,N,N,N,N,N,N
+dm-process-improvement-tracker,,RFU,Process Improvement Trackers,E/V/N,E,V,N,E,E,E,E,E,,E,E,E,E,E,E,,E,E,E,E,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+crm-tracker-3,,UP,CRM Trackers - Tracker 3,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,V,V,V,E,E,E,V,V
+crm-tracker-4,,UP,CRM Trackers - Tracker 4,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,V,V,V,E,E,E,V,V
+report-study-summary,,UP,Report - Study - Summary,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-study-details,,UP,Report - Study - Study Details,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-timelines,,UP,Report - Study - Timelines,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,N,,N,N,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-deliverables,,UP,Report - Study - Deliverables,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,N,,N,N,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-external-report,,UP,Report - Study - External Data Report,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-edc-phase,,UP,Report - Study - EDC Experience By Study Phase,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,N,,N,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-edc-system,,UP,Report - Study - EDC Study Status By System,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,N,,N,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-reports-summary,,UP,Report - Study - Reports Study DBL Summary,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,N,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-dm-owner-list,,UP,Report - Study - DM Study Owner List,V/N,V,V,N,V,V,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-project-review-report,,UP,Report - Study - Project Review Report,V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-project-issue-tracker,,UP,Report - Study - Project Issue Tracker Report,V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-omr,,UP,Report - Study - OMR Report,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-celgene-deliverables,,UP,Report - Study - Celgene Deliverables,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-studygsk-kpi,,UP,Report - Study - Study GSK KPI,V/N,,V,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,N,N
+report-study-fte-report,,UP,Report - Study - FTE Resource Report,V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-missing-qr-report,,UP,Report - Study - Missing QR Report,V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-study-timeline-interim-lock-report,,UP,Report - Study - Timeline Interim Lock Report,V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-risk-tasks-at-risk,,NR,Report - Risks - Tasks At Risk (List),V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-risk-tasks-flagged-as-alerts,,NR,Report - Risks - Tasks Flagged as Alerts,V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-risk-riskscore-scatterplot,,NR,Report - Risks - RiskScore (Graphical ScatterPlot),V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-risk-tasks-frequency,,NR,Report - Risks - Tasks AT Risk (Frequency),V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-risk-riskscore-history-all-reviews,,NR,Report - Risks - RiskScore History (List All Reviews),V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-risk-riskscore-history-bar-chart)\,,NR,Report - Risks - RiskScore History (Graphical Bar Chart),V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-resource-summary,,RFU,Report - Resources - Resource Summary Report,V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-resource-assignment,,RFU,Report - Resources - Assignments,V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-reso-fte-dashboard,,RFU,Report - Resources - FTE Dashboard,V/N,V,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-comp-project-compliance,,UP,Report - Compliance - Project Review Compliance,V/N,N,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-compliance-missing-forms-offline-checks,,UP,Report - Compliance - Missing Forms and Pending Offline Checks,V/N,N,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-compliance-missing-forms,,UP,Report - Compliance - Missing Forms,V/N,N,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-compliance-offline-checks,,UP,Report - Compliance - Offline Mandatory Checks,V/N,N,V,N,V,V,V,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-cds-development-task-request,,RFU,Report - CDS - CDS Development Task Request Report,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,N,N,N,N,V,V,V,V,V,N,N,N,N,N,N,N,N,N,N
+report-cds-output-task-request,,RFU,Report - CDS - CDS Output Task Request Report,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,N,N,N,N,V,V,V,V,V,N,N,N,N,N,N,N,N,N,N
+report-cds-delivery-task-request,,RFU,Report - CDS - CDS Delivery Task Request Report,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,N,N,N,N,V,V,V,V,V,N,N,N,N,N,N,N,N,N,N
+report-cds,,RFU,Report - CDS - CDS Report,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,N,N,N,N,V,V,V,V,V,N,N,N,N,N,N,N,N,N,N
+report-cds-instruction-task-request,,RFU,Report - CDS - CDS Instruction Task Request Report,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,N,N,N,N,V,V,V,V,V,N,N,N,N,N,N,N,N,N,N
+report-cds-validation-task-request,,RFU,Report - CDS - CDS Validation Task Request Report,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,N,N,N,N,V,V,V,V,V,N,N,N,N,N,N,N,N,N,N
+report-dm-process-improvement-tracker,,RFU,Report - CDS - DM Process Improvement Tracker Report,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-cdms-tasks-list,,RFU,Report - CDMS - CDMS Tasks (List),V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-cdms-tasks-group,,RFU,Report - CDMS - CDMS Tasks (By Task Group),V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-cdms,,RFU,Report - CDMS - CDMS,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-cdms-clininfo-list,,RFU,Report - CDMS - Clininfo CDMS Task (List),V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-cdms-clininfo-group,,RFU,Report - CDMS - Clininfo CDMS Tasks (By Task Group),V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-coding-task-request,,RFU,Report - Coding Request - Coding Task Request Report,V/N,V,V,N,V,V,V,N,N,,N,N,N,V,V,N,,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+report-imi-timelines,,RFU,Report - IMI - IMI Timelines,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+report-imi-review,,RFU,Report - IMI - IMI Review Report,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+report-imi-issue-tracker,,RFU,Report - IMI - IMI Review Issue Tracker,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+report-imi-reader-performance,,RFU,Report - IMI - IMI Reader Performance Report,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+report-imi-review-compliance,,RFU,Report - IMI - IMI Review Compliance,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+report-imi-cdms,,RFU,Report - IMI - IMI CDMS Report,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+report-imi-dm-cdms,,RFU,Report - IMI - IMI DM CDMS,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+report-imi-cdms-task-list,,RFU,Report - IMI - IMI CDMS Task List,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+report-imi-cdms-task-group,,RFU,Report - IMI - IMI CDMS Task Group,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+report-imi-r&a-development-request,,RFU,Report - IMI - IMI R&A Development Request Report,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+report-imi-r&a-output-request,,RFU,Report - IMI - IMI R&A Output Request Report,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+report-user,,RFU,Report - User Report,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,V,V,N,N,N,N,N,N,N,N
+export-dm,,RFU,Report - Export - Export Data (DM Studies),V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+export-cds,,RFU,Report - Export - CDS Export Data,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+export-cdms,,RFU,Report - Export - CDMS Export Data,V/N,V,V,N,V,V,V,V,V,,V,V,V,V,V,V,,V,V,V,V,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+export-imi,,RFU,Report - Export - IMI Export Data,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,V,V,V,V,V,N,V,N,N,N,N,N,N,N,N
+crm-report1,,UP,Reports-CRM-Report1,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,V,V,V,V,V,V,V,V
+crm-report2,,UP,Reports-CRM-Report2,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,V,V,V,V,V,V,V,V
+crm-crmexport,,UP,Reports-Export CRM,V/N,V,V,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,V,V,V,V,V,V,V,V
+request-dm-study-request,,RFU,Requests - DM Study - Request,E/N,E,N,N,E,E,E,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,,N,N,N,N,N,N
+request-dm-study-approval,,RFU,Requests - DM Study - Approval,E/V/N,E,N,N,E,E,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+request-imi-only-request,,RFU,Requests - IMI Only Study - Request,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,N,N,N,N,N,N,N,N,N,N,N,N,N
+request-imi-only-approval,,RFU,Requests - IMI Only Study - Approval,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,E,E,N,N,N,N,N,N,N,N,N,N,N,N,N
+request-crm-study-request,,UP,Requests - CRM Study - Request,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,V,V,V,E,E,E,N,N
+request-crm-study-approval,,UP,Requests - CRM Study - Approval,E/V/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,V,V,V,E,E,E,N,N
+request-user-new,,UP,Requests - User - New,E/N,E,N,N,E,E,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,E,E,E,N,N
+request-user-update,,UP,Requests - User - Update,E/V/N,E,N,N,E,E,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,E,E,E,N,N
+request-user-deactvate,,UP,Requests - User - Deactvate,E/V/N,E,N,N,E,E,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,E,E,E,N,N
+request-user-approval,,UP,Requests - User - Approval,E/V/N,E,N,N,E,E,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,E,E,E,N,N
+request-code-list-new,,RFU,Requests - Codelist - New,E/N,E,N,N,E,E,E,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+request-code-list-update,,RFU,Requests - Codelist - Update,E/V/N,E,N,N,E,E,E,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+request-code-list-deactivate,,RFU,Requests - Codelist - Deactivate,E/V/N,E,N,N,E,E,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+request-code-list-approval,,RFU,Requests - Codelist - Approval,E/V/N,E,N,N,E,E,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-users,,UP,App Admin - Users,E/N,E,N,N,N,E,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-codelist,,RFU,App Admin - Codelist,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-cdms-tasks,,RFU,App Admin - CDMS Tasks,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-cdms-tasks-groups,,RFU,App Admin - CDMS Tasks Groups,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-cdms-and-cdms-type,,RFU,App Admin - CMDS And CDMS Type,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-veeva-vault-version,,RFU,App Admin - Veeva Vault Version,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-rave-url-version,,RFU,App Admin - Rave Url Version,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-clininfo-cdms-tasks,,RFU,App Admin - ClinInfo CDMS Tasks,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-clininfo-cdms-task-groups,,RFU,App Admin - ClinInfo CDMS Task Groups,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-clininfo-cdms-and-cdms-type,,RFU,App Admin - ClinInfo CDMS And CDMS Type,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-cds-dev-category,,RFU,App Admin - CDS Development Category,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-imi-cdms-tasks,,RFU,App Admin - IMI CDMS Tasks,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-imi-cdms-tasks-groups,,RFU,App Admin - IMI CDMS Tasks Groups,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-imi-cdms-and-cdms-type,,RFU,App Admin - IMI CDMS And CDMS Type,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-imi-review-categories-codelist,,RFU,App Admin - IMI Review Categories Codelist,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-crm-codelist,,UP,App Admin - CRM Code List,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-crm-project-governance-codelist,,UP,App Admin - CRM Project Governance Codelist,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-process-improvement-categories,,RFU,App Admin - Process Improvement Categories,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-dm-fte-upload,,RFU,App Admin - DM FTE Upload,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-dm-fte-resource-upload,,RFU,App Admin - DM FTE Resource Upload,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-dm-page-list,,RFU,App Admin - DM Page List Upload,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-imi-timelines-list,,RFU,App Admin - IMI Timelines List,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-mail-log,,RFU,App Admin - Mail Logs,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-error-log,,RFU,App Admin - Error Logs,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-login-details-log,,RFU,App Admin - Login Details Log,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-group-access,,RFU,App Admin - Group Access,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-group-access-members,,RFU,App Admin - Group Access Members,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+admin-app-access-view,,UP,App Admin - App Access,E/N,E,N,N,N,N,N,N,N,,N,N,N,N,N,N,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N

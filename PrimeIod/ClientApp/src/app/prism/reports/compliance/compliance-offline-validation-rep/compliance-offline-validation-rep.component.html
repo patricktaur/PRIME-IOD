@@ -1,0 +1,48 @@
+<app-loader [isLoading]="true" *ngIf="isLoading"></app-loader>
+<div class="">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="clearfix">
+        <h4 class="mb-3 float-start me-3">{{title}}</h4>
+        <!-- <button type="button" class="btn btn-primary mb-3 float-end" (click)="onClickBack()">Back</button> -->
+      </div>
+      <!-- <div class="bg-icon-light me-n5 ms-n5 mb-3 px-5 py-3 border-bottom border-top"></div> -->
+      <div class="bg-icon-light me-n5 ms-n5 px-3 py-3 border-bottom border-top">
+        <!-- filters -->
+        <app-region-portfolio-director-cdms-dmpm-filter
+          [records]="records"
+          (filterChange)="onFilteredRecordsChange($event)"
+        ></app-region-portfolio-director-cdms-dmpm-filter>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <!-- <div class="col-md-12"> -->
+    <!-- {{columns | json}} -->
+    <div *ngIf="totalStudies > requestedStudyCount">
+      Report generation in progress ... Studies processed: {{ requestedStudyCount }} / {{ totalStudies }}
+    </div>
+    <div class="table-responsive">
+      <app-data-table-base
+        [columns]="columns"
+        [records]="sortedRecords"
+        [pageNumber]="pageNumber"
+        [pageSize]="pageSize"
+      ></app-data-table-base>
+    </div>
+    <!-- </div> -->
+  </div>
+
+  <div class="row">
+    <div class="col col-2"></div>
+    <div class="col">
+      <pagination-control
+        [page]="pageNumber"
+        [pageSize]="pageSize"
+        [collectionSize]="filteredRecords?.length"
+        (onPageChange)="onPageChange($event)"
+      ></pagination-control>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-4">
+    <div class="form-group">
+      <label class="form-label">Task Id</label>
+      <input class="form-control" placeholder="Task Id" type="text" [formControl]="filterForm" />
+    </div>
+  </div>
+
+  <div class="col-8">
+    <div class="form-group">
+      <label class="form-label">Task Category</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.taskCategory"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="false"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.taskCategory" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Due Date From</label>
+      <div class="input-group">
+        <input
+          class="form-control "
+          placeholder="From Start"
+          [(ngModel)]="selectedFilters.dueDateFrom"
+          ngbDatepicker
+          #d="ngbDatepicker"
+          (ngModelChange)="onFiltersChange()"
+        />
+        <div class="input-group-append">
+          <button class="p-2" style="border: 0;" (click)="d.toggle()" type="button">
+            <i class="bi bi-calendar3"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Due Date To</label>
+      <div class="input-group">
+        <input
+          class="form-control "
+          placeholder="Till End"
+          [(ngModel)]="selectedFilters.dueDateTo"
+          ngbDatepicker
+          #d1="ngbDatepicker"
+          (ngModelChange)="onFiltersChange()"
+        />
+        <div class="input-group-append">
+          <button class="p-2" style="border: 0;" (click)="d1.toggle()" type="button">
+            <i class="bi bi-calendar3"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Completed</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="false"
+        placeholder="All"
+        [clearable]="true"
+        [(ngModel)]="selectedFilters.completed"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'yes'"> Yes</ng-option>
+        <ng-option [value]="'no'"> No</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <br />
+    <button type="button" class="btn btn-light" (click)="resetFiltersClicked()" title="Reset Filters">
+      <i class="bi bi-arrow-counterclockwise " style="font-size: 20px;"></i>
+    </button>
+  </div>
+</div>

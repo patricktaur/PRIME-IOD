@@ -1,0 +1,11 @@
+<ng-select
+  [items]="options"
+  bindLabel="{{ bindLabel }}"
+  bindValue="{{ bindValue }}"
+  [multiple]="true"
+  [(ngModel)]="selectedValues"
+  (ngModelChange)="onModelChange()"
+  [clearable]="false"
+  [hideSelected]="true"
+>
+</ng-select>

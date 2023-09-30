@@ -1,0 +1,57 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<table class="table table-sm  small table-striped">
+	<tbody>
+        <tr>
+			<td>Clinical</td>
+			<td>{{ record.otherIconDeptClinicalPDescription }}</td>
+		</tr>
+        <tr>
+			<td>Clinical Monitoring</td>
+			<td>{{ record.otherIconDeptClinicalMonitoringPDescription }}</td>
+		</tr>
+        <tr>
+			<td>Medical</td>
+			<td>{{ record.otherIconDeptMedicalPDescription }}</td>
+		</tr>
+        <tr>
+			<td>Lab</td>
+			<td>{{ record.otherIconDeptLabPDescription }}</td>
+		</tr>
+        <tr>
+			<td>Firecrest</td>
+			<td>{{ record.otherIconDeptFirecrestPDescription }}</td>
+		</tr>
+        <tr>
+			<td>BioStatistics</td>
+			<td>{{ record.otherIconDeptBiostatsPDescription }}</td>
+		</tr>
+        <tr>
+			<td>COT</td>
+			<td>{{ record.otherIconDeptECoaPDescription }}</td>
+		</tr>
+        <tr>
+			<td>IRT</td>
+			<td>{{ record.otherIconDeptItgPDescription }}</td>
+		</tr>
+        <tr>
+			<td>IMI</td>
+			<td>{{ record.otherIconDeptImiPDescription }}</td>
+		</tr>
+        <tr>
+			<td>IDEA</td>
+			<td>{{ record.otherIconDeptIdeapDescription }}</td>
+		</tr>
+        <tr>
+			<td>ICONIK</td>
+			<td>{{ record.otherIconDeptIconikPDescription }}</td>
+		</tr>
+        <tr>
+			<td>Central Monitoring</td>
+			<td>{{ record.centralMonitoringDescription }}</td>
+		</tr>
+    </tbody>
+</table>
+<!-- <span class="alert alert-info">Last Updated on: {{ record?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+
+<app-last-saved [auditFields]="record"></app-last-saved>

@@ -1,0 +1,15 @@
+﻿Subject:PRISM CDS Development Request Change Alert - {StudyIconNumber} - {TaskId} -  - Due date is updated.
+
+Hi {ToUsers},
+<br/><br/>
+PRISM CDS Development Request Change Alert - - {StudyIconNumber} - {TaskId} - Due date is updated.<br />
+  <br />        
+Updated By: <b> {LoginUserName} </b><br />
+<br/>
+Revised Due Date: <b>{DueDate}</b><br />
+<br/>
+link: <b>  {LinktoTask} </b> <br />
+<br />
+        
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

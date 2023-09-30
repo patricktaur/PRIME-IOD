@@ -1,0 +1,10 @@
+/* Not working: */
+.tooltip > .tooltip-inner {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+}

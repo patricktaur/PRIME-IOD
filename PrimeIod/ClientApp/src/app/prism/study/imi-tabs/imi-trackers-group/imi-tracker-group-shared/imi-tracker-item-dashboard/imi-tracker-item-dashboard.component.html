@@ -1,0 +1,14 @@
+<div class="border border-primary rounded">
+  <div class="row">
+    <div class="col" align="center">
+      <b>Icon Number : {{ record?.studyIconNumber }}</b>
+    </div>
+    <div class="col" align="center">Task ID: {{ record?.recId }}</div>
+    <div class="col"></div>
+  </div>
+  <div class="row">
+    <div class="col" align="center">Created On: {{ record?.createdOn | date: 'dd-MMM-yyyy, h:mm a' }}</div>
+    <div class="col" align="center">Last Saved On: {{ record?.updatedOn | date: 'dd-MMM-yyyy, h:mm a' }}</div>
+    <div class="col" align="center">Last Saved By: {{ record?.updatedByDisplayName }}</div>
+  </div>
+</div>

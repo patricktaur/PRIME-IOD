@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "te-digital-factory"
+  },
+  "targets": {
+    "te-digital-factory": {
+      "hosting": {
+        "staging": [
+          "staging-te-digital-factory"
+        ]
+      }
+    }
+  }
+}

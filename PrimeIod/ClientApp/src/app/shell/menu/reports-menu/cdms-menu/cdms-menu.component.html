@@ -1,0 +1,96 @@
+<div class="row">
+  <div class="col-3">
+    <!-- *ngIf="menuVisible(menuCDMSTasksListStat)" -->
+    <div 
+      title="{{ menuStat[menuCDMSTasksListStat] }}"
+      appMenuAccess="reports/cdms/report-cdms-tasks-list"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+      [disabled]="menuDisabled(menuCDMSTasksListStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-s"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwReportCDMSTaskListV2' }"
+        translate
+      >
+        CDMS Tasks (List)
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuCDMSTasksByGroupStat)" -->
+    <div
+      title="{{ menuStat[menuCDMSTasksByGroupStat] }}"
+      appMenuAccess="reports/cdms/report-cdms-tasks-group"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuCDMSTasksByGroupStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-s"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwReportCDMSTaskGroupV2' }"
+        translate
+      >
+        CDMS Tasks (by Task Group)
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuCDMSStat)" -->
+    <div
+      title="{{ menuStat[menuCDMSStat] }}"
+      appMenuAccess="reports/cdms/report-cdms"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuCDMSStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwReportCDMSV2' }"
+        translate
+      >
+        CDMS
+      </button>
+    </div>
+  </div>
+  <div class="col-3">
+    <!-- *ngIf="menuVisible(menuCDMSThirdPartyTasksListStat)" -->
+    <div
+      title="{{ menuStat[menuCDMSThirdPartyTasksListStat] }}"
+      appMenuAccess="reports/cdms/report-cdms-clininfo-list"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuCDMSThirdPartyTasksListStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-s"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwReportThirdPartyCDMSTaskListV2' }"
+        translate
+      >
+        Clininfo CDMS Tasks (List)
+      </button>
+      <!-- backend ThirdPartyCDMSTracker -->
+    </div>
+
+    <!-- *ngIf="menuVisible(menuCDMSThirdPartyTasksByGroupStat)" -->
+    <div
+      title="{{ menuStat[menuCDMSThirdPartyTasksByGroupStat] }}"
+      appMenuAccess="reports/cdms/report-cdms-clininfo-group"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuCDMSThirdPartyTasksByGroupStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-s"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwReportThirdPartyCDMSTaskGroupV2' }"
+        translate
+      >
+        Clininfo CDMS Tasks (by Task Group)
+      </button>
+      <!-- backend ThirdPartyCDMSTracker -->
+    </div>
+  </div>
+</div>

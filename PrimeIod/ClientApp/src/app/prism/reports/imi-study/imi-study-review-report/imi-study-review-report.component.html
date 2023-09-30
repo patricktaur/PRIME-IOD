@@ -1,0 +1,50 @@
+<app-loader [isLoading]="isLoading"></app-loader>
+<!-- <h4 >{{ title }}</h4> -->
+<div class="clearfix">
+  <h4 class="mb-3 float-start me-3">{{ title }}</h4>
+  <!-- <button type="button" class="btn btn-primary mb-3 float-end" (click)="onClickBack()">Back</button> -->
+</div>
+<div class="bg-icon-light me-n5 ms-n5 px-3 py-3 border-bottom border-top">
+  <div class="row">
+    <div class="col">
+      <app-imi-review-report-filters
+        (filterChange)="onFilterChange($event)"
+        (commentsCheckChanged)="onCommentCheckChange($event)"
+        (actionCheckChanged)="onActionCheckChange($event)"
+      ></app-imi-review-report-filters>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="table-responsive">
+    <app-data-table-base
+      [columns]="columns"
+      [records]="records"
+      [pageNumber]="1"
+      [pageSize]="selectedFilters.pageSize"
+    ></app-data-table-base>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2 ">
+    <app-report-download-server-side-filters
+      [filters]="selectedFilters"
+      [reportPath]="downloadApiPath"
+      [fileName]="csvfileName"
+      [appendDateToFiileName]="true"
+    ></app-report-download-server-side-filters>
+  </div>
+  <div class="col-md-2">
+    <app-column-manager-shell [columns]="columns"></app-column-manager-shell>
+  </div>
+  <div class="col-md-8">
+    <pagination-control
+      [page]="selectedFilters.pageNumber"
+      [pageSize]="selectedFilters.pageSize"
+      [collectionSize]="recordCount"
+      (onPageChange)="onPageChange($event)"
+    ></pagination-control>
+  </div>
+</div>
+<!-- <p>records: {{ records | json }}</p> -->

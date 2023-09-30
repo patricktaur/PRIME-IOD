@@ -1,0 +1,185 @@
+<div class="row">
+  <div class="col-6">
+    <div class="form-group">
+      <label class="form-label">Search</label>
+      <input class="form-control" placeholder="ICON Number or Study Name" type="text" [formControl]="filterForm" />
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">DMPM</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="DMPM"
+        [(ngModel)]="filt.dmpm"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.dmpMs" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Director</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Director"
+        [(ngModel)]="filt.dmpmManager"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.dmpmManagers" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Study Type </label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Type"
+        [(ngModel)]="filt.studyType"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'DM'">DM Studies</ng-option>
+        <ng-option [value]="'DM+IMI'">DM + IMI Studies</ng-option>
+        <ng-option [value]="'IMI'">IMI Studies</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Special Projects</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Special Projects"
+        [(ngModel)]="filt.specialProject"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'yes'"> Yes</ng-option>
+        <ng-option [value]="'no'"> No</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Status</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Status"
+        [(ngModel)]="filt.status"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.status" [value]="rec.id">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Region</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Regions"
+        [(ngModel)]="filt.region"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <!-- <ng-option  [value]="0" > [All]</ng-option> -->
+        <ng-option *ngFor="let rec of filters?.region" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Portfolio</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="filt.portfolio"
+        [multiple]="true"
+        placeholder="Portfolio"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.portfolio" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">CDMS</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="filt.cdms"
+        [multiple]="true"
+        placeholder="CDMS"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.cdms" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Sponsor</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="filt.sponsor"
+        [multiple]="true"
+        placeholder="Sponsor"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.sponsors" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Watchlist</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Watchlist"
+        [(ngModel)]="filt.watchList"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'yes'"> Yes</ng-option>
+        <ng-option [value]="'no'"> No</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Review Cycle</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Review Cycle"
+        [(ngModel)]="filt.reviewCycle"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.frequency" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>

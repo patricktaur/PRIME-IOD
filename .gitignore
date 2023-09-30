@@ -1,0 +1,12 @@
+
+# Ignore all
+*
+# Except - PrimeIod 
+!PrimeIod/
+!PrimeIod/**
+!.gitignore
+
+**/obj/
+**/bin/
+**/dist
+**/node_modules/

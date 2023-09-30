@@ -1,0 +1,155 @@
+<div class="row" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+  <div class="col-6">
+    <div class="form-group">
+      <label class="form-label">Search</label>
+      <input class="form-control" placeholder="ICON Number or Study Name" type="text" [formControl]="filterForm" />
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Role</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Resources"
+        [(ngModel)]="dmpmsFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.dmResourceRoles" [value]="rec.id">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Resource</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Resource"
+        [(ngModel)]="dmpmManagerFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.dmResources" [value]="rec.id">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Study Type </label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Type"
+        [(ngModel)]="studyTypeFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'DM'">DM Studies</ng-option>
+        <ng-option [value]="'DM+IMI'">DM + IMI Studies</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Special Projects</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Special Projects"
+        [(ngModel)]="specialProjectFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'yes'"> Yes</ng-option>
+        <ng-option [value]="'no'"> No</ng-option>
+
+        <!-- <ng-option *ngFor="let rec of filters?.specialProject" [value]="rec.value">{{ -->
+        <!-- rec.value -->
+        <!-- }}</ng-option> -->
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Status</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Status"
+        [(ngModel)]="statusFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.status" [value]="rec.id">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Region</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Regions"
+        [(ngModel)]="regionFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <!-- <ng-option  [value]="0" > [All]</ng-option> -->
+        <ng-option *ngFor="let rec of filters?.region" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Portfolio</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="portfolioFilters"
+        [multiple]="true"
+        placeholder="Portfolio"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.portfolio" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">CDMS</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="cdmsFilters"
+        [multiple]="true"
+        placeholder="CDMS"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.cdms" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Sponsor</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="sponsorFilters"
+        [multiple]="true"
+        placeholder="Sponsor"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.sponsors" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>

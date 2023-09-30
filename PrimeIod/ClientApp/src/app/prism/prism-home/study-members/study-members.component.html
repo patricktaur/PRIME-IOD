@@ -1,0 +1,34 @@
+<!-- <p>study-members works!</p> -->
+
+<app-loader [isLoading]="isLoading"></app-loader>
+<!-- <app-dm-icon-number-filter
+(filterChange)="onFilterChange($event)"
+></app-dm-icon-number-filter> -->
+
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Icon Number</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="false"
+        placeholder="Icon Numbers"
+        [(ngModel)]="studyId"
+        [clearable]="false"
+        (ngModelChange)="onFilterChange($event)"
+      >
+        <ng-option *ngFor="let rec of filters" [value]="rec.recId">{{ rec.studyIconNumber }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+
+<app-data-table-base
+  [columns]="columns"
+  [records]="records"
+  [pageNumber]="pageNumber"
+  [pageSize]="pageSize"
+></app-data-table-base>
+
+<!-- <p>filters: {{filters | json}}</p> -->
+<!-- <p>records: {{ records | json }}</p> -->

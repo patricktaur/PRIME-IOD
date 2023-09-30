@@ -1,0 +1,31 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<!-- <app-study-cds-coding-task-filters
+  [selectedFilters]="selectedFilters"
+  (filterChange)="onFilterChange($event)"
+></app-study-cds-coding-task-filters> -->
+<button *ngIf="hasEditRole()" 
+  type="button" 
+  class="btn btn-primary" 
+  (click)="add()">
+  New Set-up / CPPC
+</button>
+<app-data-table-shell
+  [records]="filteredRecords"
+  [columns]="columns"
+  [showColumnManager]="false"
+  [showFooterActions]="false"
+  (raiseEvent)="onRaiseEvent($event)"
+  [viewMode]="hasViewRole()"
+>
+  <div header>
+    <!-- <h4>
+      {{ title }}
+    </h4> -->
+  </div>
+</app-data-table-shell>
+<app-server-response-messages
+  [serverResponseMessages]="serverResponses"
+  [messageBoxHeight]="200"
+></app-server-response-messages>
+<p class="alert alert-primary" role="alert">Note: Add option avaliable only for Admin and Director/DMPM/CDL of this study</p>
+<!-- <p>records:{{ records | json }}</p> -->

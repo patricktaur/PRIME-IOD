@@ -1,0 +1,26 @@
+﻿Subject: PRISM IMI R and A Output Request - New Record Created Alert for Study {StudyIconNumber}.
+Hi {ToUsers},
+<br/><br/>
+
+PRISM IMI R and A Development Request - New Record Created Alert for Study - {StudyIconNumber}.
+
+<br />
+
+
+Study Name:{StudyName}
+<br />
+Request Title:{RequestTitle}
+<br />
+Development Status:{DevelopmentStatus}
+<br />
+Request Details:{RequestDetails}
+<br />
+Last Updated By: {LoginUserName}
+
+<br />
+Link: {LinktoTask}
+
+<br />
+<br />
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

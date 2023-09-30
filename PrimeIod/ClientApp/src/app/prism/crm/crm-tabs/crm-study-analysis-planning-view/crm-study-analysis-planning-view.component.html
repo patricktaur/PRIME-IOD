@@ -1,0 +1,92 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<h5
+  style="background: #128474;
+color: white !important;
+border-color: #128474;padding:10px;margin-bottom: 10px;"
+>
+  CRM Analysis Planning
+</h5>
+<table class="table table-sm small table-striped">
+	<tbody>
+		<tr>
+			<td>ICON Study No.</td>
+			<td>{{ record.iconNumber }}</td>
+		</tr>
+        <tr>
+			<td>Activity</td>
+			<td>{{ record.activityDescription }}</td>
+		</tr>
+        <tr>
+			<td>Central Monitoring Status</td>
+			<td>{{ record.centralMonitoringStatusDescription }}</td>
+		</tr>
+        <tr>
+			<td>CDA/CM</td>
+			<td>{{ record.cdaCmDescription  }}</td>
+		</tr>
+        <tr>
+			<td>First Analysis date</td>
+			<td>{{ record.firstAnalysisDate | date: 'dd-MMM-y' }}</td>
+		</tr>
+        <tr>
+			<td>Final Analysis date</td>
+			<td>{{ record.finalAnalysisDate | date: 'dd-MMM-y' }}</td>
+		</tr>
+        <tr>
+			<td>Number of CDA analysis rounds for the study- Budget</td>
+			<td>{{ record.noOfCda }}</td>
+		</tr>
+        <tr>
+			<td>Total Forecasted CDA Analysis</td>
+			<td>{{ record.totalScheduleCdaAnalysis }}</td>
+		</tr>
+        <tr>
+			<td>Total Actual CDA Analysis</td>
+			<td>{{ record.totalActualCdaAnalysis }}</td>
+		</tr>
+    </tbody>
+</table>
+
+<h4 mb-3 float-left me-3>Analysis Planning</h4>
+
+<div class="" *ngFor="let data of crmDatas; let y = index">
+  <table class="table table-bordered">
+    <thead>
+      <tr class="text-white" style="background-color: #f2f2f2;">
+        <th scope="col" class="align-middle">
+          <h5 style="color: rgb(0 0 0 / 87%) !important;">{{ data.year }}</h5>
+        </th>
+        <th
+          scope="col"
+          class="text-center"
+          style="color: rgb(0 0 0 / 87%) !important;"
+          *ngFor="let month of data.months"
+        >
+          {{ month.month }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">ForeCast</th>
+        <td
+          class="text-center"
+          *ngFor="let month of data.months; let m = index"
+          [ngStyle]="getStyleForForecast(month.foreCast)"
+        >
+          <div>{{ month.foreCast }}</div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Actual</th>
+        <td
+          class="text-center"
+          *ngFor="let month of data.months; let m = index"
+          [ngStyle]="getStyle(month.foreCast, month.actual)"
+        >
+          <div>{{ month.actual }}</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

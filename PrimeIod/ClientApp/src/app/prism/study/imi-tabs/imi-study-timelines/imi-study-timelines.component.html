@@ -1,0 +1,25 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<h5>IMI Timelines</h5>
+<hr />
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <!-- class="row mb-3 mt-3"  -->
+  <div class="row mb-3 ">
+    <div class="col-md-12">
+      <!-- <ul class="list-unstyled" *ngIf="timeLineValations?.length > 0">
+        <li class="alert alert-danger" *ngFor="let msg of timeLineValations">{{ msg }}</li>
+      </ul> -->
+      <formly-form [fields]="fields" [model]="studyTimelines" [options]="options" [form]="form"></formly-form>
+      <!-- <ul class="list-unstyled">
+        <li class="alert alert-danger" *ngFor="let msg of timeLineValations">{{ msg }}</li>
+      </ul> -->
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary submit-button me-1" [disabled]="!(form.valid && form.dirty)">
+    Save
+  </button>
+  <button type="button" class="btn btn-default me-1" (click)="options.resetModel()">Undo</button>
+  <!-- <span class="alert alert-info">Last Updated on: {{ studyTimelines?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+  <app-last-saved [auditFields]="studyTimelines"></app-last-saved>
+
+</form>
+<!-- <p>studyTimelines:{{ studyTimelines | json }}</p> -->

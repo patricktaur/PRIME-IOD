@@ -1,0 +1,13 @@
+<!-- <app-study-filters [records]="inputRecords" (filterChange)="onFilterChange($event)"
+  (searchTextChange)="onSearchTextChange($event)"></app-study-filters> -->
+
+<div class="row">
+  <div class="col-3">
+    <app-region-imi-filter [inputRecords]="inputRecords" (filteredRecords)="regionComponentEvent($event)">
+    </app-region-imi-filter>
+  </div>
+  <div class="col-3">
+    <app-sponsor-imi-filter [inputRecords]="regionComponentRecords" (filteredRecords)="onFilterChange($event)">
+    </app-sponsor-imi-filter>
+  </div>
+</div>

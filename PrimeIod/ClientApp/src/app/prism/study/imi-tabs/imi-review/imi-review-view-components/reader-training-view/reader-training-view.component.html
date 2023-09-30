@@ -1,0 +1,46 @@
+<table class="table table-striped">
+	<thead>
+		<tr class="bg-green align-text-top">
+			<th scope="col">Project Status Categories</th>
+			<th scope="col">N/A</th>
+            <th scope="col">Project Category Score</th>
+			<th scope="col">Comment</th>
+			<th scope="col">Action</th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr>
+            <th> Reader Training </th>
+            <td></td>
+            <td class="text-center">
+                <div [style]="getStyle(record.readerTraining)">
+                    {{ record.readerTraining }}
+                </div>
+            </td>
+            <td>{{ record.readerTrainingComments }}</td>
+            <td>{{ record.readerTrainingAction }}</td>
+        </tr>
+        <tr>
+            <th> Reader Training, EDC Completion</th>
+            <td>{{ getNotApplicableStatus(record.readertrainingEdccompletionFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.readertrainingEdccompletion)">
+                    {{ record.readertrainingEdccompletion }}
+                </div>
+            </td>
+            <td>{{ record.readertrainingEdccompletionComments }}</td>
+            <td>{{ record.readertrainingEdccompletionAction }}</td>
+        </tr>
+        <tr>
+            <th> Reader Re-Training at Pre-defined Timepoints </th>
+            <td>{{ getNotApplicableStatus(record.readerretrainingFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.readerretraining)">
+                    {{ record.readerretraining }}
+                </div>
+            </td>
+            <td>{{ record.readerretrainingComments }}</td>
+            <td>{{ record.readerretrainingAction }}</td>
+        </tr>
+    </tbody>
+</table>

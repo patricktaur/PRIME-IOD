@@ -1,0 +1,141 @@
+<div class="position-relative">
+  <div class="row">
+    <div [ngClass]="menuClass()">
+      <span role="button" class="collapse-icon" (click)="toggleMenuWidth()">
+        <i [ngClass]="collapse()"></i>
+      </span>
+      <!-- <br /> -->
+      <h6 class="ps-3">IMI Study</h6>
+      <ul class="list-group small ms-n4 mt-n3 list-group-flush border-right mb-n4 study-tab-list">
+        <!-- <li>
+          &nbsp;&nbsp;&nbsp;IMI Study
+        </li> -->
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'imi-study-edit'"
+          routerLinkActive="active"
+          >
+          IMI Study Edit
+        </li>
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'review-group'"
+          routerLinkActive="active"
+          appStudyMenuAccessLink
+          [rootPath]="rootPath"
+
+          >
+          IMI Review
+        </li>
+
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'description-assumptions'"
+          routerLinkActive="active"
+          appStudyMenuAccessLink
+          [rootPath]="rootPath"
+        >
+          Description
+        </li>
+
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'resources'"
+          routerLinkActive="active"
+          appStudyMenuAccessLink
+          [rootPath]="rootPath"        >
+          IMI Resources
+        </li>
+
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'resources-view'"
+          routerLinkActive="active"
+          appStudyMenuAccessLink
+          [rootPath]="rootPath"        >
+          IMI Resources - View
+        </li>
+
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'timelines'"
+          routerLinkActive="active"
+          appStudyMenuAccessLink
+          [rootPath]="rootPath"        >
+          IMI Timelines
+        </li>
+
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'timelines-view'"
+          routerLinkActive="active"
+          appStudyMenuAccessLink
+          [rootPath]="rootPath">
+          IMI Timelines - View
+        </li>
+
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'status'"
+          routerLinkActive="active"
+          appStudyMenuAccessLink
+          [rootPath]="rootPath"        >
+          IMI Study Status
+        </li>
+
+        <li role="button" 
+          class="list-group-item" 
+          [routerLink]="'status-view'" 
+          routerLinkActive="active"
+          appStudyMenuAccessLink
+          [rootPath]="rootPath"        >
+          IMI Study Status - View
+        </li>
+
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'cds-group'"
+          routerLinkActive="active"
+          appStudyMenuAccessLink
+          [rootPath]="rootPath"        >
+          CDS
+        </li>
+        <!-- move back to IMI CDMS after testing -->
+        <!-- *ngIf="studyProperties?.requiresRaveMedImaging" -->
+        <li
+          *ngIf="studyProperties?.requiresRaveMedImaging"
+          role="button"
+          class="list-group-item"
+          [routerLink]="'cdms-group'"
+          routerLinkActive="active"
+          appStudyMenuAccessLink
+          [rootPath]="rootPath"        >
+          IMI CDMS
+        </li>
+
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'trackers-group'"
+          routerLinkActive="active"
+          appStudyMenuAccessLink
+          [rootPath]="rootPath"        >
+          IMI Trackers
+        </li>
+        <br />
+      </ul>
+    </div>
+    <div class="col overflow-hidden">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

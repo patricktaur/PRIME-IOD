@@ -1,0 +1,19 @@
+﻿Subject:PRISM CDS Validation Request Change Alert -  - {TaskId} - Validation Status modified to {ValidationStatus}
+
+Hi {ToUsers},
+<br/><br/>
+PRISM CDS Validation Request Change Alert -  - {TaskId} - Validation Status modified to {ValidationStatus} </br>
+  <br />        
+Last Updated By: <b> {LoginUserName} </b><br />
+<br/>
+Due Date: <b>{DueDate}</b><br />
+<br/>
+Development Detail: <b> {DevelopmentDetail} </b><br />
+<br/>
+
+
+link: <b>  {LinktoTask} </b> <br />
+<br />
+        
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

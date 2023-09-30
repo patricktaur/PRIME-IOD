@@ -1,0 +1,52 @@
+<app-loader [isLoading]="loading"></app-loader>
+<h4>{{ title }}</h4>
+
+<hr />
+
+<form [formGroup]="form">
+  <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <div class="alert alert-warning" role="alert" *ngIf="showOtherUserAlert()">
+    Last actioned by: {{ record?.updatedByDisplayName }}. Action buttons not available for other users.
+  </div>
+  <div class="alert alert-warning" role="alert" *ngIf="iconNumberInStudy.length > 0">
+    Unable to Submit for Approval. Study Icon Number: {{ iconNumberInStudy }} exists.
+  </div>
+
+  <button type="button" class="btn btn-default" (click)="back()">Back</button>
+
+  <button (click)="submit()" class="btn btn-primary submit-button me-1" *ngIf="saveButton" [disabled]="!form.dirty">
+    Save
+  </button>
+  <button type="button" class="btn btn-default" (click)="options.resetModel()" *ngIf="saveButton">Undo</button>
+  <app-confirmation-shell
+    *ngIf="removeButton"
+    [message]="'Remove Request: ' + recId + ' ?'"
+    [labelText]="'Remove'"
+    [responseValue]="recId"
+    (response)="deleteRecord($event)"
+  >
+  </app-confirmation-shell>
+  <app-confirmation-shell
+    *ngIf="submitForApprovalButton"
+    [message]="'Submit For Approval: ' + recId + ' ?'"
+    [labelText]="'Submit for Approval'"
+    [responseValue]="recId"
+    (response)="validateAndSubmitForApproval()"
+    [disabled]="!form.valid"
+  >
+  </app-confirmation-shell>
+  <app-confirmation-shell
+    *ngIf="withdrawRequestButton"
+    [message]="'Withdraw request:' + recId + ' ?'"
+    [labelText]="'Withdraw submitted request'"
+    [responseValue]="recId"
+    (response)="withdrawRequest()"
+  >
+  </app-confirmation-shell>
+</form>
+
+<!-- <p>record: {{ record | json }}</p> -->
+<!-- <p>showOtherUserAlert: {{showOtherUserAlert()}}</p> -->
+<!-- <p>currentUserIsLastUpdatedByUser: {{currentUserIsLastUpdatedByUser()}}</p> -->
+
+<!-- <p>saveButton: {{saveButton}}</p> -->

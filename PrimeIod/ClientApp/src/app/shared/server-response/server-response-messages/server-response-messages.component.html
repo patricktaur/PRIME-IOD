@@ -1,0 +1,12 @@
+<div *ngIf="serverResponseMessages?.length > 0">
+  <div [ngStyle]="boxStyle">
+    Action History ({{ serverResponseMessages?.length }})
+    <button type="button" class="btn btn-link" (click)="clearClicked()">
+      Clear Action History
+    </button>
+    <!-- class="alert alert-success" -->
+    <div [ngClass]="getAlertClass(res)" role="alert" style=" margin-bottom:5px; " *ngFor="let res of sortedMessages">
+      {{ res.exectuedAt | date: 'h:mm a' }} : {{ res.title }} : {{ res.message }}
+    </div>
+  </div>
+</div>

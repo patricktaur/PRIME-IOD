@@ -1,0 +1,93 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<table class="table table-sm  small table-striped">
+  <tbody>
+    <tr>
+      <td>Category</td>
+      <td>{{ record?.categoryPDescription }}</td>
+    </tr>
+    <tr>
+      <td>Sub Category</td>
+      <td>{{ record?.subCategoryPDescription }}</td>
+    </tr>
+    <tr>
+      <td>Output Detail</td>
+      <td>{{ record?.outputTaskDetail }}</td>
+    </tr>
+
+    <tr>
+      <td>Due Date</td>
+      <td>{{ record?.dueDate | date: 'dd-MMM-yyyy' }}</td>
+    </tr>
+    <tr>
+      <td>Recurring Frequency</td>
+      <td>{{ record?.recurringFrequencySummary }}</td>
+    </tr>
+    <tr>
+      <td>Completed Date</td>
+      <td>{{ record?.completedDate | date: 'dd-MMM-yyyy' }}</td>
+    </tr>
+    <tr>
+      <td>Completed By</td>
+      <td>{{ record?.completedByDisplayName }}</td>
+    </tr>
+
+    <tr>
+      <td>Programming Lead</td>
+      <td>{{ record?.clinicalDataDeliveryLeadDisplayName }}</td>
+    </tr>
+
+    <tr>
+      <td>Programmer Assigned</td>
+      <td>{{ record?.cdsassignedToDisplayName }}</td>
+    </tr>
+
+    <tr>
+      <td>Requestor</td>
+      <td>{{ record?.requestorDisplayName }}</td>
+    </tr>
+
+    <tr>
+      <td>On SCheduler</td>
+      <td>{{ record?.onSchedulerPid }}</td>
+    </tr>
+    <tr>
+      <td>Globalscape</td>
+      <td>{{ record?.globalscape }}</td>
+    </tr>
+
+    <tr>
+      <td>Link To Task Instruction</td>
+      <td>{{ record?.linkToDocumentation }}</td>
+    </tr>
+
+    <tr>
+      <td>CDS Instruction Task</td>
+      <td>{{ record?.instructionIdProgramName }}</td>
+    </tr>
+
+    <tr *ngIf="record?.cdsinstructionTaskId > 0">
+      <td>Instruction Details</td>
+      <td>
+        <a class="link-primary"  role="button"
+          (click)="onShowInstructionTaskClicked(record?.cdsinstructionTaskId)"
+          >
+          Instruction Details</a
+        >
+      </td>
+    </tr>
+
+    <tr>
+      <td>Comments</td>
+      <td>{{ record?.comments }}</td>
+    </tr>
+
+    <tr>
+      <td>Overdue Comments</td>
+      <td>{{ record?.overDueComments }}</td>
+    </tr>
+  </tbody>
+</table>
+<app-last-saved [auditFields]="record"></app-last-saved>
+
+<!-- <p>{{ record | json }}</p> -->

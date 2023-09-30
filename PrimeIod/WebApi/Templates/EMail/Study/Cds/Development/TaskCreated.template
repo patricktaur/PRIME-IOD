@@ -1,0 +1,21 @@
+﻿Subject: PRISM CDS Development Request Change Alert {StudyIconNumber} – {TaskId} – {DevelopmentCategory} Development Task Created
+
+Hi {ToUsers},
+<br/><br/>
+
+PRISM CDS Development Request Change Alert - {StudyIconNumber} - {TaskId} - {DevelopmentCategory} Development Task Created.<br />
+<br />
+Created By: <b> {LoginUserName} </b><br />
+<br />
+Due Date: <b>{DueDate}</b><br />
+<br/>
+Development Detail: <b> {DevelopmentDetail} </b><br />
+<br/>
+
+Development Request Task <b>{TaskId}</b> is created. <br />
+<br />
+
+link: {LinktoTask}<br />
+<br />
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

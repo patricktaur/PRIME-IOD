@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Icon Number</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="multiple"
+        placeholder="Icon Numbers"
+        [(ngModel)]="iconNumbersFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters" [value]="rec.studyIconNumber">{{ rec.studyIconNumber }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+<!-- <p>filters: {{filters | json }}</p> -->
+<!-- <p>iconNumbersFilters: {{iconNumbersFilters | json }}</p> -->
+<!-- <p>filterRecords: {{ filterRecords | json }}</p> -->

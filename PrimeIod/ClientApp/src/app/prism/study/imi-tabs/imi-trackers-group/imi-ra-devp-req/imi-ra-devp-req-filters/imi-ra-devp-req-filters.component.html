@@ -1,0 +1,245 @@
+<div class="row">
+  <div class="col-4">
+    <div class="form-group">
+      <label class="form-label">Task Id</label>
+      <input class="form-control" placeholder="Task Id" type="text" [formControl]="filterForm" />
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">New / Change</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.requestType"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="false"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.requestType" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Validation Needed?</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.validationNeeded"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="false"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.validationNeeded" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Requestor</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="All"
+        [(ngModel)]="selectedFilters.requestor"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.requestor" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Requested Priority</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.requestedPriority"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="false"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.requestedPriority" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Requested Date From</label>
+      <div class="input-group">
+        <input
+          class="form-control "
+          placeholder="From Start"
+          [(ngModel)]="selectedFilters.requestedDueDateFrom"
+          ngbDatepicker
+          #d="ngbDatepicker"
+          (ngModelChange)="onFiltersChange()"
+        />
+        <div class="input-group-append">
+          <button class="p-2" style="border: 0;" (click)="d.toggle()" type="button">
+            <i class="bi bi-calendar3"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Requested Date To</label>
+      <div class="input-group">
+        <input
+          class="form-control "
+          placeholder="Till End"
+          [(ngModel)]="selectedFilters.requestedDueDateTo"
+          ngbDatepicker
+          #d1="ngbDatepicker"
+          (ngModelChange)="onFiltersChange()"
+        />
+        <div class="input-group-append">
+          <button class="p-2" style="border: 0;" (click)="d1.toggle()" type="button">
+            <i class="bi bi-calendar3"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Specification Status</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="All"
+        [(ngModel)]="selectedFilters.specificationStatus"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <!-- <ng-option  [value]="0" > [All]</ng-option> -->
+        <ng-option *ngFor="let rec of filters?.specificationStatus" [value]="rec.value">{{ rec.value }} </ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Development Status</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.developmentStatus"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.developmentStatus" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Developer</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.developerAssigned"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.developerAssigned" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">QC Code Reviewer</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.qcCodeReviewAssignedTo"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="false"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.qcCodeReviewAssignedTo" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">UAT assigned to</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.uatAssignedTo"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="false"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.uatAssignedTo" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Development</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="false"
+        placeholder="All"
+        [clearable]="true"
+        [(ngModel)]="selectedFilters.developmentCompleted"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="''">All</ng-option>
+        <ng-option [value]="'yes'">Completed</ng-option>
+        <ng-option [value]="'no'">Not Completed</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">UAT</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="false"
+        placeholder="All"
+        [clearable]="true"
+        [(ngModel)]="selectedFilters.uatCompleted"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="''">All</ng-option>
+        <ng-option [value]="'yes'">Completed</ng-option>
+        <ng-option [value]="'no'">Not Completed</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Validation</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="false"
+        placeholder="All"
+        [clearable]="true"
+        [(ngModel)]="selectedFilters.validaatinCompleted"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="''">All</ng-option>
+        <ng-option [value]="'yes'">Completed</ng-option>
+        <ng-option [value]="'no'">Not Completed</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+<!-- <p>filters: {{filters | json}}</p> -->

@@ -1,0 +1,78 @@
+<ul class="nav nav-pills pb-3">
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'sign-off'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+  >Review Signoff
+  </li>
+  <!-- *ngIf="!hasDMManagerRole" -->
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'sign-off-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    [rootPath]="rootPath"
+  >Review Signoff - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'review-categories'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Project Status Categories
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'review-categories-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Project Status Categories - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'issue-tracker'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Project Issue Tracker
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'issue-tracker-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Project Issue Tracker - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'review-history'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Project History
+  </li>
+  <!-- *ngIf="hasDMManagerRole" -->
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'offline-checks'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Offline Checks
+  </li>
+  <!-- *ngIf="!hasDMManagerRole" -->
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'offline-checks-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Offline Checks - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'archived-reviews'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Archived Reviews
+  </li>
+</ul>
+<hr />
+<router-outlet></router-outlet>

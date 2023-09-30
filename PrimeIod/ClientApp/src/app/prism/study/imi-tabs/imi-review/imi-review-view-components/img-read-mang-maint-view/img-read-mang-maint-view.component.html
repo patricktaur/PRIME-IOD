@@ -1,0 +1,112 @@
+<table class="table table-striped">
+	<thead>
+		<tr class="bg-green align-text-top">
+			<th scope="col">Project Status Categories</th>
+			<th scope="col">N/A</th>
+            <th scope="col">Project Category Score</th>
+			<th scope="col">Comment</th>
+			<th scope="col">Action</th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr>
+            <th> Image/Read Management Maintenance </th>
+            <td></td>
+            <td class="text-center">
+                <div [style]="getStyle(record.imageReadManagementMaintenance)">
+                    {{ record.imageReadManagementMaintenance }}
+                </div>
+            </td>
+            <td>{{ record.imageReadManagementMaintenanceComments }}</td>
+            <td>{{ record.imageReadManagementMaintenanceAction }}</td>
+        </tr>
+        <tr>
+            <th> Image Data Received Status </th>
+            <td>{{ getNotApplicableStatus(record.imageDatareceivedstatusFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.imageDatareceivedstatus)">
+                    {{ record.imageDatareceivedstatus }}
+                </div>
+            </td>
+            <td>{{ record.imageDatareceivedstatusComments }}</td>
+            <td>{{ record.imageDatareceivedstatusAction }}</td>
+        </tr>
+        <tr>
+            <th> Image Data QC's by CoreLab </th>
+            <td>{{ getNotApplicableStatus(record.imageDataQcsFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.imageDataQcs)">
+                    {{ record.imageDataQcs }}
+                </div>
+            </td>
+            <td>{{ record.imageDataQcsComments }}</td>
+            <td>{{ record.imageDataQcsAction }}</td>
+        </tr>
+        <tr>
+            <th> Reconciliation (image data) </th>
+            <td>{{ getNotApplicableStatus(record.reconciliationimagedataFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.reconciliationimagedata)">
+                    {{ record.reconciliationimagedata }}
+                </div>
+            </td>
+            <td>{{ record.reconciliationimagedataComments }}</td>
+            <td>{{ record.reconciliationimagedataAction }}</td>
+        </tr>
+        <tr>
+            <th> Image Data Query/Re-Query Status and Trends </th>
+            <td>{{ getNotApplicableStatus(record.imageDataQueryreQueryStatusFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.imageDataQueryreQueryStatus)">
+                    {{ record.imageDataQueryreQueryStatus }}
+                </div>
+            </td>
+            <td>{{ record.imageDataQueryreQueryStatusComments }}</td>
+            <td>{{ record.imageDataQueryreQueryStatusAction }}</td>
+        </tr>
+        <tr>
+            <th> Interim Analyses and Deliverables / Data Snaps </th>
+            <td>{{ getNotApplicableStatus(record.interimAnalsysesDeliverablesFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.interimAnalsysesDeliverables)">
+                    {{ record.interimAnalsysesDeliverables }}
+                </div>
+            </td>
+            <td>{{ record.interimAnalsysesDeliverablesComments }}</td>
+            <td>{{ record.interimAnalsysesDeliverablesActions }}</td>
+        </tr>
+        <tr>
+            <th> Read Preparation Status </th>
+            <td>{{ getNotApplicableStatus(record.readpreparationstatusFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.readpreparationstatus)">
+                    {{ record.readpreparationstatus }}
+                </div>
+            </td>
+            <td>{{ record.readpreparationstatusComments }}</td>
+            <td>{{ record.readpreparationstatusAction }}</td>
+        </tr>
+        <tr>
+            <th> DM Inbound Data Transfer </th>
+            <td>{{ getNotApplicableStatus(record.dminboundDataTranferFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.dminboundDataTranfer)">
+                    {{ record.dminboundDataTranfer }}
+                </div>
+            </td>
+            <td>{{ record.dminboundDataTranferComments }}</td>
+            <td>{{ record.dminboundDataTranferAction }}</td>
+        </tr>
+        <tr>
+            <th> DM Outbound Data Transfer </th>
+            <td>{{ getNotApplicableStatus(record.dmoutboundDataTranferFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.dmoutboundDataTranfer)">
+                    {{ record.dmoutboundDataTranfer }}
+                </div>
+            </td>
+            <td>{{ record.dmoutboundDataTranferComments }}</td>
+            <td>{{ record.dmoutboundDataTranferAction }}</td>
+        </tr>
+    </tbody>
+</table>

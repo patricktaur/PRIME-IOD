@@ -1,0 +1,16 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<h4>External Data</h4>
+<hr />
+<!-- {{ record | json }} -->
+<form [formGroup]="form" (ngSubmit)="submit()" style="height: 1000px !important;">
+  <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <button type="submit" class="btn btn-primary submit-button me-1" [disabled]="!(form.valid && form.dirty)">Save</button>
+  <button type="button" class="btn btn-default me-1" (click)="options.resetModel()">Undo</button>
+
+  <button type="button" class="btn btn-default" (click)="back()">Back</button>
+  <app-last-saved [auditFields]="record"></app-last-saved>
+
+</form>
+
+
+<!-- <p>dtsStatus: {{ record | json }}</p> -->

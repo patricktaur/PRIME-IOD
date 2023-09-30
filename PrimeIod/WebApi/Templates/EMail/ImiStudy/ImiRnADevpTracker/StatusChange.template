@@ -1,0 +1,21 @@
+﻿Subject:PRISM IMI R and A Development Request Status Change Alert - {StudyIconNumber} - {TaskId}  Changes
+
+Hi {ToUsers},
+<br/><br/>
+PRISM IMI R and A Development Request Status Change Alert - {StudyIconNumber} - {TaskId}   <br />        
+<br/><br/>
+Study Name:{StudyName}
+<br />
+Request Title:{RequestTitle}
+<br />
+Output Status:{DevelopmentStatus}
+<br />
+Request Details:{RequestDetails}
+<br />
+Last Updated By: {LoginUserName}
+<br />
+Link: {LinktoTask}
+<br />
+        
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

@@ -1,0 +1,1235 @@
+{
+  "part-config": [
+    {
+      "id": 1,
+      "part-id": 1,
+      "totalSteps": 15,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "completed"
+        },
+        {
+          "stepNo": 8,
+          "status": "completed"
+        },
+        {
+          "stepNo": 9,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 10,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 11,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 12,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 13,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 14,
+          "status": "completed"
+        },
+        {
+          "stepNo": 15,
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "part-id": 2,
+      "totalSteps": 20,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "completed"
+        },
+        {
+          "stepNo": 8,
+          "status": "completed"
+        },
+        {
+          "stepNo": 9,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 10,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 11,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 12,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 13,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 14,
+          "status": "completed"
+        },
+        {
+          "stepNo": 15,
+          "status": "completed"
+        },
+        {
+          "stepNo": 16,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 17,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 18,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 19,
+          "status": "completed"
+        },
+        {
+          "stepNo": 20,
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "part-id": 3,
+      "totalSteps": 25,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "completed"
+        },
+        {
+          "stepNo": 8,
+          "status": "completed"
+        },
+        {
+          "stepNo": 9,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 10,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 11,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 12,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 13,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 14,
+          "status": "completed"
+        },
+        {
+          "stepNo": 15,
+          "status": "completed"
+        },
+        {
+          "stepNo": 16,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 17,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 18,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 19,
+          "status": "completed"
+        },
+        {
+          "stepNo": 20,
+          "status": "completed"
+        },
+        {
+          "stepNo": 21,
+          "status": "completed"
+        },
+        {
+          "stepNo": 22,
+          "status": "completed"
+        },
+        {
+          "stepNo": 23,
+          "status": "completed"
+        },
+        {
+          "stepNo": 24,
+          "status": "completed"
+        },
+        {
+          "stepNo": 25,
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": 4
+    }
+  ],
+  "workorder-status": [
+    {
+      "id": 1,
+      "wo_no": 123,
+      "part-id": 1,
+      "totalSteps": 15,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "completed"
+        },
+        {
+          "stepNo": 8,
+          "status": "completed"
+        },
+        {
+          "stepNo": 9,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 10,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 11,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 12,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 13,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 14,
+          "status": "completed"
+        },
+        {
+          "stepNo": 15,
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "part-id": 2,
+      "totalSteps": 20,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "completed"
+        },
+        {
+          "stepNo": 8,
+          "status": "completed"
+        },
+        {
+          "stepNo": 9,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 10,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 11,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 12,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 13,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 14,
+          "status": "completed"
+        },
+        {
+          "stepNo": 15,
+          "status": "completed"
+        },
+        {
+          "stepNo": 16,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 17,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 18,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 19,
+          "status": "completed"
+        },
+        {
+          "stepNo": 20,
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "part-id": 3,
+      "totalSteps": 25,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "completed"
+        },
+        {
+          "stepNo": 8,
+          "status": "completed"
+        },
+        {
+          "stepNo": 9,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 10,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 11,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 12,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 13,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 14,
+          "status": "completed"
+        },
+        {
+          "stepNo": 15,
+          "status": "completed"
+        },
+        {
+          "stepNo": 16,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 17,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 18,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 19,
+          "status": "completed"
+        },
+        {
+          "stepNo": 20,
+          "status": "completed"
+        },
+        {
+          "stepNo": 21,
+          "status": "completed"
+        },
+        {
+          "stepNo": 22,
+          "status": "completed"
+        },
+        {
+          "stepNo": 23,
+          "status": "completed"
+        },
+        {
+          "stepNo": 24,
+          "status": "completed"
+        },
+        {
+          "stepNo": 25,
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": 4
+    }
+  ],
+  "workOrder": [
+    {
+      "id": 1,
+      "workOrderNo": 12345,
+      "quantity": 2,
+      "partNoId": 1,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "completed"
+        },
+        {
+          "stepNo": 8,
+          "status": "completed"
+        },
+        {
+          "stepNo": 9,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 10,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 11,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 12,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 13,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 14,
+          "status": "completed"
+        },
+        {
+          "stepNo": 15,
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "workOrderNo": 12346,
+      "quantity": 3,
+      "partNoId": 2,
+      "steps": []
+    },
+    {
+      "id": 3,
+      "workOrderNo": 12347,
+      "quantity": 4,
+      "partNoId": 3,
+      "steps": []
+    },
+    {
+      "id": 4,
+      "workOrderNo": 12348,
+      "quantity": 5,
+      "partNoId": 4,
+      "steps": []
+    },
+    {
+      "workOrderNo": 123456,
+      "quantity": 2,
+      "partNoId": 1,
+      "id": 5,
+      "steps": []
+    },
+    {
+      "workOrderNo": 12345,
+      "quantity": 2,
+      "partNoId": 1,
+      "id": 6,
+      "steps": []
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fName": "Nikhil",
+      "lName": "VK",
+      "email": "nikhilVK@te.com",
+      "employeeId": 10
+    },
+    {
+      "fName": "Akash",
+      "lName": "Konnur",
+      "email": "akash.konnur@claritytechnologies.com",
+      "employeeId": 20,
+      "id": 2
+    },
+    {
+      "fName": "surekha",
+      "lName": "Bedakihal",
+      "email": "surekha.bedakihal@claritytechnologies.com",
+      "employeeId": 30,
+      "id": 3
+    },
+    {
+      "fName": "Lawrence",
+      "lName": "Taur",
+      "email": "lawrence.taur@claritytechnologies.com",
+      "employeeId": 40,
+      "id": 4
+    },
+    {
+      "fName": "Patrick",
+      "lName": "Taur",
+      "email": "Patrick.taur@claritytechnologies.com",
+      "employeeId": 50,
+      "id": 5
+    },
+    {
+      "fName": "Pradeep",
+      "lName": "Chavan",
+      "email": "Pradeep.Chavan@claritytechnologies.com",
+      "employeeId": 60,
+      "id": 6
+    },
+    {
+      "fName": "Satya",
+      "lName": "Murthy",
+      "email": "Sathya.Murthy@claritytechnologies.com",
+      "employeeId": 70,
+      "id": 7
+    },
+    {
+      "fName": "Vishal",
+      "lName": "kulkarni",
+      "email": "vishalkulkarni@gmail.com",
+      "employeeId": "1000",
+      "id": 8
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "Quality",
+      "managerId": 1,
+      "totalUsers": 8
+    },
+    {
+      "id": 2,
+      "name": "Con-Vap",
+      "managerId": 2,
+      "totalUsers": 10
+    },
+    {
+      "id": 3,
+      "name": "Finance",
+      "managerId": 3,
+      "totalUsers": 12
+    },
+    {
+      "id": 4,
+      "name": "PIM-L4",
+      "managerId": 4,
+      "totalUsers": 13
+    },
+    {
+      "id": 5,
+      "name": "Human Resource",
+      "managerId": 5,
+      "totalUsers": 15
+    },
+    {
+      "id": 6,
+      "name": "Electrical",
+      "managerId": 6,
+      "totalUsers": 12
+    },
+    {
+      "id": 7,
+      "name": "Maintainance",
+      "managerId": 7,
+      "totalUsers": 12
+    },
+    {
+      "name": "Testing department add",
+      "managerId": "6",
+      "totalUsers": 8,
+      "privacy": true,
+      "id": 8
+    },
+    {
+      "name": "Re-test Dept",
+      "managerId": "2",
+      "totalUsers": 8,
+      "privacy": true,
+      "id": 9
+    },
+    {
+      "name": "final-Test",
+      "managerId": "1",
+      "totalUsers": 8,
+      "privacy": true,
+      "id": 10
+    },
+    {
+      "name": "final-Test",
+      "managerId": "1",
+      "totalUsers": 8,
+      "privacy": false,
+      "id": 11
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "Admin"
+    },
+    {
+      "id": 2,
+      "name": "Manager"
+    },
+    {
+      "id": 3,
+      "name": "User"
+    },
+    {
+      "name": "Super Admin",
+      "id": 4
+    },
+    {
+      "name": "Pilot",
+      "id": 5
+    },
+    {
+      "name": "champion",
+      "id": 6
+    },
+    {
+      "name": "Re-Test",
+      "id": 7
+    },
+    {
+      "name": "final test",
+      "id": 8
+    }
+  ],
+  "parts": [
+    {
+      "partNumber": "1001",
+      "department": "7",
+      "cycleTime": 199,
+      "id": 8
+    },
+    {
+      "partNumber": "555",
+      "department": "4",
+      "cycleTime": 1036800,
+      "id": 9
+    },
+    {
+      "partNumber": "777",
+      "department": "5",
+      "cycleTime": 1814400,
+      "id": 10
+    },
+    {
+      "partNumber": "888",
+      "department": "1",
+      "cycleTime": 60,
+      "id": 11
+    },
+    {
+      "partNumber": "999",
+      "department": "3",
+      "cycleTime": 3600,
+      "id": 12
+    },
+    {
+      "partNumber": "1000",
+      "department": "2",
+      "cycleTime": 86400,
+      "id": 13
+    },
+    {
+      "partNumber": "1100",
+      "department": "1",
+      "cycleTime": 604800,
+      "id": 14
+    },
+    {
+      "partNumber": "22",
+      "department": "1",
+      "cycleTime": 720,
+      "id": 15
+    },
+    {
+      "partNumber": "420",
+      "department": "1",
+      "cycleTime": 60,
+      "id": 16
+    }
+  ],
+  "workOrders": [
+    {
+      "id": 1,
+      "workOrderNumber": 1000,
+      "quantity": 2,
+      "partNo": 5,
+      "employeeId": 10,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "completed"
+        },
+        {
+          "stepNo": 8,
+          "status": "completed"
+        },
+        {
+          "stepNo": 9,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 10,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 11,
+          "status": "inprogress"
+        },
+        {
+          "stepNo": 12,
+          "status": "inprogress"
+        },
+        {
+          "stepNo": 13,
+          "status": "slow"
+        },
+        {
+          "stepNo": 14,
+          "status": "slow"
+        },
+        {
+          "stepNo": 15,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "workOrderNumber": 2000,
+      "quantity": 21,
+      "partNo": 10,
+      "employeeId": "12389",
+      "id": 4,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "completed"
+        },
+        {
+          "stepNo": 8,
+          "status": "completed"
+        },
+        {
+          "stepNo": 9,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 10,
+          "status": ""
+        },
+        {
+          "stepNo": 11,
+          "status": ""
+        },
+        {
+          "stepNo": 12,
+          "status": ""
+        },
+        {
+          "stepNo": 13,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "workOrderNumber": 123,
+      "quantity": 5,
+      "partNo": 10,
+      "employeeId": "12345",
+      "id": 5,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "completed"
+        },
+        {
+          "stepNo": 8,
+          "status": "completed"
+        },
+        {
+          "stepNo": 9,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 10,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 11,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 12,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 13,
+          "status": ""
+        },
+        {
+          "stepNo": 14,
+          "status": ""
+        },
+        {
+          "stepNo": 15,
+          "status": ""
+        },
+        {
+          "stepNo": 16,
+          "status": ""
+        },
+        {
+          "stepNo": 17,
+          "status": ""
+        },
+        {
+          "stepNo": 18,
+          "status": ""
+        },
+        {
+          "stepNo": 19,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "workOrderNumber": 124,
+      "quantity": 1,
+      "partNo": 9,
+      "employeeId": "12345",
+      "id": 6,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "completed"
+        },
+        {
+          "stepNo": 8,
+          "status": "completed"
+        },
+        {
+          "stepNo": 9,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 10,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 11,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 12,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 13,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 14,
+          "status": "completed"
+        },
+        {
+          "stepNo": 15,
+          "status": "completed"
+        },
+        {
+          "stepNo": 16,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 17,
+          "status": ""
+        },
+        {
+          "stepNo": 18,
+          "status": ""
+        },
+        {
+          "stepNo": 19,
+          "status": ""
+        },
+        {
+          "stepNo": 20,
+          "status": ""
+        },
+        {
+          "stepNo": 21,
+          "status": ""
+        },
+        {
+          "stepNo": 22,
+          "status": ""
+        },
+        {
+          "stepNo": 23,
+          "status": ""
+        }
+      ]
+    },
+    {
+      "workOrderNumber": 125,
+      "quantity": 2,
+      "partNo": 9,
+      "employeeId": "12346",
+      "id": 7,
+      "steps": [
+        {
+          "stepNo": 1,
+          "status": "completed"
+        },
+        {
+          "stepNo": 2,
+          "status": "completed"
+        },
+        {
+          "stepNo": 3,
+          "status": "completed"
+        },
+        {
+          "stepNo": 4,
+          "status": "completed"
+        },
+        {
+          "stepNo": 5,
+          "status": "completed"
+        },
+        {
+          "stepNo": 6,
+          "status": "completed"
+        },
+        {
+          "stepNo": 7,
+          "status": "delayed"
+        },
+        {
+          "stepNo": 8,
+          "status": "inprogress"
+        },
+        {
+          "stepNo": 9,
+          "status": ""
+        },
+        {
+          "stepNo": 10,
+          "status": ""
+        },
+        {
+          "stepNo": 11,
+          "status": ""
+        },
+        {
+          "stepNo": 12,
+          "status": ""
+        }
+      ]
+    }
+  ]
+}

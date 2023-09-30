@@ -1,0 +1,51 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-title">
+    Columns - Hide
+  </h4>
+
+  <button type="button" id="close" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body p-0">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="form">
+        <!-- <button type="submit" color="danger" expand="block">Submit</button> -->
+        <table class="table table-sm table-hover small">
+          <thead>
+            <tr>
+              <th align="center" data-toggle="tooltip" data-placement="top" title="Hide All">
+                <input type="checkbox" (change)="checkUncheckAll($event)" />
+                Hide
+              </th>
+              <th align="left">Column</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container formArrayName="columns">
+              <tr [formGroupName]="i" *ngFor="let item of form.controls?.columns?.controls; let i = index">
+                <td align="center">
+                  <input type="checkbox" formControlName="checked" />
+                </td>
+                <td>
+                  {{ columns[i].header }}
+                </td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+  <!-- <div class="row">
+    <div class="col-md-12">
+
+    </div>
+  </div> -->
+</div>
+<div class="modal-footer">
+  <button id="update" type="submit" class="btn btn-primary" (click)="activeModal.dismiss('Cross click')">
+    Close
+  </button>
+</div>

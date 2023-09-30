@@ -1,0 +1,75 @@
+<app-loader [isLoading]="true" *ngIf="!filteredCurrentReviewRecords"></app-loader>
+<div class="">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="clearfix">
+        <h4 class="mb-3 float-start me-3">{{title}}</h4>
+        <button type="button" class="btn btn-primary mb-3 float-end" (click)="onClickBack()">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="col-md-12 mt-3 border-top pt-3"> -->
+  <ul ngbNav #nav="ngbNav" class="nav-pills">
+    <li ngbNavItem>
+      <a ngbNavLink>Latest Score({{ currentReviewsCount }})</a>
+      <ng-template ngbNavContent>
+        <app-data-table-shell
+          [records]="filteredCurrentReviewRecords"
+          [columns]="columns"
+          [pageNumber]="pageNumber"
+          [pageSize]="pageSize"
+          [showColumnManager]="true"
+        >
+          <div header>
+            <app-project-review-filter-a (filterChange)="onFilterOneChange($event)"> </app-project-review-filter-a>
+          </div>
+        </app-data-table-shell>
+      </ng-template>
+    </li>
+    <li ngbNavItem>
+      <a ngbNavLink>All reviews ({{ ReviewsCount }})</a>
+      <ng-template ngbNavContent>
+        <app-data-table-shell
+          [records]="filteredReviewRecords"
+          [columns]="columns"
+          [pageNumber]="pageNumber"
+          [pageSize]="pageSize"
+          [showColumnManager]="true"
+        ></app-data-table-shell>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+  <!-- <ngb-tabset type="pills">
+    <ngb-tab title="Latest Score({{ currentReviewsCount }}) ">
+      <ng-template ngbTabContent>
+        <app-data-table-shell
+          [records]="filteredCurrentReviewRecords"
+          [columns]="columns"
+          [pageNumber]="pageNumber"
+          [pageSize]="pageSize"
+          [showColumnManager]="true"
+        >
+          <div header>
+            <app-project-review-filter-a (filterChange)="onFilterOneChange($event)"> </app-project-review-filter-a>
+          </div>
+        </app-data-table-shell>
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="All reviews ({{ ReviewsCount }}) ">
+      <ng-template ngbTabContent>
+        <app-data-table-shell
+          [records]="filteredReviewRecords"
+          [columns]="columns"
+          [pageNumber]="pageNumber"
+          [pageSize]="pageSize"
+          [showColumnManager]="true"
+        ></app-data-table-shell>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset> -->
+  <!-- </div> -->
+</div>

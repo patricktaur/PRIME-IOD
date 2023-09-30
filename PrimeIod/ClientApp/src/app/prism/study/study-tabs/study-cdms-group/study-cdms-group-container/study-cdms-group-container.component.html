@@ -1,0 +1,66 @@
+<ul class="nav nav-pills pb-3">
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'cdms'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >CDMS
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'cdms-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >CDMS - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'cdms-extract-specification'" 
+    routerLinkActive="active"
+    >CDMS Extraction Specification
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'cdms-cppc'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >CDMS CPPC
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'cdms-cppc-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >CDMS CPPC - View
+  </li>
+  <li *ngIf="!clininfoTab" role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'cdms-tracker'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >CDMS Tracker
+  </li>
+  <li *ngIf="!clininfoTab" role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'cdms-tracker-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >CDMS Tracker - View
+  </li>
+  <li *ngIf="clininfoTab" role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'third-party-cdms-tracker'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Clininfo CDMS Tracker
+  </li>
+  <li *ngIf="clininfoTab" role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'third-party-cdms-tracker-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Clininfo CDMS Tracker - View
+  </li>
+</ul>
+<hr />
+<router-outlet></router-outlet>

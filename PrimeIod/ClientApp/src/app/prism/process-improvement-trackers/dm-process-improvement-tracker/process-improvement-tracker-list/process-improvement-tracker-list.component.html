@@ -1,0 +1,28 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<div header>
+  <h4>{{ title }}</h4>
+</div>
+<app-dm-proc-imp-tracker-dashboard (itemClicked)="onFilterChange($event)"></app-dm-proc-imp-tracker-dashboard>
+<hr />
+<div class="bg-icon-light me-n5 ms-n5 px-3 py-3 border-bottom border-top">
+  <!-- <details> -->
+<app-dm-proc-imp-tracker-filters
+  [selectedFilters]="selectedFilters"
+  (filterChange)="onFilterChange($event)"
+  (resetFilters)="onResetFilters()"
+></app-dm-proc-imp-tracker-filters>
+<!-- </details> -->
+</div>
+<button type="button" class="btn btn-primary" (click)="add()">
+  Add
+</button>
+<app-data-table-shell
+  [records]="filteredRecords"
+  [columns]="columns"
+  [showColumnManager]="false"
+  [showFooterActions]="true"
+  (raiseEvent)="onRaiseEvent($event)"
+>
+</app-data-table-shell>
+<!-- <p>records: {{ records | json }}</p> -->
+<!-- <p>selectedFilters: {{selectedFilters | json }}</p> -->

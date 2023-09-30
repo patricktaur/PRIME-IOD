@@ -1,0 +1,24 @@
+<file-upload [formControl]="control" fileslimit="1" multiple="false">
+    <ng-template let-isFileDragDropAvailable="isFileDragDropAvailable" #placeholder>
+            <file-upload-drop-zone>
+                    <ng-container *ngIf="isFileDragDropAvailable; else isNotDragDropAvailable">
+                        <b>Drag & Drop</b> a file<br>
+                        or click here 
+                    </ng-container>
+            </file-upload-drop-zone>
+    </ng-template>
+
+    <ng-template let-i="index" let-file="file" let-control="control" #item>
+            <file-upload-list-item  [index]="i" [file]="file" [control]="control">Remove</file-upload-list-item>
+    </ng-template>
+</file-upload>
+
+<b
+    [hidden]="
+    control.valid || control.untouched
+    "
+    class="text-danger"
+    translate
+>
+    Please select a csv file
+</b>

@@ -1,0 +1,79 @@
+<table class="table table-striped">
+	<thead>
+		<tr class="bg-green align-text-top">
+			<th scope="col">Project Status Categories</th>
+			<th scope="col">N/A</th>
+            <th scope="col">Project Category Score</th>
+			<th scope="col">Comment</th>
+			<th scope="col">Action</th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr>
+            <th> Cross Functional Data Quality Review </th>
+            <td></td>
+            <td class="text-center">
+                <div [style]="getStyle(record.crossFunctionalDataQualityReview)">
+                    {{ record.crossFunctionalDataQualityReview }}
+                </div>
+            </td>
+            <td>{{ record.crossFunctionalDataQualityReviewComments }}</td>
+            <td>{{ record.crossFunctionalDataQualityReviewAction }}</td>
+        </tr>
+        <tr>
+            <th> Cross-Functional Data Cleaning Strategy Defined</th>
+            <td>{{ getNotApplicableStatus(record.crossFunctionalDataCleaningStrategyFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.crossFunctionalDataCleaningStrategy)">
+                    {{ record.crossFunctionalDataCleaningStrategy }}
+                </div>
+            </td>
+            <td>{{ record.crossFunctionalDataCleaningStrategyComments }}</td>
+            <td>{{ record.crossFunctionalDataCleaningStrategyAction }}</td>
+        </tr>
+        <tr>
+            <th> Review of Items Impacting Primary Efficacy Analysis </th>
+            <td>{{ getNotApplicableStatus(record.reviewimpactingprimaryefficacyanalysisFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.reviewimpactingprimaryefficacyanalysis)">
+                    {{ record.reviewimpactingprimaryefficacyanalysis }}
+                </div>
+            </td>
+            <td>{{ record.reviewimpactingprimaryefficacyanalysisComments }}</td>
+            <td>{{ record.reviewimpactingprimaryefficacyanalysisAction }}</td>
+        </tr>
+        <tr>
+            <th> Review of Items Impacting Unblinding </th>
+            <td>{{ getNotApplicableStatus(record.reviewimpactingunblindingFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.reviewimpactingunblinding)">
+                    {{ record.reviewimpactingunblinding }}
+                </div>
+            </td>
+            <td>{{ record.reviewimpactingunblindingComments }}</td>
+            <td>{{ record.reviewimpactingunblindingAction }}</td>
+        </tr>
+        <tr>
+            <th> Review of Items impacting Protocol Deviators/Violators </th>
+            <td>{{ getNotApplicableStatus(record.reviewimpactingprotocoldeviatorsViolatorsFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.reviewimpactingprotocoldeviatorsViolators)">
+                    {{ record.reviewimpactingprotocoldeviatorsViolators }}
+                </div>
+            </td>
+            <td>{{ record.reviewimpactingprotocoldeviatorsViolatorsComments }}</td>
+            <td>{{ record.reviewimpactingprotocoldeviatorsViolatorsAction }}</td>
+        </tr>
+        <tr>
+            <th> Data Quality Review Checks e.g. MSA Checks MIRA vs Delivery Report MIRA vs Medidata (if applicable) MIRA vs MINT (if applicable) </th>
+            <td>{{ getNotApplicableStatus(record.dataQualityReviewChecksFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.dataQualityReviewChecks)">
+                    {{ record.dataQualityReviewChecks }}
+                </div>
+            </td>
+            <td>{{ record.dataQualityReviewChecksComments }}</td>
+            <td>{{ record.dataQualityReviewChecksActions }}</td>
+        </tr>
+    </tbody>
+</table>

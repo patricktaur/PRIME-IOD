@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col">
+    <!-- *ngIf="menuVisible(menuCDSCodingRequestStat)"  -->
+    <div
+      title="{{ menuStat[menuCDSCodingRequestStat] }}"
+      appMenuAccess="reports/conding-request/report-coding-task-request"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuCDSCodingRequestStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-s"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwCDSCodingTaskV2' }"
+        translate
+      >
+        Coding Task Request Report
+      </button>
+    </div>
+  </div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>

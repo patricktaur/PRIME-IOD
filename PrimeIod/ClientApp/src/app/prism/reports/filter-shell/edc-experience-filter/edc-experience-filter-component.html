@@ -1,0 +1,67 @@
+<!-- {{records | json}} -->
+
+<!-- EDC Experience Filter -->
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Region</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Regions"
+        [(ngModel)]="regionFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <!-- <ng-option  [value]="0" > [All]</ng-option> -->
+        <ng-option *ngFor="let rec of filters?.region" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Phase</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="phaseFilters"
+        [multiple]="true"
+        placeholder="Phase"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.protocolPhase" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Therapeutic Area</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="therapeuticAreaFilters"
+        [multiple]="true"
+        placeholder="Therapeutic Area"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.therapeuticIndication" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">CDMS</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="cdmsFilters"
+        [multiple]="true"
+        placeholder="CDMS"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.cdms" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<app-study-filters
+  [records]="records"
+  (filterChange)="onFilterOneChange($event)"
+  (searchTextChange)="onSearchTextChange($event)"
+></app-study-filters>
+
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">EDC </label>
+      <ng-select
+        [multiple]="true"
+        placeholder="EDC / Paper"
+        [(ngModel)]="edcPaperFilters"
+        [clearable]="true"
+        (ngModelChange)="onFilterTwoChange()"
+      >
+        <ng-option [value]="'EDC'">EDC</ng-option>
+        <ng-option [value]="'Paper'">Paper</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Type of DBL (Main/FU) </label>
+      <ng-select
+        [multiple]="true"
+        placeholder="Type of DBL (Main/FU) "
+        [(ngModel)]="typeOfDBLFilters"
+        [clearable]="true"
+        (ngModelChange)="onFilterTwoChange()"
+      >
+        <ng-option [value]="'Followup'">Followup</ng-option>
+        <ng-option [value]="'Main'">Main</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Pass/Fail</label>
+      <ng-select
+        [multiple]="true"
+        placeholder="Pass/Fail"
+        [(ngModel)]="passOrFailFilters"
+        [clearable]="true"
+        (ngModelChange)="onFilterTwoChange()"
+      >
+        <ng-option [value]="'Fail'">Fail</ng-option>
+        <ng-option [value]="'Pass'">Pass</ng-option>
+        <ng-option [value]="'N/A'">N/A</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>

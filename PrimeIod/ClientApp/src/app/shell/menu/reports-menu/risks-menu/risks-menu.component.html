@@ -1,0 +1,113 @@
+<div class="row">
+  <div class="col">
+
+    <!-- *ngIf="menuVisible(menuStudyTaskAtRiskListStat)"  -->
+    <div
+      title="{{ menuStat[menuStudyTaskAtRiskListStat] }}"
+      appMenuAccess="reports/risks/report-risk-tasks-at-risk">
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyTaskAtRiskListStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudySummaryV2XXX' }"
+        translate
+      >
+        Tasks At Risk (List)
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyTasksFlaggedAsAlertsStat)" -->
+    <div
+      title="{{ menuStat[menuStudyTasksFlaggedAsAlertsStat] }}"
+      appMenuAccess="reports/risks/report-risk-tasks-flagged-as-alerts"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+      [disabled]="menuDisabled(menuStudyTasksFlaggedAsAlertsStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudySummaryV2XXX' }"
+        translate
+      >
+        Tasks Flagged as Alerts
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyRiskScoreGraphicalScatterPlotStat)" -->
+    <div
+      title="{{ menuStat[menuStudyRiskScoreGraphicalScatterPlotStat] }}"
+      appMenuAccess="reports/risks/report-risk-riskscore-scatterplot"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+      [disabled]="menuDisabled(menuStudyRiskScoreGraphicalScatterPlotStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudySummaryV2XXX' }"
+        translate
+      >
+        RiskScore (Graphical ScatterPlot)
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyTasksAtRiskFrequencyStat)" -->
+    <div
+      title="{{ menuStat[menuStudyTasksAtRiskFrequencyStat] }}"
+      appMenuAccess="reports/risks/report-risk-tasks-frequency"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+      [disabled]="menuDisabled(menuStudyTasksAtRiskFrequencyStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudySummaryV2XXX' }"
+        translate
+      >
+        Tasks At Risk (Frequency)
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyRiskScoreHistoryListStat)" -->
+    <div
+      title="{{ menuStat[menuStudyRiskScoreHistoryListStat] }}"
+      appMenuAccess="reports/risks/report-risk-riskscore-history-all-reviews"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+      [disabled]="menuDisabled(menuStudyRiskScoreHistoryListStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudySummaryV2XXX' }"
+        translate
+      >
+        RiskScore History(List All Reviews)
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyRiskScoreHistoryBarChartStat)" -->
+    <div
+      title="{{ menuStat[menuStudyRiskScoreHistoryBarChartStat] }}"
+      appMenuAccess="reports/risks/report-risk-riskscore-history-bar-chart"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+      [disabled]="menuDisabled(menuStudyRiskScoreHistoryBarChartStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudySummaryV2XXX' }"
+        translate
+      >
+        RiskScore History(Graphical BarChart)
+      </button>
+    </div>
+  </div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>

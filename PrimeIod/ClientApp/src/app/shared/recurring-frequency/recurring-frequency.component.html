@@ -1,0 +1,15 @@
+<details>
+  <summary>{{ convertedObject?.Summary }}</summary>
+
+  <form [formGroup]="form">
+    <formly-form
+      [model]="convertedObject"
+      [fields]="fields"
+      [options]="options"
+      [form]="form"
+      (modelChange)="onModelChange()"
+    ></formly-form>
+  </form>
+</details>
+
+<!-- <p>convertedObject: {{ convertedObject | json }}</p> -->

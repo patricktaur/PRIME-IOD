@@ -1,0 +1,63 @@
+<ul class="nav nav-pills nav-fill pb-3">
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'imi-review-signoff'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >
+    Signoff
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'imi-review-signoff-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+
+    >Signoff - View
+  
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'imi-review-categories'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Review Categories
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'imi-review-categories-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Review Categories - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'issue-tracker'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Project Issue Tracker
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'issue-tracker-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+
+    >Project Issue Tracker - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'review-history'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Project Review History
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'review-history-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Project Review History - View
+  </li>
+</ul>
+<hr />
+<router-outlet></router-outlet>

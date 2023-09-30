@@ -1,0 +1,50 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">{{ year }}/{{ month }}</h4>
+  <button
+    type="button"
+    id="close"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  ></button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="crmForm" validate>
+    <div class="form-group row">
+      <div class="col-md-12">
+        <label class="col-form-label">Forecast</label>
+        <select class="form-control" formControlName="foreCast">
+          <option [value]="0">0</option>
+          <option [value]="1">1</option>
+          <option [value]="2">2</option>
+          <option [value]="3">3</option>
+          <option [value]="4">4</option>
+        </select>
+      </div>
+      <div class="col-md-12">
+        <label class="col-form-label">Actual</label>
+        <select class="form-control" formControlName="actual">
+          <option [value]="0">0</option>
+          <option [value]="1">1</option>
+          <option [value]="2">2</option>
+          <option [value]="3">3</option>
+          <option [value]="4">4</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-12">
+        <button
+          id="save"
+          type="button"
+          [disabled]="!crmForm.valid"
+          (click)="save()"
+          class="btn btn-primary mt-3 float-end"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,353 @@
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Search On</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="false"
+        [clearable]="false"
+        [(ngModel)]="selectedFilters.searchOn"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'icon-number'">Icon Number</ng-option>
+        <ng-option [value]="'study-name'">Study Name</ng-option>
+        <ng-option [value]="'task-id'">Task Id</ng-option>
+        <ng-option [value]="'details'">Development Details</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Search Text </label>
+      <input class="form-control" placeholder="Value to search" type="text" [formControl]="filterForm" />
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Sort By </label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="false"
+        [clearable]="false"
+        [(ngModel)]="selectedFilters.sortOn"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'icon-number-task-id'">Icon Number, Task Id</ng-option>
+        <ng-option [value]="'task-id'">Task Id</ng-option>
+        <ng-option [value]="'created-on'">Created On</ng-option>
+        <ng-option [value]="'due-on'">Due On</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Sort Order </label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        placeholder="Type"
+        [multiple]="false"
+        [clearable]="false"
+        [(ngModel)]="selectedFilters.sortBy"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'asc'">Ascending</ng-option>
+        <ng-option [value]="'desc'">Descending</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">DMPM</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="All"
+        [(ngModel)]="selectedFilters.dmpm"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.dmpMs" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Region</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="All"
+        [(ngModel)]="selectedFilters.region"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <!-- <ng-option  [value]="0" > [All]</ng-option> -->
+        <ng-option *ngFor="let rec of filters?.region" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Portfolio</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.portfolio"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.portfolio" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Sponsor</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.sponsor"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="false"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.sponsors" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Requestor</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="All"
+        [(ngModel)]="selectedFilters.requestor"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.requestor" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Programmer Assigned</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="All"
+        [(ngModel)]="selectedFilters.cDSAssignedTo"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <!-- <ng-option  [value]="0" > [All]</ng-option> -->
+        <ng-option *ngFor="let rec of filters?.programmerAssigned" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Programming Lead</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.clinicalDataDeliveryLead"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.programmingLead" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Validation Programmer</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.validationProgrammer"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.validationProgrammer" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Development Task Category</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.taskCategory"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="false"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.taskCategory" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Development Task Sub Category</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.taskSubCategory"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="false"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.taskSubCategory" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Due Date From</label>
+      <div class="input-group">
+        <input
+          class="form-control "
+          placeholder="From Start"
+          [(ngModel)]="selectedFilters.dueDateFrom"
+          ngbDatepicker
+          #d="ngbDatepicker"
+          (ngModelChange)="onFiltersChange()"
+          [readonly]="true"
+        />
+        <div class="input-group-append">
+          <button
+            class="p-2"
+            style="border: 0;"
+            (click)="selectedFilters.dueDateFrom = null; onFiltersChange()"
+            type="button"
+          >
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        <div class="input-group-append">
+          <button class="px-2" style="border: 0;" (click)="d.toggle()" type="button">
+            <i class="bi bi-calendar3"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Due Date To</label>
+      <div class="input-group">
+        <input
+          class="form-control "
+          placeholder="Till End"
+          [(ngModel)]="selectedFilters.dueDateTo"
+          ngbDatepicker
+          #d1="ngbDatepicker"
+          (ngModelChange)="onFiltersChange()"
+          [readonly]="true"
+        />
+        <div class="input-group-append">
+          <button
+            class="p-2"
+            style="border: 0;"
+            (click)="selectedFilters.dueDateTo = null; onFiltersChange()"
+            type="button"
+          >
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+        <div class="input-group-append">
+          <button class="px-2" style="border: 0;" (click)="d1.toggle()" type="button">
+            <i class="bi bi-calendar3"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Priority</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="false"
+        placeholder="All"
+        [clearable]="true"
+        [(ngModel)]="selectedFilters.priority"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'yes'"> Yes</ng-option>
+        <ng-option [value]="'no'"> No</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Development Status</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="selectedFilters.status"
+        [multiple]="true"
+        placeholder="All"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.developmentStatus" [value]="rec.id.toString()">{{
+          rec.value
+        }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Completed</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="false"
+        placeholder="All"
+        [clearable]="true"
+        [(ngModel)]="selectedFilters.completed"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option [value]="'yes'"> Yes</ng-option>
+        <ng-option [value]="'no'"> No</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <br />
+    <button
+      type="button"
+      class="btn btn-light"
+      (click)="resetFiltersClicked()"
+      *ngIf="showResetButton"
+      title="Reset Filters"
+    >
+      <i class="bi bi-arrow-counterclockwise " style="font-size: 20px;"></i>
+    </button>
+  </div>
+  <div class="col-3"></div>
+</div>
+<!-- <p>filters: {{selectedFilters | json}}</p> -->
+<!-- <p>filters: {{filters | json}}</p> -->

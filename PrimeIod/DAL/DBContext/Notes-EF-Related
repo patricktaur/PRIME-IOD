@@ -1,0 +1,46 @@
+20Apr2022:
+Building EF relationship without DB Relationship
+==========================================================
+The following code works:
+
+
+//Access 
+to relation object
+//db does not have relationship, yet Ef is able to get the related object
+
+1. In Primary Model:
+======================
+exisiting primary field:
+public int? ValidationStatus { get; set; } //(normally ValidationStatusPid)
+
+a. add virtal field:
+public virtual TblParam ValidationStatusP { get; set; }
+    }
+    
+2. in Related foriegnt table Model:
+=================================
+
+a. add:
+TblCdsvalidationRequestValidationStatusP =
+<PrimaryModel+VirtualFieldName>
+public virtual ICollection<TblCdsvalidationRequest> TblCdsvalidationRequestValidationStatusP { get; set; }
+
+
+
+3. In DBContext of primary object   
+=====================
+     public partial class TblParam
+    {
+        public TblParam()
+        {
+               . . .
+                TblCdsvalidationRequestValidationStatusP = new HashSet<TblCdsvalidationRequest>(); 
+        }
+        ...
+        entity.HasOne(d => d.ValidationStatusP)
+        .WithMany(p => p.TblCdsvalidationRequestValidationStatusP)
+        .HasForeignKey(d => d.ValidationStatus);   
+    }  
+           
+       
+    

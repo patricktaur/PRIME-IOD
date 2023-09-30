@@ -1,0 +1,24 @@
+﻿Subject:PRISM CDS Coding Request Change Alert - {StudyIconNumber} - {TaskId} - {CodingCategory} - Changes
+
+Hi {ToUsers},
+<br/><br/>
+PRISM CDS Coding Request Change Alert - {StudyIconNumber} - {TaskId} - {CodingCategory} - Changes </br>
+  <br />        
+Last Updated By: <b> {LoginUserName} </b><br />
+<br/>
+Due Date: <b>{DueDate}</b><br />
+<br/>
+Coding Detail: <b> {CodingDetail} </b><br />
+<br/>
+Coding Request TaskId <b>{TaskId}</b> is modified. <br />
+
+<p>
+{ModifiedContent}
+</p>
+<br />
+
+link: <b>  {LinktoTask} </b> <br />
+<br />
+        
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

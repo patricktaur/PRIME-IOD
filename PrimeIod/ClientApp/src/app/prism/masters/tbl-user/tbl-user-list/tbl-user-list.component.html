@@ -1,0 +1,62 @@
+<app-loader [isLoading]="isLoading"></app-loader>
+<div class="">
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="mb-4">TblUser-Repo</h4>
+      <div>
+        <form>
+          <div class="float-right">
+            <!-- todo: modify case to this format: repo-name.modify *appHasPermissions="'TblUser.modify'" -->
+            <!-- todo: and also make corresponding changes in DAL/Core/ApplicationPermissions/Partials/TblUserApplicationPermissions.cs -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="addTblUserModal()"
+              *appHasPermissions="'TblUser.modify'"
+            >
+              Add TblUser
+            </button>
+          </div>
+          <div class="form-group form-inline">
+            <div class="form-group form-inline">
+              <input class="form-control ms-2" placeholder="Search" type="text" [formControl]="filter" />
+            </div>
+          </div>
+          <table class="table table-borderless table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">displayName</th>
+                <th class="text-right" scope="col" *appHasPermissions="'TblUser.modify'">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let rec of records; let i = index">
+                <td scope="row">{{ pageSize * (pageNumber - 1) + (i + 1) }}</td>
+                <td>
+                  <ngb-highlight [result]="rec.displayName" [term]="filter.value"></ngb-highlight>
+                </td>
+
+                <td class="text-right" *appHasPermissions="'TblUser.modify'">
+                  <div ngbDropdown class="d-inline-block " placement="bottom-right">
+                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Action</button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                      <button ngbDropdownItem (click)="editTblUserModal(rec)">Edit</button>
+                      <button ngbDropdownItem (click)="confirmDeleteTblUser(rec)">Delete</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+      <pagination-control
+        [page]="pageNumber"
+        [pageSize]="pageSize"
+        [collectionSize]="totalItems"
+        (onPageChange)="onPageChange($event)"
+      ></pagination-control>
+    </div>
+  </div>
+</div>

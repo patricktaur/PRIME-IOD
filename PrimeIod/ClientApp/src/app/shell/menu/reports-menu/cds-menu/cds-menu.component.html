@@ -1,0 +1,147 @@
+<div class="row">
+  <div class="col">
+    <!-- <div *ngIf="menuVisible(menuStudyXXXXXStat)" title="{{ menuStat[menuStudyXXXXXStat] }}">
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwCDSDevelopmentTaskV2' }"
+        translate
+        *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyXXXXXStat)"
+      >
+        CDS Development Task Request Report
+      </button>
+    </div> -->
+
+    <!-- convereted to server side pagination -->
+    <!-- *ngIf="menuVisible(menuCDSDevelopmentTasksStat)"  -->
+    <div
+      title="{{ menuStat[menuCDSDevelopmentTasksStat] }}"
+      appMenuAccess="reports/cds/report-cds-development-task-request"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuCDSDevelopmentTasksStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-s"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwCDSDevelopmentTaskV2' }"
+        translate
+      >
+        CDS Development Task Request Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuCDSOutputTasksStat)"  -->
+    <div
+      title="{{ menuStat[menuCDSOutputTasksStat] }}"
+      appMenuAccess="reports/cds/report-cds-output-task-request"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuCDSOutputTasksStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-s"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwCDSOutputTaskV2' }"
+        translate
+      >
+        CDS Output Task Request Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuCDSDeliveryTasksStat)" -->
+    <div
+      title="{{ menuStat[menuCDSDeliveryTasksStat] }}"
+      appMenuAccess="reports/cds/report-cds-delivery-task-request"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuCDSDeliveryTasksStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-s"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwCDSDeliveryTaskV2' }"
+        translate
+      >
+        CDS Delivery Task Request Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuCDSStat)" -->
+    <div
+      title="{{ menuStat[menuCDSStat] }}"
+      appMenuAccess="reports/cds/report-cds"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuCDSStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwCDSV2' }"
+        translate
+      >
+        CDS Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuCDSInstructionTaskStat)" -->
+    <div 
+      title="{{ menuStat[menuCDSInstructionTaskStat] }}"
+      appMenuAccess="reports/cds/report-cds-instruction-task-request"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuCDSInstructionTaskStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-s"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwCDSInstructionTaskV2' }"
+        translate
+      >
+        CDS Instruction Task Request Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuCDSValidationRequestStat)" -->
+    <div
+      title="{{ menuStat[menuCDSValidationRequestStat] }}"
+      appMenuAccess="reports/cds/report-cds-validation-task-request"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuCDSValidationRequestStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-s"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwCDSValidationTaskV2' }"
+        translate
+      >
+        CDS Validation Task Request Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuDMProcessImprovementTrackerStat)" -->
+    <div
+      title="{{ menuStat[menuDMProcessImprovementTrackerStat] }}"
+      appMenuAccess="reports/cds/report-dm-process-improvement-tracker"
+    >
+    <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuDMProcessImprovementTrackerStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/dm-process-improvement-tracker"
+        routerLinkActive="active"
+        translate
+        
+      >
+        DM Process Improvement Tracker Report
+      </button>
+    </div>
+  </div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>

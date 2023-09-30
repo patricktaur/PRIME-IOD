@@ -1,0 +1,20 @@
+<app-study-filters
+  [records]="inputRecords"
+  (filterChange)="onFilterChange($event)"
+  (searchTextChange)="onSearchTextChange($event)"
+></app-study-filters>
+<div class="row">
+  <div class="col-3">
+    <app-region-filter
+      [inputRecords]="inputRecords"
+      (filteredRecords)="regionComponentEvent($event)"
+    ></app-region-filter>
+  </div>
+  <div class="col-3">
+    <app-sponsor-filter
+      [inputRecords]="regionComponentRecords"
+      (filteredRecords)="sponsorComponentEvent($event)"
+    ></app-sponsor-filter>
+    <!-- sponsorComponentRecords:{{sponsorComponentRecords?.length}} -->
+  </div>
+</div>

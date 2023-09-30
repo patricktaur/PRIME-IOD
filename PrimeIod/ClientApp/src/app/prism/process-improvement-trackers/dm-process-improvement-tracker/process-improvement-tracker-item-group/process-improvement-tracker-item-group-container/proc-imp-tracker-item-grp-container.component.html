@@ -1,0 +1,25 @@
+<h5>Process Improvement Id: {{ id }}</h5>
+<ul class="nav nav-pills " style=" padding-top: 10px; ">
+  <li class="nav-item">
+    <a class="nav-link py-1" [routerLink]="'view'" [queryParams]="{ id: id }" routerLinkActive="active">View</a>
+  </li>
+  <!-- /study/cds/devp-request/item-group/ -->
+  <li class="nav-item">
+    <a class="nav-link  py-1" [routerLink]="'history'" [queryParams]="{ id: id }" routerLinkActive="active">History</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link  py-1" [routerLink]="'edit'" [queryParams]="{ id: id }" routerLinkActive="active">Edit</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
+<hr />
+<button type="button" class="btn btn-primary" (click)="back()"><i class="bi bi-skip-backward-fill"></i> Back</button>
+
+<app-copy-link></app-copy-link>
+
+<app-confirmation-shell
+  [message]="'Remove Task ' + id + ' ?'"
+  [labelText]="'Remove'"
+  [responseValue]="id"
+  (response)="delete($event)"
+></app-confirmation-shell>

@@ -1,0 +1,7 @@
+<div class="form-group" [formGroup]="myForm">
+  <label class="col-form-label">{{ label }}</label>
+  <input type="text" class="form-control" [formControlName]="controlName" placeholder="placeHolder" />
+  <small [hidden]="control.valid || control.untouched" class="text-danger">
+    {{ errorMessage }}
+  </small>
+</div>

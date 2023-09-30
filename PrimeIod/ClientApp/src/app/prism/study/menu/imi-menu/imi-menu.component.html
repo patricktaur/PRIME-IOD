@@ -1,0 +1,41 @@
+<ul class="list-group small ms-n4 mt-n3 list-group-flush border-right mb-n4 study-tab-list">
+  <li role="button" class="list-group-item" [routerLink]="'imi-study-edit'" routerLinkActive="active">
+    IMI Study Edit
+  </li>
+  <li role="button" class="list-group-item" [routerLink]="'imi-review-group'" routerLinkActive="active">
+    IMI Review
+  </li>
+
+  <li role="button" class="list-group-item" [routerLink]="'imi-description-assumptions'" routerLinkActive="active">
+    Description
+  </li>
+
+  <li role="button" class="list-group-item" [routerLink]="'imi-resources'" routerLinkActive="active">
+    IMI Resources
+  </li>
+
+  <li role="button" class="list-group-item" [routerLink]="'imi-timelines'" routerLinkActive="active">
+    IMI Timelines
+  </li>
+
+  <li role="button" class="list-group-item" [routerLink]="'imi-status'" routerLinkActive="active">
+    IMI Study Status
+  </li>
+  <li role="button" class="list-group-item" [routerLink]="'cds'" routerLinkActive="active">
+    CDS
+  </li>
+  <li
+    *ngIf="studyProperties?.requiresRaveMedImaging"
+    role="button"
+    class="list-group-item"
+    [routerLink]="'imi-cdms-group'"
+    routerLinkActive="active"
+  >
+    IMI CDMS
+  </li>
+
+  <li role="button" class="list-group-item" [routerLink]="'imi-trackers-group'" routerLinkActive="active">
+    IMI Trackers
+  </li>
+  <br />
+</ul>

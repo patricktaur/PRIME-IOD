@@ -1,0 +1,90 @@
+Command executed:
+ng g clar-collection:list-edit --name TblParam 
+
+Post actions:
+npm run build
+
+todo: 1. a, b.
+--------------------------------------------------
+import TblParamModule into a parent Module
+  example imports TblParamModule into MasterModule:
+  
+//todo: a. 
+ //*****************************
+ import {TblParamModule} from '@app/masters/tbl-param/tbl-param.module';
+ 
+ @NgModule({
+   imports: [
+     ...
+     //todo: b.
+     //*****************************
+     TblParamModule
+   ],
+  
+ })
+ export class MastersModule {}
+---------------------------------------------------
+
+todo: 2. a, b
+connect  TblParamListComponent to a routing module:
+   example connects TblParamListComponent to MastersRoutingModule: 
+   
+   import { NgModule } from '@angular/core';
+   import { Routes, RoutersModule } from '@angular/router';
+  //todo: a
+  //*****************************
+
+  import {TblParamListComponent} from '@app/masters/tbl-param/tbl-param-list/tbl-param-list.component';
+
+  todo:b insert:
+     //*****************************
+     { path: 'tbl-param', component: TblParamListComponent },
+     . . .
+     { path: '**', redirectTo: '', pathMatch: 'full' }
+   ];
+  
+   @NgModule({
+     imports: [RouterModule.forChild(routes)],
+     exports: [RouterModule]
+   })
+   export class MastersRoutingModule {}
+  
+
+todo 3: 
+Add menu item:
+Example adds the menu item in header.component.html:
+insert in:
+app\shell\header\header.component.html
+
+add lazy loaded module path if required:
+routerLink="/lazy-loaded-module-path/tbl-param"
+//******************************
+  <button
+    class="dropdown-item"
+
+    routerLink="/masters/tbl-param"
+    routerLinkActive="active"
+    translate
+    *appHasPermissions="'TblParam.view'"
+  >
+    TblParam
+  </button> 
+//****************************
+todo 4:
+Run the application 
+  and add the permissions to the logged in test user's role
+  and test.
+
+todo 5 : Optional
+Convert TblParam.view permission to
+ tbl-param.view
+Note: this action is optional and is required only to maintain consistency in naming conventions.
+  The Dotnet Core generator (in the current version) is not able to generate a dasherized version of TblParam
+  and the angular schematic is not above to generate a lower case version of TblParam.
+  Therefore both the generatos produce TblParam.view . 
+  Recomended to change 
+    TblParam.view to tbl-param.view
+    TblParam.modify to tbl-param.modify
+    Ensure that corresponding changes are made in
+      DAL\Core\ApplicationPermissions\partials\TblParam-ApplicationPermissions.cs
+

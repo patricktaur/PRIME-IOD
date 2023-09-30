@@ -1,0 +1,32 @@
+<ul class="nav nav-pills nav-fill pb-3">
+  <li role="button"
+    class="nav-item nav-link"  
+    [routerLink]="'description'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Details
+  </li>
+  <li role="button"
+    class="nav-item nav-link"  
+    [routerLink]="'description-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Details - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link"  
+    [routerLink]="'assumptions'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Assumptions
+  </li>
+  <li role="button"
+    class="nav-item nav-link"  
+    
+    [routerLink]="'assumptions-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Assumptions - View
+  </li>
+</ul>
+<router-outlet></router-outlet>

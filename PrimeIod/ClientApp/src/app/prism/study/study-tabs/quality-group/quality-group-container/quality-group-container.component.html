@@ -1,0 +1,99 @@
+<ul class="nav nav-pills pb-3">
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'quality-review'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Quality Review
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'quality-review-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Quality Review - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'kpis'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+
+    >KPIs
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'kpis-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >KPIs - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'kpi-dashboard'" 
+    routerLinkActive="active" 
+    appStudyMenuAccessLink
+    >KPI Dashboard
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'kpi-dashboard-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >KPI Dashboard - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link"
+    *ngIf="studyProperties?.isEDCUserAccess"
+    [routerLink]="'edc-user-access'"
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >EDC User Access
+  </li>
+  <li role="button"
+    class="nav-item nav-link"
+    *ngIf="studyProperties?.isEDCUserAccess"
+    [routerLink]="'edc-user-access-view'"
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >EDC User Access - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    *ngIf="studyProperties?.isTMFQC" 
+    [routerLink]="'tmf-qc'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >TMF QC
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    *ngIf="studyProperties?.isTMFQC" 
+    [routerLink]="'tmf-qc-view'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >TMF QC - View
+  </li>
+  <li role="button"
+    class="nav-item nav-link"
+    [routerLink]="'sftp-user-access'"
+    routerLinkActive="active"
+    >sFTP User Access
+  </li>
+  <li role="button"
+    class="nav-item nav-link"
+    [routerLink]="'audit-trail-review'"
+    routerLinkActive="active"
+    >Audit Trail Review
+  </li>
+  <!-- <li role="button"
+    class="nav-item nav-link"
+    [routerLink]="'sftp-user-access-view'"
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >sFTP User Access - View
+  </li> -->
+</ul>
+<hr/>
+<!-- <p>hasDMManagerRole: {{ hasDMManagerRole}}</p> -->
+<router-outlet></router-outlet>

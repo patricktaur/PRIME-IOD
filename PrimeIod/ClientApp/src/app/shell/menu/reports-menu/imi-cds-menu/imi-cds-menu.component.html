@@ -1,0 +1,96 @@
+<div class="row">
+  <div class="col">
+    <div  title="{{ menuStat[menuStudyIMITileLines] }}"
+      appMenuAccess="reports/imi/report-imi-timelines">
+      <button class="dropdown-item" routerLink="/reports/report-n-dynamic-filters" routerLinkActive="active"
+        [queryParams]="{ report: 'vwIMIStudyTimelinesV2' }" translate>
+        IMI Timelines
+      </button>
+    </div>
+    <div title="{{ menuStat[menuStudyIMIReviewReport] }}"
+      appMenuAccess="reports/imi/report-imi-review">
+      <!-- routerLink="/reports/imi-study-review-report" -->
+      <!-- [queryParams]="{ report: 'vwIMIStudyReviewV2' }" -->
+      <button class="dropdown-item" routerLink="/reports/imi-study-review-report" routerLinkActive="active" translate
+        >
+        IMI Review Report
+      </button>
+    </div>
+    <div  title="{{ menuStat[menuStudyIMIReviewIssueTracker] }}"
+      appMenuAccess="reports/imi/report-imi-issue-tracker">
+      <button class="dropdown-item" routerLink="/reports/report-n-dynamic-filters" routerLinkActive="active"
+        [queryParams]="{ report: 'vwIMIStudyIssueTrackerV2' }" translate >
+        IMI Review Issue Tracker
+      </button>
+    </div>
+    <div 
+      title="{{ menuStat[menuStudyIMIReaderPerformanceReport] }}"
+      appMenuAccess="reports/imi/report-imi-reader-performance">
+      <button class="dropdown-item" routerLink="/reports/report-s" routerLinkActive="active"
+        [queryParams]="{ report: 'vwIMIStudyReviewReaderPerformanceV2' }" translate >
+        IMI Reader Perormance Report
+      </button>
+    </div>
+    <div  title="{{ menuStat[menuImiReviewComplianceStat] }}"
+      appMenuAccess="reports/imi/report-imi-review-compliance">
+      <button class="dropdown-item" routerLink="/reports/imi-review-compliance" routerLinkActive="active" translate
+       >
+        IMI Review Compliance
+      </button>
+    </div>
+  </div>
+
+  <div class="col">
+    <div title="{{ menuStat[menuIMICDMSReportStat] }}"
+      appMenuAccess="reports/imi/report-imi-cdms">
+      <button class="dropdown-item" routerLink="/reports/report-n-dynamic-filters" routerLinkActive="active"
+        [queryParams]="{ report: 'vwIMICDMSReportV2' }" translate >
+        IMI CDMS Report
+      </button>
+    </div>
+    <div  title="{{ menuStat[menuIMIDMCDMSStat] }}"
+      appMenuAccess="reports/imi/report-imi-dm-cdms">
+      <button class="dropdown-item" routerLink="/reports/report-n-dynamic-filters" routerLinkActive="active"
+        [queryParams]="{ report: 'vwReportDmImiCDMSV2' }" translate >
+        IMI DM CDMS
+      </button>
+    </div>
+    <div  title="{{ menuStat[menuIMICDMSTaskListStat] }}"
+      appMenuAccess="reports/imi/report-imi-cdms-task-list">
+      <button class="dropdown-item" routerLink="/reports/report-s" routerLinkActive="active"
+        [queryParams]="{ report: 'vwReportIMICDMSTasksListV2' }" translate >
+        IMI CDMS Task List
+      </button>
+    </div>
+    <div  title="{{ menuStat[menuIMICDMSTaskGroupStat] }}"
+      appMenuAccess="reports/imi/report-imi-cdms-task-group">
+      <button class="dropdown-item" routerLink="/reports/report-s" routerLinkActive="active"
+        [queryParams]="{ report: 'vwReportIMICDMSTasksGroupV2' }" translate >
+        IMI CDMS Task Group
+      </button>
+    </div>
+  </div>
+  <div class="col-3">
+    <!-- *ngIf="menuVisible(menuStudyRnADevpRequestStat)"  -->
+    <div title="{{ menuStat[menuStudyRnADevpRequestStat] }}"
+      appMenuAccess="reports/imi/report-imi-r&a-development-request">
+      <!-- *appHasPermissions="'rol.*, res.*'"
+      [disabled]="menuDisabled(menuStudyRnADevpRequestStat)" -->
+      <button class="dropdown-item" routerLink="/reports/report-s" routerLinkActive="active"
+        [queryParams]="{ report: 'vwIMI_RA_DevelopmentRequestV2' }" translate>
+        IMI R&A Development Request Report
+      </button>
+    </div>
+    <!-- *ngIf="menuVisible(menuStudyRnAOutputRequestStat)" -->
+    <div title="{{ menuStat[menuStudyRnAOutputRequestStat] }}"
+      appMenuAccess="reports/imi/report-imi-r&a-output-request">
+      <!-- *appHasPermissions="'rol.*, res.*'"
+      [disabled]="menuDisabled(menuStudyRnAOutputRequestStat)" -->
+      <button class="dropdown-item" routerLink="/reports/report-s" routerLinkActive="active"
+        [queryParams]="{ report: 'vwIMI_RA_OutputRequestV2' }" translate>
+        IMI R&A Output Request Report
+      </button>
+    </div>
+  </div>
+  <div class="col"></div>
+</div>

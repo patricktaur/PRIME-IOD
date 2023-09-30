@@ -1,0 +1,26 @@
+<h4 class="mb-3 float-left">Analysis Planning</h4>
+
+<div class="py-2" *ngFor="let year of Object.keys(crmDatas);">
+    <table class="table table-bordered">
+        <thead>
+            <tr class="text-white" style="background-color: #f2f2f2;">
+                <th scope="col" class="align-middle"><h5 class="align-middle" style="margin-bottom: 0; color: rgb(0 0 0 / 87%) !important;">{{year}}</h5></th>
+                <th scope="col" class="text-center" style="color: rgb(0 0 0 / 87%) !important;" *ngFor="let month of Object.keys(crmDatas[year]);">{{month}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Forecast</th>
+                <td class="text-center" *ngFor="let month of Object.keys(crmDatas[year]);" [ngStyle]="getStyleForForecast(crmDatas[year][month].forecast)">
+                    <div>{{crmDatas[year][month].forecast}}</div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Actual</th>
+                <td class="text-center" *ngFor="let month of Object.keys(crmDatas[year]);" [ngStyle]="getStyle(crmDatas[year][month].actual)" (click)="onClickActual(year, month, crmDatas[year][month])">
+                    <div>{{crmDatas[year][month].actual}}</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

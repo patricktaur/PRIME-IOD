@@ -1,0 +1,12 @@
+﻿Subject:  Study  {StudyName} - {StudyIconNumber} - CPPC # {CppcNumber} External UAT Completed.
+ 
+Hello {ToUsers},
+<br/><br/>
+
+CPPC #{CppcNumber} UAT fixes are completed for Study {StudyName} ({StudyIconNumber}). Please ensure applicable CPPC documentation (like annotated CRFs, etc.) is uploaded to the study’s Y drive folder.
+<br /><br />
+{NoteCppcScheduled}
+
+<br /><br />
+Thanks,<br />
+PRISM Admin Team

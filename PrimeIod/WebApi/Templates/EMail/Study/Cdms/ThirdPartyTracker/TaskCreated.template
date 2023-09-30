@@ -1,0 +1,12 @@
+﻿Subject:  Study  {StudyName} - {StudyIconNumber}  CPPC # {CppcNumber} is planned.
+ 
+Hello {ToUsers},
+<br/><br/>
+
+A new CPPC #{CppcNumber} is planned for Study {StudyName} ({StudyIconNumber}). Please ensure all applicable teams (like CDS, SDTM, Stats, ICONIK, etc.) are notified and confirm if the dataset structure will be affected by the planned changes.
+<br />
+Please refer DM006-WP001 (CDMS Change Management Process) for details.
+
+<br />
+Thanks,<br />
+PRISM Admin Team

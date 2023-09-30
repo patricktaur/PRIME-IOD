@@ -1,0 +1,23 @@
+<!-- <p>log-container works!</p> -->
+<ul class="nav nav-pills  pb-3">
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="'error-log'" routerLinkActive="active">Error Log</a>
+  </li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'mail-log'" 
+    routerLinkActive="active"
+    appMenuAccessLink
+  >Mail Log</li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'login-details-log'" 
+    routerLinkActive="active"
+    appMenuAccessLink
+  >Login Details
+  </li>
+  <!-- <li class="nav-item">
+    <a class="nav-link" [routerLink]="'login-details-log'" routerLinkActive="active">Login Details</a>
+  </li> -->
+</ul>
+<router-outlet></router-outlet>

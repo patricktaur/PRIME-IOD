@@ -1,0 +1,8 @@
+<!-- <hr /> -->
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <button type="submit" class="btn btn-primary submit-button" [disabled]="!(form.valid && form.dirty)">Save</button>
+  <!-- <span class="alert alert-info">Last Updated on: {{ record?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+  <app-last-saved [auditFields]="record"></app-last-saved>
+</form>
+<hr />

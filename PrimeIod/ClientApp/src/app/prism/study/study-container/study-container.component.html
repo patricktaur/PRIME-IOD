@@ -1,0 +1,30 @@
+<app-loader [isLoading]="isLoading"></app-loader>
+
+<div class="position-relative">
+  <app-study-dashboard-horizontal [studyId]="selectedStudyId"></app-study-dashboard-horizontal>
+  <div class="row">
+    <div [ngClass]="menuClass()">
+      <span role="button" class="collapse-icon" (click)="toggleMenuWidth()">
+        <i [ngClass]="collapse()"></i>
+      </span>
+      <br />
+      <app-dm-menu *ngIf="studyProperties?.studyType == 'DM' || studyProperties?.studyType == 'DM+IMI'"></app-dm-menu>
+      <app-dm-imi-menu *ngIf="studyProperties?.studyType == 'DM+IMI'"></app-dm-imi-menu>
+      <app-imi-menu *ngIf="studyProperties?.studyType == 'IMI'"></app-imi-menu>
+      <app-crm-menu *ngIf="studyProperties?.studyType == 'CRM'"></app-crm-menu>
+
+      <ul class="list-group small ms-n4 mt-n3 list-group-flush border-right mb-n4 study-tab-list">
+        <li role="button" class="list-group-item" [routerLink]="'study-info'" routerLinkActive="active">
+          Study - Info
+        </li>
+      </ul>
+    </div>
+
+    <div class="col overflow-hidden">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<br /><br /><br /><br />
+<!-- <p>studyProperties: {{ studyProperties | json }}</p> -->
+<p>studyType:{{ studyType }}</p>

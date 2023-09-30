@@ -1,0 +1,97 @@
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Icon Number</label>
+      <input class="form-control" placeholder="ICON Number" type="text" [formControl]="filterForm" />
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Data Type</label>
+      <ng-select
+        [multiple]="true"
+        placeholder="Data Type"
+        [(ngModel)]="dataTypeFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.dataTypes" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Vendor Name</label>
+      <ng-select
+        [multiple]="true"
+        placeholder="Vendor Name"
+        [(ngModel)]="vendorNameFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.vendorNames" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Frequency Of Transfer</label>
+      <ng-select
+        [multiple]="true"
+        placeholder="Frequency Of Transfer"
+        [(ngModel)]="frequencyOfTransferFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.frequencyOfTransfers" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">DTS Status</label>
+      <ng-select
+        [multiple]="true"
+        placeholder="DTS Status"
+        [(ngModel)]="dtsStatusFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.dtsStatus" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Test Transfer Status</label>
+      <ng-select
+        [multiple]="true"
+        placeholder="Test Transfer Status"
+        [(ngModel)]="testTransferStatusFilter"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.testTransferStatus" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Reconciliation Listing Status</label>
+      <ng-select
+        [multiple]="true"
+        placeholder="Reconciliation Listing Status"
+        [(ngModel)]="reconListingStatusFilter"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.reconciliationListingStatus" [value]="rec.value">{{
+          rec.value
+        }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>

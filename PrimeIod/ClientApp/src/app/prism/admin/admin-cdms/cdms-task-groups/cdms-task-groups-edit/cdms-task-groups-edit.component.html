@@ -1,0 +1,36 @@
+<app-loader [isLoading]="loading"></app-loader>
+<h5>{{ title }}</h5>
+
+<hr />
+<!-- (ngSubmit)="submit()" -->
+<form [formGroup]="form">
+  <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+
+  <!-- <div class="row ">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <app-data-table-base
+          [columns]="columns"
+          [records]="Taskrecords"
+          [pageNumber]="1"
+          [pageSize]="1000"
+        ></app-data-table-base>
+      </div>
+    </div>
+  </div> -->
+
+  <button type="button" class="btn btn-default" (click)="back()">Back</button>
+  <button type="submit" class="btn btn-primary submit-button" (click)="submit()">
+    Save
+  </button>
+  <button type="button" class="btn btn-default" (click)="options.resetModel()">Undo</button>
+  <app-confirmation-shell
+    [message]="'Do you want to remove this Task Group: ' + TaskGroupname + ' ?'"
+    [labelText]="'Remove'"
+    [responseValue]="recId"
+    (response)="deleteRecord($event)"
+  >
+  </app-confirmation-shell>
+</form>
+
+<!-- <p>record: {{ record | json }}</p> -->

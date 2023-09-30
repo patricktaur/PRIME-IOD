@@ -1,0 +1,133 @@
+<!-- <p>studyDashboard: {{ studyDashboard | json }}</p>
+
+<p>studyId: {{ studyId }}</p> -->
+<p>Criteria for display of study tab menu items:</p>
+<table class="table table-borderless table-hover">
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Tab</th>
+      <th>Visible</th>
+      <th>Criteria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Timelines</td>
+      <td>Timelines</td>
+      <td>Yes</td>
+      <td>Always visible</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Deliverables</td>
+      <td>{{ !studyDashboard?.isCelgene | yesNo }}</td>
+      <td>Visible if study sponsor is NOT Celgene Deliverables</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Celgene Deliverables</td>
+      <td>{{ studyDashboard?.isCelgene | yesNo }}</td>
+      <td>Visible if study sponsor is Celgene Deliverables</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Project History</td>
+      <td>Yes</td>
+      <td>Always visible</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Offline Checks</td>
+      <td>Yes</td>
+      <td>Always visible</td>
+    </tr>
+    <tr>
+      <td>Study Resources</td>
+      <td>Study Resources</td>
+      <td>Always visible</td>
+      <td>
+        Additional roles External Vendor in filter and edit pages are provided if Study is Astellas (0798/xxx). Current
+        Value: {{ studyDashboard?.isAstellasStudy | yesNo }}
+      </td>
+    </tr>
+
+    <tr>
+      <td>GSK Study KPI Dashboard</td>
+      <td>All tabs</td>
+      <td>{{ studyDashboard?.isGSK | yesNo }}</td>
+      <td>Visible when Study Protocl is GSK Vacines</td>
+    </tr>
+    <tr>
+      <td>FTEs (FTE Computations)</td>
+      <td>All tabs</td>
+      <td>{{ studyDashboard?.isGSK | yesNo }}</td>
+      <td>Visible when Study Protocl is GSK Vacines</td>
+    </tr>
+    <tr>
+      <td>Quality</td>
+      <td>Quality</td>
+      <td>Yes</td>
+      <td>Always visible</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>KPIs</td>
+      <td>Yes</td>
+      <td>Always visible</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>EDC User Access</td>
+      <td>{{ studyDashboard?.isEDCUserAccess | yesNo }}</td>
+      <td>Visible if Study-Assumptions-EdcaccessReviewPeriodicity is > 0</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>TMF QC</td>
+      <td>{{ studyDashboard?.isTMFQC | yesNo }}</td>
+      <td>Visible if Study-Assumptions-TMFQC Periodicity is > 0</td>
+    </tr>
+    <tr>
+      <td>Local Labs</td>
+      <td>Local Labs</td>
+      <td>{{ studyDashboard?.isLocalLab | yesNo }}</td>
+      <td>Visible if Study Description Local Labs = yes</td>
+    </tr>
+    <tr>
+      <td>Archived Reviews</td>
+      <td>Archived Reviews</td>
+      <td>{{ studyDashboard?.hasArchivedReviews | yesNo }}</td>
+      <td>
+        Visible if Study was created before 12th March 2019. Current Value:
+        {{ studyDashboard?.studyCreatedOn | date: 'dd-MMM-yyyy' }}
+      </td>
+    </tr>
+    <tr>
+      <td>CDS</td>
+      <td>Coding Request</td>
+      <td>{{ studyDashboard?.isIConCoding | yesNo }}</td>
+      <td>Visible if Study Description ICON Coding = yes</td>
+    </tr>
+    <tr>
+      <td>IMI Menu for DM+IMI Studies</td>
+      <td>IMI Menu</td>
+      <td>{{ studyDashboard?.studyType == 'DM+IMI' | yesNo }}</td>
+      <td>Visible if Study Type is DM+IMI. Current Value: {{ studyDashboard?.studyType }}</td>
+    </tr>
+    <tr>
+      <td>Menu for IMI Studies</td>
+      <td>IMI Menu</td>
+      <td>{{ studyDashboard?.studyType == 'IMI' | yesNo }}</td>
+      <td>Visible if Study Type is IMI. Current Value: {{ studyDashboard?.studyType }}</td>
+    </tr>
+    <tr>
+      <td>IMI CDMS</td>
+      <td>IMI CDMS</td>
+      <td>{{ studyDashboard?.requiresRaveMedImaging | yesNo }}</td>
+      <td>Visible if Study Description - Requires Rave Medical Imaging = yes and IMI-Only Study</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <p>{{ studyDashboard | json }}</p> -->

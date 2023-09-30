@@ -1,0 +1,46 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<h4>Database Lock Dashboard</h4>
+<hr />
+
+<table class="table table-sm small table-striped">
+	<tbody>
+		<tr>
+			<td>Planned LPO</td>
+			<td>{{ studyMainDbl.plannedLpo | date: 'dd-MMM-yyyy' }}</td>
+		</tr>
+		<tr>
+			<td>Planned Cycle Time (days)</td>
+			<td>{{ studyMainDbl.plannedCycleTime }}</td>
+		</tr>
+		<tr>
+			<td>Actual LPO</td>
+			<td>{{ studyMainDbl.actualLpo | date: 'dd-MMM-yyyy' }}</td>
+		</tr>
+		<tr>
+			<td>Planned DBL</td>
+			<td>{{ studyMainDbl.plannedDbl | date: 'dd-MMM-yyyy' }}</td>
+		</tr>
+		<tr>
+			<td>Actual Cycle Time (days)</td>
+			<td>{{ studyMainDbl.actualCycleTime }}</td>
+		</tr>
+		<tr>
+			<td>Actual DBL</td>
+			<td>{{ studyMainDbl.actualDbl | date: 'dd-MMM-yyyy' }}</td>
+		</tr>
+        <tr>
+			<td>Justification if above 21 days</td>
+			<td>{{ studyMainDbl.justification }}</td>
+		</tr>
+        <tr>
+			<td>Resolution Action</td>
+			<td>{{ studyMainDbl.resolutionActionComment }}</td>
+		</tr>
+        <tr>
+			<td>PreFinal DryRun</td>
+			<td>{{ studyMainDbl.plannedDate | date: 'dd-MMM-yyyy' }}</td>
+		</tr>
+    </tbody>
+</table>
+<!-- <span class="alert alert-info">Last Updated on: {{ studyMainDbl?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+<app-last-saved [auditFields]="studyMainDbl"></app-last-saved>

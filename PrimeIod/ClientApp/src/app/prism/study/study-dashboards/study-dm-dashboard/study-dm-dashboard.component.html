@@ -1,0 +1,31 @@
+<table class="table mb-0 study-dashboard">
+  <tr>
+    <td>Study Name</td>
+    <td>Region</td>
+    <td>Portfolio</td>
+    <td>Sponsor</td>
+    <td>CDMS</td>
+    <td>DMPM</td>
+    <td>Status</td>
+    <td>FPI</td>
+    <td>mDBL</td>
+    <td>fDBL</td>
+    <td>Score</td>
+  </tr>
+
+  <tr>
+    <td>{{ studyDashboard?.studyName }}</td>
+    <td>{{ studyDashboard?.region }}</td>
+    <td>{{ studyDashboard?.portfolio }}</td>
+    <td>{{ studyDashboard?.sponsor }}</td>
+    <td>{{ studyDashboard?.cdms }}</td>
+    <td>{{ studyDashboard?.currentDmpm }}</td>
+    <td>{{ studyDashboard?.studyStatusText }}</td>
+    <td>{{ studyDashboard?.fpiText }}</td>
+    <td>{{ studyDashboard?.mainDBLText }}</td>
+    <td>{{ studyDashboard?.followUpDBLText }}</td>
+    <td>
+      <app-cell [record]="studyDashboard" [column]="column"></app-cell>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,44 @@
+<app-loader [isLoading]="isLoading"></app-loader>
+<!-- <div class="container-fluid"> -->
+<!-- <div class="row">
+  <div class="col-md-12">
+    <h4 class="mb-4">Studies</h4>
+  </div>
+</div> -->
+<div class="bg-icon-light me-n5 ms-n5 px-3 py-3 border-bottom border-top">
+  <div class="row">
+    <div class="col">
+      <app-imi-resources-s-filter
+        [requiredPermissions]="requiredPermissions"
+        [selectedFilters]="selectedFilters"
+        (filterChange)="onFilterChange($event)"
+      >
+      </app-imi-resources-s-filter>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="table-responsive">
+    <app-data-table-base
+      [columns]="columns"
+      [records]="records"
+      [pageNumber]="1"
+      [pageSize]="selectedFilters.pageSize"
+      (raiseEvent)="onRaiseEvent($event)"
+    ></app-data-table-base>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <pagination-control
+      [page]="selectedFilters.pageNumber"
+      [pageSize]="selectedFilters.pageSize"
+      [collectionSize]="recordCount"
+      (onPageChange)="onPageChange($event)"
+    ></pagination-control>
+  </div>
+</div>
+
+<!-- <app-component-access [compCode]="'imi-study-list-view'" [redirect-to]="'/prism-home/crm-list'"> </app-component-access> -->
+<!-- <p>records: {{ records | json }}</p> -->

@@ -1,0 +1,17 @@
+.status {
+  padding: 10px;
+  text-align: center;
+}
+
+td.status:not([class*="bg-"]) {
+  background-color: green;
+  color: white;
+}
+
+td.status.bg-fail {
+  background-color: red;
+}
+
+td.status.bg-na {
+  background-color: grey;
+}

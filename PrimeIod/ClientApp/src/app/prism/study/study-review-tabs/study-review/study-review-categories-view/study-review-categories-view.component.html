@@ -1,0 +1,164 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<table class="table table-striped">
+	<thead>
+		<tr class="bg-green align-text-top">
+			<th scope="col">Project Status Categories</th>
+			<th scope="col">N/A</th>
+            <th scope="col">Project Category Score</th>
+			<th scope="col">Comment</th>
+			<th scope="col">Action</th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr>
+            <th> DM Tool Kit Setup
+             </th>
+            <td>{{ getNotApplicableStatus(review.dmtoolKitSetupFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.dataCleaningScore)">
+                    {{ review.dmtoolKitSetupScore }}
+                </div>
+            </td>
+            <td>{{ review.dmtoolKitSetupComment }}</td>
+            <td>{{ review.dmtoolKitSetupAction }}</td>
+        </tr>
+        <tr>
+            <th> DM TMF Inventory Log Build and Review
+             </th>
+            <td>{{ getNotApplicableStatus(review.dmtmfinventoryLogFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.dataCleaningScore)">
+                    {{ review.dmtmfinventoryLogScore }}
+                </div>
+            </td>
+            <td>{{ review.dmtmfinventoryLogComment }}</td>
+            <td>{{ review.dmtmfinventoryLogAction }}</td>
+        </tr>
+        <tr>
+            <th> Data Cleaning/Clean Patient Progress </th>
+            <td>{{ getNotApplicableStatus(review.dataCleaningFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.dataCleaningScore)">
+                    {{ review.dataCleaningScore }}
+                </div>
+            </td>
+            <td>{{ review.dataCleaningComment }}</td>
+            <td>{{ review.dataCleaningAction }}</td>
+        </tr>
+        <tr>
+            <th> External Data Reconciliation </th>
+            <td>{{ getNotApplicableStatus(review.externalDataReconciliationFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.externalDataReconciliationScore)">
+                    {{ review.externalDataReconciliationScore }}
+                </div>
+            </td>
+            <td>{{ review.externalDataReconciliationComment }}</td>
+            <td>{{ review.externalDataReconciliationAction }}</td>
+        </tr>
+        <tr>
+            <th> Quality Assessment </th>
+            <td>{{ getNotApplicableStatus(review.qualityAssessmentFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.qualityAssessmentScore)">
+                    {{ review.qualityAssessmentScore }}
+                </div>
+            </td>
+            <td>{{ review.qualityAssessmentComment }}</td>
+            <td>{{ review.qualityAssessmentAction }}</td>
+        </tr>
+        <tr>
+            <th> Next Milestone Deliverable </th>
+            <td>{{ getNotApplicableStatus(review.nextMilestoneDeliverableFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.nextMilestoneDeliverableScore)">
+                    {{ review.nextMilestoneDeliverableScore }}
+                </div>
+            </td>
+            <td>{{ review.nextMilestoneDeliverableComment }}</td>
+            <td>{{ review.nextMilestoneDeliverableAction }}</td>
+        </tr>
+        <tr>
+            <th> Resourcing </th>
+            <td>{{ getNotApplicableStatus(review.resourcingFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.resourcingScore)">
+                    {{ review.resourcingScore }}
+                </div>
+            </td>
+            <td>{{ review.resourcingComment }}</td>
+            <td>{{ review.resourcingAction }}</td>
+        </tr>
+        <tr>
+            <th> Project Financial Health </th>
+            <td>{{ getNotApplicableStatus(review.projectFinancialHealthFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.projectFinancialHealthScore)">
+                    {{ review.projectFinancialHealthScore }}
+                </div>
+            </td>
+            <td>{{ review.projectFinancialHealthComment }}</td>
+            <td>{{ review.projectFinancialHealthAction }}</td>
+        </tr>
+        <tr>
+            <th> TMF status </th>
+            <td>{{ getNotApplicableStatus(review.tmfstatusFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.tmfstatusScore)">
+                    {{ review.tmfstatusScore }}
+                </div>
+            </td>
+            <td>{{ review.tmfstatusComment }}</td>
+            <td>{{ review.projectFinancialHealthAction }}</td>
+        </tr>
+        <tr>
+            <th> EDC User Access Review </th>
+            <td>{{ getNotApplicableStatus(review.edcuserAccessReviewFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.edcuserAccessReviewScore)">
+                    {{ review.edcuserAccessReviewScore }}
+                </div>
+            </td>
+            <td>{{ review.edcuserAccessReviewComment }}</td>
+            <td>{{ review.edcuserAccessReviewAction }}</td>
+        </tr>
+        <tr>
+            <th> Other ICON Department </th>
+            <td>{{ getNotApplicableStatus(review.otherIcondeptFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.otherIcondeptScore)">
+                    {{ review.otherIcondeptScore }}
+                </div>
+            </td>
+            <td>{{ review.otherIcondeptComment }}</td>
+            <td>{{ review.otherIcondeptAction }}</td>
+        </tr>
+        <tr>
+            <th> Sponsor Relationship </th>
+            <td>{{ getNotApplicableStatus(review.sponsorRelationshipFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.sponsorRelationshipScore)">
+                    {{ review.sponsorRelationshipScore }}
+                </div>
+            </td>
+            <td>{{ review.sponsorRelationshipComment }}</td>
+            <td>{{ review.sponsorRelationshipAction }}</td>
+        </tr>
+        <tr>
+            <th> DMPM Oversight </th>
+            <td>{{ getNotApplicableStatus(review.dmpmoversightFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(review.dmpmoversightScore)">
+                    {{ review.dmpmoversightScore }}
+                </div>
+            </td>
+            <td>{{ review.dmpmoversightComment }}</td>
+            <td>{{ review.dmpmoversightAction }}</td>
+        </tr>      
+	</tbody>
+</table>
+
+<span class="alert alert-info">Last Updated on: {{ review?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span>
+
+{{ review | json}}

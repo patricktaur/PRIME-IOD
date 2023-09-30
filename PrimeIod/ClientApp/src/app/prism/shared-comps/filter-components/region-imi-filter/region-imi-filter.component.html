@@ -1,0 +1,9 @@
+<app-drop-down-value-filter
+  [label]="'Region'"
+  [filterOptions]="filterOptions.region"
+  [filterField]="'imiregion'"
+  [inputRecords]="inputRecords"
+  [placeHolder]="'Region'"
+  (filteredRecords)="onFiltersChange($event)"
+>
+</app-drop-down-value-filter>

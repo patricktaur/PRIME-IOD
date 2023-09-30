@@ -1,0 +1,32 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<app-study-cds-ouput-task-filters
+  [selectedFilters]="selectedFilters"
+  (filterChange)="onFilterChange($event)"
+  (resetFilters)="onResetFilters()"
+></app-study-cds-ouput-task-filters>
+<!-- <div footer-actions class="form-group">
+  
+</div> -->
+<button type="button" class="btn btn-primary" (click)="add()"
+[appMenuAccess]="menuAccessLink">
+  New Ouput Request
+</button>
+<app-data-table-shell
+  [records]="filteredRecords"
+  [columns]="columns"
+  [showColumnManager]="false"
+  [showFooterActions]="showFooterActions"
+  (raiseEvent)="onRaiseEvent($event)"
+  [pageNumber]="selectedFilters?.pageNumber"
+  [pageSize]="selectedFilters?.pageSize"
+  (pageOptionsChanged)="pageOptionsChanged($event)"
+  [viewMode]="isViewMode"
+>
+  <div header>
+    <!-- <h4>
+      {{ title }}
+    </h4> -->
+  </div>
+</app-data-table-shell>
+<!-- 
+<p>records: {{ records | json }}</p> -->

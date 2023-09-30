@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-2">
+    <div class="form-group">
+      <label class="form-label">Region</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Regions"
+        [(ngModel)]="regionFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <!-- <ng-option  [value]="0" > [All]</ng-option> -->
+        <ng-option *ngFor="let rec of filters?.region" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-2">
+    <div class="form-group">
+      <label class="form-label">Portfolio</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="portfolioFilters"
+        [multiple]="true"
+        placeholder="Portfolio"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.portfolio" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Director</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Director"
+        [(ngModel)]="dmpmManagerFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.dmpmManagers" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+
+  <div class="col-2">
+    <div class="form-group">
+      <label class="form-label">CDMS</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="cdmsFilters"
+        [multiple]="true"
+        placeholder="CDMS"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.cdms" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">DMPM</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="DMPM"
+        [(ngModel)]="dmpmsFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.dmpMs" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>

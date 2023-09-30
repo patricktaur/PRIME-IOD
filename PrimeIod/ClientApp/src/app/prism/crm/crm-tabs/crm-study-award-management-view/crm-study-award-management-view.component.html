@@ -1,0 +1,96 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<h5
+  style="background: #128474;
+color: white !important;
+border-color: #128474;padding:10px;margin-bottom: 10px;"
+>
+  CRM Study Award
+</h5>
+<table class="table table-sm small table-striped">
+	<tbody>
+		<tr>
+			<td>Global Project Manager</td>
+			<td>{{ record?.globalProjectManager }}</td>
+		</tr>
+        <tr>
+			<td>Activity</td>
+			<td>{{ record?.activityCpDescription }}</td>
+		</tr>
+        <tr>
+			<td>Central Monitoring Platform</td>
+			<td>{{ record?.centralMonitoringPlatformDescription }}</td>
+		</tr>
+        <tr>
+            <td>Central Monitoring Platform Other</td>
+            <td>{{ record?.centralMonitoringPlatformOther }}</td>
+        </tr>
+        <tr>
+            <td>ICONik package</td>
+            <td>{{ record?.iconIkPackageDescription }}</td>
+        </tr>
+        <tr>
+            <td>ICONik package Other</td>
+            <td>{{ record?.iconIkPackageOther }}</td>
+        </tr>
+        <tr>
+            <td>Complexity factor - CDA</td>
+            <td>{{ record?.complexityFactorCdaCpDescription }}</td>
+        </tr>
+        <tr>
+            <td>Budgeted CDA/CM allocation set-up (FTE based on FOUR month set-up)</td>
+            <td>{{ record?.budgetedCdaCmAllocationSetup }}</td>
+        </tr>
+        <tr>
+            <td>Budgeted CDA/CM allocation during enrolment (FTE)</td>
+            <td>{{ record?.budgetedCdaCmAllocationDuringEnrolement }}</td>
+        </tr>
+        <tr>
+            <td>Budgeted CDA/CM allocation during treatment (FTE)</td>
+            <td>{{ record?.budgetedCdaCmAllocationDuringTreatment }}</td>
+        </tr> 
+        <tr>
+            <td>Budgeted CDA/CM allocation during LTFU (FTE)</td>
+            <td>{{ record?.budgetedCdaCmAllocationDuringLtfu }}</td>
+        </tr>
+        <tr>
+            <td>Contracted KOM, CRAmeetings</td>
+            <td>{{ record?.contractedKomCraMeetingsCpDescription }}</td>
+        </tr>
+        <tr>
+            <td>CDA Analysis Frequency</td>
+            <td>{{ record?.cdaAnalysisFrequencyCpDescription }}</td>
+        </tr>
+        <tr>
+            <td>CDA analysis frequency (Enrolment)</td>
+            <td>{{ record?.cdaAnalysisFrequencyEnrolementCpDescription }}</td>
+        </tr>
+       
+        <tr>
+            <td>CDA Analysis Frequency (LPI-LPO)</td>
+            <td>{{ record?.cdaAnalysisFrequencyLpiLpoCpDescription }}</td>
+        </tr>
+       
+        <tr>
+            <td>CDA analysis frequency (LTFU / OLE / SFU)</td>
+            <td>{{ record?.cdaAnalysisFrequencyLtfuOleSfuCpDescription }}</td>
+        </tr>
+        <tr>
+            <td>Central Monitoring Status</td>
+            <td>{{ record?.centralMonitoringStatusCpDescription }}</td>
+        </tr>
+        <tr>
+            <td>Nr of indicators (Max)</td>
+            <td>{{ record?.indicators }}</td>
+        </tr>
+        <tr>
+            <td>Notes</td>
+            <td>{{ record?.notes }}</td>
+        </tr>
+        <tr>
+            <td>Unfilled PRM Request</td>
+            <td>{{ record?.unfilledPrmRequestCpDescription }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<span class="alert alert-info">Last Updated on: {{ record?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span>

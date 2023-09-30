@@ -1,0 +1,48 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<table class="table table-sm small table-striped">
+	<tbody>
+		<tr>
+			<td>Review No</td>
+			<td>{{ review.reviewIndex }}</td>
+		</tr>
+        <tr>
+			<td>Review Cycle</td>
+			<td>{{ review.reviewCycleDescription }}</td>
+		</tr>
+        <tr>
+			<td>Next Review Cycle Due Date</td>
+			<td>{{ review.newReviewCycleDueDate | date: 'dd-MMM-y' }}</td>
+		</tr>
+		<br/>
+        <!-- <tr> -->
+            <h6>DMPM Review</h6>
+        <!-- </tr> -->
+        <tr>
+			<td>Overall Project Score</td>
+			<td>{{ review.overallProjectScore }}</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>{{ dmpmReviewStatus }}</td>
+		</tr>
+		<br/>
+        <!-- <tr> -->
+            <h6>DMPM Manager Review</h6>
+        <!-- </tr> -->
+        <tr>
+			<td>Override Project Score</td>
+			<td>{{ review.overideProjectScore }}</td>
+		</tr>
+		<tr>
+			<td>WatchList</td>
+			<td>{{ review.watchlistBool }}</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>{{ dmpmManagerReviewStatus }}</td>
+		</tr>
+    </tbody>
+</table>
+<!-- <span class="alert alert-info">Last Updated on: {{ review?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+<app-last-saved [auditFields]="review"></app-last-saved>

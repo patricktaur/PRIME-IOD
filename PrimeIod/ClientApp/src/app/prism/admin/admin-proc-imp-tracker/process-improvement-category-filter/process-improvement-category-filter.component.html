@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label>Select Task Group:</label>
+      <ng-select
+        id="parId"
+        [multiple]="false"
+        placeholder="All"
+        [clearable]="true"
+        [(ngModel)]="selectedFilters.parId"
+        (ngModelChange)="onSubFilterChange()"
+        class="custom"
+      >
+        <ng-option *ngFor="let rec of filters" [value]="rec.recId">{{ rec.description }}</ng-option>
+        <!-- <ng-option [value]="true"> Yes</ng-option>
+            <ng-option [value]="false"> No</ng-option> -->
+      </ng-select>
+    </div>
+  </div>
+</div>
+<!-- <p>filters: {{ selectedFilters | json }}</p> -->

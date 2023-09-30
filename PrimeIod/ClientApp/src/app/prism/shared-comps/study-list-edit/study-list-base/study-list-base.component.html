@@ -1,0 +1,19 @@
+<!-- <div class=""> -->
+<h4>{{ title }}</h4>
+
+<div class="table-responsive">
+  <app-data-table-base
+    [pageNumber]="pageNumber"
+    [pageSize]="pageSize"
+    [columns]="filteredColumns"
+    [records]="records"
+    (raiseEvent)="dataTableEvent($event)"
+  ></app-data-table-base>
+</div>
+<p *ngIf="displayJson">records: {{ records | json }}</p>
+<button type="button" class="btn btn-primary" (click)="add()" *ngIf="!viewMode">
+  Add
+</button>
+
+<!-- </div> -->
+<!-- <p>record: {{ columns | json }}</p> -->

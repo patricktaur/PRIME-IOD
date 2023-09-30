@@ -1,0 +1,29 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<!-- <h4>{{ title }}</h4> -->
+
+<hr />
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <div class="alert alert-warning" role="alert" *ngIf="pastDueDateWarning">
+    The Due Date is in the past.
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary submit-button me-1"
+    [disabled]="!(form.valid && form.dirty) || pastDueDateWarning"
+  >
+    Save
+  </button>
+  <!-- <button type="button" class="btn btn-default" (click)="options.resetModel()">Undo</button> -->
+  <button type="button" class="btn btn-primary me-1" (click)="options.resetModel()" title="Undo changes">
+    <i class="bi bi-arrow-counterclockwise "></i>
+    Undo
+  </button>
+  <button type="button" class="btn btn-primary" (click)="cancel()" title="Cancel changes">
+    Cancel
+  </button>
+  <app-last-saved [auditFields]="record"></app-last-saved>
+
+</form>
+
+<!-- <p>record: {{ record | json }}</p> -->

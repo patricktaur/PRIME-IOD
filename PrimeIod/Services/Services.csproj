@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>2.7.2</Version>
+    <Description>Data Access Layer</Description>
+    <Copyright>Copyright © 2020 www.claritytechnologies.com</Copyright>
+    <PackageProjectUrl>https://www.claritytechnologies.com</PackageProjectUrl>
+    <Company>claritytechnologies</Company>
+  </PropertyGroup>
+  <ItemGroup>
+        <PackageReference Include="MailKit" Version="2.6.0" />
+        <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+        <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
+        <PackageReference Include="Serilog.Filters.Expressions" Version="2.1.0" />
+        <PackageReference Include="Serilog.Settings.Configuration" Version="3.2.0" />
+  </ItemGroup>
+</Project>

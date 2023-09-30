@@ -1,0 +1,9 @@
+.clickable {
+  cursor: pointer;
+}
+
+.highlighted {
+  background-color: #b6e0ac !important;
+  color: white;
+  font-weight: bold;
+}

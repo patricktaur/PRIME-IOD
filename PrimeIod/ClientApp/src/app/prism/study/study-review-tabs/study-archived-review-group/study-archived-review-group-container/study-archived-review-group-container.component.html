@@ -1,0 +1,31 @@
+<ul class="nav nav-pills  pb-3">
+  <li role="button"
+    class="nav-item nav-link py-1" 
+    [routerLink]="'project-review-sign-off'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Project Review Sign Off
+  </li>
+  <li role="button"
+    class="nav-item nav-link py-1" 
+    [routerLink]="'project-issue-list'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Project Issue List
+  </li>
+  <li role="button"
+    class="nav-item nav-link py-1"  
+    [routerLink]="'archived-project-review-history'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+      >Archived Project Review History
+  </li>
+  <li role="button"
+    class="nav-item nav-link py-1" 
+    [routerLink]="'timeline-history'" 
+    routerLinkActive="active"
+    appStudyMenuAccessLink
+    >Timelines History
+  </li>
+</ul>
+<router-outlet></router-outlet>

@@ -1,0 +1,80 @@
+{
+    "2023": {
+        "Jan": {
+            "forecast": null,
+            "actual": null
+        }, "Feb": {
+            "forecast": 1,
+            "actual": 0
+        }, "Mar":  {
+            "forecast": 1,
+            "actual": 1
+        }, "Apr":  {
+            "forecast": 1,
+            "actual": 0
+        }, "May":  {
+            "forecast": 1,
+            "actual": 0
+        }, "Jun":  {
+            "forecast": 1,
+            "actual": 0
+        }, "Jul":  {
+            "forecast": 1,
+            "actual": 0
+        }, "Aug":  {
+            "forecast": 1,
+            "actual": 0
+        }, "Sep":  {
+            "forecast": 1,
+            "actual": 0
+        }, "Oct":  {
+            "forecast": 1,
+            "actual": 0
+        }, "Nov":  {
+            "forecast": 1,
+            "actual": 0
+        }, "Dec":  {
+            "forecast": 1,
+            "actual": 0
+        }
+    },
+    "2024": {
+        "Jan": {
+            "forecast": 1,
+            "actual": 0
+        }, "Feb": {
+            "forecast": 1,
+            "actual": 0
+        }, "Mar":  {
+            "forecast": 1,
+            "actual": 0
+        }, "Apr":  {
+            "forecast": null,
+            "actual": null
+        }, "May":  {
+            "forecast": null,
+            "actual": null
+        }, "Jun":  {
+            "forecast": null,
+            "actual": null
+        }, "Jul":  {
+            "forecast": null,
+            "actual": null
+        }, "Aug":  {
+            "forecast": null,
+            "actual": null
+        }, "Sep":  {
+            "forecast": null,
+            "actual": null
+        }, "Oct":  {
+            "forecast": null,
+            "actual": null
+        }, "Nov":  {
+            "forecast": null,
+            "actual": null
+        }, "Dec":  {
+            "forecast": null,
+            "actual": null
+        }
+    }
+}

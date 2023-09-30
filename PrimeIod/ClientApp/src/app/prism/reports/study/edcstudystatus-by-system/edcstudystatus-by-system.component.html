@@ -1,0 +1,50 @@
+<!-- {{filteredRecords | json}} -->
+
+<app-loader [isLoading]="isLoading"></app-loader>
+<div class="">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="clearfix">
+        <h4 class="mb-3 float-start me-3">{{title}}</h4>
+        <!-- <button type="button" class="btn btn-primary mb-3 float-end" (click)="onClickBack()">Back</button> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-icon-light me-n5 ms-n5 px-3 py-3 border-bottom border-top">
+    <div class="row">
+      <div class="col">
+        <app-filter-four [records]="records" (filterChange)="onFilterChange($event)"></app-filter-four>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- <div class="col-md-12"> -->
+    <!-- <div> -->
+    <div class="table-responsive">
+      <app-data-table-base
+        [pageNumber]="pageNumber"
+        [pageSize]="pageSize"
+        [columns]="columns"
+        [records]="groupedRecords"
+      ></app-data-table-base>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <span>
+        Studies with CDMS-'Blank/Missing' or CDMS Type - 'Paper' and Studies with Status- 'Future' are excluded
+      </span>
+      <br />
+      <app-report-download-csv-2-json
+        [records]="groupedRecords"
+        [fields]="columns"
+        [fileName]="title + '.csv'"
+        [appendDateToFiileName]="true"
+      ></app-report-download-csv-2-json>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<button  type="button" class="btn btn-primary" (click)="add()"
+appMenuAccess="study/imi/cdms-group/cdms-tracker/item-group/edit" 
+>
+  New Set-up / CPPC
+</button>
+<app-data-table-shell
+  [records]="filteredRecords"
+  [columns]="columns"
+  [showColumnManager]="false"
+  [showFooterActions]="showFooterActions"
+  (raiseEvent)="onRaiseEvent($event)"
+>
+  <div header>
+    <!-- <h4>
+      {{ title }}
+    </h4> -->
+  </div>
+</app-data-table-shell>
+<app-server-response-messages
+  [serverResponseMessages]="serverResponses"
+  [messageBoxHeight]="200"
+></app-server-response-messages>
+<!-- <p>records:{{ records | json }}</p> -->

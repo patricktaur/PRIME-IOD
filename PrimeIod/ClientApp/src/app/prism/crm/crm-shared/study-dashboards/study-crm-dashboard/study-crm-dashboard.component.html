@@ -1,0 +1,29 @@
+<table class="table mb-0 study-dashboard">
+  <tr>
+    <td>Sponsor Study Code</td>
+    <td>Sponsor</td>
+    <td>CDA/CM</td>
+    <td>Central Risk Manager</td>
+    <td>Central Monitoring Status</td>
+    <td>First Analysis Date</td>
+    <td>Final Analysis Date</td>
+    <td>Analysis Frequency</td>
+    <td>Total Forecasted CDA Analysis</td>
+    <td>Total Actual Analysis</td>
+  </tr>
+
+  <tr>
+    <td>{{ studyDashboard?.sponsorStudyNumber }}</td>
+    <td>{{ studyDashboard?.sponsor }}</td>
+    <td>{{ studyDashboard?.cdaCm }}</td>
+    <td>{{ studyDashboard?.clinicalRiskManager }}</td>
+    <td>{{ studyDashboard?.centralMonitoringStatus }}</td>
+    <td>{{ studyDashboard?.firstAnalysisDate | date: 'dd-MMM-yyyy' }}</td>
+    <td>{{ studyDashboard?.finalAnalysisDate | date: 'dd-MMM-yyyy' }}</td>
+    <td>{{ studyDashboard?.analysisFrequencyDerived }}</td>
+    <td>{{ studyDashboard?.totalScheduleCdaAnalysis }}</td>
+    <td>{{ studyDashboard?.totalActualCdaAnalysis }}</td>
+  </tr>
+</table>
+
+<!-- <p>studyDashboard: {{studyDashboard | json}}</p> -->

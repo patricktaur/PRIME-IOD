@@ -1,0 +1,27 @@
+<app-loader [isLoading]="isLoading"></app-loader>
+<div class="">
+  <div class="row">
+    <div class="col-md-12">
+      <h4 class="mb-4">{{ title }}</h4>
+      <div>
+        <!-- <app-study-filters
+          [records]="records"
+          (filterChange)="onFilterChange($event)"
+          (searchTextChange)="onSearchTextChange($event)"
+        ></app-study-filters> -->
+
+        <!-- <app-report-download
+          [reportPath]="'api/studyreports/omr-dashboard-report-exp'"
+          [fileName]="'OMR-Report.csv'"
+          [appendDateToFiileName]="true"
+        ></app-report-download> -->
+      </div>
+    </div>
+
+    <div class="col-md-12 mt-3 border-top pt-3">
+      <div class="table-responsive">
+        <app-report-base [columns]="columns" [records]="records"> </app-report-base>
+      </div>
+    </div>
+  </div>
+</div>

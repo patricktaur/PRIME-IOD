@@ -1,0 +1,106 @@
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Search</label>
+      <input class="form-control" placeholder="ICON Number or Protocol Name" type="text" [formControl]="filterForm" />
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Portfolio</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Portfolio"
+        [(ngModel)]="portfolioFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.portfolio" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Sponsors</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Sponsor"
+        [(ngModel)]="sponsorsFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.sponsor" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Frequency</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [multiple]="true"
+        placeholder="Frequency"
+        [(ngModel)]="reviewCycleFilters"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.reviewCycle" [value]="rec.value">{{ rec.value }}</ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Last Reviewed By</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="lastReviewedByFilters"
+        [multiple]="true"
+        placeholder="Last Reviewed By"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.lastReviewedBy" [value]="rec.value">{{ rec.value }} </ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Project Director</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="projectDirectorFilters"
+        [multiple]="true"
+        placeholder="Project Directors"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.projectDirectors" [value]="rec.value">{{ rec.value }} </ng-option>
+      </ng-select>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-group">
+      <label class="form-label">Project Manager</label>
+      <ng-select
+        id="exampleFormControlSelect1"
+        [(ngModel)]="projectManagersFilters"
+        [multiple]="true"
+        placeholder="Project Manager"
+        [clearable]="true"
+        (ngModelChange)="onFiltersChange()"
+      >
+        <ng-option *ngFor="let rec of filters?.projectManagers" [value]="rec.value">{{ rec.value }} </ng-option>
+      </ng-select>
+    </div>
+  </div>
+</div>
+
+<!-- <p>filters: {{filters | json}}</p> -->
+
+<!-- <p>projectDirectorFilters: {{projectDirectorFilters | json}}</p> -->
+<!-- <p>projectManagersFilters: {{projectManagersFilters | json}}</p> -->
+<!-- <p>records: {{records | json }}</p> -->

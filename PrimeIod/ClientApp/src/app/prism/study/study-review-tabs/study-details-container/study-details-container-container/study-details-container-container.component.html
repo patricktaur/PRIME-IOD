@@ -1,0 +1,48 @@
+<ul class="nav nav-pills  pb-3">
+  <li role="button"
+    class="nav-item nav-link" 
+		[routerLink]="'description'"
+		routerLinkActive="active"
+		appStudyMenuAccessLink
+		>Study Details  
+  </li>
+  <li role="button"
+		class="nav-item nav-link"  
+		[routerLink]="'description-view'" 
+		routerLinkActive="active"
+		appStudyMenuAccessLink
+		>Study Details - View
+  </li>
+  <li role="button"
+		class="nav-item nav-link" 
+		[routerLink]="'other-icon-departments'"
+		routerLinkActive="active"
+		appStudyMenuAccessLink
+		>Other Icon Departments
+  </li>
+  <li role="button"
+		class="nav-item nav-link"  
+		[routerLink]="'other-icon-departments-view'" 
+		routerLinkActive="active"
+		appStudyMenuAccessLink
+		>Other Icon Departments - View
+  </li>
+  <!-- *ngIf="hasDMManagerRole" -->
+  <li role="button"
+		class="nav-item nav-link" 
+		[routerLink]="'assumptions'"
+		routerLinkActive="active"
+		appStudyMenuAccessLink
+		>Assumptions
+  </li>
+  <li role="button"
+		class="nav-item nav-link"  
+		[routerLink]="'assumptions-view'" 
+		routerLinkActive="active"
+		appStudyMenuAccessLink
+		>Assumptions - View
+  </li>
+</ul>
+<!-- <p>hasDMManagerRole: {{hasDMManagerRole}}</p> -->
+<hr />
+<router-outlet></router-outlet>

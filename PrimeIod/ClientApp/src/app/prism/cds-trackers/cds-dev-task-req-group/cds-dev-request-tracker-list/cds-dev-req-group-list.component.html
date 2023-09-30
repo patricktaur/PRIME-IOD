@@ -1,0 +1,30 @@
+<!-- <app-loader [isLoading]="isLoading"></app-loader> -->
+
+<app-cds-dev-req-dashboard
+  [tag]="'all'"
+  (itemClicked)="onItemClicked($event)"
+  *ngIf="currentUserRoleIsAdminOrCdsManager"
+></app-cds-dev-req-dashboard>
+
+<app-cds-dev-req-dashboard
+  [tag]="'my'"
+  (itemClicked)="onItemClicked($event)"
+  *ngIf="!currentUserRoleIsAdminOrCdsManager"
+></app-cds-dev-req-dashboard>
+
+<div class="bg-icon-light me-n5 ms-n5 px-3 py-3 border-bottom border-top">
+  <details>
+    <summary><i class="bi bi-funnel"></i> Filters</summary>
+    <app-cds-development-filter
+      [selectedFilters]="selectedFilters"
+      [showResetButton]="true"
+      (filterChange)="onFilterChange($event)"
+      (resetFilters)="onResetFilters()"
+    >
+    </app-cds-development-filter>
+  </details>
+</div>
+<app-cds-dev-req-base-list [filters]="selectedFilters"></app-cds-dev-req-base-list>
+<!-- <app-cds-dev-req-base-list></app-cds-dev-req-base-list> -->
+
+<!-- <p>selectedFilters: {{ selectedFilters | json }}</p> -->

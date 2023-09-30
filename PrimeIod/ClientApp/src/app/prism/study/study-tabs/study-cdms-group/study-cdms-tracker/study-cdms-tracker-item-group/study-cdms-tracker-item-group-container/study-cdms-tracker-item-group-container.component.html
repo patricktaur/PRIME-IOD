@@ -1,0 +1,31 @@
+<ul class="nav nav-pills " style=" padding-top: 10px; ">
+  <li class="nav-item">
+    <a class="nav-link py-1" [routerLink]="'view'" [queryParams]="{ id: id }" routerLinkActive="active"
+   
+    >View</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link  py-1" [routerLink]="'edit'" [queryParams]="{ id: id }" routerLinkActive="active"
+    appStudyMenuAccessLink
+    
+    >Edit</a>
+  </li>
+</ul>
+<hr />
+
+<router-outlet></router-outlet>
+<hr />
+<button type="button" class="btn btn-default me-1" (click)="back()">Back</button>
+<app-copy-link></app-copy-link>
+<app-confirmation-shell 
+  [appMenuAccess]="menuAccessLink"
+  [message]="'Remove Task ' + id + ' ?'"
+  [labelText]="'Remove'"
+  [responseValue]="id"
+  (response)="delete($event)"
+></app-confirmation-shell>
+<hr />
+<app-server-response-messages
+  [serverResponseMessages]="serverResponses"
+  [messageBoxHeight]="200"
+></app-server-response-messages>

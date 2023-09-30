@@ -1,0 +1,59 @@
+<app-data-table-shell
+  [records]="filterRecords"
+  [columns]="columns"
+  [showColumnManager]="false"
+  [showFooterActions]="showFooterActions"
+  (raiseEvent)="onRaiseEvent($event)"
+  [viewMode]="isViewMode"
+>
+  <div header>
+    <div class="row">
+      <div class="col-8">
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label class="form-label">Role</label>
+              <ng-select
+                [multiple]="true"
+                [clearable]="true"
+                [(ngModel)]="roleFilters"
+                (ngModelChange)="onFilterChange()"
+              >
+                <ng-option *ngFor="let res of resourcesList()" [value]="res.recId">{{ res.description }}</ng-option>
+              </ng-select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label class="form-label">Active</label>
+              <ng-select
+                [multiple]="true"
+                [clearable]="true"
+                [(ngModel)]="activeFilters"
+                [clearable]="true"
+                (ngModelChange)="onFilterChange()"
+              >
+                <ng-option [value]="true">Yes</ng-option>
+                <ng-option [value]="false">No</ng-option>
+              </ng-select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <app-study-resource-dashboard [records]="records"></app-study-resource-dashboard>
+      </div>
+    </div>
+  </div>
+  <div footer-actions>
+    <button type="button" class="btn btn-primary" (click)="add()">
+      Add
+    </button>
+  </div>
+</app-data-table-shell>
+
+<!-- <p>record:{{ filterRecords | json }}</p>
+
+<p>record:{{ columns | json }}</p> -->

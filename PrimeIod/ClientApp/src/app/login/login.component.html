@@ -1,0 +1,66 @@
+<div class="login-container bg-secondary">
+  <div class="login-box">
+    <div class="text-light">
+      <h1 translate>APP_NAME</h1>
+      <h6 class="d-inline-block">v{{ version }}</h6>
+      <!-- language: -->
+      <!-- <div class="d-inline-block ms-3" ngbDropdown>
+        <button id="language-dropdown" class="btn btn-sm btn-secondary" ngbDropdownToggle>
+          {{ currentLanguage }}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="language-dropdown">
+          <button class="dropdown-item" *ngFor="let language of languages" (click)="setLanguage(language)">
+            {{ language }}
+          </button>
+        </div>
+      </div> -->
+    </div>
+    <div class="container">
+      <div class="card col-md-6 mt-3 mx-auto">
+        <div class="card-body">
+          <h4 class="card-title text-center">
+            <i class="far fa-3x fa-user-circle text-muted"></i>
+          </h4>
+          <!--  <app-email-token-login *ngIf="isProd"></app-email-token-login> -->
+          <!-- <app-user-name-pwd-login [envIsProd]="isProd" *ngIf="isProd"></app-user-name-pwd-login> -->
+          <div *ngIf="!isProd">
+            <div class="alert alert-primary text-center" role="alert">
+              <strong>Development Environment</strong>
+            </div>
+
+            
+            <ul ngbNav #nav="ngbNav" class="nav-pills">
+              <li ngbNavItem>
+                <a ngbNavLink>Password</a>
+                <ng-template ngbNavContent>
+                  <!-- <app-user-name-pwd-login [envIsProd]="isProd"></app-user-name-pwd-login> -->
+                </ng-template>
+              </li>
+              <li ngbNavItem>
+                <a ngbNavLink>EMail</a>
+                <ng-template ngbNavContent>
+                  <!-- <app-email-token-login></app-email-token-login> -->
+                </ng-template>
+              </li>
+            </ul>
+            <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+            <!-- <ngb-tabset type="tabs">
+              <ngb-tab>
+                <ng-template ngbTabTitle>Password</ng-template>
+                <ng-template ngbTabContent>
+                  <app-user-name-pwd-login [envIsProd]="isProd"></app-user-name-pwd-login>
+                </ng-template>
+              </ngb-tab>
+              <ngb-tab title="EMail">
+                <ng-template ngbTabContent>
+                  <app-email-token-login></app-email-token-login>
+                </ng-template>
+              </ngb-tab>
+            </ngb-tabset> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

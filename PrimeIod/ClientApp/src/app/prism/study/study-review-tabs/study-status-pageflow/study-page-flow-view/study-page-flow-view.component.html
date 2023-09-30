@@ -1,0 +1,35 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<ul class="list-group">
+    <li class="list-group-item">First Study Date: {{ pageflow.firstDate | date: 'dd-MMM-yyyy' }}</li>
+    <li class="list-group-item">Last Study Date: {{ pageflow.lastDate | date: 'dd-MMM-yyyy' }}</li>
+    <li class="list-group-item">Total Actual Pages: {{ totalActualPages }}</li>
+    <li class="list-group-item">Total Future Planned Pages: {{ totalFuturePages }}</li>
+</ul>
+
+<div [formGroup]="tableForm" class="input-group mb-3 col-4 my-3 ms-0 ps-0 green-form">
+    <span class="input-group-text bg-green" id="basic-addon1">Year</span>
+    <select formControlName="selectedYear" class="form-control" (change)="updateYear($event)">
+      <option *ngFor="let years of YearValue" selected="selectedYear">{{ years }}</option>
+    </select>
+</div>
+
+<table class="table table-sm small table-striped">
+    <thead>
+		<tr class="bg-green align-text-top">
+			<th scope="col">MMM-YYYY</th>
+            <th scope="col">Planned Pages</th>
+			<th scope="col">Actual Pages</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let item of filterPageFlow;">
+			<td>{{ item.yyyymm | date: 'MMM-yyyy' }}</td>
+			<td>{{ item.plannedPages }}</td>
+            <td>{{ item.actualPages }}</td>
+		</tr>
+    </tbody>
+</table>
+
+<!-- <span class="alert alert-info">Last Updated on: {{ pageflow.lastSavedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+<app-last-saved [auditFields]="filterPageFlow"></app-last-saved>

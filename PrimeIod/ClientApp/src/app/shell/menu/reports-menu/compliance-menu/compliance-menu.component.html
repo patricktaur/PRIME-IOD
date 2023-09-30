@@ -1,0 +1,80 @@
+<!-- *ngIf="menuVisible(menuProjectReviewComplianceStat)"  -->
+<div 
+  title="{{ menuStat[menuProjectReviewComplianceStat] }}"
+  appMenuAccess="reports/compliance/report-compliance-project-compliance"
+>
+  <!-- *appHasPermissions="'rol.*, res.*'"
+    [disabled]="menuDisabled(menuProjectReviewComplianceStat)" -->
+  <button
+    class="dropdown-item"
+    routerLink="/reports/project-review-compliance"
+    routerLinkActive="active"
+    translate
+  >
+    Project Review Compliance
+  </button>
+</div>
+
+<!-- *ngIf="menuVisible(menuMissingFormsAndPendingOfflineChecksStat)" -->
+<div
+  title="{{ menuStat[menuMissingFormsAndPendingOfflineChecksStat] }}"
+  appMenuAccess="reports/compliance/report-compliance-missing-forms-offline-checks"
+>
+  <!-- *appHasPermissions="'rol.*, res.*'"
+    [disabled]="menuDisabled(menuMissingFormsAndPendingOfflineChecksStat)" -->
+  <button
+    class="dropdown-item"
+    routerLink="/reports/missing-forms-and-offline-validations"
+    routerLinkActive="active"
+    translate
+  >
+    Missing Forms and Pending Offline Checks
+  </button>
+</div>
+
+<!-- *ngIf="menuVisible(menuMissingFormsStat)" -->
+<div 
+  title="{{ menuStat[menuMissingFormsStat] }}"
+  appMenuAccess="reports/compliance/report-compliance-missing-forms"
+>
+  <!-- *appHasPermissions="'rol.*, res.*'"
+    [disabled]="menuDisabled(menuMissingFormsStat)" -->
+  <button
+    class="dropdown-item"
+    routerLink="/reports/report-n-dynamic-filters"
+    routerLinkActive="active"
+    [queryParams]="{ report: 'vwComplianceMissingFormsRepV2' }"
+    translate
+  >
+    Missing Forms
+  </button>
+</div>
+
+<!-- *ngIf="menuVisible(menuOfflineChecksStat)" -->
+<div
+  title="{{ menuStat[menuOfflineChecksStat] }}"
+  appMenuAccess="reports/compliance/report-compliance-offline-checks"
+>
+  <!-- *appHasPermissions="'rol.*, res.*'"
+    [disabled]="menuDisabled(menuOfflineChecksStat)" -->
+  <button
+    class="dropdown-item"
+    routerLink="/reports/offline-validation-rep"
+    routerLinkActive="active"
+    translate
+  >
+    Offline Mandatory Checks
+  </button>
+</div>
+<!-- <div *ngIf="menuVisible(menuImiReviewComplianceStat)" title="{{ menuStat[menuImiReviewComplianceStat] }}">
+  <button
+    class="dropdown-item"
+    routerLink="/reports/imi-review-compliance"
+    routerLinkActive="active"
+    translate
+    *appHasPermissions="'rol.*, res.*'"
+    [disabled]="menuDisabled(menuImiReviewComplianceStat)"
+  >
+    IMI Review Compliance
+  </button>
+</div> -->

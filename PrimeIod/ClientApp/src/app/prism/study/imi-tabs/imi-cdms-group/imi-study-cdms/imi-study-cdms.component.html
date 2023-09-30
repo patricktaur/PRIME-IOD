@@ -1,0 +1,44 @@
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <br />
+  <div class="alert alert-warning" role="alert" *ngIf="cdsmLeadNameAndCoveringCdmsLeadNameAreIdentical">
+    CDMS Lead and Convering CDMS Lead are identical
+  </div>
+  <div
+    *ngIf="timelineValidation?.updateRequired && !timelineValidation?.timelineValidationSuccess"
+    class="alert alert-primary"
+    role="alert"
+  >
+    <b>Timeline updates:</b><br />
+    {{ timelineValidation.message }}
+    <p *ngIf="timelineValidation?.validationMessages?.length > 0">
+      Conflicts found in Timeline section:
+    </p>
+    <div
+      class="alert alert-danger"
+      role="alert"
+      style=" margin-bottom:5px; "
+      *ngFor="let res of timelineValidation?.validationMessages"
+    >
+      {{ res.message }}
+    </div>
+    <div *ngIf="timelineValidation?.updateRequired && !timelineValidation?.timelineValidationSuccess">
+      Uncheck 'Update Timelines' if you do not wish to update Timelines when the form is Saved.
+    </div>
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary submit-button me-1"
+    [disabled]="!(form.valid && form.dirty) || cdsmLeadNameAndCoveringCdmsLeadNameAreIdentical"
+  >
+    Save
+  </button>
+  <button type="button" class="btn btn-light me-1" (click)="options.resetModel()">Undo</button>
+  <!-- <span class="alert alert-info">Last Updated on: {{ record?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+  <app-last-saved [auditFields]="record"></app-last-saved>
+
+</form>
+
+<!-- <p>record: {{ record | json }}</p> -->
+<!-- <p>timelineValidation:{{timelineValidation | json}}</p> -->

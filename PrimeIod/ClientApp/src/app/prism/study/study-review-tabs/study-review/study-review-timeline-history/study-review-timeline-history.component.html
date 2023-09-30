@@ -1,0 +1,46 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<h4>Timeline History</h4>
+<!-- <p>column : {{visbleColumns | json}}</p>  -->
+<!-- <p>studyReviewTimelineHistory: {{studyReviewTimelineHistory | json }}</p> -->
+<div class="table-responsive">
+  <table class="table table-sm table-hover small">
+    <thead class="bg-green">
+      <tr>
+        <th *ngFor="let column of visbleColumns; let j = index">
+          <!-- <span *ngIf="j != 0">{{ column | titlecase }}</span> -->
+          <span>{{ column | titlecase }}</span>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- <tr>
+      <td rowspan="2">
+        name
+      </td>
+      <td rowspan="1">
+        plan
+      </td>
+      <td rowspan="1">
+        actual
+      </td>
+      
+    </tr> -->
+
+      <tr *ngFor="let record of studyReviewTimelineHistory; let i = index; let count = last">
+        <td
+          *ngFor="let column of getColumns(record.group, visbleColumns); let j = index"
+          [ngStyle]="styles[record.group]"
+          [attr.colspan]="getColspan(record.group, visbleColumns.length)"
+        >
+          {{ record[column] }}
+
+          <!-- --
+        {{getColumns(record.group, visbleColumns)}} -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr />
+<!-- {{ studyReviewTimelineHistory | json }} -->

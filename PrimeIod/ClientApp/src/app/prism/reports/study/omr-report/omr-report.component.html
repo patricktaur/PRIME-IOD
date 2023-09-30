@@ -1,0 +1,92 @@
+<app-loader [isLoading]="isLoading"></app-loader>
+<div class="">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="clearfix">
+        <h4 class="mb-3 float-start me-3">OMR Report</h4>
+        <!-- <button type="button" class="btn btn-primary mb-3 float-end" (click)="onClickBack()">Back</button> -->
+      </div>
+      <div>
+        <app-study-filters
+          [records]="records"
+          (filterChange)="onFilterChange($event)"
+          (searchTextChange)="onSearchTextChange($event)"
+        ></app-study-filters>
+
+        <!-- <app-report-download
+          [reportPath]="'api/VwOMRDashboardV2/ome-dashboard-report-exp'"
+          [fileName]="'Ome-Report.csv'"
+          [appendDateToFiileName]="true"
+        ></app-report-download> -->
+      </div>
+    </div>
+    <!-- <div class="col-md-12 mt-3 border-top pt-3"> -->
+    <div class="table-responsive">
+      <table class="table table-sm table-hover small">
+        <thead class="bg-green">
+          <tr>
+            <th scope="col">ICON Number</th>
+            <th scope="col">Study Name</th>
+            <th scope="col" class="text-center">Total Clean Subjects</th>
+            <th scope="col" class="text-center">% Clean Subjects</th>
+            <th scope="col" class="text-center">Overall DM Score</th>
+            <th scope="col" class="text-center">Data Cleaning Score</th>
+            <th scope="col" class="text-center">External Data Score</th>
+            <th scope="col" class="text-center">DB Lock Cycle Time</th>
+            <th scope="col" class="text-center">DB Live Prior to FPI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="
+              let rec of filteredRecords | slice: (pageNumber - 1) * pageSize:(pageNumber - 1) * pageSize + pageSize;
+              let i = index
+            "
+          >
+            <td><ngb-highlight [result]="rec.studyIconNumber"></ngb-highlight></td>
+            <td><ngb-highlight [result]="rec.studyName"></ngb-highlight></td>
+
+            <td align="center"><ngb-highlight [result]="rec.totalCleanSubjects"></ngb-highlight></td>
+            <td align="center"><ngb-highlight [result]="rec.percentageCleanSubject"></ngb-highlight></td>
+            <td align="center">
+              <ngb-highlight [result]="rec.overallDMScore"></ngb-highlight>
+            </td>
+
+            <td align="center">
+              <ngb-highlight [result]="rec.dataCleaningScore"></ngb-highlight>
+            </td>
+            <td align="center">
+              <ngb-highlight [result]="rec.externalDataScore"></ngb-highlight>
+            </td>
+            <td align="center">
+              <ngb-highlight [result]="rec.dbLockCycleTime"></ngb-highlight>
+            </td>
+
+            <td align="center">
+              <ngb-highlight [result]="rec.dbLivePriorToFPI | date: 'dd MMM yyyy'"></ngb-highlight>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- </div> -->
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <app-report-download-csv-2-json
+        [records]="filteredRecords"
+        [fields]="columns"
+        [fileName]="'Ome-Report.csv'"
+        [appendDateToFiileName]="true"
+      ></app-report-download-csv-2-json>
+    </div>
+    <div class="col-md-10">
+      <pagination-control
+        [page]="pageNumber"
+        [pageSize]="pageSize"
+        [collectionSize]="filteredRecords.length"
+        (onPageChange)="onPageChange($event)"
+      ></pagination-control>
+    </div>
+  </div>
+</div>

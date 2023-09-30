@@ -1,0 +1,17 @@
+
+
+<div class="modal-header ">
+    <h5 class="modal-title" id="modal-basic-title">DM Study Team Members</h5>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <!-- <app-study-cds-inst-task-view [taskId]="taskId"></app-study-cds-inst-task-view> -->
+    <app-dm-study-members-base [studyId]="studyId"></app-dm-study-members-base>
+    <button type="button" class="btn btn-primary" aria-label="Close" (click)="activeModal.dismiss()">
+      Close
+    </button>
+    <br />
+  </div>
+

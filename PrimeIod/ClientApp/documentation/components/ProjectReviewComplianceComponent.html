@@ -1,0 +1,1322 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>icon-prism-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">icon-prism-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ProjectReviewComplianceComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-project-review-compliance</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./project-review-compliance.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./project-review-compliance.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#activeStudies">activeStudies</a>
+                            </li>
+                            <li>
+                                <a href="#filter">filter</a>
+                            </li>
+                            <li>
+                                <a href="#filteredOneStudies">filteredOneStudies</a>
+                            </li>
+                            <li>
+                                <a href="#filteredStudies">filteredStudies</a>
+                            </li>
+                            <li>
+                                <a href="#isDataLoaded">isDataLoaded</a>
+                            </li>
+                            <li>
+                                <a href="#isLoading">isLoading</a>
+                            </li>
+                            <li>
+                                <a href="#pageNumber">pageNumber</a>
+                            </li>
+                            <li>
+                                <a href="#pageSize">pageSize</a>
+                            </li>
+                            <li>
+                                <a href="#searchTerm">searchTerm</a>
+                            </li>
+                            <li>
+                                <a href="#totalItems">totalItems</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#loadReport">loadReport</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onFilterOneChange">onFilterOneChange</a>
+                            </li>
+                            <li>
+                                <a href="#onFilterTwoChange">onFilterTwoChange</a>
+                            </li>
+                            <li>
+                                <a href="#onSearchTextChange">onSearchTextChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#activeRecordsCount">activeRecordsCount</a>
+                                </li>
+                                <li>
+                                    <a href="#compliantRecords">compliantRecords</a>
+                                </li>
+                                <li>
+                                    <a href="#isCompliantCount">isCompliantCount</a>
+                                </li>
+                                <li>
+                                    <a href="#ReviewOverDueByDMPMRecords">ReviewOverDueByDMPMRecords</a>
+                                </li>
+                                <li>
+                                    <a href="#ReviewOverDueByDMPMCount">ReviewOverDueByDMPMCount</a>
+                                </li>
+                                <li>
+                                    <a href="#ReviewOverDueByDMPMManagerRecords">ReviewOverDueByDMPMManagerRecords</a>
+                                </li>
+                                <li>
+                                    <a href="#ReviewOverDueByDMPMManagerCount">ReviewOverDueByDMPMManagerCount</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(studyReportService: <a href="../injectables/StudyReportService.html">StudyReportService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>studyReportService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StudyReportService.html" target="_self" >StudyReportService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadReport"></a>
+                    <span class="name">
+                        <b>
+                            loadReport
+                        </b>
+                        <a href="#loadReport"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadReport()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFilterOneChange"></a>
+                    <span class="name">
+                        <b>
+                            onFilterOneChange
+                        </b>
+                        <a href="#onFilterOneChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onFilterOneChange(filteredRecords: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filteredRecords</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onFilterTwoChange"></a>
+                    <span class="name">
+                        <b>
+                            onFilterTwoChange
+                        </b>
+                        <a href="#onFilterTwoChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onFilterTwoChange(filteredRecords: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filteredRecords</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSearchTextChange"></a>
+                    <span class="name">
+                        <b>
+                            onSearchTextChange
+                        </b>
+                        <a href="#onSearchTextChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSearchTextChange(searchText: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>searchText</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="activeStudies"></a>
+                        <span class="name">
+                            <b>
+                            activeStudies</b>
+                            <a href="#activeStudies"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filter"></a>
+                        <span class="name">
+                            <b>
+                            filter</b>
+                            <a href="#filter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new FormControl(&#x27;&#x27;)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filteredOneStudies"></a>
+                        <span class="name">
+                            <b>
+                            filteredOneStudies</b>
+                            <a href="#filteredOneStudies"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filteredStudies"></a>
+                        <span class="name">
+                            <b>
+                            filteredStudies</b>
+                            <a href="#filteredStudies"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isDataLoaded"></a>
+                        <span class="name">
+                            <b>
+                            isDataLoaded</b>
+                            <a href="#isDataLoaded"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLoading"></a>
+                        <span class="name">
+                            <b>
+                            isLoading</b>
+                            <a href="#isLoading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pageNumber"></a>
+                        <span class="name">
+                            <b>
+                            pageNumber</b>
+                            <a href="#pageNumber"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>1</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pageSize"></a>
+                        <span class="name">
+                            <b>
+                            pageSize</b>
+                            <a href="#pageSize"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>10</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchTerm"></a>
+                        <span class="name">
+                            <b>
+                            searchTerm</b>
+                            <a href="#searchTerm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="totalItems"></a>
+                        <span class="name">
+                            <b>
+                            totalItems</b>
+                            <a href="#totalItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="activeRecordsCount"></a>
+                        <span class="name"><b>activeRecordsCount</b><a href="#activeRecordsCount"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>activeRecordsCount()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:65</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="compliantRecords"></a>
+                        <span class="name"><b>compliantRecords</b><a href="#compliantRecords"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>compliantRecords()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:71</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isCompliantCount"></a>
+                        <span class="name"><b>isCompliantCount</b><a href="#isCompliantCount"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isCompliantCount()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:77</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ReviewOverDueByDMPMRecords"></a>
+                        <span class="name"><b>ReviewOverDueByDMPMRecords</b><a href="#ReviewOverDueByDMPMRecords"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>ReviewOverDueByDMPMRecords()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:85</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ReviewOverDueByDMPMCount"></a>
+                        <span class="name"><b>ReviewOverDueByDMPMCount</b><a href="#ReviewOverDueByDMPMCount"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>ReviewOverDueByDMPMCount()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:92</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ReviewOverDueByDMPMManagerRecords"></a>
+                        <span class="name"><b>ReviewOverDueByDMPMManagerRecords</b><a href="#ReviewOverDueByDMPMManagerRecords"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>ReviewOverDueByDMPMManagerRecords()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:101</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ReviewOverDueByDMPMManagerCount"></a>
+                        <span class="name"><b>ReviewOverDueByDMPMManagerCount</b><a href="#ReviewOverDueByDMPMManagerCount"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>ReviewOverDueByDMPMManagerCount()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">src/app/prism/reports/study/project-review-compliance/project-review-compliance.component.ts:108</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { StudyReportService } from &#x27;@app/prism/reports/study/study-report.service&#x27;;
+import { FormControl } from &#x27;@angular/forms&#x27;;
+
+@Component({
+  selector: &#x27;app-project-review-compliance&#x27;,
+  templateUrl: &#x27;./project-review-compliance.component.html&#x27;,
+  styleUrls: [&#x27;./project-review-compliance.component.css&#x27;]
+})
+export class ProjectReviewComplianceComponent implements OnInit {
+  activeStudies: any;
+  filteredStudies: any;
+  filteredOneStudies: any;
+
+  isLoading: boolean &#x3D; false;
+  searchTerm &#x3D; &#x27;&#x27;;
+  isDataLoaded &#x3D; false;
+
+  pageNumber &#x3D; 1;
+  pageSize &#x3D; 10;
+  totalItems &#x3D; 0;
+  filter &#x3D; new FormControl(&#x27;&#x27;);
+
+  constructor(private studyReportService: StudyReportService) {}
+
+  ngOnInit(): void {
+    this.loadReport();
+  }
+
+  loadReport() {
+    this.isLoading &#x3D; true;
+    this.studyReportService.getProjectReviewComplianceReport().subscribe(
+      (res: any) &#x3D;&gt; {
+        if (res.status &#x3D;&#x3D;&#x3D; 400) {
+          return;
+        } else {
+          this.activeStudies &#x3D; res;
+          if (this.activeStudies) {
+            this.filteredStudies &#x3D; this.activeStudies;
+            this.filteredOneStudies &#x3D; this.activeStudies;
+          }
+        }
+        this.isLoading &#x3D; false;
+      },
+      (err: any) &#x3D;&gt; {
+        console.log(&#x60;err &#x3D; ${JSON.stringify(err, null, 2)}&#x60;);
+        this.isLoading &#x3D; false;
+      }
+    );
+  }
+
+  onFilterOneChange(filteredRecords: any) {
+    this.filteredOneStudies &#x3D; filteredRecords;
+    this.onFilterTwoChange(this.filteredOneStudies);
+  }
+
+  onSearchTextChange(searchText: string) {
+    this.searchTerm &#x3D; searchText;
+  }
+
+  onFilterTwoChange(filteredRecords: any) {
+    this.filteredStudies &#x3D; filteredRecords;
+  }
+
+  get activeRecordsCount() {
+    if (!this.filteredStudies) {
+      return;
+    }
+    return this.filteredStudies.length;
+  }
+  get compliantRecords() {
+    if (!this.filteredStudies) {
+      return;
+    }
+    return this.filteredStudies.filter((n: any) &#x3D;&gt; n.isCompliant &#x3D;&#x3D; true);
+  }
+  get isCompliantCount() {
+    if (!this.compliantRecords) {
+      return;
+    }
+    //  return this.activeStudies.filter((n: any) &#x3D;&gt; n.isCompliant &#x3D;&#x3D; true).length;
+    return this.compliantRecords.length;
+  }
+
+  get ReviewOverDueByDMPMRecords() {
+    if (!this.filteredStudies) {
+      return;
+    }
+    return this.filteredStudies.filter((n: any) &#x3D;&gt; n.isReviewOverDueByDMPM &#x3D;&#x3D; true);
+  }
+
+  get ReviewOverDueByDMPMCount() {
+    if (!this.ReviewOverDueByDMPMRecords) {
+      return;
+    }
+
+    // return this.activeStudies.filter((n: any) &#x3D;&gt; n.isReviewOverDueByDMPM &#x3D;&#x3D; true).length;
+    return this.ReviewOverDueByDMPMRecords.length;
+  }
+
+  get ReviewOverDueByDMPMManagerRecords() {
+    if (!this.filteredStudies) {
+      return;
+    }
+    return this.filteredStudies.filter((n: any) &#x3D;&gt; n.isReviewOverDueByDMPMManager &#x3D;&#x3D; true);
+  }
+
+  get ReviewOverDueByDMPMManagerCount() {
+    if (!this.ReviewOverDueByDMPMManagerRecords) {
+      return;
+    }
+
+    // return this.activeStudies.filter((n: any) &#x3D;&gt; n.isReviewOverDueByDMPMManager &#x3D;&#x3D; true).length;
+    return this.ReviewOverDueByDMPMManagerRecords.length;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-loader [isLoading]&#x3D;&quot;isLoading&quot;&gt;&lt;/app-loader&gt;
+&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+  &lt;div class&#x3D;&quot;row&quot;&gt;
+    &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+      &lt;h4 class&#x3D;&quot;mb-4&quot;&gt;Compliance Report&lt;/h4&gt;
+      &lt;div&gt;
+        &lt;app-study-filters
+          [records]&#x3D;&quot;activeStudies&quot;
+          (filterChange)&#x3D;&quot;onFilterOneChange($event)&quot;
+          (searchTextChange)&#x3D;&quot;onSearchTextChange($event)&quot;
+        &gt;&lt;/app-study-filters&gt;
+        &lt;app-study-review-filter
+          [records]&#x3D;&quot;filteredOneStudies&quot;
+          (filterChange)&#x3D;&quot;onFilterTwoChange($event)&quot;
+        &gt;&lt;/app-study-review-filter&gt;
+
+        &lt;app-report-download
+          [reportPath]&#x3D;&quot;&#x27;api/studyreports/project-review-compliance-report-csv&#x27;&quot;
+          [fileName]&#x3D;&quot;&#x27;ProjectReviewCompliance.csv&#x27;&quot;
+          [appendDateToFiileName]&#x3D;&quot;true&quot;
+        &gt;&lt;/app-report-download&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-md-12 mt-3 border-top pt-3&quot;&gt;
+      &lt;ngb-tabset type&#x3D;&quot;pills&quot;&gt;
+        &lt;ngb-tab title&#x3D;&quot;Compliant ({{ isCompliantCount }}) &quot;&gt;
+          &lt;ng-template ngbTabContent&gt;
+            &lt;app-project-review-compliance-list [records]&#x3D;&quot;compliantRecords&quot; [searchTerm]&#x3D;&quot;searchTerm&quot;&gt;
+            &lt;/app-project-review-compliance-list&gt;
+          &lt;/ng-template&gt;
+        &lt;/ngb-tab&gt;
+        &lt;ngb-tab title&#x3D;&quot;With DMPM ({{ ReviewOverDueByDMPMCount }})&quot;&gt;
+          &lt;ng-template ngbTabContent&gt;
+            &lt;app-project-review-compliance-list [records]&#x3D;&quot;ReviewOverDueByDMPMRecords&quot; [searchTerm]&#x3D;&quot;searchTerm&quot;&gt;
+            &lt;/app-project-review-compliance-list&gt;
+          &lt;/ng-template&gt;
+        &lt;/ngb-tab&gt;
+
+        &lt;ngb-tab title&#x3D;&quot;Pending with DMPM Manager ({{ ReviewOverDueByDMPMManagerCount }})&quot;&gt;
+          &lt;ng-template ngbTabContent&gt;
+            &lt;app-project-review-compliance-list [records]&#x3D;&quot;ReviewOverDueByDMPMManagerRecords&quot; [searchTerm]&#x3D;&quot;searchTerm&quot;&gt;
+            &lt;/app-project-review-compliance-list&gt;
+          &lt;/ng-template&gt;
+        &lt;/ngb-tab&gt;
+        &lt;ngb-tab title&#x3D;&quot;All Active ({{ activeRecordsCount }})&quot;&gt;
+          &lt;ng-template ngbTabContent&gt;
+            &lt;app-project-review-compliance-list [records]&#x3D;&quot;filteredStudies&quot; [searchTerm]&#x3D;&quot;searchTerm&quot;&gt;
+            &lt;/app-project-review-compliance-list&gt;
+          &lt;/ng-template&gt;
+        &lt;/ngb-tab&gt;
+      &lt;/ngb-tabset&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./project-review-compliance.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-loader [isLoading]="isLoading"></app-loader><div class="container-fluid">  <div class="row">    <div class="col-md-12">      <h4 class="mb-4">Compliance Report</h4>      <div>        <app-study-filters          [records]="activeStudies"          (filterChange)="onFilterOneChange($event)"          (searchTextChange)="onSearchTextChange($event)"        ></app-study-filters>        <app-study-review-filter          [records]="filteredOneStudies"          (filterChange)="onFilterTwoChange($event)"        ></app-study-review-filter>        <app-report-download          [reportPath]="\'api/studyreports/project-review-compliance-report-csv\'"          [fileName]="\'ProjectReviewCompliance.csv\'"          [appendDateToFiileName]="true"        ></app-report-download>      </div>    </div>    <div class="col-md-12 mt-3 border-top pt-3">      <ngb-tabset type="pills">        <ngb-tab title="Compliant ({{ isCompliantCount }}) ">          <ng-template ngbTabContent>            <app-project-review-compliance-list [records]="compliantRecords" [searchTerm]="searchTerm">            </app-project-review-compliance-list>          </ng-template>        </ngb-tab>        <ngb-tab title="With DMPM ({{ ReviewOverDueByDMPMCount }})">          <ng-template ngbTabContent>            <app-project-review-compliance-list [records]="ReviewOverDueByDMPMRecords" [searchTerm]="searchTerm">            </app-project-review-compliance-list>          </ng-template>        </ngb-tab>        <ngb-tab title="Pending with DMPM Manager ({{ ReviewOverDueByDMPMManagerCount }})">          <ng-template ngbTabContent>            <app-project-review-compliance-list [records]="ReviewOverDueByDMPMManagerRecords" [searchTerm]="searchTerm">            </app-project-review-compliance-list>          </ng-template>        </ngb-tab>        <ngb-tab title="All Active ({{ activeRecordsCount }})">          <ng-template ngbTabContent>            <app-project-review-compliance-list [records]="filteredStudies" [searchTerm]="searchTerm">            </app-project-review-compliance-list>          </ng-template>        </ngb-tab>      </ngb-tabset>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssumptionsComponent', 'selector': 'app-assumptions'},{'name': 'CellComponent', 'selector': 'app-cell'},{'name': 'ColumnManagerComponent', 'selector': 'app-column-manager'},{'name': 'ConfirmationModalComponent', 'selector': 'app-confirmation-modal'},{'name': 'DataTableBaseComponent', 'selector': 'app-data-table-base'},{'name': 'DataTableShellComponent', 'selector': 'app-data-table-shell'},{'name': 'DataTableShellNDynamicFiltersComponent', 'selector': 'app-data-table-shell-n-dynamic-filters'},{'name': 'DetailsComponent', 'selector': 'app-details'},{'name': 'DropDownComponent', 'selector': 'app-drop-down'},{'name': 'EmailTokenLoginComponent', 'selector': 'app-email-token-login'},{'name': 'FilterOneComponent', 'selector': 'app-filter-one'},{'name': 'FilterTwoComponent', 'selector': 'app-filter-two'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoaderComponent', 'selector': 'app-loader'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NoaccessComponent', 'selector': 'app-noaccess'},{'name': 'NotRegisteredComponent', 'selector': 'app-not-registered'},{'name': 'OmrReportComponent', 'selector': 'app-omr-report'},{'name': 'PaginationControlComponent', 'selector': 'pagination-control'},{'name': 'ProjectReviewComplianceComponent', 'selector': 'app-project-review-compliance'},{'name': 'ProjectReviewComplianceListComponent', 'selector': 'app-project-review-compliance-list'},{'name': 'ReportBaseComponent', 'selector': 'app-report-base'},{'name': 'ReportDownloadComponent', 'selector': 'app-report-download'},{'name': 'ReportShellComponent', 'selector': 'app-report-shell'},{'name': 'ReportsMenuComponent', 'selector': 'app-reports-menu'},{'name': 'RisksMenuComponent', 'selector': 'app-risks-menu'},{'name': 'RolesComponent', 'selector': 'app-roles'},{'name': 'RolesFormComponent', 'selector': 'app-roles-form'},{'name': 'ShellComponent', 'selector': 'app-shell'},{'name': 'SmsOtpLoginComponent', 'selector': 'app-sms-otp-login'},{'name': 'StudyComponent', 'selector': 'app-study'},{'name': 'StudyFiltersComponent', 'selector': 'app-study-filters'},{'name': 'StudyFilterShellComponent', 'selector': 'app-study-filter-shell'},{'name': 'StudyMenuComponent', 'selector': 'app-study-menu'},{'name': 'StudyReviewFilterComponent', 'selector': 'app-study-review-filter'},{'name': 'TblAnnouncementsEditComponent', 'selector': 'app-tbl-announcements-edit'},{'name': 'TblAnnouncementsListComponent', 'selector': 'app-tbl-announcements'},{'name': 'TblParamEditComponent', 'selector': 'app-tbl-param-edit'},{'name': 'TblParamListComponent', 'selector': 'app-tbl-param'},{'name': 'TblStudyEditComponent', 'selector': 'app-tbl-study-edit'},{'name': 'TblStudyListCachedComponent', 'selector': 'app-tbl-study-cached'},{'name': 'TblStudyListComponent', 'selector': 'app-tbl-study'},{'name': 'TblTaskCategoryEditComponent', 'selector': 'app-tbl-task-category-edit'},{'name': 'TblTaskCategoryListComponent', 'selector': 'app-tbl-task-category'},{'name': 'TblUserEditComponent', 'selector': 'app-tbl-user-edit'},{'name': 'TblUserListComponent', 'selector': 'app-tbl-user'},{'name': 'TextBoxComponent', 'selector': 'app-text-box'},{'name': 'ToastComponent', 'selector': 'app-toast'},{'name': 'UpdateSwToastComponent', 'selector': 'app-update-sw-toast'},{'name': 'UserFormComponent', 'selector': 'app-user-form'},{'name': 'UserNamePwdLoginComponent', 'selector': 'app-user-name-pwd-login'},{'name': 'UsersComponent', 'selector': 'app-users'}];
+    var DIRECTIVES = [{'name': 'HasPermissionsDirective', 'selector': '[appHasPermissions]'},{'name': 'PlaceholderDirective', 'selector': '[appPlaceholder]'}];
+    var ACTUAL_COMPONENT = {'name': 'ProjectReviewComplianceComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProjectReviewComplianceComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<app-loader [isLoading]="loading"></app-loader>
+<h5>{{ title }}</h5>
+<hr />
+
+<form [formGroup]="form">
+  <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <button type="button" class="btn btn-default" (click)="back()">Back</button>
+  <button (click)="submit()" class="btn btn-primary submit-button" [disabled]="!form.dirty">
+    Save
+  </button>
+  <button type="button" class="btn btn-default" (click)="options.resetModel()">Undo</button>
+  <app-confirmation-shell
+    [message]="'Remove Request: ' + record.description + ' ?'"
+    [labelText]="'Remove'"
+    [responseValue]="recId"
+    (response)="deleteRecord($event)"
+  >
+  </app-confirmation-shell>
+</form>

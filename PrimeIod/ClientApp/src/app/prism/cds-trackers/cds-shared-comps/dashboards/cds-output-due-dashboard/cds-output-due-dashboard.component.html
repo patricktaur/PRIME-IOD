@@ -1,0 +1,43 @@
+<!-- <app-cds-due-dashboard
+  [dashboardItems]="allDueDashboard"
+  (itemClicked)="onAllDueDashboardClicked($event)"
+></app-cds-due-dashboard> -->
+<div>
+  <!-- <div class="row">
+    <div class="col-sm" style="background-color:#008080; color:white">
+      All Output Tasks Due
+    </div>
+    <div class="col-sm" style="background-color:#008080; color:white">
+      My Ouput Tasks Due
+    </div>
+    <div class="col-sm" style="background-color:#008080; color:white">
+      My Output Tasks Due as Programmer Assigned
+    </div>
+  </div> -->
+
+  <div class="row" style="margin-bottom: 10px;">
+    <!-- *ngIf="currentUserRoleIsAdminOrCdsManager" -->
+    <div class="col" *ngIf="currentUserRoleIsAdminOrCdsManager">
+      <div style="padding: 5px;font-weight: 500;">All Output Tasks Due</div>
+      <app-card-dashboard [tag]="'all'" [dashboardItems]="allDueDashboard" (itemClicked)="onItemClicked($event)">
+      </app-card-dashboard>
+    </div>
+    <!-- *ngIf="!currentUserRoleIsAdminOrCdsManager" -->
+    <div class="col" *ngIf="!currentUserRoleIsAdminOrCdsManager" >
+      <div style="padding: 5px;font-weight: 500;">My Output Tasks Due</div>
+      <app-card-dashboard [tag]="'my-due'" [dashboardItems]="myDueDashboard" (itemClicked)="onItemClicked($event)">
+      </app-card-dashboard>
+    </div>
+    <!-- *ngIf="!currentUserRoleIsAdminOrCdsManager" -->
+    <div class="col" *ngIf="!currentUserRoleIsAdminOrCdsManager">
+      <div style="padding: 5px;font-weight: 500;">
+        My Output Tasks Due as Programmer Assigned
+      </div>
+      <app-card-dashboard
+        [tag]="'me-as-programmer'"
+        [dashboardItems]="meAsProgrammerDashboared"
+        (itemClicked)="onItemClicked($event)"
+      ></app-card-dashboard>
+    </div>
+  </div>
+</div>

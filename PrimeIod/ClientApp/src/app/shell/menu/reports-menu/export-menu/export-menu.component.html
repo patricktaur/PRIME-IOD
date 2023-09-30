@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col">
+    <!-- *ngIf="menuVisible(menuStudyDmStat)"  -->
+    <div
+      title="{{ menuStat[menuStudyDmStat] }}"
+      appMenuAccess="reports/export/export-dm"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyDmStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/dm-exports"
+        routerLinkActive="active"
+        translate
+      >
+        Export Data - DM Studies
+      </button>
+    </div>
+    <!-- *ngIf="menuVisible(menuStudyCdsStat)" -->
+    <div 
+      title="{{ menuStat[menuStudyCdsStat] }}"
+      appMenuAccess="reports/export/export-cds"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyCdsStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/cds-exports"
+        routerLinkActive="active"
+        translate
+      >
+        CDS Export Data
+      </button>
+    </div>
+    <!-- *ngIf="menuVisible(menuStudyCdmsStat)"  -->
+    <div 
+      title="{{ menuStat[menuStudyCdmsStat] }}"
+      appMenuAccess="reports/export/export-cdms"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyCdmsStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/cdms-exports"
+        routerLinkActive="active"
+        translate
+      >
+        CDMS Export Data
+      </button>
+    </div>
+    <!-- *ngIf="menuVisible(menuStudyImiStat)"  -->
+    <div 
+      title="{{ menuStat[menuStudyImiStat] }}"
+      appMenuAccess="reports/export/export-imi"
+    >
+      <!--  *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyImiStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/imi-exports"
+        routerLinkActive="active"
+        translate
+      >
+        IMI Export Data
+      </button>
+    </div>
+  </div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>

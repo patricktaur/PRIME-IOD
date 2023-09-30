@@ -1,0 +1,13 @@
+<div class="mx-auto">
+  <div class="row me-3">
+    <div [ngClass]="menuClass()">
+      <span role="button" class="collapse-icon" (click)="toggleMenuWidth()">
+        <i [ngClass]="collapse()"></i>
+      </span>
+      <app-header></app-header>
+    </div>
+    <div class="" [ngClass]="collapseExpand()">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

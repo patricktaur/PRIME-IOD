@@ -1,0 +1,14 @@
+.grey-dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.red-dot {
+  height: 15px;
+  width: 15px;
+  background-color: rgba(239, 3, 3, 0.822);
+  border-radius: 50%;
+  display: inline-block;
+}

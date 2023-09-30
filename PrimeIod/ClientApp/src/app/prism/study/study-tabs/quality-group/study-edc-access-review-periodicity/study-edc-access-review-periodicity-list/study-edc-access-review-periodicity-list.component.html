@@ -1,0 +1,21 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<app-data-table-shell
+  [records]="records"
+  [columns]="columns"
+  [showColumnManager]="false"
+  [showFooterActions]="showFooterActions"
+  (raiseEvent)="onRaiseEvent($event)"
+  [viewMode]="isViewMode"
+>
+  <div header>
+    <h4>
+      {{ title }}
+    </h4>
+  </div>
+  <div footer-actions class="form-group">
+    <button type="button" class="btn btn-primary" (click)="add()">
+      Add
+    </button>
+  </div>
+</app-data-table-shell>

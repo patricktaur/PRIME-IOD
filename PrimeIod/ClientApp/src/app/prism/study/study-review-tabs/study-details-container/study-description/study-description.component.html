@@ -1,0 +1,27 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [model]="studyDetails" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <div *ngIf="eproVendorNameValid" class="alert alert-danger">
+    epro Vendor Name must be empty when ePRO is 'None'
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary submit-button me-1"
+    [disabled]="!(form.valid && form.dirty) || eproVendorNameValid"
+  >
+    Save
+  </button>
+  <button type="button" class="btn btn-light me-1" (click)="options.resetModel()">Undo</button>
+  <!-- <span class="alert alert-info">Last Updated on: {{ studyDetails?.updatedOn + 'Z'  | date: 'd-MMM-y, h:mm a' }}</span> -->
+  <app-last-saved [auditFields]="studyDetails"></app-last-saved>
+</form>
+
+<hr />
+
+<!-- <app-component-access
+  [compCode]="'study-description-edit'"
+  [redirect-to]="'description-assumptions/assumptions'"
+  [show-user-permissions]="true"
+></app-component-access> -->
+<!-- {{ studyDetails | json }} -->

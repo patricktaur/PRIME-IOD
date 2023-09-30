@@ -1,0 +1,37 @@
+<app-loader [isLoading]="isLoading"></app-loader>
+<div class="row">
+  <div class="col-md-12">
+    <div class="clearfix">
+      <h4 class="mb-3 float-left me-3">{{ title }}</h4>
+      <h4 class="mb-3 float-right"></h4>
+    </div>
+  </div>
+</div>
+<div class="form-check ">
+  <label class="form-check-label">
+    <input type="checkbox" [(ngModel)]="selectedOptions.includeAllReviews" class="form-check-input" value="" />Include
+    All Reviews
+  </label>
+</div>
+<hr />
+<form [formGroup]="formOne">
+  <formly-form
+    [model]="selectedOptions.dmExportOptions"
+    [fields]="fields"
+    [options]="options"
+    [form]="formOne"
+  ></formly-form>
+  <button type="button" class="btn btn-primary" (click)="selectOneAll()">{{ selectAllButtonOneCaption }}</button>
+
+  <app-report-download-server-side-filters
+    [filters]="selectedOptions"
+    [reportPath]="downloadApiOnePath"
+    [fileName]="zipOnefileName"
+    [appendDateToFiileName]="true"
+    [disabled]="downloadButtonOneDisabled"
+  ></app-report-download-server-side-filters>
+</form>
+<br />
+
+<!-- <p>selectedOptions:{{selectedOneOptions | json}}</p> -->
+<!-- <p>selectedOptions {{selectedOptions | json}}</p> -->

@@ -1,0 +1,76 @@
+<app-loader [isLoading]="true" *ngIf="!filteredRecords"></app-loader>
+<div class="">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="clearfix">
+        <h4 class="mb-3 float-start me-3">{{ title }}</h4>
+        <!-- <h4 class="mb-3 float-end"> -->
+           <!-- <button type="button" class="btn btn-outline-primary"><i class="bi bi-funnel-fill"></i></button> -->
+        <!-- </h4> -->
+      </div>
+      <!-- <div class="bg-icon-light me-n5 ms-n5 mb-3 px-5 py-3 border-bottom border-top"></div> -->
+      <div class="bg-icon-light me-n5 ms-n5 px-3 py-3 border-bottom border-top">
+        <app-study-filter-shell
+          *ngIf="records && filterGroup"
+          [filterGroup]="filterGroup"
+          [records]="records"
+          (filteredRecords)="onFilteredRecordsChange($event)"
+        ></app-study-filter-shell>
+        <!-- <app-report-download
+          *ngIf="records && filterGroup"
+          [reportPath]="downloadApiPath"
+          [fileName]="title + '.csv'"
+          [appendDateToFiileName]="true"
+        ></app-report-download> -->
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row">
+    <div class="col-md-12"></div>
+  </div> -->
+  <div class="row">
+    <!-- <div class="col-md-12"> -->
+    <!-- {{columns | json}} -->
+    <div class="table-responsive">
+      <app-data-table-base
+        [columns]="columns"
+        [records]="filteredRecords"
+        [pageNumber]="pageNumber"
+        [pageSize]="pageSize"
+      ></app-data-table-base>
+      <!-- </div> -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 pt-2">
+      <app-report-download-csv-2-json
+        [records]="filteredRecords"
+        [fields]="columns"
+        [fileName]="csvfileName"
+        [appendDateToFiileName]="true"
+      ></app-report-download-csv-2-json>
+    </div>
+    <div class="col-md-1 pt-2">
+      <button
+        id="edit"
+        (click)="openColumnManager()"
+        class="btn btn-outline-primary"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Hide Columns"
+      >
+        <i class="bi bi-ui-checks-grid"></i>
+      </button>
+    </div>
+    <div class="col-md-9">
+      <pagination-control
+        [page]="pageNumber"
+        [pageSize]="pageSize"
+        [collectionSize]="filteredRecords.length"
+        (onPageChange)="onPageChange($event)"
+      ></pagination-control>
+    </div>
+  </div>
+</div>
+<!-- <p>filteredRecords: {{filteredRecords | json}}</p> -->

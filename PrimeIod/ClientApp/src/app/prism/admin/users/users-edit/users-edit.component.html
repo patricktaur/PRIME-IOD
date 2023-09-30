@@ -1,0 +1,117 @@
+<app-loader [isLoading]="loading"></app-loader>
+<h5>{{ title }}</h5>
+
+<hr />
+<!-- (ngSubmit)="submit()" -->
+<form [formGroup]="form">
+  <ul ngbNav #nav="ngbNav" class="nav-pills">
+    <li ngbNavItem>
+      <a ngbNavLink>General</a>
+      <ng-template ngbNavContent>
+        <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+      </ng-template>
+    </li>
+    <li ngbNavItem>
+      <a ngbNavLink>Roles</a>
+      <ng-template ngbNavContent>
+        <div class="row">
+          <div class="col">
+            <label>Available Roles:</label>
+            <table class="table table-sm table-hover small table-striped">
+              <thead>
+                <tr>
+                  <th align="right"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr  *ngFor="let role of availableRoles;">
+                  <!-- <ngb-highlight [result]="rec.studyIconNumber" [term]="searchTerm"></ngb-highlight><br /> -->
+                  <td
+                    
+                  >
+                    <span class="btn btn-default text-start"
+                    >{{ role.name }}</span>
+
+                    <button
+                    type="button"
+                    class="btn btn-primary btn-sm float-end"
+                    (click)="addRole(role.name)"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Add"
+                  >
+                    >
+                  </button>
+                  </td>
+                  <!-- <td>
+                    
+                  </td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col">
+            <label>Assigned Roles:</label>
+            <table class="table table-sm table-hover small table-striped">
+              <thead>
+                <tr>
+                  <th align="right"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let role of roles; let i = index">
+                  <!-- <ngb-highlight [result]="rec.studyIconNumber" [term]="searchTerm"></ngb-highlight><br /> -->
+                  <!-- <td>
+                    
+                  </td> -->
+                  <td
+                    
+                  >
+                  <button
+                  type="button"
+                  class="btn btn-primary btn-sm float-start"
+                  (click)="removeRole(i)"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Remove"
+                >
+                  <
+                </button>
+                    <span class="btn btn-default text-start"
+                    >{{ role }}
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+  
+
+  <div class="row">
+    <div class="col-md-6">
+      <small [hidden]="roles?.length > 0" class="text-danger" translate>
+        At least one role is required
+      </small>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-default" (click)="back()">Back</button>
+  <button [disabled]="!(form.valid && form.dirty && roles.length > 0)" type="submit" class="btn btn-primary submit-button" (click)="submit()">
+    Save
+  </button>
+  <br><br>
+  <div class="alert alert-info" >
+    Changes to a user's permissions will take effect upon login. If the user is currently logged in, please ask them to reload the permissions. 
+  </div>
+</form>
+
+<!-- <p>record: {{ record | json }}</p> -->
+
+<!-- <p>roles: {{ roles | json }}</p> -->
+

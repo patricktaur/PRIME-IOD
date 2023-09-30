@@ -1,0 +1,90 @@
+Command executed:
+ng g clar-collection:list-edit --name TblAnnouncements 
+
+Post actions:
+npm run build
+
+todo: 1. a, b.
+--------------------------------------------------
+import TblAnnouncementsModule into a parent Module
+  example imports TblAnnouncementsModule into MasterModule:
+  
+//todo: a. 
+ //*****************************
+ import {TblAnnouncementsModule} from '@app/masters/tbl-announcements/tbl-announcements.module';
+ 
+ @NgModule({
+   imports: [
+     ...
+     //todo: b.
+     //*****************************
+     TblAnnouncementsModule
+   ],
+  
+ })
+ export class MastersModule {}
+---------------------------------------------------
+
+todo: 2. a, b
+connect  TblAnnouncementsListComponent to a routing module:
+   example connects TblAnnouncementsListComponent to MastersRoutingModule: 
+   
+   import { NgModule } from '@angular/core';
+   import { Routes, RoutersModule } from '@angular/router';
+  //todo: a
+  //*****************************
+
+  import {TblAnnouncementsListComponent} from '@app/masters/tbl-announcements/tbl-announcements-list/tbl-announcements-list.component';
+
+  todo:b insert:
+     //*****************************
+     { path: 'tbl-announcements', component: TblAnnouncementsListComponent },
+     . . .
+     { path: '**', redirectTo: '', pathMatch: 'full' }
+   ];
+  
+   @NgModule({
+     imports: [RouterModule.forChild(routes)],
+     exports: [RouterModule]
+   })
+   export class MastersRoutingModule {}
+  
+
+todo 3: 
+Add menu item:
+Example adds the menu item in header.component.html:
+insert in:
+app\shell\header\header.component.html
+
+add lazy loaded module path if required:
+routerLink="/lazy-loaded-module-path/tbl-announcements"
+//******************************
+  <button
+    class="dropdown-item"
+
+    routerLink="/masters/tbl-announcements"
+    routerLinkActive="active"
+    translate
+    *appHasPermissions="'TblAnnouncements.view'"
+  >
+    TblAnnouncements
+  </button> 
+//****************************
+todo 4:
+Run the application 
+  and add the permissions to the logged in test user's role
+  and test.
+
+todo 5 : Optional
+Convert TblAnnouncements.view permission to
+ tbl-announcements.view
+Note: this action is optional and is required only to maintain consistency in naming conventions.
+  The Dotnet Core generator (in the current version) is not able to generate a dasherized version of TblAnnouncements
+  and the angular schematic is not above to generate a lower case version of TblAnnouncements.
+  Therefore both the generatos produce TblAnnouncements.view . 
+  Recomended to change 
+    TblAnnouncements.view to tbl-announcements.view
+    TblAnnouncements.modify to tbl-announcements.modify
+    Ensure that corresponding changes are made in
+      DAL\Core\ApplicationPermissions\partials\TblAnnouncements-ApplicationPermissions.cs
+

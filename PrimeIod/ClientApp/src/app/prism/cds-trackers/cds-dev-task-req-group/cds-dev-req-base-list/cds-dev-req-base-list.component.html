@@ -1,0 +1,37 @@
+<div>
+  <app-loader [isLoading]="isLoading"></app-loader>
+  <button type="button" class="btn btn-primary my-3" (click)="add()">
+    New Development Request
+  </button>
+  <div class="row">
+    <div class="table-responsive">
+      <app-data-table-base
+        [columns]="columns"
+        [records]="records"
+        [pageNumber]="1"
+        [pageSize]="filters?.pageSize"
+      ></app-data-table-base>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <app-column-manager-shell [columns]="columns"></app-column-manager-shell>
+    </div>
+
+    <div class="col-md-10">
+      <pagination-control
+        [page]="pageNumber"
+        [pageSize]="pageSize"
+        [collectionSize]="recordCount"
+        (onPageChange)="onPageChange($event)"
+      ></pagination-control>
+    </div>
+  </div>
+
+  <app-server-response-messages
+    [serverResponseMessages]="serverResponses"
+    [messageBoxHeight]="200"
+  ></app-server-response-messages>
+  <!-- <p>records: {{ records | json }}</p> -->
+  <!-- <p>filters: {{ filters | json }}</p> -->
+</div>

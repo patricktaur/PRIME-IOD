@@ -1,0 +1,56 @@
+<!-- <div class="bg-icon-light me-n5 ms-n5 px-5 py-3 border-bottom border-top">
+  
+</div> -->
+<ng-content select="[header]"></ng-content>
+<div class="row">
+  <!-- <div class="col-md-12 mt-3 border-top pt-3"> -->
+  <div class="table-responsive">
+    <app-data-table-base
+      [columns]="filteredColumns"
+      [records]="records"
+      [pageNumber]="pageNumber"
+      [pageSize]="pageSize"
+      (raiseEvent)="onRaiseEvent($event)"
+    ></app-data-table-base>
+  </div>
+  <!-- </div> -->
+</div>
+<div class="row">
+  <div class="col">
+    <ng-content select="[actions]"></ng-content>
+  </div>
+</div>
+
+<div class="row" *ngIf="showFooter">
+  <!-- //class="d-flex justify-content-between p-2" -->
+  <div *ngIf="showFooterActions" class="col-2">
+    <ng-content select="[footer-actions]"></ng-content>
+  </div>
+  <div class="col-2" *ngIf="!showFooterActions">
+    <!-- dummy - to force pagination-control col to remain on right when columnManager is hidden -->
+  </div>
+
+  <div class="col-2 " *ngIf="showColumnManager">
+    <button
+      id="edit"
+      (click)="openColumnManager()"
+      class="btn btn-outline-primary"
+      data-toggle="tooltip"
+      title="Hide Columns"
+    >
+      <i class="bi bi-ui-checks-grid"></i>
+    </button>
+  </div>
+  <div class="col-1" *ngIf="!showColumnManager">
+    <!-- dummy - to force pagination-control col to remain on right when columnManager is hidden -->
+  </div>
+
+  <div class="col-8 align-self-center">
+    <pagination-control
+      [page]="pageNumber"
+      [pageSize]="pageSize"
+      [collectionSize]="records?.length"
+      (onPageChange)="onPageChange($event)"
+    ></pagination-control>
+  </div>
+</div>

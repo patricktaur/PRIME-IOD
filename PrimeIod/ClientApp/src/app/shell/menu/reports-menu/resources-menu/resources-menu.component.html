@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>
+<!-- *ngIf="menuVisible(menuResourcesSummaryReportStat)"  -->
+<div
+  title="{{ menuStat[menuResourcesSummaryReportStat] }}"
+  appMenuAccess="reports/resources/report-resource-summary"
+>
+  <button
+    class="dropdown-item"
+    routerLink="/reports/report-n-dynamic-filters"
+    routerLinkActive="active"
+    [queryParams]="{ report: 'vwResourceSummaryReportV2' }"
+    translate
+
+  >
+    Resource Summary Report
+  </button>
+</div>
+<!-- *ngIf="menuVisible(menuResourcesSummaryReportStat)"  -->
+<!-- <div
+  title="{{ menuStat[menuResourcesSummaryReportStat] }}"
+  appMenuAccess="reports/resources/report-resource-summary"
+>
+  <button
+    class="dropdown-item"
+    routerLink="/reports/report-s"
+    routerLinkActive="active"
+    [queryParams]="{ report: 'vwResourceSummaryReportV2' }"
+    translate
+    *appHasPermissions="'rol.*, res.*'"
+    [disabled]="menuDisabled(menuResourcesSummaryReportStat)"
+  >
+    Resource Summary Report
+  </button>
+</div> -->
+<!-- *ngIf="menuVisible(menuResourcesAssignmentsStat)" -->
+<div  
+  title="{{ menuStat[menuResourcesAssignmentsStat] }}"
+  appMenuAccess="reports/resources/report-resource-assignment"
+>
+<!-- *appHasPermissions="'rol.*, res.*'"
+    [disabled]="menuDisabled(menuResourcesAssignmentsStat)" -->
+  <button
+    class="dropdown-item"
+    routerLink="/reports/report-n-dynamic-filters"
+    routerLinkActive="active"
+    [queryParams]="{ report: 'vwResourceAssignmentReportV2' }"
+    translate
+    
+  >
+    Assignments
+  </button>
+</div>
+<!-- *ngIf="menuVisible(menuResourcesFTEDashboardStat)"  -->
+<div
+  title="{{ menuStat[menuResourcesFTEDashboardStat] }}"
+  appMenuAccess="reports/resources/report-resource-fte-dashboard"
+>
+  <button
+    class="dropdown-item"
+    routerLink="/reports/fte-dashboard-report"
+    routerLinkActive="active"
+    [queryParams]="{ report: 'vwResourceSummaryReportV2xx' }"
+    translate
+    *appHasPermissions="'rol.*, res.*'"
+    [disabled]="menuDisabled(menuResourcesFTEDashboardStat)"
+  >
+    FTE Dashboard
+  </button>
+</div>

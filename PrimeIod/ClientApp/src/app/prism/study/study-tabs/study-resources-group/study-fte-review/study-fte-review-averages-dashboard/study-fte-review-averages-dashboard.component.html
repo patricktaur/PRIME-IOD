@@ -1,0 +1,72 @@
+<!-- <app-data-table-shell [records]="records" [columns]="columns" [showFooter]="false"></app-data-table-shell> -->
+<!-- <p>average records:{{records | json }}</p> -->
+<div class="row">
+  <div class="col-md-9">
+    <H6>Average FTE</H6>
+    <div class="table-responsive">
+      <table class="table table-sm table-hover small">
+        <thead>
+          <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">Time Period</th>
+            <th scope="col">Avg DMPM FTE</th>
+            <th scope="col">Avg CDL FTE</th>
+            <th scope="col">Avg CDC FTE</th>
+            <th scope="col">Avg Programmer FTE</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let rec of records; let i = index">
+            <!-- type: 'number',
+            format: '2.2-2', -->
+            <!-- <a class="btn btn-sm btn-outline-dark" (click)="onRaiseEvent($event)">{{ linkText }}</a> -->
+            <td>{{ rec.timePeriod }}</td>
+            <!-- class="btn btn-sm btn-outline-dark"  -->
+            <!-- <a (click)="onRaiseEvent($event)">{{ linkText }}</a> -->
+            <td align="center">
+              <a
+                class="btn btn-sm btn-outline-dark"
+                [class.disabled]="rec.avgDmpmFte <= 0"
+                (click)="onRaiseEvent({ row: i, col: 'dmpm' })"
+                >{{ rec.avgDmpmFte | number: '2.2-2' }}</a
+              >
+            </td>
+            <td align="center">
+              <a
+                class="btn btn-sm btn-outline-dark"
+                [class.disabled]="rec.avgCdlFte <= 0"
+                (click)="onRaiseEvent({ row: i, col: 'cdl' })"
+                >{{ rec.avgCdlFte | number: '2.2-2' }}</a
+              >
+            </td>
+            <td align="center">
+              <a
+                class="btn btn-sm btn-outline-dark"
+                [class.disabled]="rec.avgCdcFte <= 0"
+                (click)="onRaiseEvent({ row: i, col: 'cdc' })"
+                >{{ rec.avgCdcFte | number: '2.2-2' }}</a
+              >
+            </td>
+
+            <td align="center">
+              <a
+                class="btn btn-sm btn-outline-dark"
+                [class.disabled]="rec.avgProgrammerFte <= 0"
+                (click)="onRaiseEvent({ row: i, col: 'programmer' })"
+                >{{ rec.avgProgrammerFte | number: '2.2-2' }}</a
+              >
+            </td>
+            <td align="center">
+              <a class="btn btn-sm btn-outline-dark" [class.disabled]="true">{{ rec.totalFte | number: '2.2-2' }}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <app-study-fte-review-averages-list [records]="filteredSixMonthRecords" [title]="filterRecordsTitle">
+    </app-study-fte-review-averages-list>
+  </div>
+</div>

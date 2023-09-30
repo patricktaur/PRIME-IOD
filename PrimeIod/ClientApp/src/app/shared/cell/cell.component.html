@@ -1,0 +1,12 @@
+<!-- <span ngbTooltip="{{ toolTip }}">{{ formattedText }}</span> -->
+<!-- <button class="btn btn-link" role="link" type="submit" name="op" value="Link 1">Link 1</button> -->
+<div [ngSwitch]="actionType" [ngStyle]="backgroundStyle">
+  <span *ngSwitchCase="'link'">
+    <!-- <button class="btn btn-link btn-sm" (click)="redirectTo()">{{ linkText }}</button> -->
+    <a class="btn btn-sm btn-outline-dark" (click)="redirectTo()">{{ linkText }}</a>
+  </span>
+  <span *ngSwitchCase="'raise-event'">
+    <a class="btn btn-sm btn-outline-dark" (click)="onRaiseEvent($event)">{{ linkText }}</a>
+  </span>
+  <span *ngSwitchDefault ngbTooltip="{{ toolTip }}">{{ formattedText }}</span>
+</div>

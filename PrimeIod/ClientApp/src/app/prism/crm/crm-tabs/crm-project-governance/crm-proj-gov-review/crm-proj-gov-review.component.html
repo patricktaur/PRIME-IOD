@@ -1,0 +1,21 @@
+<div class="form-group">
+  <label class="form-label">Reviews :</label>
+  <div *ngIf="hasReviews">
+    <ng-select [multiple]="false" placeholder="Review" [(ngModel)]="selectedReview" [clearable]="false"
+      (ngModelChange)="onFiltersChange()">
+      <ng-option *ngFor="let review of reviews" [value]="review.recId">Review No: {{ review.reviewNumber }} - by: {{
+        review.reviewedByDisplayName }} - on: {{ review.reviewedOn + 'Z' | date: 'dd-MMM-yy, h:mm a'}} </ng-option>
+    </ng-select>
+    <app-crm-proj-gov-view [reviewId]="selectedReview"></app-crm-proj-gov-view>
+  </div>
+  <div *ngIf="!hasReviews">
+    No reviews found.
+  </div>
+</div>
+
+
+
+
+<!-- <p>selectedReview:{{selectedReview}}</p> -->
+
+<!-- <p>reviews:{{reviews | json}}</p> -->

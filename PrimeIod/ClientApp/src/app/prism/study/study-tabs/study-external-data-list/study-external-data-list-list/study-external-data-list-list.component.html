@@ -1,0 +1,25 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<app-data-table-shell
+  [records]="records"
+  [columns]="columns"
+  [showColumnManager]="false"
+  [showFooterActions]="false"
+  (raiseEvent)="onRaiseEvent($event)"
+  [viewMode]="hasViewRole"
+>
+  <div header>
+    <h4>
+      {{ title }}
+    </h4>
+  </div>
+   
+</app-data-table-shell>
+<div *ngIf="hasEditRole()" footer-actions class="form-group">
+  <button type="button" class="btn btn-primary" (click)="add()">
+    Add
+  </button>
+</div>
+<p class="alert alert-primary" role="alert">Note: Add option avaliable only for Admin and Director/DMPM/CDL of this study</p>
+
+<!-- <p>hasViewRole(): {{hasViewRole}}</p> -->

@@ -1,0 +1,139 @@
+<div class="reports-menu px-3">
+  <h5 class="my-3">Reports</h5>
+  
+  <ul ngbNav #nav="ngbNav" class="nav-pills" [(activeId)]="active" (navChange)="onNavChange($event)">
+    <!-- *ngIf="studyTabVisible" -->
+    <li *ngIf="studyTabVisible" [ngbNavItem]="'study'" appMenuAccess="reports/study">
+      <a ngbNavLink>Study</a>
+      <ng-template ngbNavContent>
+        <app-study-menu></app-study-menu>
+      </ng-template>
+    </li>
+    <!-- *ngIf="risksTabVisible" -->
+    <li *ngIf="risksTabVisible" [ngbNavItem]="'risks'" appMenuAccess="reports/risks">
+      <a ngbNavLink>Risks</a>
+      <ng-template ngbNavContent>
+        <app-risks-menu></app-risks-menu>
+      </ng-template>
+    </li>
+    <!-- *ngIf="resourcesTabVisible" -->
+    <li *ngIf="resourcesTabVisible" [ngbNavItem]="'resources'" appMenuAccess="reports/resources">
+      <a ngbNavLink>Resources</a>
+      <ng-template ngbNavContent>
+        <app-resources-menu></app-resources-menu>
+      </ng-template>
+    </li>
+    <!-- *ngIf="complianceTabVisible" -->
+    <li *ngIf="complianceTabVisible" [ngbNavItem]="'compliance'" appMenuAccess="reports/compliance">
+      <a ngbNavLink>Compliance</a>
+      <ng-template ngbNavContent>
+        <app-compliance-menu></app-compliance-menu>
+      </ng-template>
+    </li>
+    <!-- *ngIf="cdsTabVisible" -->
+    <li *ngIf="cdsTabVisible" [ngbNavItem]="'cds'" appMenuAccess="reports/cds">
+      <a ngbNavLink>CDS</a>
+      <ng-template ngbNavContent>
+        <app-cds-menu> </app-cds-menu>
+      </ng-template>
+    </li>
+    <!-- *ngIf="cdmsTabVisible" -->
+    <li *ngIf="cdmsTabVisible" [ngbNavItem]="'cdms'" appMenuAccess="reports/cdms">
+      <a ngbNavLink>CDMS</a>
+      <ng-template ngbNavContent>
+        <app-cdms-menu> </app-cdms-menu>
+      </ng-template>
+    </li>
+    <!-- *ngIf="codingRequestTabVisible" -->
+    <li *ngIf="codingRequestTabVisible" [ngbNavItem]="'codingrequest'" appMenuAccess="reports/conding-request">
+      <a ngbNavLink>Coding Request</a>
+      <ng-template ngbNavContent>
+        <app-coding-request-menu> </app-coding-request-menu>
+      </ng-template>
+    </li>
+    <!-- *ngIf="imiTabVisible" -->
+    <li *ngIf="imiTabVisible" [ngbNavItem]="'imi'" appMenuAcess="reports/imi">
+      <a ngbNavLink>IMI</a>
+      <ng-template ngbNavContent>
+        <app-imi-cds-menu></app-imi-cds-menu>
+      </ng-template>
+    </li>
+    <li *ngIf="userTabVisible" [ngbNavItem]="'user'">
+      <a ngbNavLink>User</a>
+      <ng-template ngbNavContent>
+        <app-users-menu></app-users-menu>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="'export'" *ngIf="exportTabVisible" appMenuAccess="reports/export">
+      <a ngbNavLink>Export</a>
+      <ng-template ngbNavContent>
+        <app-export-menu> </app-export-menu>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="'crm'" *ngIf="crmTabVisible" appMenuAccess="reports/crm">
+      <a ngbNavLink>CRM</a>
+      <ng-template ngbNavContent>
+        <app-crm-menu> </app-crm-menu>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+  <!-- <ngb-tabset type="pills">
+    <ngb-tab *ngIf="studyTabVisible">
+      <ng-template ngbTabTitle>Study</ng-template>
+      <ng-template ngbTabContent>
+        <app-study-menu></app-study-menu>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab *ngIf="risksTabVisible">
+      <ng-template ngbTabTitle>Risks</ng-template>
+      <ng-template ngbTabContent>
+        <app-risks-menu></app-risks-menu>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab *ngIf="resourcesTabVisible">
+      <ng-template ngbTabTitle>Resources</ng-template>
+      <ng-template ngbTabContent>
+        <app-resources-menu></app-resources-menu>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab *ngIf="complianceTabVisible">
+      <ng-template ngbTabTitle>Compliance</ng-template>
+      <ng-template ngbTabContent>
+        <app-compliance-menu></app-compliance-menu>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab *ngIf="cdsTabVisible">
+      <ng-template ngbTabTitle>CDS</ng-template>
+      <ng-template ngbTabContent>
+        <app-cds-menu> </app-cds-menu>
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab *ngIf="cdmsTabVisible">
+      <ng-template ngbTabTitle>CDMS</ng-template>
+      <ng-template ngbTabContent>
+        <app-cdms-menu> </app-cdms-menu>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab *ngIf="codingRequestTabVisible">
+      <ng-template ngbTabTitle>Coding Request</ng-template>
+      <ng-template ngbTabContent>
+        <app-coding-request-menu> </app-coding-request-menu>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab *ngIf="imiTabVisible">
+      <ng-template ngbTabTitle>IMI</ng-template>
+      <ng-template ngbTabContent>
+        <app-imi-cds-menu></app-imi-cds-menu>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab *ngIf="exportTabVisible">
+      <ng-template ngbTabTitle>Export</ng-template>
+      <ng-template ngbTabContent>
+        <app-export-menu> </app-export-menu>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset> -->
+</div>

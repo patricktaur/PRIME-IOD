@@ -1,0 +1,330 @@
+<div class="row">
+  <div class="col">
+    <!-- *ngIf="menuVisible(menuStudySummaryStat)" -->
+    <div
+      title="{{ menuStat[menuStudySummaryStat] }}"
+      appMenuAccess="reports/study/report-study-summary"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudySummaryStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudySummaryV2' }"
+        translate
+      >
+        Summary
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyDetailsStat)" -->
+    <div
+      title="{{ menuStat[menuStudyDetailsStat] }}"
+      appMenuAccess="reports/study/report-study-study-details"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyDetailsStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudyDetailsV2' }"
+        translate
+      >
+        Study Details
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyTimelinesStat)" -->
+    <div
+      title="{{ menuStat[menuStudyTimelinesStat] }}"
+      appMenuAccess="reports/study/report-study-timelines"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyTimelinesStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudyTimeLinesV2' }"
+        translate
+      >
+        Timelines
+      </button>
+    </div>
+    <!-- <div *ngIf="menuVisible(menuStudyDeliverablesStat)" title="{{ menuStat[menuStudyDeliverablesStat] }}">
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudyDeliverablesV2' }"
+        translate
+        *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyDeliverablesStat)"
+      >
+        Deliverables
+      </button>
+    </div> -->
+
+    <!-- *ngIf="menuVisible(menuStudyDeliverablesStat)" -->
+    <div
+      title="{{ menuStat[menuStudyDeliverablesStat] }}"
+      appMenuAccess="reports/study/report-study-deliverables"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyDeliverablesStat)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-s"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudyDeliverablesV2' }"
+        translate
+      >
+        Deliverables
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyExternalDatareport)" -->
+    <div 
+      title="{{ menuStat[menuStudyExternalDatareport] }}" 
+      appMenuAccess="reports/study/report-study-external-report"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyExternalDatareport)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwExternalDataReportV2' }"
+        translate
+      >
+        External Data Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyEDCExperienceByStudyPhase)" -->
+    <div
+      title="{{ menuStat[menuStudyEDCExperienceByStudyPhase] }}"
+      appMenuAccess="reports/study/report-study-edc-phase"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyEDCExperienceByStudyPhase)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/edc-experience-by-study-phase-report"
+        routerLinkActive="active"
+        translate
+      >
+        EDC Experience By Study Phase
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyEDCStudyStatusBySystem)" -->
+    <div
+      title="{{ menuStat[menuStudyEDCStudyStatusBySystem] }}"
+      appMenuAccess="reports/study/report-study-edc-system"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyEDCStudyStatusBySystem)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/edc-study-status-by-system"
+        routerLinkActive="active"
+        translate
+      >
+        EDC Study Status By System
+      </button>
+    </div>
+  </div>
+  <div class="col">
+    <!-- *ngIf="menuVisible(menuStudyDBLSummary)" -->
+    <div
+      title="{{ menuStat[menuStudyDBLSummary] }}"
+      appMenuAccess="reports/study/report-study-reports-summary"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyDBLSummary)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwStudyDBLSummaryV2' }"
+        translate
+      >
+        Reports Study DBL Summary
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyDMOwnerList)"  -->
+    <div
+      title="{{ menuStat[menuStudyDMOwnerList] }}"
+      appMenuAccess="reports/study/report-study-dm-owner-list"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyDMOwnerList)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'VwStudyDMOwnerListV2' }"
+        translate
+      >
+        DM Study Owner List
+      </button>
+    </div>
+
+    <!-- To be enabled later -->
+    <!-- <div *ngIf="menuVisible(menuStudyDMOwnerListVariant)" title="{{menuStat[menuStudyDMOwnerListVariant]}}">
+      <button class="dropdown-item" routerLink="/reports/report-n-dynamic-filters" routerLinkActive="active"
+        [queryParams]="{ report: 'VwDMStudyOwnerListVariantV2' }" translate *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyDMOwnerListVariant)">
+        DM Study Owner List - Variant
+      </button>
+    </div> -->
+
+    <!-- *ngIf="menuVisible(menuStudyProjectReviewReport)" -->
+    <div 
+      title="{{ menuStat[menuStudyProjectReviewReport] }}"
+      appMenuAccess="reports/study/report-study-project-review-report"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyProjectReviewReport)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/project-review-report"
+        routerLinkActive="active"
+        translate
+      >
+        Project Review Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyProjectIssueTracker)" -->
+    <div
+      title="{{ menuStat[menuStudyProjectIssueTracker] }}"
+      appMenuAccess="reports/study/report-study-project-issue-tracker"
+    >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyProjectIssueTracker)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwProjectIssueTrackerV2' }"
+        translate
+      >
+        Project Issue Tracker Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyOMRReport)" -->
+    <div
+      title="{{ menuStat[menuStudyOMRReport] }}"
+      appMenuAccess="reports/study/report-study-omr"
+      >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyOMRReport)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/omr-report"
+        routerLinkActive="active"
+        translate
+      >
+        OMR Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyCelegneDeliverables)" -->
+    <div
+      title="{{ menuStat[menuStudyCelegneDeliverables] }}"
+      appMenuAccess="reports/study/report-study-celgene-deliverables"
+      >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyCelegneDeliverables)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwCelgenceDeliverablesV2' }"
+        translate
+      >
+        Celgene Deliverables
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuStudyGskKpi)" -->
+    <div 
+      title="{{ menuStat[menuStudyGskKpi] }}"
+      appMenuAccess="reports/study/report-study-studygsk-kpi"
+      >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+      [disabled]="menuDisabled(menuStudyGskKpi)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwStudyGSKKPIV2' }"
+        translate
+      >
+        Study GSK KPI
+      </button>
+    </div>
+  </div>
+
+  <div class="col">
+    <!-- *ngIf="menuVisible(menuStudyFTEResource)"  -->
+    <div
+      title="{{ menuStat[menuStudyFTEResource] }}"
+      appMenuAccess="reports/study/report-study-fte-report"
+      >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuStudyFTEResource)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwFTEResourceV2' }"
+        translate
+      >
+        FTE Resource Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuMissingQrReport)" -->
+    <div
+      title="{{ menuStat[menuMissingQrReport] }}"
+      appMenuAccess="reports/study/report-study-missing-qr-report"
+      >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuMissingQrReport)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwMissingQrReportV2' }"
+        translate
+      >
+        Missing QR Report
+      </button>
+    </div>
+
+    <!-- *ngIf="menuVisible(menuTimelineInterimLockReport)" -->
+    <div 
+      title="{{ menuStat[menuTimelineInterimLockReport] }}"
+      appMenuAccess="reports/study/report-study-timeline-interim-lock-report"
+      >
+      <!-- *appHasPermissions="'rol.*, res.*'"
+        [disabled]="menuDisabled(menuTimelineInterimLockReport)" -->
+      <button
+        class="dropdown-item"
+        routerLink="/reports/report-n-dynamic-filters"
+        routerLinkActive="active"
+        [queryParams]="{ report: 'vwStudyTimeLineInterimLocksV2' }"
+        translate
+      >
+        Timeline Interim Lock Report
+      </button>
+    </div>
+  </div>
+</div>

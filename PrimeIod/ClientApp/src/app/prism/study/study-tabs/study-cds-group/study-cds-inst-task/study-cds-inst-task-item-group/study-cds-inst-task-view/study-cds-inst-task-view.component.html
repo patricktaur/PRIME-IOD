@@ -1,0 +1,46 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<table class="table table-sm  small table-striped">
+  <tbody>
+    <tr>
+      <td>Instruction Programming Task Category</td>
+      <td>{{ record?.programmingTaskPDescription }}</td>
+    </tr>
+
+    <tr>
+      <td>Programming Detail</td>
+      <td>{{ record?.programName }}</td>
+    </tr>
+    <!-- <tr>
+      <td>CDP</td>
+      <td>{{ record?.cdpPDisplayName }}</td>
+    </tr> -->
+    <tr>
+      <td>CDPL</td>
+      <td>{{ record?.cdplPDisplayName }}</td>
+    </tr>
+    <tr>
+      <td>Instruction</td>
+      <td [innerHTML]="record?.instructions"></td>
+    </tr>
+    <tr>
+      <td>Programming Location</td>
+      <td>{{ record?.programLocation }}</td>
+    </tr>
+    <tr>
+      <td>Log Location</td>
+      <td>{{ record?.logLocation }}</td>
+    </tr>
+    <tr>
+      <td>Output Location</td>
+      <td>{{ record?.outputLocation }}</td>
+    </tr>
+
+    <tr>
+      <td>Additional Comments</td>
+      <td>{{ record?.additionalComments }}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- <p>{{ record | json }}</p> -->
+<app-last-saved [auditFields]="record"></app-last-saved>

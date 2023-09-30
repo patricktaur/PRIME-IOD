@@ -1,0 +1,344 @@
+/*
+ * Entry point of global application style.
+ * Component-specific style should not go here and be included directly as part of the components.
+ */
+
+ /* Theme variables, must be included before the libraries to allow overriding defaults */
+ /* @import "theme/theme-variables"; */
+ 
+ /* 3rd party libraries */
+ /* @import "~bootstrap/scss/bootstrap"; */
+ /* @import "~@fortawesome/fontawesome-free/scss/fontawesome.css";
+  @import "~@fortawesome/fontawesome-free/scss/brands.css";
+  @import "~@fortawesome/fontawesome-free/scss/regular.css";
+  @import "~@fortawesome/fontawesome-free/scss/solid.css"; */
+ 
+ /* Theme customization */
+ @import "theme";
+ 
+ :root {
+   --blue: #128474 !important;
+   --green: #d5f5e3 !important;
+   --red: indianred !important;
+   --light-green: rgba(18, 132, 116, 0.07);
+   --dark-green: #128474;
+ }
+ 
+ .spinner {
+   position: fixed;
+   z-index: 999;
+   height: 2em;
+   width: 2em;
+   overflow: show;
+   margin: auto;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+ }
+ 
+ .spinner:before {
+   content: "";
+   display: block;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: none;
+ }
+ 
+ /* green: #004750
+  light green: rgba(18,132,116,.07)
+ 
+  button
+  background-color: #1790d0;
+  border-color: #1790d0;
+ 
+  button :hover
+  background-color: #1378ae;
+  border-color: #1270a2;
+ */
+  
+ /* Clarity Styles */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ label,
+ .nav-link:not(.active),
+ b {
+   color: #004750 !important;
+ }
+ 
+ .nav-pills .nav-link:not(.active){
+    background-color: var(--light-green) !important;
+    color: #004750 !important;
+  }
+
+  .nav-pills .nav-link:not(.active):hover{
+    background: #128474 !important;
+    color: white ;
+    border-color: #128474 !important;
+  }
+
+ .btn {
+   border-radius: 3em !important;
+ }
+ .btn-primary,
+ .nav-pills .nav-link.active,
+ .nav-pills .show > .nav-link,
+ .page-item.active .page-link,
+ .reports-menu .dropdown-item.active,
+ .reports-menu .dropdown-item:active {
+   background-color: #128474 !important;
+   border-color: #004750 !important;
+   border-radius: 3px !important;
+ }
+ 
+ .reports-menu .dropdown-item {
+   margin-bottom: 5px;
+ }
+ .btn-primary:hover {
+   background-color: #004750 !important;
+   border-color: #004750 !important;
+ }
+ 
+ .btn-outline-primary {
+   color: #004750 !important;
+   border-color: #004750 !important;
+ }
+ .btn-outline-primary:hover {
+   background-color: #004750 !important;
+   color: white !important;
+   border-color: #004750 !important;
+ }
+ .bg-light,
+ .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked,
+ .dropdown-item:focus,
+ .dropdown-item:hover {
+   background-color: rgba(18, 132, 116, 0.07) !important;
+   color: inherit;
+ }
+ label {
+   font-weight: 600;
+   font-size: 0.8rem;
+ }
+ .navbar-nav .nav-item .dropdown-menu {
+   left: calc(100% + 15px) !important;
+   top: 1em !important;
+   transform: none !important;
+   max-width: 80vw;
+ }
+ .sidebar {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 100;
+   overflow: visible !important;
+   /* box-shadow: inset -1px 0 0 rgb(0 0 0 / 10%); */
+ }
+ .sidebar-sticky {
+   position: sticky;
+   top: 0;
+   height: 100vh;
+   padding-top: 0.5rem;
+   /* overflow-x: hidden;
+    overflow-y: auto; */
+ }
+ 
+ .reports-menu {
+   width: 80vw;
+ }
+ 
+ .bg-icon-light {
+   background: rgba(18, 132, 116, 0.07) !important;
+ }
+
+ .study-tab-list li:nth-child(even) {
+    /* background: rgba(18, 132, 116, 0.07); */
+    cursor: pointer;
+  }
+
+ /* .study-tab-list li:not([style*="display: none"]):nth-child(even) {
+   background: rgba(18, 132, 116, 0.07);
+   cursor: pointer;
+ } */
+ 
+ .study-tab-list li.active,
+ .study-tab-list li:hover,
+ .nav-pills .nav-link.active,
+ .nav-pills .show > .nav-link {
+   background: #128474;
+   color: white;
+   border-color: #128474;
+ }
+ 
+ .table-sm td,
+ .table-sm th {
+   padding: 0.5rem !important;
+ }
+ 
+ .study-dashboard {
+   margin-top: -5px;
+ }
+ .study-dashboard tr:first-child {
+   background-color: #b6effb;
+   /* color: white !important; */
+   width: 100%;
+   padding: 3px;
+ }
+ 
+ .study-dashboard > div {
+   /* border: 1px solid rebeccapurple; */
+   margin: 0;
+ }
+ 
+ .reports-menu .nav-item .active > .nav-link,
+ .reports-menu .nav-item .nav-link.active,
+ .reports-menu .nav-item .nav-link.show,
+ .reports-menu .nav-item .show > .nav-link {
+   color: white !important;
+ }
+ 
+ .bg-green,
+ app-data-table-base thead {
+   background-color: var(--green) !important;
+ }
+ .bg-grey,
+ .alt-row-form:nth-child(even) {
+   background-color: #f1f1f1 !important;
+ }
+ 
+ .bg-light-blue {
+   background-color: #e1f5fe;
+ }
+ .bg-light-yellow {
+   background-color: #fff9c4;
+ }
+ 
+ .input-group .input-group-text {
+   border-top-right-radius: 0;
+   border-bottom-right-radius: 0;
+   border-right: 0;
+ }
+ 
+ .assumption-form label,
+ .group-a label,
+ .study-status-form label,
+ .green-form label,
+ .green-label label {
+   color: white !important;
+   background: seagreen;
+   padding: 1px 5px;
+   border-radius: 3px;
+ }
+ 
+ .group-b label {
+   color: white !important;
+   background: grey;
+   padding: 1px 5px;
+   border-radius: 3px;
+ }
+ 
+ .group-c label {
+   color: white !important;
+   background: gold;
+   color: black !important;
+   padding: 1px 5px;
+   border-radius: 3px;
+ }
+ 
+ .alert {
+   font-size: 0.9rem;
+   padding: 0.5rem !important;
+ }
+ 
+ .study-dashboard td {
+   border: 1px solid grey;
+ }
+
+ app-study-dashboard-container {
+    width: 100%;
+ }
+
+ .study-dashboard-comp {
+    width: 100% !important;
+ }
+
+ .nav-pills .nav-item {
+   margin-right: 10px;
+ }
+ .nav-pills .nav-link {
+   background-color: var(--light-green);
+ }
+ 
+ .nav-pills .nav-link:hover {
+   background-color: var(--dark-green);
+   color: white !important;
+ }
+ 
+ .collapse-icon {
+   position: absolute;
+   right: 0;
+   width: 20px;
+   /* height: 20px; */
+   background: white;
+   z-index: 5;
+   top: -5px;
+   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+   border: 1px solid #dee2e6;
+   border-top-left-radius: 3px;
+   border-bottom-left-radius: 3px;
+ }
+ .sidebar-collapsed .collapse-icon {
+   top: 63px !important;
+ }
+ .sidebar .collapse-icon {
+   position: absolute;
+   right: 15px;
+   width: 20px;
+   top: 93px;
+ }
+ 
+ .sidebar-collapsed .nav-item span:not(.bi) {
+   display: none;
+ }
+ 
+ .sidebar-collapsed .navbar-nav {
+   margin: auto;
+ }
+ 
+ .form-group {
+  margin-bottom: 1rem;
+}
+
+/* .sidebar {
+  max-width: 285px !important;
+} */
+
+/* .nav-item {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+} */
+
+.study-dropdown .ng-dropdown-panel {
+  width: 120% !important;
+}
+
+body {
+  background-color: var(--dark-green) !important;
+}
+
+/* Surekha added this for disable study tabs */
+li.list-group-item.disabled {
+  color: darkgray;
+}
+
+.nav-link.disabled {
+  color: darkgray !important;
+}

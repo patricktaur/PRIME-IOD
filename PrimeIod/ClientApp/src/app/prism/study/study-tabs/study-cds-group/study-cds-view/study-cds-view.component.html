@@ -1,0 +1,81 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<table class="table table-sm small table-striped">
+	<tbody>
+		<tr>
+			<td>Clinical Data ProgrammingLead - Clinical Programming</td>
+			<td>{{ record.clinicalDataDeliveryLeadNameDisplayName }}</td>
+		</tr>
+        <tr>
+			<td>Maintenance Programmer</td>
+			<td>{{ record.maintenanceProgrammerUserDisplayName }}</td>
+		</tr>
+		<tr>
+			<td>Maintenance Programmer Backup</td>
+			<td>{{ record.maintenanceProgrammerBackupUserDisplayName }}</td>
+		</tr>
+        <tr>
+			<td>Unblinded Clinical Programmer</td>
+			<td>{{ record.unblindedClinicalProgrammerDisplayName }}</td>
+		</tr>
+        
+        <tr>
+			<td>Second Unblinded Clinical Programmer</td>
+			<td>{{ record.secondUnblindedClinicalProgrammerDisplayName }}</td>
+		</tr>
+        <tr>
+			<td>Clinical Data Programming Lead - SDTM Programming</td>
+			<td>{{ record.leadSdtmNameDisplayName }}</td>
+		</tr>
+        <tr>
+			<td>Unblinded SDTM Programmer</td>
+			<td>{{ record.unblindedSdtmProgrammerDisplayName }}</td>
+		</tr>
+        <tr>
+			<td>Clinical Data Programming Lead - IMI Programming</td>
+			<td>{{ record.clinicalLeadImiProgrammingUserDisplayName }}</td>
+		</tr>
+        <tr>
+			<td>Data Delivery Types</td>
+			<td>{{ getDeliveryTypes() }}</td>
+		</tr>
+        <tr>
+			<td>SDTM Go-Live Date (Planned)</td>
+			<td>{{ record.timeSdtmgoLivePlanned | date: 'dd-MMM-yyyy' }}</td>
+		</tr>
+        <tr>
+			<td>SDTM Go-Live Date (Actual)</td>
+			<td>{{ record.timeSdtmgoLiveActual | date: 'dd-MMM-yyyy' }}</td>
+		</tr>
+        <tr>
+			<td>SAS GRID</td>
+			<td>{{ record.sasGridPDescription }}</td>
+		</tr>
+        <tr>
+			<td>CDS Network Location</td>
+			<td>{{ record.cdsnetworkLocationPidlist }}</td>
+		</tr>
+        <tr>
+			<td>CDS Comments</td>
+			<td>{{ record.cdsComments }}</td>
+		</tr>
+        <tr>
+			<td>Reporting Partner</td>
+			<td>{{ record.reportPartnerPDescription }}</td>
+		</tr>
+        <tr>
+			<td>Are Study Folders archived</td>
+			<td>{{ record.areStudyFoldersArchivedPDescription }}</td>
+		</tr>
+        <tr>
+			<td>IT Archive Ticket Number</td>
+			<td>{{ record.itArchiveTicketNumber }}</td>
+		</tr>
+        <tr>
+			<td>IT Archive Ticker Request Date</td>
+			<td>{{ record.itArchiveTicketRequestDate | date: 'dd-MMM-yyyy' }}</td>
+		</tr>
+    </tbody>
+</table>
+
+<app-last-saved [auditFields]="record"></app-last-saved>

@@ -1,0 +1,188 @@
+<header class="shadow mb-3 mt-3 bg-white sidebar-sticky rounded-right">
+  <nav class="d-flex flex-column navbar navbar-expand-lg sticky-top  navbar-light bg-white mb-0 px-0 pt-3">
+    <a class="p-0 navbar-brand text-center" routerLink="/home" translate>
+      <img class="logo mx-auto mb-4 w-100 h-auto px-5" height="30px" src="assets/logo.png" alt="Icon logo" />
+    </a>
+    <a class="p-0 navbar-brand text-center border-top w-100 m-0" routerLink="/home" translate> </a>
+    <span class="text-center font-monospace d-flex flex-column align-items-center text-black-50"
+      ><span class="fs-2" translate>APP_NAME</span>
+      <span class="fs-6 text-secondary">{{ appVersion }} ({{ site | uppercase }})</span>
+      </span
+    >
+    <!-- *appHasPermissions="homeMenuGroupPermissions" -->
+    <div id="navbar-menu" class="d-flex collapse navbar-collapse float-xs-none w-100" [ngbCollapse]="menuHidden">
+      <div class="d-flex flex-column navbar-nav ">
+        
+        
+        Studies
+        
+        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/prism-home"
+            routerLinkActive="active"
+            Title="Studies-Seaexh"
+            appMenuAccessLink
+          >
+            <span>Search</span>
+          </a>
+        </div>
+        
+        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/study"
+            routerLinkActive="active"
+            Title="Studies"
+            appMenuAccessLink
+          >
+            <span>Details</span></a
+          >
+        </div>
+        <!-- *appHasPermissions="studyMenuGroupPermissions" -->
+        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/cds-trackers"
+            routerLinkActive="active"
+            Title="CDS & Coding Trackers"
+            appMenuAccessLink
+          >
+            <span>Demand</span></a
+          >
+        </div>
+        <div
+          class="nav-item"
+          ngbDropdown
+          display="dynamic"
+          placement="bottom-right"
+          
+        >
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/imi-ra-trackers"
+            routerLinkActive="active"
+            Title="IMI R&A Trackers"
+            appMenuAccessLink
+          >
+            <span>Assignment</span></a
+          >
+        </div>
+        <div
+          class="nav-item"
+          ngbDropdown
+          display="dynamic"
+          placement="bottom-right"
+        >
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/process-improvement-trackers"
+            routerLinkActive="active"
+            Title="Process Improvement Trackers"
+            appMenuAccessLink
+          >
+            <span>Milestones</span></a
+          >
+        </div>
+
+          Resources
+        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/crm-trackers"
+            routerLinkActive="active"
+            Title="CRM"
+            appMenuAccessLink
+          >
+            <span>Search</span></a
+          >
+        </div>
+
+        <div class="nav-item dropdown position-static" ngbDropdown display="dynamic" 
+        placement="bottom-left"
+        *ngIf="reportsMenuVisible"
+        >
+          <a id="reports-dropdown" class="nav-link" ngbDropdownToggle Title="Reports" role="button">
+            <span>Assignment</span></a
+          >
+
+
+          <div ngbDropdownMenu aria-labelledby="reports-dropdown" class="shadow-lg">
+            <app-reports-menu></app-reports-menu>
+          </div>
+        </div>
+
+        
+
+        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/requests"
+            routerLinkActive="active"
+            Title="Requests"
+            appMenuAccessLink
+          >
+            <span>Uploads</span></a
+          >
+        </div>
+       ---
+        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/admin"
+            routerLinkActive="active"
+            appMenuAccessLink
+          >
+            <span>Reports</span></a
+          >
+        </div>
+        
+        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/admin"
+            routerLinkActive="active"
+            appMenuAccessLink
+          >
+            <span>App Admin</span></a
+          >
+        </div>
+        
+        
+
+        
+
+        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a id="user-dropdown" class="nav-link" ngbDropdownToggle data-toggle="tooltip" title="{{ userEmail }}" role="button">
+            <span translate>{{ username }}</span>
+          </a>
+
+          <div ngbDropdownMenu aria-labelledby="user-dropdown">
+            <!-- <h6 class="dropdown-header">
+              <span translate>Logged in as </span> <b>{{ username }}</b>
+            </h6> -->
+            <!-- <div class="dropdown-divider"></div> -->
+            <!-- <button class="dropdown-item" (click)="reloadPermissions()" translate>Reload Permissions</button> -->
+            <button class="dropdown-item" routerLink="/user/user-access-view" routerLinkActive="active" translate>
+              My Access Permissions
+            </button>
+            <button class="dropdown-item" routerLink="/user/login-details" routerLinkActive="active" translate>
+              My Login Log
+            </button>
+            <button class="dropdown-item" (click)="logout()"><span>Logout</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <p>permissions: {{permissions | json}}</p>() -->
+  </nav>
+</header>

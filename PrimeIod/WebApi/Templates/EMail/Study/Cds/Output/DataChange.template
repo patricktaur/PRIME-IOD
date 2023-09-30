@@ -1,0 +1,24 @@
+﻿Subject:PRISM CDS Output Request Change Alert - {StudyIconNumber} - {TaskId} - {OutputCategory} - Changes
+
+Hi {ToUsers},
+<br/><br/>
+PRISM CDS Output Request Change Alert - {StudyIconNumber} - {TaskId} - {OutputCategory} - Changes </br>
+  <br />        
+Last Updated By: <b> {LoginUserName} </b><br />
+<br/>
+Due Date: <b>{DueDate}</b><br />
+<br/>
+Output Detail: <b> {OutputDetail} </b><br />
+<br/>
+Output Request TaskId <b>{TaskId}</b> is modified. <br />
+
+<p>
+{ModifiedContent}
+</p>
+<br />
+
+link: <b>  {LinktoTask} </b> <br />
+<br />
+        
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

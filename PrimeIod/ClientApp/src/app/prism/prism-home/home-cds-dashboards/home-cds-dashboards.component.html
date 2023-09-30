@@ -1,0 +1,29 @@
+<div class="mb-3">
+  <app-cds-dev-req-dashboard [tag]="'all'" (itemClicked)="onItemClicked($event)"></app-cds-dev-req-dashboard>
+</div>
+
+<!-- style="background-color:#632B86; -->
+<div class="my-3" *ngIf="!currentUserRoleIsAdminOrCdsManager">
+  <app-cds-dev-req-dashboard [tag]="'my'" (itemClicked)="onItemClicked($event)"></app-cds-dev-req-dashboard>
+</div>
+<hr/>
+
+<div class="my-3">
+  <div class="d-flex pb-2 align-items-center">
+    <span style="background-color:#632B86; border-radius: 50%; width: 25px; height: 25px; display: inline-block;"></span>
+    <h5 class="flex-grow-1 ps-2 mb-0">CDS Ouput Tasks Due Dashboard</h5>
+  </div>
+  <app-cds-output-due-dashboard (itemClicked)="onOutputDashboardClicked($event)"></app-cds-output-due-dashboard>
+</div>
+<hr/>
+
+<div class="my-3">
+  <div class="d-flex pb-2 align-items-center">
+    <span style="background-color:#60C3D6; border-radius: 50%; width: 25px; height: 25px; display: inline-block;"></span>
+    <h5 class="flex-grow-1 ps-2 mb-0">CDS Delivery Tasks Due Dashboard</h5>
+  </div>
+  <app-cds-dely-due-dashboard (itemClicked)="onDelyDashboardClicked($event)"></app-cds-dely-due-dashboard>
+</div>
+
+<!-- <app-component-access [compCode]="'cds-dashboard-view'" [redirect-to]="'/prism-home/study-list'">
+</app-component-access> -->

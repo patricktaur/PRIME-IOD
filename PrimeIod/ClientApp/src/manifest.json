@@ -1,0 +1,21 @@
+{
+  "name": "Prism",
+  "short_name": "Prism",
+  "theme_color": "#e78321",
+  "background_color": "#e78321",
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/ngx-rocket-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

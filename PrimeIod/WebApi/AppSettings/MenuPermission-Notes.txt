@@ -1,0 +1,53 @@
+1. For all DMPM and CDL changed E to R - Icon to confirm if this is correct
+
+DMPM	CDL	CDC
+E is repaced with R  (Edit where the user is a study resource)
+
+Study - Description - Study Details
+Study - Description - Other Icon Departments
+Study - Description - Assumptions
++ others
+
+Is there a similar requirement in IMI.
+	In the current arrangement all IMI roles can access the IMI study tabs in edit mode.
+	Please advise if any IMI role has to be restricted to Edit Studies where the user is a Study Resournce 
+
+Central Monitor	
+Clinical Data Analyst	
+Sr. Clinical Data Analyst	
+Clinical Risk Manager	
+Sr. Clinical Risk Manager	
+Sr. Director - CRM
+
+the abvoe roles have permission to view DM Study List (as provided by Icon)
+
+therefore these roles are also provided view permission for all DM study tabs
+
+30Jul2023 - Patrick
+Fix: CDMS-Tracker - MenuConfig  DM-IMI dm-imi/cdms cdms-tracker section - 
+	Error: User with edit access is provided with view access.
+	incorrectly configured. Now corrected.
+	Pending: apply the same arrangement for dm and imi sectins
+	Check cds and similar sections
+
+25Aug2023:
+Email From Madel, Shailesh, 24Aug2023, 3:55PM
+RoleMatrix updated:
+R Access for following :
+study-crm-award
+study-crm-description
+study-crm-timelines
+study-crm-resources
+study-crm-budget
+study-crm-analysis-planning
+study-crm-project-governance-setup
+study-crm-project-governance-on-ongoing
+study-crm-project-governance-analysis
+study-crm-project-governance-closure
+For Roles 
+Central Monitor  and roles CRM - Clinical Data Analyst and CRM - Sr. Clinical Data Analyst
+
+
+07Sep2023: Patrick
+App-Admin-CRM-Codelist
+item inserted in RoleMatrix

@@ -1,0 +1,42 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<!-- <h4>Page Flow</h4>
+<hr /> -->
+<!-- <button type="submit" class="btn btn-primary submit-button">Save</button>
+<button type="button" class="btn btn-light" (click)="options.resetModel()">Undo</button>
+<span class="alert alert-info">Last Updated on: {{ lastSavedOn | date: 'd-MMM-y, h:mm a' }}</span>
+<hr /> -->
+<ul class="list-group">
+  <li class="list-group-item">First Study Date: {{ firstStudyDate | date: 'dd-MMM-yyyy' }}</li>
+  <li class="list-group-item">Last Study Date: {{ lastStudyDate | date: 'dd-MMM-yyyy' }}</li>
+  <li class="list-group-item">Total Actual Pages: {{ totalActualPages }}</li>
+  <li class="list-group-item">Total Future Planned Pages: {{ totalFuturePages }}</li>
+</ul>
+<!-- <div [formGroup]="tableForm" class="col-4 my-3 ms-0 ps-0 green-form">
+  <label class="form-label">Year</label>
+  <select formControlName="selectedYear" class="form-control" (change)="updateYear($event)">
+    <option *ngFor="let years of YearValue" selected="selectedYear">{{ years }}</option>
+  </select>
+</div> -->
+<div [formGroup]="tableForm" class="input-group mb-3 col-4 my-3 ms-0 ps-0 green-form">
+  <span class="input-group-text bg-green" id="basic-addon1">Year</span>
+  <select formControlName="selectedYear" class="form-control" (change)="updateYear($event)">
+    <option *ngFor="let years of YearValue" selected="selectedYear" [selected]="years==selectedYear">{{ years }}</option>
+  </select>
+</div>
+
+<!-- {{ selectedYear }} -->
+<!-- pageflow.pageflow: {{pageflow | json}} -->
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [model]="filterPageFlow" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <br />
+  <button type="submit" class="btn btn-primary submit-button me-1" [disabled]="!(form.valid && form.dirty)">Save</button>
+  <button type="button" class="btn btn-light me-1" (click)="options.resetModel()">Undo</button>
+  <!-- <span class="alert alert-info">Last Updated on: {{ lastSavedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+  <app-last-saved [auditFields]="filterPageFlow"></app-last-saved>
+
+</form>
+<br />
+
+<hr />
+
+<!-- {{pageflow.pageflow | json}} -->

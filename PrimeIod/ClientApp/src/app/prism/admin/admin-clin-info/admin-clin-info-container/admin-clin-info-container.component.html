@@ -1,0 +1,22 @@
+
+<ul class="nav nav-pills nav-fill pb-3">
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'clininfo-cdms-tasks'" 
+    routerLinkActive="active"
+    appMenuAccessLink
+  >Clininfo CDMS Tasks</li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'clininfo-cdms-task-groups'" 
+    routerLinkActive="active"
+    appMenuAccessLink
+  >Clininfo CDMS Task Groups</li>
+  <li role="button"
+    class="nav-item nav-link" 
+    [routerLink]="'clininfo-cdms-and-cdms-type'" 
+    routerLinkActive="active"
+    appMenuAccessLink
+  >Clininfo CDMS & CDMS Type</li>
+  </ul>
+<router-outlet></router-outlet>

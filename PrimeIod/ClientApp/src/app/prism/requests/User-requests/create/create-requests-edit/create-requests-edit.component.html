@@ -1,0 +1,63 @@
+<app-loader [isLoading]="loading"></app-loader>
+<h5>{{ title }}</h5>
+
+<hr />
+<!-- (ngSubmit)="submit()" -->
+<form [formGroup]="form">
+  <formly-form [model]="record" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <div class="alert alert-warning" role="alert" *ngIf="showOtherUserAlert()">
+    Last actioned by: {{ record?.updatedByDisplayName }}. Action buttons not available for other users.
+  </div>
+  <button type="button" class="btn btn-default" (click)="back()">Back</button>
+  <button
+    *ngIf="saveButton"
+    type="submit"
+    class="btn btn-primary submit-button me-1"
+    (click)="submit()"
+    [disabled]="!canSave()"
+  >
+    Save
+  </button>
+  <button *ngIf="saveButton" type="button" class="btn btn-default" (click)="options.resetModel()">Undo</button>
+  <app-confirmation-shell
+    *ngIf="removeButton"
+    [message]="'Remove Request: ' + recId + ' ?'"
+    [labelText]="'Remove'"
+    [responseValue]="recId"
+    (response)="deleteRecord($event)"
+  >
+  </app-confirmation-shell>
+  <app-confirmation-shell
+    *ngIf="submitForApprovalButton"
+    [message]="'Submit For Approval: ' + recId + ' ?'"
+    [labelText]="'Submit for Approval'"
+    [responseValue]="recId"
+    (response)="submitForApproval()"
+    [disabled]="!form.valid"
+  >
+  </app-confirmation-shell>
+  <app-confirmation-shell
+    *ngIf="withdrawRequestButton"
+    [message]="'Withdraw request:' + recId + ' ?'"
+    [labelText]="'Withdraw submitted request'"
+    [responseValue]="recId"
+    (response)="withdrawRequest()"
+    [disabled]="!form.valid"
+  >
+  </app-confirmation-shell>
+</form>
+
+<!-- <button
+    *ngIf="submitForApprovalButton"
+    type="button"
+    (click)="submitForApproval()"
+    class="btn btn-primary submit-button"
+    [disabled]="!form.valid"
+  >
+    Submit For Approval
+  </button>
+  <button *ngIf="withdrawRequestButton" type="button" (click)="withdrawRequest()" class="btn btn-primary submit-button">
+    Withdraw Request
+  </button> -->
+
+<!-- <p>record: {{ record | json }}</p> -->

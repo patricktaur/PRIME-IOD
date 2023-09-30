@@ -1,0 +1,134 @@
+<h4>IMI Timeline Upload</h4>
+
+
+<!-- <h6>MILESTONE TASK List</h6>
+<table class="table table-bordered table-sm table-hover small table-striped" style="border-color:lightgray;">
+    <tbody>
+        <tr><td>1</td><td>Award Notification</td></tr>
+        <tr><td>2</td><td>Communication Plan complete</td></tr>
+        <tr><td>3</td><td>Contract execution date</td></tr>
+        <tr><td>4</td><td>Data Delivery Specification (DDS)-Inbound complete</td></tr>
+        <tr><td>5</td><td>Data Delivery Specification (DDS)-Outbound complet</td></tr>
+        <tr><td>6</td><td>Database Lock</td></tr>
+        <tr><td>7</td><td>EDC Installation complete</td></tr>
+        <tr><td>8</td><td>Final Protocol with signatures</td></tr>
+        <tr><td>9</td><td>Final Read Delivery</td></tr>
+        <tr><td>10</td><td>First Patient In (Screened/Enrolled/Randomized)</td></tr>
+        <tr><td>11</td><td>Image Upload Configuration complete</td></tr>
+        <tr><td>12</td><td>Imaging Manual complete</td></tr>
+        <tr><td>13</td><td>IMI INVOLVEMENT BEGINS</td></tr>
+        <tr><td>14</td><td>IMI INVOLVEMENT ENDS</td></tr>
+        <tr><td>15</td><td>Independent Review Charter complete</td></tr>
+        <tr><td>16</td><td>Independent Review Training Manual (IRTM) complete</td></tr>
+        <tr><td>17</td><td>IPOP Complete</td></tr>
+        <tr><td>18</td><td>Last Patient In (Screened/Enrolled/Randomized)</td></tr>
+        <tr><td>19</td><td>Last Patient Out/ Last Patient Last Visit</td></tr>
+        <tr><td>20</td><td>MSA Checks Specifications complete</td></tr>
+        <tr><td>21</td><td>Programming Start Date</td></tr>
+        <tr><td>22</td><td>QA Approval Date</td></tr>
+        <tr><td>23</td><td>Reader Performance Set-up complete</td></tr>
+        <tr><td>24</td><td>Sponsor Approval of EDC</td></tr>
+        <tr><td>25</td><td>Systems Requirement Specification (SRS) complete</td></tr>
+        <tr><td>26</td><td>UAT / Testing Handover Date</td></tr>
+        <tr><td>27</td><td>UAT Approval</td></tr>
+        <tr><td>28</td><td>Validation complete</td></tr>
+
+    </tbody>
+</table> -->
+
+<ul ngbNav #nav="ngbNav" class="nav-pills">
+	<li ngbNavItem>
+	  <a ngbNavLink>Upload a File</a>
+	  <ng-template ngbNavContent>
+			<div>
+				<form [formGroup]="fileUploadForm">
+					<!-- <file-upload formControlName="files" fileslimit="1" multiple="false" ></file-upload> -->
+					<app-ngx-file-upload [control]="files" (controlChange)="onControlChange($event)"></app-ngx-file-upload>
+				</form>
+				<button class="btn btn-primary" (click)="upload()" [disabled]="fileUploadForm.invalid"><i class="bi bi-cloud-upload"></i> Upload</button>
+				<span *ngIf="uploadInProgress">Uploading...</span>
+			</div>
+
+			<br/>
+			<app-alert [alerts]="alerts"></app-alert>
+
+			<table class="table table-bordered table-sm table-hover small table-striped" style="border-color:lightgray;">
+				<thead style="background-color: #b6effb;">
+					<tr>
+						<th align="left">Uploaded On</th>
+						<th align="left">Uploaded By</th>
+						<th align="left">File Name</th>
+						<th align="left">No. Of Records</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let uploadDetail of uploadDetails;">
+						<td>{{ uploadDetail.uploadedDate | date: 'dd-MMM-yyyy, hh:mm:ss'}}</td>
+						<td>{{ uploadDetail.uploadedByUsrDisplayName }}</td>
+						<td>{{ uploadDetail.fileName }}</td>
+						<td>{{ uploadDetail.totalRecords }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</ng-template>
+	</li>
+
+	<li ngbNavItem>
+	  <a ngbNavLink>Instructions</a>
+	  <ng-template ngbNavContent>
+			<table class="table table-bordered table-sm table-hover small table-striped" style="border-color:lightgray;">
+					<thead style="background-color: #b6effb;">
+						<tr>
+							<th colspan="3">
+								File Format
+							</th>
+						</tr>
+						<tr>
+							<th align="left">Column Position</th>
+							<th align="left">Column Name</th>
+							<th align="left">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>MILESTONE TASK</td>
+							<td>
+								<p>Fixed set of items as listed below</p>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>STUDY NUMBER</td>
+							<td>
+								<p>Icon Number of the Study formate: IMIPMP0004/0065</p>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>SCHEDULE START</td>
+							<td>
+													<p>Format: 13-Aug-2020</p>
+													<p>First 2 digits represent a Date and Next 3 alphabet represent a Month and last 4 digits represent Year</p>
+											</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>ACTUAL START</td>
+							<td>
+								<p>Foramt: 24-Aug-2020</p>
+								<p>First 2 digits represent a Date and Next 3 alphabet represent a Month and last 4 digits represent Year</p>
+							</td>
+						</tr>
+					</tbody>
+			</table>
+
+			<button *ngIf="!downloadInProgress" class="btn btn-primary" (click)="downloadSampleTemplate()">Download Template</button>
+			<button *ngIf="downloadInProgress" class="btn btn-primary" type="button" disabled>
+				<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+				Downloading...
+			</button>
+		</ng-template>
+	</li>
+</ul>
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

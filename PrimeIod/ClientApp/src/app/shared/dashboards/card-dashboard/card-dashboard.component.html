@@ -1,0 +1,42 @@
+<div class="table-responsive">
+  <table class="table table-bordered" style="overflow-wrap: anywhere;">
+    <thead>
+      <tr>
+      <td scope="col" class="text-center" *ngFor="let item of dashboardItems" [ngStyle]="getDescriptionTextStyle(item)">
+        <!-- <small class="text-center fs-6"> -->
+          {{ item?.displayText }}
+        <!-- </small> -->
+      </td>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td [role]="canDrillDown(item)?'button':'cell'" scope="col" *ngFor="let item of dashboardItems" [ngClass]="'text-center font-monospace fw-bold text-black-60'" 
+        (click)="canDrillDown(item)? onItemClicked(item): ''">
+          <!-- <div class="text-center fs-4 font-monospace"> -->
+            {{ item?.value }}
+          <!-- </div> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <div
+    class="card"
+    style="height: auto;"
+    *ngFor="let item of dashboardItems"
+    [ngStyle]="getStyle(item)"
+    [title]="getTitle(item)"
+  >
+    <div class="card-body m-0 p-0">
+      <a class="btn stretched-link " (click)="onItemClicked(item)" *ngIf="canDrillDown(item)"></a>
+      <a class="btn stretched-link disabled" *ngIf="!canDrillDown(item)"></a>
+      <div class="text-center" [ngStyle]="getValueTextStyle(item)">
+        {{ item?.value }}
+      </div>
+      <div class="text-center" [ngStyle]="getDescriptionTextStyle(item)">
+        {{ item?.displayText }}
+      </div>
+    </div>
+  </div> -->
+</div>

@@ -1,0 +1,69 @@
+<form [formGroup]="dashboardForm" (ngSubmit)="submit()">
+  <!-- <formly-form [model]="records" [fields]="fields" [options]="options" [form]="form"></formly-form>
+   -->
+  <div formArrayName="records">
+    <div class="card" *ngFor="let group of getRecordFormControls(dashboardForm); let g1 = index" [formGroupName]="g1">
+      <div class="card-body">
+        <h5 class="card-title">{{ group.value.groupname }}</h5>
+        <div style="overflow-x:auto;">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">KPI Name</th>
+                <th scope="col">KPI Description</th>
+                <th scope="col" >Criteria for Pass</th>
+                <th scope="col">Label1</th>
+                <th scope="col">Field1</th>
+                <th scope="col">Label2</th>
+                <th scope="col">Field2</th>
+                <th scope="col">Label3</th>
+                <th scope="col">Field3</th>
+                <th scope="col">Label4</th>
+                <th scope="col">Field4</th>
+                <th scope="col">Label5</th>
+                <th scope="col">KPI Outcome</th>
+                <th scope="col">KPI Comment</th>
+              </tr>
+            </thead>
+            <tbody formArrayName="items">
+              <tr *ngFor="let item of getItemsFormControls(group); let itemIndex = index" [formGroupName]="itemIndex">
+                <td>{{ item.value.kpiCategory }}</td>
+                <td>{{ item.value.kpiName }}</td>
+                <!-- <td>{{ item.value.kpiDescription }}</td> -->
+                <td><app-cell [record]="item.value" [column]="columnKpiDescription"></app-cell></td>
+
+                <td>{{ item.value.criteriaForPass }}</td>
+                <!-- <td><app-cell [record]="item.value" [column]="columncriteriaForPass"></app-cell></td> -->
+                <td>{{ item.value.label1 }}</td>
+                <td>{{ item.value.field1 }}</td>
+                <td>{{ item.value.label2 }}</td>
+                <td>{{ item.value.field2 }}</td>
+                <td>{{ item.value.label3 }}</td>
+                <td>{{ item.value.field3 }}</td>
+                <td>{{ item.value.label4 }}</td>
+                <td>{{ item.value.field4 }}</td>
+                <td>{{ item.value.label5 }}</td>
+                <td [style]="getKpiOutcomeStyle(item.value.kpiOutcome)">{{ item.value.kpiOutcome }}</td>
+                <td>
+                  <textarea formControlName="kpiComments"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary submit-button"
+    [disabled]="!(dashboardForm.valid && dashboardForm.dirty)"
+  >
+    Save
+  </button>
+  <!-- <span class="alert alert-info">Last Updated on: {{ records?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+</form>
+
+<!-- <p>records:{{ records | json }}</p> -->

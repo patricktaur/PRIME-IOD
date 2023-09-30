@@ -1,0 +1,56 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+<table class="table table-sm small table-striped">
+    <tbody>
+        <tr>
+            <td>Protocol Phase</td>
+            <td>{{ studyAssumptions.protocolPhasePDescription }}</td>
+        </tr>
+        <tr>
+            <td>Protocol Complexity</td>
+            <td>{{ studyAssumptions.protocolComplexityPDescription }}</td>
+        </tr>
+        <tr>
+            <td>Rescue Study</td>
+            <td>{{ studyAssumptions.rescueStudyPDescription }}</td>
+        </tr>
+        <tr>
+            <td>Total Unique Forms</td>
+            <td>{{ studyAssumptions.totalUniqueForms }}</td>
+        </tr>
+        <tr>
+            <td>SDTM</td>
+            <td>{{ studyAssumptions.sdtmPDescription }}</td>
+        </tr>
+        <tr>
+            <td>External Data Sources</td>
+            <td>{{ studyAssumptions.externalDataSources }}</td>
+        </tr>
+        <tr>
+            <td>Unblinding Activities During Study</td>
+            <td>{{ studyAssumptions.unblindingactivitiesduringstudyPDescription }}</td>
+        </tr>
+        <tr>
+            <td>Sites</td>
+            <td>{{ studyAssumptions.sites }}</td>
+        </tr>
+        <tr>
+            <td>TMF</td>
+            <td>{{ studyAssumptions.tmfPDescription }}</td>
+        </tr>
+        <tr>
+            <td>TMF QC Periodicity</td>
+            <td>{{ studyAssumptions.tmfqcperiodicity }}</td>
+        </tr>
+        <tr>
+            <td>EDC Access Review Periodicity</td>
+            <td>{{ studyAssumptions.edcaccessReviewPeriodicity }}</td>
+        </tr>
+        <tr>
+            <td>TMF QC Periodicity Comment</td>
+            <td>{{ studyAssumptions.tmfqcperiodicityComment }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <span class="alert alert-info">Last Updated on: {{ studyAssumptions?.updatedOn | date: 'd-MMM-y, h:mm a' }}</span> -->
+<app-last-saved [auditFields]="studyAssumptions"></app-last-saved>

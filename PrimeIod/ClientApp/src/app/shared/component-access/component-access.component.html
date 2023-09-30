@@ -1,0 +1,11 @@
+<!-- <p>component-access works!</p> -->
+
+<div *ngIf="showUserPermissions">
+  HasPermission:{{ hasPermission }}
+  <br />
+  CompCode: {{ compCode }}
+  <br />
+
+  Permission Values:
+  {{ permissions | json }}
+</div>

@@ -1,0 +1,36 @@
+<div>
+  <div class="row" style="margin-bottom: 10px;">
+    <div class="col" *ngIf="currentUserRoleIsAdminOrCdsManager">
+      <!-- background-color:#60C3D6; color:white; -->
+      <div style="padding: 5px; font-weight: 500;">All Delivery Tasks Due</div>
+
+      <app-card-dashboard
+        [tag]="'all'"
+        [dashboardItems]="allDueDashboard"
+        (itemClicked)="onItemClicked($event)"
+      ></app-card-dashboard>
+    </div>
+    <div class="col" *ngIf="!currentUserRoleIsAdminOrCdsManager">
+      <!-- background-color:#60C3D6; color:white; -->
+      <div style="padding: 5px;font-weight: 500;">My Delivery Tasks Due</div>
+
+      <app-card-dashboard
+        [tag]="'my-due'"
+        [dashboardItems]="myDueDashboard"
+        (itemClicked)="onItemClicked($event)"
+      ></app-card-dashboard>
+    </div>
+    <div class="col" *ngIf="!currentUserRoleIsAdminOrCdsManager">
+      <!-- background-color:#60C3D6; color:white; -->
+      <div style="padding: 5px;font-weight: 500;">
+        My Delivery Tasks Due as Programmer Assigned
+      </div>
+
+      <app-card-dashboard
+        [tag]="'me-as-programmer'"
+        [dashboardItems]="meAsProgrammerDashboared"
+        (itemClicked)="onItemClicked($event)"
+      ></app-card-dashboard>
+    </div>
+  </div>
+</div>

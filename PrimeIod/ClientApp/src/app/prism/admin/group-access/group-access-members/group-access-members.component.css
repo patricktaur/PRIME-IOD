@@ -1,0 +1,10 @@
+.lists-container {
+  display: flex;
+}
+
+.list-1,
+.list-2 {
+  width: 50%;
+  padding: 10px;
+  height: 80%;
+}

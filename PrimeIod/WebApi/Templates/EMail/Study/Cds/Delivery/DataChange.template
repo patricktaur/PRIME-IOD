@@ -1,0 +1,24 @@
+﻿Subject:PRISM CDS Delivery Request Change Alert - {StudyIconNumber} - {TaskId} - {DeliveryCategory} - Changes
+
+Hi {ToUsers},
+<br/><br/>
+PRISM CDS Delivery Request Change Alert - {StudyIconNumber} - {TaskId} - {DeliveryCategory} - Changes </br>
+  <br />        
+Last Updated By: <b> {LoginUserName} </b><br />
+<br/>
+Due Date: <b>{DueDate}</b><br />
+<br/>
+Delivery Detail: <b> {DeliveryDetail} </b><br />
+<br/>
+Delivery Request TaskId <b>{TaskId}</b> is modified. <br />
+
+<p>
+{ModifiedContent}
+</p>
+<br />
+
+link: <b>  {LinktoTask} </b> <br />
+<br />
+        
+Yours sincerely,<br />
+Project Risk Information and Solutions Management.

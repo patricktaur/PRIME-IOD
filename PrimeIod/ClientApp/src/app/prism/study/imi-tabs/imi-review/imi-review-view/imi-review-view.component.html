@@ -1,0 +1,190 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<div class="row no-gutters">
+    <div class="col-sm-4">
+      &nbsp;&nbsp;
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+        <li ngbNavItem="tab01">
+          <a ngbNavLink
+            >Project Status Dashboard Review
+            <div style="float: right;"><app-form-status [isDirty]="tab01isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-proj-stat-dash-review-view
+              [form]="form"
+              [record]="record"
+              (isDirtyChanged)="tab01isDirtyChanged($event)"
+            ></app-proj-stat-dash-review-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab02">
+          <a ngbNavLink>
+            Milestones and Timelines
+            <div style="float: right;"><app-form-status [isDirty]="tab02isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-miles-stones-timelines-view
+              [record]="record"
+            ></app-miles-stones-timelines-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab03">
+          <a ngbNavLink>
+            Risk Management
+            <div style="float: right;"><app-form-status [isDirty]="tab03isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-risk-management-view
+              [record]="record"
+            ></app-risk-management-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab04">
+          <a ngbNavLink>
+            Study StartUp
+            <div style="float: right;"><app-form-status [isDirty]="tab04isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-study-startup-view
+              [record]="record"
+            ></app-study-startup-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab05">
+          <a ngbNavLink>
+            Image Data and Read Forecasting
+            <div style="float: right;"><app-form-status [isDirty]="tab05isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-img-data-and-read-forecasting-view
+              [record]="record"
+            ></app-img-data-and-read-forecasting-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab06">
+          <a ngbNavLink>
+            EDC Documentation / Development
+            <div style="float: right;"><app-form-status [isDirty]="tab06isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-edc-doc-and-dev-view
+              [record]="record"
+            ></app-edc-doc-and-dev-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab07">
+          <a ngbNavLink>
+            Reader Training
+            <div style="float: right;"><app-form-status [isDirty]="tab07isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-reader-training-view
+              [record]="record"
+            ></app-reader-training-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab08">
+          <a ngbNavLink>
+            Management of Readers
+            <div style="float: right;"><app-form-status [isDirty]="tab08isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-management-of-readers-view
+              [record]="record"
+            ></app-management-of-readers-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab09">
+          <a ngbNavLink>
+            Image/Read Management Maintenance
+            <div style="float: right;"><app-form-status [isDirty]="tab09isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-img-read-mang-maint-view
+              [record]="record"
+            ></app-img-read-mang-maint-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab10">
+          <a ngbNavLink>
+            Cross Functional Data Quality Review
+            <div style="float: right;"><app-form-status [isDirty]="tab10isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-cross-functional-view
+              [record]="record"
+            ></app-cross-functional-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab11">
+          <a ngbNavLink>
+            Finance
+            <div style="float: right;"><app-form-status [isDirty]="tab11isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-finance-view
+							[record]="record" 
+            ></app-finance-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab12">
+          <a ngbNavLink>
+            Quality and TMF
+            <div style="float: right;"><app-form-status [isDirty]="tab12isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-quality-and-tmf-view
+              [record]="record"
+            ></app-quality-and-tmf-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab13">
+          <a ngbNavLink>
+            Vendor Management
+            <div style="float: right;"><app-form-status [isDirty]="tab13isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-vendor-management-view
+              [record]="record"
+            ></app-vendor-management-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab14">
+          <a ngbNavLink>
+            Resourcing and Staff Engagement
+            <div style="float: right;"><app-form-status [isDirty]="tab14isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-resourcing-and-staff-eng-view
+              [record]="record"
+            ></app-resourcing-and-staff-eng-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab15">
+          <a ngbNavLink>
+            Client Satisfaction
+            <div style="float: right;"><app-form-status [isDirty]="tab15isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-client-satisfaction-view
+              [record]="record"
+            ></app-client-satisfaction-view>
+          </ng-template>
+        </li>
+        <li ngbNavItem="tab16">
+          <a ngbNavLink>
+            Communication and Meetings
+            <div style="float: right;"><app-form-status [isDirty]="tab16isDirty" [isValid]="true"></app-form-status></div>
+          </a>
+          <ng-template ngbNavContent>
+            <app-communication-and-meetings-view
+              [record]="record"
+            ></app-communication-and-meetings-view>
+          </ng-template>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-8">
+      <div [ngbNavOutlet]="nav"></div>
+    </div>
+  </div>

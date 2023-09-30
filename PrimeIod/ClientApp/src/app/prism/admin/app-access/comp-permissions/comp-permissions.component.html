@@ -1,0 +1,35 @@
+
+
+<app-loader [isLoading]="isLoading"></app-loader>
+<!-- <app-users-filter [selectedFilters]="selectedFilters" (filterChange)="onFilterChange($event)"></app-users-filter> -->
+<!-- //[requiredPermissions]="requiredPermissions" -->
+<div class="row " style="min-height: 200px;">
+  <div class="col-md-12">
+    <div class="form-group">
+      <label>Search</label>
+      <input class="form-control" placeholder="Page or Studies permitted" type="text" [(formControl)]="filterForm" />
+    </div>
+  </div>
+  <div class="col-md-12">
+    <!-- {{columns | json}} -->
+    <div class="table-responsive">
+      <app-data-table-base
+        [columns]="columns"
+        [records]="filteredRecords"
+        [pageNumber]="pageNumber"
+        [pageSize]="pageSize"
+        
+      ></app-data-table-base>
+    </div>
+  </div>
+  <pagination-control
+      [page]="pageNumber"
+      [pageSize]="pageSize"
+      [collectionSize]="filteredRecords?.length"
+      (onPageChange)="onPageChange($event)"
+    ></pagination-control>
+</div>
+<!-- <p>comp-permission-userId: {{userId}}</p> -->
+
+<!-- <p>componentPermissions: {{componentPermissions | json}}</p> -->
+<!-- <p>permList: {{permList | json}}</p> -->

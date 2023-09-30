@@ -1,0 +1,26 @@
+<app-loader [isLoading]="true" *ngIf="loading"></app-loader>
+
+<app-imi-ra-devp-req-filters
+  [selectedFilters]="selectedFilters"
+  (filterChange)="onFilterChange($event)"
+></app-imi-ra-devp-req-filters>
+<button *ngIf="!isViewMode" type="button" class="btn btn-primary" (click)="add()">
+  New IMI R&A Development Request
+</button>
+<app-imi-ra-batch-actions
+  *ngIf="!isViewMode"
+  (batchActionButtonClicked)="batchActionModeChanged($event)"
+  [batchActionOptions]="batchActionOptions"
+  (process)="processBatchActions($event)"
+  [batchActionMode]="batchActionMode"
+></app-imi-ra-batch-actions>
+<app-data-table-shell
+  [records]="filteredRecords"
+  [columns]="columns"
+  [showColumnManager]="false"
+  [showFooterActions]="false"
+  (raiseEvent)="onRaiseEvent($event)"
+  [viewMode]="isViewMode"
+>
+</app-data-table-shell>
+<!-- <p>records: {{ records | json }}</p> -->

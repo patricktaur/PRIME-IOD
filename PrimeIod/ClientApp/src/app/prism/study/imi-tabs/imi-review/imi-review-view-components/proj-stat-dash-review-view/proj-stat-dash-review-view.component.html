@@ -1,0 +1,57 @@
+<table class="table table-striped">
+	<thead>
+		<tr class="bg-green align-text-top">
+			<th scope="col">Project Status Categories</th>
+			<th scope="col">N/A</th>
+            <th scope="col">Project Category Score</th>
+			<th scope="col">Comment</th>
+			<th scope="col">Action</th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr>
+            <th> Project Status Category </th>
+            <td></td>
+            <td class="text-center">
+                <div [style]="getStyle(record.projectStatusDashboardrecord)">
+                    {{ record.projectStatusDashboardrecord }}
+                </div>
+            </td>
+            <td>{{ record.projectStatusDashboardReviewComments }}</td>
+            <td>{{ record.projectStatusDashboardReviewAction }}</td>
+        </tr>
+        <tr>
+            <th>Status, Trend and Risk Review using IMI Dashboard, IMI Metrics report (MCC), MIRA reports or equivalent data visualization/trending tools.</th>
+            <td>{{ getNotApplicableStatus(record.statusFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.status)">
+                    {{ record.status }}
+                </div>
+            </td>
+            <td>{{ record.statusComments }}</td>
+            <td>{{ record.statusAction }}</td>
+        </tr>
+        <tr>
+            <th> Protocol Amendment </th>
+            <td>{{ getNotApplicableStatus(record.protocolAmendmentFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.protocolAmendment)">
+                    {{ record.protocolAmendment }}
+                </div>
+            </td>
+            <td>{{ record.protocolAmendmentComments }}</td>
+            <td>{{ record.protocolAmendmentActions }}</td>
+        </tr>
+        <tr>
+            <th> Protocol Amendment Impact Assessment Complete (e.g. documentation / system updates required ?) </th>
+            <td>{{ getNotApplicableStatus(record.protocolAmendmentImpactAssessmentFlag) }}</td>
+            <td class="text-center">
+                <div [style]="getStyle(record.protocolAmendmentImpactAssessment)">
+                    {{ record.protocolAmendmentImpactAssessment }}
+                </div>
+            </td>
+            <td>{{ record.protocolAmendmentImpactAssessmentComments }}</td>
+            <td>{{ record.protocolAmendmentImpactAssessmentActions }}</td>
+        </tr>
+    </tbody>
+</table>

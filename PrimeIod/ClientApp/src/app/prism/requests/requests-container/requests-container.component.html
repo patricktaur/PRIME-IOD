@@ -1,0 +1,69 @@
+<!-- <app-loader [isLoading]="isLoading"></app-loader> -->
+
+<div class="position-relative">
+  <div class="row">
+    <div [ngClass]="menuClass()">
+      <span role="button" class="collapse-icon" (click)="toggleMenuWidth()">
+        <i [ngClass]="collapse()"></i>
+      </span>
+      <h5>Requests</h5>
+      <br />
+      <ul class="list-group small ms-n4 mt-n3 list-group-flush border-right mb-n4 study-tab-list">
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'study-request'"
+          routerLinkActive="active"
+          appMenuAccessLink
+          [rootPath]="rootPath"
+        >
+          DM Study
+        </li>
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'imi-study-request'"
+          routerLinkActive="active"
+          appMenuAccessLink
+          [rootPath]="rootPath"
+        >
+          IMI ONLY study
+        </li>
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'crm-study-request'"
+          routerLinkActive="active"
+          appMenuAccessLink
+          [rootPath]="rootPath"
+        >
+          CRM study
+        </li>
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'user-request'"
+          routerLinkActive="active"
+          appMenuAccessLink
+          [rootPath]="rootPath"
+        >
+          User
+        </li>
+        <li
+          role="button"
+          class="list-group-item"
+          [routerLink]="'codelist-request'"
+          routerLinkActive="active"
+          appMenuAccessLink
+          [rootPath]="rootPath"
+        >
+          Codelist
+        </li>
+      </ul>
+    </div>
+
+    <div class="col overflow-hidden">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -16,7 +16,7 @@ import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 import { ShellModule } from './shell/shell.module';
-import { LoginModule } from './login/login.module';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ToastService } from './shared/services/toast.service';
@@ -27,13 +27,12 @@ import { NoaccessComponent } from './noaccess/noaccess.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { UpdateSwToastComponent } from './service/update-sw-toast/update-sw-toast.component';
 import { FileUploadModule } from '@iplab/ngx-file-upload';
-import { PrismModule } from '@app/prism/prism.module';
+
 import { CustomNgbDateAdapter } from '@app/shared/services/custom-ngb-date-adapter';
 import { CustomNgbDateParserFormatter } from '@app/shared/services/custom-ngb-date-parser-formatter';
 import { NgbDateAdapter, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
 import { NotReadyComponent } from './common/not-ready/not-ready.component';
 import { SplashComponent } from './common/splash/splash.component';
-import { StudyIconNumbersResolver } from '@app/prism/resolvers/study-icon-number-resolver';
 
 @NgModule({
   imports: [
@@ -50,11 +49,11 @@ import { StudyIconNumbersResolver } from '@app/prism/resolvers/study-icon-number
     CoreModule,
     SharedModule,
     ShellModule,
-    LoginModule,
+
     AppRoutingModule,
     FileUploadModule,
 
-    PrismModule
+    
 
     // must be imported as the last module as it contains the fallback route
   ],
@@ -66,8 +65,7 @@ import { StudyIconNumbersResolver } from '@app/prism/resolvers/study-icon-number
     CommonService,
     { provide: NgbDateAdapter, useClass: CustomNgbDateAdapter },
     { provide: NgbDateParserFormatter, useClass: CustomNgbDateParserFormatter },
-    StudyIconNumbersResolver
-
+    
     //devp:
     // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
     // //prod:

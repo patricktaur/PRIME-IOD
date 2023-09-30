@@ -61,3 +61,6 @@ dotnet ef dbcontext scaffold "Server=(localdb)\mssqllocaldb;Database=PrimeIod;Tr
 dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g Common -sg Employee -m TblEmployee
 
 dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g Fte -sg Demand -m TblFteDemand
+
+ClientApp\src\app\prism\fte>
+dotnet new listbasiclazy -m fte-group  -gn FteGroup

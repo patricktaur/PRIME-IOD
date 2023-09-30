@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { StudyReportService } from '@app/prism/reports/study/study-report.service';
 import { ColumnManagerComponent } from '@app/shared/column-manager/column-manager/column-manager.component';
 @Component({
   selector: 'app-data-table-shell',
@@ -36,7 +35,7 @@ export class DataTableShellComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private studyReportService: StudyReportService,
+    
     private modalService: NgbModal
   ) {}
 

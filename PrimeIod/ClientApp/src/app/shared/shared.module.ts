@@ -24,7 +24,6 @@ import { DataTableShellComponent } from './data-table/data-table-shell/data-tabl
 import { ColumnManagerComponent } from './column-manager/column-manager/column-manager.component';
 import { CellComponent } from './cell/cell.component';
 import { PlaceholderDirective } from './directives/placeholder.directive';
-import { DataTableShellNDynamicFiltersComponent } from '../prism/reports/data-table-shell-n-dynamic-filters/data-table-shell-n-dynamic-filters.component';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { LabelTypeComponent } from './formly/types/label-type.component';
@@ -63,13 +62,11 @@ import { IntCheckBoxTypeComponent } from './formly/types/int-check-box';
 import { FormlySelectModule } from '@ngx-formly/core/select';
 import { ViewTableComponent } from './view-table/view-table.component';
 import { PanelWrapperComponent } from './formly/wrappers/panel-wrapper/panel-wrapper.component';
-import { HasResourcePermissionsDirective } from './has-resource-permissions/has-resource-permissions.directive';
 import { ComponentAccessComponent } from './component-access/component-access.component';
 import { MenuAccessLinkDirective } from './directives/menu-access-link.directive';
 import { HtmlEditorComponent } from './html-editor/html-editor.component';
 import { HtmlEditorTypeComponent } from './formly/types/html-editor-type/html-editor-type.component';
 import { LastSavedComponent } from './last-saved/last-saved.component';
-import { HasStudyResourcePermissionsDirective } from './has-study-resource-permissions/has-study-resource-permissions.directive';
 import { NavigationService } from './navigation.service';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { DragDropDirective } from './directives/drag-drop.directive';
@@ -175,8 +172,7 @@ export function emailIdValidatorMessage(err: any, field: any) {
     ConfirmationModalComponent,
     PaginationControlComponent,
     HasPermissionsDirective,
-    HasResourcePermissionsDirective,
-    HasStudyResourcePermissionsDirective,
+    
     DropDownComponent,
     TextBoxComponent,
     YesNoPipe,
@@ -241,8 +237,7 @@ export function emailIdValidatorMessage(err: any, field: any) {
     PaginationControlComponent,
     NgSelectModule,
     HasPermissionsDirective,
-    HasResourcePermissionsDirective,
-    HasStudyResourcePermissionsDirective,
+    
     DropDownComponent,
     TextBoxComponent,
     YesNoPipe,

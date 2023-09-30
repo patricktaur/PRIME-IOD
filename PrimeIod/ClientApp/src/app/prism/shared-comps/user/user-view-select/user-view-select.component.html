@@ -1,9 +1,0 @@
-<ng-select
-  [multiple]="false"
-  [clearable]="false"
-  [(ngModel)]="selectedUserId"
-  (ngModelChange)="onUserSelect()"
-  [disabled]="disabled"
->
-  <ng-option *ngFor="let rec of users" [value]="rec.id">{{ rec.value }}</ng-option>
-</ng-select>

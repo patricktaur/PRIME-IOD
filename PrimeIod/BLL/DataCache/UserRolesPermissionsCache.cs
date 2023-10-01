@@ -125,19 +125,21 @@ namespace BLL.CachedData
         
 
         public UserRolePermissionsDTO AddUserRolesPermissions(UserNRolesDTO userNRolesDTO){
-            
-             UserRolePermissionsDTO userRolePermissionsDTO = new UserRolePermissionsDTO();
-            userRolePermissionsDTO.Active = userNRolesDTO.Active;
 
-            userRolePermissionsDTO.CanLogin = userNRolesDTO.CanLogin;
-            userRolePermissionsDTO.DisplayName = userNRolesDTO.Name;
+            UserRolePermissionsDTO userRolePermissionsDTO = new UserRolePermissionsDTO
+            {
+                Id = userNRolesDTO.Id,
+                Active = userNRolesDTO.Active,
+                CanLogin = userNRolesDTO.CanLogin,
+                DisplayName = userNRolesDTO.Name
+            };
             // userNRolesDTO = _mapper.Map<UserNRolesDTO>(user);
             // if (userNRolesDTO != null){
             //     var roleIds = _bizLogic.TblUserQuery.GetUserRoleIds(userNRolesDTO.RecId);
             //     userNRolesDTO.Roles = roleIds;
 
-                
-                var permissions = new List<string>();
+
+            var permissions = new List<string>();
 
             //     //Roles are from tblParam:
             //     // foreach(int roleId in roleIds){

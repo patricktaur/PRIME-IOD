@@ -13,7 +13,7 @@ namespace DAL.DTOs
             
             MenuPermissions = new List<MenuPermission>();
         }
-        public int RecId { get; set; }
+        public int Id { get; set; }
         public string UserLogin { get; set; }
         public string DisplayName { get; set; }
         public bool? Active { get; set; }
@@ -34,7 +34,7 @@ namespace DAL.DTOs
 
          public int UserId {
              get {
-                 return RecId;
+                 return Id;
              }
         }
         

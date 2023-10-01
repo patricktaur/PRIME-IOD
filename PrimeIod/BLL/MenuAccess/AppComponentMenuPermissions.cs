@@ -29,9 +29,9 @@ namespace BLL.MenuAccess
         public AppCompAndMenuPermissions GetMenuComponentPermissions(int userId){
             //todo: 
             //Get all user's roleIds, User.RoleIds + Resource RoleIds (DM, IMI and CRM)
-            // var roleIds = _bizLogic.TblUserQuery.GetUserRoleIds(userId);
-            // return GetMenuComponentPermissions(userId, roleIds);
-            return null;
+            var roleIds = _bizLogic.TblUser_Query.GetUserRoleIds(userId);
+            return GetMenuComponentPermissions(userId, roleIds);
+            
         }
         
         public AppCompAndMenuPermissions GetMenuComponentPermissions(int userId, List<int> roleIds){
@@ -41,12 +41,14 @@ namespace BLL.MenuAccess
             var userCompPermissions = _menuAccessGenerator.GetComponentPermissions(userId, roleIds, appComponents);
             
             var menuItems = _menuItemCsvDataCached.MenuConfigDataCached;
-            var userMenuPermissions = _menuAccessGenerator.GetMenuPmerissions(menuItems, userCompPermissions);  
-            
-            var retPermissions = new AppCompAndMenuPermissions();
-            retPermissions.AppCompPermissions = userCompPermissions;
-            retPermissions.AppMenuPermissions = userMenuPermissions;
-            
+            var userMenuPermissions = _menuAccessGenerator.GetMenuPmerissions(menuItems, userCompPermissions);
+
+            var retPermissions = new AppCompAndMenuPermissions
+            {
+                AppCompPermissions = userCompPermissions,
+                AppMenuPermissions = userMenuPermissions
+            };
+
             return retPermissions;
         }
 

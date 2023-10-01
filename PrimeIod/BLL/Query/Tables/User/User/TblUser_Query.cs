@@ -47,5 +47,22 @@ namespace BLL.Query {
         }
 
 
+        public List<int> GetUserRoleIds(int userId){
+            
+            // return  _unitOfWork.TblUserRole_Repo
+            //     .Find( x=> x.UserId ==userId)
+            //     .Select(x=> x.RoleId).ToList();
+
+            var predicate = PredicateBuilder.True<TblUser>();
+            predicate = predicate.And(i => i.Id == userId);
+            var tblUser = _unitOfWork.TblUser_Repo.GetRecordDto<UserNRolesDTO>(predicate);
+            if (tblUser == null){
+                return null;
+            }
+            return tblUser.TblUserRole.Select(x => x.RoleId).ToList();
+            
+        }
+
+
     }
 }

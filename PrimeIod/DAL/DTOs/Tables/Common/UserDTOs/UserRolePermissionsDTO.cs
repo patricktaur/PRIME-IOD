@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 namespace DAL.DTOs
 {
-    public class UserNRolesDTO
+    public class UserRolePermissionsDTO
     {
         
-        public UserNRolesDTO(){
+        public UserRolePermissionsDTO(){
             Roles = new List<int>();
             ResourceRoles = new List<int>();
             Permissions = new List<string>();
@@ -18,9 +18,11 @@ namespace DAL.DTOs
         public string DisplayName { get; set; }
         public bool? Active { get; set; }
         public bool? CanLogin { get; set; }
-        // public int? OperatingDivisionPid { get; set; }
+        
         public string EmailId { get; set; }
         public string EnterpriseId { get; set; }
+
+        public string Message { get; set; }
         public List<int> Roles { get; set; } 
 
         public List<int> ResourceRoles { get; set; } 

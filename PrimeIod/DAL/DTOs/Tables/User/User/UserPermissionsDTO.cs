@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using DAL.Models;
 namespace DAL.DTOs
 {
-    public class UserPermissionsDTO   {
+    public class UserNRolesDTO   {
         //PropertiesBlockStart
         public int Id { get; set; }
         public string Name { get; set; }

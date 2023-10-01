@@ -20,10 +20,17 @@ namespace BLL.Query {
             _mapper = mapper;
         }
 
-        public UserPermissionsDTO GetUserNRoles(string enterpriseId){
+        public UserNRolesDTO GetUserNRoles(string enterpriseId){
             var predicate = PredicateBuilder.True<TblUser>();
             predicate = predicate.And(i => i.EnterpriseId == enterpriseId);
-            return _unitOfWork.TblUser_Repo.GetRecordDto<UserPermissionsDTO>(predicate);
+            return _unitOfWork.TblUser_Repo.GetRecordDto<UserNRolesDTO>(predicate);
+        }
+
+        public TblUser GetUserByEnterpriseId(string EnterpriseId){
+                return _unitOfWork.TblUser_Repo
+                .Find(x => x.EnterpriseId == EnterpriseId)
+                .FirstOrDefault();
+            
         }
         
         public List<TblUserDTO> GetList(int studyId) {
@@ -38,5 +45,7 @@ namespace BLL.Query {
             var record = _unitOfWork.TblUser_Repo.Get(RecId);
             return record;
         }
+
+
     }
 }

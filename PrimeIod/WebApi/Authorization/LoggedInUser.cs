@@ -26,7 +26,7 @@ namespace WebApi.Authorization
         // public int GetLoggedInUserId(string enterpriseId ){
             
         // }
-        public UserNRolesDTO GetLoggedInUserDto(string enterpriseId ){
+        public UserRolePermissionsDTO GetLoggedInUserDto(string enterpriseId ){
             if (enterpriseId == null || enterpriseId.Trim().Length == 0){
                 enterpriseId = GetEnterpriseIdInDevelopment();
             }

@@ -10,7 +10,7 @@ namespace DAL.DTOs
         public TblUserMapperProfile(){
             CreateMap<TblUser, TblUserDTO>();
 
-            CreateMap<TblUser, UserPermissionsDTO>();
+            CreateMap<TblUser, UserNRolesDTO>();
             // .ForMember(dest => dest.TblUserRole, opt => opt.MapFrom(src => src.TblUserRole.Select(x => x.Role)));
                 
             

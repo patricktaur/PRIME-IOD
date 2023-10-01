@@ -64,3 +64,6 @@ dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g Fte -sg Demand -m 
 
 ClientApp\src\app\prism\fte>
 dotnet new listbasiclazy -m fte-group  -gn FteGroup
+
+
+dotnet new listeditlazy -m fte-demand -n FteDemand

@@ -86,9 +86,9 @@ namespace WebApi.Controllers
                   
             }
 
-            if (enterpriseId == null){
-                enterpriseId = "User name not found";
-            }
+            // if (enterpriseId == null){
+            //     enterpriseId = "User name not found";
+            // }
 
             if (enterpriseId == null)
             {
@@ -98,33 +98,42 @@ namespace WebApi.Controllers
                 AddLoginDetails(enterpriseId, enterpriseId, false);
                 return BadRequest(new 
                 {
-                    
                     ErrorDescription = errorMessage
                 });
             }
 
-            // var prismUser =  _unitOfWork.TblUser_Repo.Find(x => x.EnterpriseId == "admin").FirstOrDefault();
-            
-            var prismUser = _unitOfWork.TblUser_Repo
-            .Find(x => 
-                x.EnterpriseId == enterpriseId
-                ).FirstOrDefault();
-
-             var user = _bizLogic.TblUser_Query.GetUserNRoles(enterpriseId);   
-     
-            if (prismUser == null)
-            {
-                errorMessage = String.Format("{0} / is not registered in PRIME", enterpriseId);
-                if (logRequired){
-                _logger.LogInformation(errorMessage);
-                }
-                
+            var userRolePermissions = _userRolesPermissionsCache.GetUserRolesPermissions(enterpriseId);
+            if (userRolePermissions.CanLogin == true){
+                return Ok(userRolePermissions);
+            }else{
                 return BadRequest(new 
                 {
-                   
-                    ErrorDescription = errorMessage
+                    ErrorDescription = userRolePermissions.Message
                 });
             }
+            
+            // var prismUser =  _unitOfWork.TblUser_Repo.Find(x => x.EnterpriseId == "admin").FirstOrDefault();
+            
+            // var prismUser = _unitOfWork.TblUser_Repo
+            // .Find(x => 
+            //     x.EnterpriseId == enterpriseId
+            //     ).FirstOrDefault();
+
+            //  var user = _bizLogic.TblUser_Query.GetUserNRoles(enterpriseId);   
+     
+            // if (prismUser == null)
+            // {
+            //     errorMessage = String.Format("{0} / is not registered in PRIME", enterpriseId);
+            //     if (logRequired){
+            //     _logger.LogInformation(errorMessage);
+            //     }
+                
+            //     return BadRequest(new 
+            //     {
+                   
+            //         ErrorDescription = errorMessage
+            //     });
+            // }
 
             
             
@@ -150,38 +159,39 @@ namespace WebApi.Controllers
             // }
 
            
-            _userRolesPermissionsCache.RemoveUserRolesPermissions(enterpriseId);
-            var prismUserWithPermissions = _userRolesPermissionsCache.GetUserRolesPermissions(enterpriseId);
-            if (prismUserWithPermissions.Permissions.Count == 0 
-                ){
-                errorMessage = String.Format("{0} does not have permissions to use PRISM", enterpriseId);
-                if (logRequired){
-                    _logger.LogInformation(errorMessage);
-                 }
+            // _userRolesPermissionsCache.RemoveUserRolesPermissions(enterpriseId);
+            // var prismUserWithPermissions = _userRolesPermissionsCache.GetUserRolesPermissions(enterpriseId);
+            // if (prismUserWithPermissions.Permissions.Count == 0 
+            //     ){
+            //     errorMessage = String.Format("{0} does not have permissions to use PRISM", enterpriseId);
+            //     if (logRequired){
+            //         _logger.LogInformation(errorMessage);
+            //      }
 
-                AddLoginDetails(prismUserWithPermissions.EnterpriseId, prismUserWithPermissions.DisplayName, false);
+            //     AddLoginDetails(prismUserWithPermissions.EnterpriseId, prismUserWithPermissions.DisplayName, false);
 
-                return BadRequest(new 
-                {
-                    ErrorDescription = errorMessage
-                });
+            //     return BadRequest(new 
+            //     {
+            //         ErrorDescription = errorMessage
+            //     });
 
-            }
+            // }
             
             
             //login success:
-            if (logRequired){
-                _logger.LogInformation(String.Format("{0} logged in", enterpriseId));
-            }
+            // if (logRequired){
+            //     _logger.LogInformation(String.Format("{0} logged in", enterpriseId));
+            // }
 
             
             
             // return Ok(prismUser
             //     );
             
-            AddLoginDetails(prismUserWithPermissions.EnterpriseId, prismUserWithPermissions.DisplayName, true);
+            // AddLoginDetails(prismUserWithPermissions.EnterpriseId, prismUserWithPermissions.DisplayName, true);
 
-            return Ok(prismUserWithPermissions);
+            //  return Ok(prismUserWithPermissions);
+            // return Ok();
         }
 
         

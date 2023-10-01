@@ -21,7 +21,7 @@ namespace WebApi.Controllers
 
         private LoggedInUser _loggedInUser;
 
-        private UserNRolesDTO _loggedInUserDto;
+        private UserRolePermissionsDTO _loggedInUserDto;
 
         public TblAppAccessGroupController (
             BizLogic bizLogic, 

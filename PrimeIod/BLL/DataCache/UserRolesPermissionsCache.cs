@@ -41,8 +41,8 @@ namespace BLL.CachedData
             _appCompAndMenuPermissions = appCompAndMenuPermissions;
         }
 
-        private List<UserNRolesDTO> _UsersNrolesCached = new List<UserNRolesDTO>();
-        public List<UserNRolesDTO> UsersNrolesCached { 
+        private List<UserRolePermissionsDTO> _UsersNrolesCached = new List<UserRolePermissionsDTO>();
+        public List<UserRolePermissionsDTO> UsersNrolesCached { 
             get{
                 //Pending CAching
                 
@@ -54,8 +54,8 @@ namespace BLL.CachedData
 
         
 
-        public UserNRolesDTO GetUserRolesPermissions(string enterpriseId){
-            UserNRolesDTO retUserRolePermissionsDTO;
+        public UserRolePermissionsDTO GetUserRolesPermissions(string enterpriseId){
+            UserRolePermissionsDTO retUserRolePermissionsDTO;
             retUserRolePermissionsDTO = _UsersNrolesCached.Where(x => x.EnterpriseId == enterpriseId).FirstOrDefault();
             if (retUserRolePermissionsDTO != null){
                 return retUserRolePermissionsDTO;
@@ -115,30 +115,29 @@ namespace BLL.CachedData
             
             // return  userPermissions.Permissions.Contains(requiredPermissions);
         }
-        public UserNRolesDTO AddUserRolesPermissions(string enterpriseId){
-                //UserRoles are not relationally mapped to tblUser in DB
-            //hence the workaround to separately accces the user roles.
-            return null;
-            // var user = _bizLogic.TblUserQuery.GetUserByEnterpriseId(enterpriseId);
-            // if (user == null){
-            //     return new UserNRolesDTO();
-            // }
-            // return AddUserRolesPermissions(user);
+        public UserRolePermissionsDTO AddUserRolesPermissions(string enterpriseId){
+            var userNRoles = _bizLogic.TblUser_Query.GetUserNRoles(enterpriseId);
+            if (userNRoles == null){
+                return new UserRolePermissionsDTO();
+            }
+            return AddUserRolesPermissions(userNRoles);
         }
         
 
-        public UserNRolesDTO AddUserRolesPermissions(TblUser user){
+        public UserRolePermissionsDTO AddUserRolesPermissions(UserNRolesDTO userNRolesDTO){
             
-            UserNRolesDTO userNRolesDTO = new UserNRolesDTO();
-            
-            
+             UserRolePermissionsDTO userRolePermissionsDTO = new UserRolePermissionsDTO();
+            userRolePermissionsDTO.Active = userNRolesDTO.Active;
+
+            userRolePermissionsDTO.CanLogin = userNRolesDTO.CanLogin;
+            userRolePermissionsDTO.DisplayName = userNRolesDTO.Name;
             // userNRolesDTO = _mapper.Map<UserNRolesDTO>(user);
             // if (userNRolesDTO != null){
             //     var roleIds = _bizLogic.TblUserQuery.GetUserRoleIds(userNRolesDTO.RecId);
             //     userNRolesDTO.Roles = roleIds;
 
                 
-            //     var permissions = new List<string>();
+                var permissions = new List<string>();
 
             //     //Roles are from tblParam:
             //     // foreach(int roleId in roleIds){
@@ -154,47 +153,37 @@ namespace BLL.CachedData
 
             //     // }
 
-            //     foreach(int roleId in roleIds){
-            //         var per = "rol." + roleId; 
-            //          permissions.Add(per); 
-            //     }
+                // foreach(int roleId in roleIds){
+                //     var per = "rol." + roleId; 
+                //      permissions.Add(per); 
+                // }
+                var roleIds = new List<int>();
+                foreach(TblUserRole tblUserRole in userNRolesDTO.TblUserRole){
+                    var per = "rol." + tblUserRole.RoleId; 
+                     permissions.Add(per); 
+                     roleIds.Add(tblUserRole.RoleId);
+                }
+
+
+                //menu permissions:
+                //todo:
+                var componentPermissions = _appCompAndMenuPermissions.GetComponentPermissions(userNRolesDTO.Id, roleIds); 
+
+                var menuPermissions = _appCompAndMenuPermissions.GetMenuPermissions(componentPermissions);
                 
-            //     // var resources = _bizLogic.TblStudyResourcesQuery.GetActiveUserResources(userNRolesDTO.RecId);
-            //     // foreach(var res in resources){
-            //     //     var per = String.Format("res.{0}.{1}", res.StudyId, res.RolePid);
-            //     //     permissions.Add(per);   
-            //     // }
+                 userRolePermissionsDTO.ComponentPermissions =  componentPermissions;
 
-            //     // var imiResources = _bizLogic.TblImiresources_Query.GetActiveUserResources(userNRolesDTO.RecId);
-            //     // foreach(var res in imiResources){
-            //     //     var per = String.Format("res.{0}.{1}", res.StudyId, res.RolePid);
-            //     //     permissions.Add(per);   
-            //     // }
-
-            //     // var crmResources = _bizLogic.TblCrmStudyResources_Query.GetActiveUserResources(userNRolesDTO.RecId);
-            //     // foreach(var res in crmResources){
-            //     //     var per = String.Format("res.{0}.{1}", res.StudyId, res.RolePid);
-            //     //     permissions.Add(per);   
-            //     // }
-
-            //     //menu permissions:
-            //     var componentPermissions = _appCompAndMenuPermissions.GetComponentPermissions(userNRolesDTO.RecId, roleIds); 
-
-            //     var menuPermissions = _appCompAndMenuPermissions.GetMenuPermissions(componentPermissions);
-                
-            //      userNRolesDTO.ComponentPermissions =  componentPermissions;
-
-            //      userNRolesDTO.MenuPermissions = menuPermissions;
+                 userRolePermissionsDTO.MenuPermissions = menuPermissions;
         
             //     var perms = permissions.Distinct().ToList();
             //     userNRolesDTO.Permissions = perms;
                
             // }
-            return userNRolesDTO;            
+            return userRolePermissionsDTO;            
             
         }
 
-        public UserNRolesDTO UpdateUserRolesPermissions(string enterpriseId){
+        public UserRolePermissionsDTO UpdateUserRolesPermissions(string enterpriseId){
             RemoveUserRolesPermissions(enterpriseId);
             return AddUserRolesPermissions(enterpriseId);
         }

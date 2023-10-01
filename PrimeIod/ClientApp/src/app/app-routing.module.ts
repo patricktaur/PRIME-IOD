@@ -16,12 +16,12 @@ const routes: Routes = [
   
   
   
-  // Shell.childRoutes([
-  //   {
-  //     path: 'fte',
-  //     loadChildren: () => import('@app/prism/fte/fte-group/fte-group.module').then(m => m.FteGroupModule),
-  //   }
-  // ]),
+  Shell.childRoutes([
+    {
+      path: 'fte',
+      loadChildren: () => import('@app/prime-iod/fte/fte-group/fte-group.module').then(m => m.FteGroupModule),
+    }
+  ]),
 
 
   

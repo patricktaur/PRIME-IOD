@@ -171,10 +171,9 @@ export class AuthenticationService {
       map((response: any) => {
         console.log('winLogin success');
         this.credentialsService.SaveWinUserDetails(response);
-
         console.log('After SaveWinUserDetails');
         // this.appCompMenuPermissionsService.reloadPermissions();
-        this.appCompMenuPermissionsService.getAppPermissions(response.recId).subscribe(
+        this.appCompMenuPermissionsService.getAppPermissions(response.id).subscribe(
           permissions => {
             //
           },

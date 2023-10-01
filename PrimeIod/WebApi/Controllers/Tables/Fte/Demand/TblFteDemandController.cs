@@ -24,9 +24,25 @@ namespace WebApi.Controllers
         }
         // [Authorize (Authorization.Policies.TblStudyTimelineInterimLocksViewPolicy)]
         
+        [HttpGet("records")]
+        public IActionResult List () {
+             return Ok (_bizLogic.TblFteDemand_Query.GetList());
+        }
+       
+
         [HttpGet("records/{studyId}")]
         public IActionResult List (int studyId) {
              return Ok (_bizLogic.TblFteDemand_Query.GetList(studyId));
+        }
+       
+       //todo: 
+
+       //for testing only:
+       [HttpGet("new")]
+        public IActionResult New () {
+            
+             var studyId = 1;
+             return Ok (_bizLogic.TblFteDemandCommands.GetRecordNew(studyId));
         }
        
        [HttpGet("new/{studyId}")]

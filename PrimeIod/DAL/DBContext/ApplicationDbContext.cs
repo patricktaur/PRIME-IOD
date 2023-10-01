@@ -44,6 +44,7 @@ namespace DAL {
             BuildModel_tblLoginDetailsV2Context(builder);
 
             BuildModel_TblUserContext(builder);
+            BuildModel_TblFteDemandContext(builder);
 
             
             

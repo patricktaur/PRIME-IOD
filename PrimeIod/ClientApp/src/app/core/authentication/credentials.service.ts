@@ -97,7 +97,7 @@ export class CredentialsService {
   testAuthenticated: boolean = false;
   SaveWinUserDetails(userNroles: any) {
     let user = new User(
-      userNroles.recId,
+      userNroles.id,
       userNroles.displayName,
       userNroles.displayName,
       userNroles.emailId,

@@ -102,6 +102,14 @@ namespace BLL.CachedData
 
                 },
 
+
+                new ControllerActionPermissionDTO{ControllerName="FTEDemand", 
+                    ActionPermissions = new List<ActionPermissionsDTO>{
+                        new ActionPermissionsDTO{ActionName="List", PermissionValue="reports.view, *"},
+                        
+                    }
+
+                },
                 #region AppComponents
 
                 

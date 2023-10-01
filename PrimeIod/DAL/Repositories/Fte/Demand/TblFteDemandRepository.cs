@@ -16,7 +16,16 @@ namespace DAL.Repositories
         public TblFteDemandRepository(DbContext context) : base(context)
         { }
 
-        
+        public List<TblFteDemand> GetList(){
+           return _appContext.TblFteDemand
+           //.Include(x => x.DeliverableTypeP)
+            //.Include(x => x.OutcomeP)
+            // .Where(
+            //     // x => x.StudyId == studyId
+            //     // && !x.DeletedOn.HasValue
+            // )
+            .ToList();
+        }
 
         public List<TblFteDemand> GetList(int studyId){
            return _appContext.TblFteDemand

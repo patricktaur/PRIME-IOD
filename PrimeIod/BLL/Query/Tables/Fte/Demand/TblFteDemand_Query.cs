@@ -21,7 +21,11 @@ namespace BLL.Query {
         }
 
         
-        
+        public List<TblFteDemandDTO> GetList() {
+            
+            var recs = _unitOfWork.TblFteDemand_Repo.GetList();
+            return  _mapper.Map<List<TblFteDemandDTO>>(recs);
+        }
         public List<TblFteDemandDTO> GetList(int studyId) {
             return null;
             // var recs = _unitOfWork.TblFteDemand_Repo.GetList(studyId);

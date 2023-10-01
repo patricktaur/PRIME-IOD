@@ -12,14 +12,14 @@ const routes: Routes = [
   // { path: '', redirectTo: '/splash', pathMatch: 'full' },
   // { path: 'splash', component: SplashComponent },
   
-  { path: '', redirectTo: '/fte', pathMatch: 'full' },
+  { path: '', redirectTo: 'fte', pathMatch: 'full' },
   
   
   
   Shell.childRoutes([
     {
       path: 'fte',
-      loadChildren: () => import('@app/prime-iod/fte/fte-group/fte-group.module').then(m => m.FteGroupModule),
+      loadChildren: () => import('@app/prime-iod/fte/fte-demand/fte-demand.module').then(m => m.FteDemandModule),
     }
   ]),
 
@@ -30,7 +30,7 @@ const routes: Routes = [
   Shell.childRoutes([{ path: 'no-access', component: NoaccessComponent }]),
   Shell.childRoutes([{ path: 'error-page', component: ErrorPageComponent }]),
 
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  // { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

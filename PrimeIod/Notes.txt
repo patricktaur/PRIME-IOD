@@ -66,4 +66,4 @@ ClientApp\src\app\prism\fte>
 dotnet new listbasiclazy -m fte-group  -gn FteGroup
 
 
-dotnet new listeditlazy -m fte-demand -n FteDemand
+dotnet new listeditlazy -fn fte-demand -m FteDemand -c TblFteDemand

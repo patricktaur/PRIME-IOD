@@ -13,8 +13,13 @@ namespace BLL.Command
         
 
         public TblFteDemand GetRecordNew (int studyId) {
-            var rec = new TblFteDemand();
-            rec.StudyId = studyId;
+            var rec = new TblFteDemand
+            {
+               
+                StudyId = studyId,
+                StartDate = DateTime.Now,
+                EndDate = DateTime.Now
+            };
             return rec;
         }
 

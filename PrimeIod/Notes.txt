@@ -67,3 +67,12 @@ dotnet new listbasiclazy -m fte-group  -gn FteGroup
 
 
 dotnet new listeditlazy -fn fte-demand -m FteDemand -c TblFteDemand
+
+02Oct2023
+dotnet ef dbcontext scaffold "Server=(localdb)\mssqllocaldb;Database=PrimeIod;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o GeneratedFiles -t tblEmployee -t tblFteDemand -t tblFteDemandDetails -t tblStudy -t tblDepartment -t tblStudyDepartment
+
+
+dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g Study -sg Department -m TblDepartment
+
+dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g Study -sg Study -m TblStudy
+

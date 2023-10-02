@@ -5,6 +5,11 @@ namespace DAL.Models
 {
     public partial class TblFteDemand
     {
+        public TblFteDemand()
+        {
+            TblFteDemandDetails = new HashSet<TblFteDemandDetails>();
+        }
+
         public int Id { get; set; }
         public DateTime CreatedOn { get; set; }
         public int CreatedById { get; set; }
@@ -13,49 +18,30 @@ namespace DAL.Models
         public int StudyId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public decimal DemandFte { get; set; }
-        public decimal AssignedFte { get; set; }
-        public decimal ActualFte { get; set; }
+        public decimal TotalDemandFte { get; set; }
+        public decimal TotalAssignedFte { get; set; }
+        public decimal TotalActualFte { get; set; }
+
+        public virtual TblStudy Study { get; set; }
+        public virtual ICollection<TblFteDemandDetails> TblFteDemandDetails { get; set; }
     }
 
-    public partial class TblFteAssignment
-    {
-        public TblFteAssignment()
-        {
-            InverseDemand = new HashSet<TblFteAssignment>();
-            TblFteTimeSheet = new HashSet<TblFteTimeSheet>();
-        }
-
-        public int Id { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public int CreatedById { get; set; }
-        public DateTime UpdatedOn { get; set; }
-        public int UpdatedById { get; set; }
-        public int DemandId { get; set; }
-        public int EmployeeId { get; set; }
-        public decimal AssignedFte { get; set; }
-        public decimal TimeSheetFte { get; set; }
-
-        public virtual TblFteAssignment Demand { get; set; }
-        public virtual TblEmployee Employee { get; set; }
-        public virtual ICollection<TblFteAssignment> InverseDemand { get; set; }
-        public virtual ICollection<TblFteTimeSheet> TblFteTimeSheet { get; set; }
-    }
-
-    public partial class TblFteTimeSheet
+    public partial class TblFteDemandDetails
     {
         public int Id { get; set; }
         public DateTime CreatedOn { get; set; }
         public int CreatedById { get; set; }
         public DateTime UpdatedOn { get; set; }
         public int UpdatedById { get; set; }
-        public int FteAssignmentId { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public decimal ActualFte { get; set; }
+        public int FteDemandId { get; set; }
+        public DateTime PeriodStarting { get; set; }
+        public decimal? DemandFte { get; set; }
+        public decimal? AssignedFte { get; set; }
+        public decimal? ActualFte { get; set; }
+        public int AssignedEmployeeId { get; set; }
 
-        public virtual TblFteAssignment FteAssignment { get; set; }
+        public virtual TblEmployee AssignedEmployee { get; set; }
+        public virtual TblFteDemand FteDemand { get; set; }
     }
-
 
 }

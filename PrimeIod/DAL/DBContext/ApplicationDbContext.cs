@@ -43,8 +43,13 @@ namespace DAL {
 
             BuildModel_tblLoginDetailsV2Context(builder);
 
-            BuildModel_TblUserContext(builder);
+            BuildModel_TblDepartmentContext(builder);
+            BuildModel_TblEmployeeContext(builder);
             BuildModel_TblFteDemandContext(builder);
+            BuildModel_TblStudyContext(builder);
+
+            BuildModel_TblUserContext(builder);
+            
 
             
             

@@ -3,12 +3,12 @@ using Computations.Enumerators;
 using System.Collections.Generic;
 namespace DAL.Models
 {
-    public partial class TblEmployee
+    public partial class TblDepartment
     {
         //PropertiesBlockStart
-        public TblEmployee()
+        public TblDepartment()
         {
-            TblFteDemandDetails = new HashSet<TblFteDemandDetails>();
+            TblStudyDepartment = new HashSet<TblStudyDepartment>();
         }
 
         public int Id { get; set; }
@@ -16,8 +16,9 @@ namespace DAL.Models
         public int CreatedById { get; set; }
         public DateTime UpdatedOn { get; set; }
         public int UpdatedById { get; set; }
+        public string Name { get; set; }
 
-        public virtual ICollection<TblFteDemandDetails> TblFteDemandDetails { get; set; }
+        public virtual ICollection<TblStudyDepartment> TblStudyDepartment { get; set; }
         //PropertiesBlockEnd
     }
 }

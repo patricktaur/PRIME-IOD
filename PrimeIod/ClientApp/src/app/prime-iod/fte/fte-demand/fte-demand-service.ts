@@ -16,7 +16,7 @@ export class FteDemandService {
 
   getList() {
     // const api = environment.serverUrl + `/api/${controllerName}/${actionName}/${studyId}`;
-    const api = `${environment.serverUrl}/api/${this.controllerName}/records/`;
+    const api = `${environment.serverUrl}/api/${this.controllerName}/records-x/`;
 
     return this.http.get(api).pipe(
       map(response => {

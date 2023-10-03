@@ -1,5 +1,6 @@
 using System;
 using DAL;
+using DAL.DTOs;
 using DAL.Models;
 
 namespace BLL.Command
@@ -23,9 +24,10 @@ namespace BLL.Command
             return rec;
         }
 
-        public TblFteDemand GetRecordForEdit (int recId) {
-            return _unitOfWork.TblFteDemand_Repo.Get(recId);
-            
+        public TblFteDemandEditDTO GetRecordForEdit (int recId) {
+            //return _unitOfWork.TblFteDemand_Repo.Get(recId);
+            var xyz = _unitOfWork.TblFteDemand_Repo.GetRecordDto<TblFteDemandEditDTO>(recId);
+            return xyz;
         }
         public TblFteDemand Update(TblFteDemand TblFteDemand){
             _unitOfWork.TblFteDemand_Repo.Update(TblFteDemand);

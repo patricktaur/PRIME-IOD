@@ -24,7 +24,7 @@ namespace WebApi.Controllers
         }
         // [Authorize (Authorization.Policies.TblStudyTimelineInterimLocksViewPolicy)]
         
-        [HttpGet("records")]
+        [HttpGet("records-x")]
         public IActionResult List () {
              return Ok (_bizLogic.TblFteDemand_Query.GetList());
         }

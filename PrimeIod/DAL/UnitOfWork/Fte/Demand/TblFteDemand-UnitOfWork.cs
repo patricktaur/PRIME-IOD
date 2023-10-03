@@ -17,7 +17,7 @@ namespace DAL
             get
             {
                 if (_TblFteDemand == null)
-                    _TblFteDemand = new TblFteDemandRepository(_context);
+                    _TblFteDemand = new TblFteDemandRepository(_context, _mapper);
 
                 return _TblFteDemand;
             }

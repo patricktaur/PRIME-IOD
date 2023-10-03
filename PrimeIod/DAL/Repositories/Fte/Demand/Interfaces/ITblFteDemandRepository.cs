@@ -8,7 +8,11 @@ namespace DAL.Repositories.Interfaces
     public interface ITblFteDemandRepository : IRepository<TblFteDemand>
     {
         List<TblFteDemand> GetList();
-        // List<TblFteDemand> GetPaginatedSearchResults(Expression<Func<TblFteDemand, bool>> predicate, int pageNumber, int pageSize);
-        // List<TblFteDemand> GetList(int studyId);
+        
+
+        List<T> GetList<T>(Expression<Func<TblFteDemand, bool>> predicate);
+        List<T> GetList<T>(int studyId);
+        public T GetRecordDto<T>(int id);
+        
     }
 }

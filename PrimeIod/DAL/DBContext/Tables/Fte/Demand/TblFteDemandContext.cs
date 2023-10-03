@@ -45,9 +45,9 @@ namespace DAL
                     .HasConstraintName("FK_tblFteDemand_tblStudy");
             });
 
-            modelBuilder.Entity<TblFteDemandDetails>(entity =>
+            modelBuilder.Entity<TblFteDemandDetail>(entity =>
             {
-                entity.ToTable("tblFteDemandDetails");
+                entity.ToTable("tblFteDemandDetail");
 
                 entity.Property(e => e.ActualFte).HasColumnType("decimal(18, 0)");
 
@@ -70,13 +70,13 @@ namespace DAL
                     .HasColumnType("datetime");
 
                 entity.HasOne(d => d.AssignedEmployee)
-                    .WithMany(p => p.TblFteDemandDetails)
+                    .WithMany(p => p.TblFteDemandDetail)
                     .HasForeignKey(d => d.AssignedEmployeeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tblFteDemandDetails_tblEmployee");
 
                 entity.HasOne(d => d.FteDemand)
-                    .WithMany(p => p.TblFteDemandDetails)
+                    .WithMany(p => p.TblFteDemandDetail)
                     .HasForeignKey(d => d.FteDemandId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tblFteDemandDetails_tblFteDemand");

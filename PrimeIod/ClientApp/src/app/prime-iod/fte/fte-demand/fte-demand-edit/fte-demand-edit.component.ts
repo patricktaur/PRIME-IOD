@@ -2,7 +2,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 import { Observable, of } from 'rxjs';
 import { Location } from '@angular/common';
 
@@ -28,6 +28,12 @@ export class FteDemandEditComponent  implements OnInit, OnDestroy{
   record: any;
   form = new FormGroup({});
 
+  //  organizedData : any = {};
+  //  public Object = Object;
+
+  // formDet: FormGroup = new FormGroup({});
+  
+
   id: number = 0;
   editMode: string = '';
 
@@ -43,7 +49,8 @@ export class FteDemandEditComponent  implements OnInit, OnDestroy{
     private location: Location,
     // private tblParamService: TblParamService,
     // private tblUserService: TblUserService,
-    private xmodelService: FteDemandService 
+    private xmodelService: FteDemandService ,
+    private fb: FormBuilder
   ) 
   { }
 
@@ -58,6 +65,12 @@ export class FteDemandEditComponent  implements OnInit, OnDestroy{
       this.editMode = 'new';
       this.loadNewRecord();
     }
+    
+    // this.formDet = this.fb.group({
+    //   years: this.fb.array([])
+    // });
+    
+    
   }
 
   loadRecord(recId: number) {
@@ -71,6 +84,10 @@ export class FteDemandEditComponent  implements OnInit, OnDestroy{
         } else {
           this.record = res;
           this.loading = false;
+          
+          // this.organizeData();
+          // this.initializeForm();
+          
         }
         // this.isLoading = false;
       },
@@ -80,6 +97,57 @@ export class FteDemandEditComponent  implements OnInit, OnDestroy{
       }
     );
   }
+
+  
+  
+  
+  
+  
+  // organizeData() {
+  //   for (let detail of this.record.tblFteDemandDetailDTO) {
+  //     let date = new Date(detail.periodStarting);
+  //     let year = date.getFullYear();
+  //     let month = date.getMonth();
+
+  //     if (!this.organizedData[year]) {
+  //       this.organizedData[year] = {
+  //         DemandFte: Array(12).fill(0),
+  //         AssignedFte: Array(12).fill(0)
+  //       };
+  //     }
+
+  //     this.organizedData[year].DemandFte[month] = detail.demandFte;
+  //     this.organizedData[year].AssignedFte[month] = detail.assignedFte;
+  //   }
+  // }
+
+  // get years(): FormArray {
+  //   return this.formDet.get('years') as FormArray;
+  // }
+
+  // initializeForm() {
+  //   const yearsSet = new Set(this.record.tblFteDemandDetailDTO.map((detail: any) => new Date(detail.periodStarting).getFullYear()));
+  //   const years = Array.from(yearsSet);
+
+  //   for (let year of years) {
+  //     const yearGroup = this.fb.group({
+  //       year,
+  //       months: this.fb.array([])
+  //     });
+  //     const monthsArray = yearGroup.get('months') as FormArray;
+
+  //     const detailsForYear = this.record.tblFteDemandDetailDTO.filter((detail: any) => new Date(detail.periodStarting).getFullYear() === year);
+
+  //     for (let detail of detailsForYear) {
+  //       monthsArray.push(this.fb.group({
+  //         demandFte: [detail.demandFte],
+  //         actualFte: [detail.actualFte]
+  //       }));
+  //     }
+
+  //     this.years.push(yearGroup);
+  //   }
+  // }
 
   loadNewRecord() {
     this.loading = true;
@@ -100,6 +168,8 @@ export class FteDemandEditComponent  implements OnInit, OnDestroy{
       }
     );
   }
+
+  
 
   addOrUpdate() {
     this.loading = true;
@@ -268,6 +338,49 @@ export class FteDemandEditComponent  implements OnInit, OnDestroy{
         show: true
       }
     },
+    
+    {
+      key: 'tblFteDemandDetailDTO',
+      type: 'repeat-horizontal',
+      templateOptions: {
+        hideRemoveButton: true,
+        hideAddButton: true
+      },
+      fieldArray: {
+        fieldGroupClassName: 'row alt-row-form',
+        fieldGroup: [
+          {
+            // className: 'col-4',
+            type: 'label',
+            key: 'periodStarting',
+            templateOptions: {
+              hideLabel: true
+            }
+          },
+          {
+            type: 'input',
+            key: 'demandFte',
+            // className: 'col-4',
+            wrappers: ['help-text'],
+            templateOptions: {
+              helpText: 'Enter the order Number',
+              type: 'number'
+            }
+          },
+          // {
+          //   type: 'input',
+          //   key: 'assignedFte',
+          //   className: 'col-4',
+          //   wrappers: ['help-text'],
+          //   templateOptions: {
+          //     type: 'number'
+          //   }
+          // },
+          
+        ]
+      }
+    }
+
   ];
 
   ngOnDestroy(): void {

@@ -22,9 +22,9 @@ namespace BLL.Query {
 
         
         
-        public List<TblStudyDTO> GetList(int studyId) {
-            var recs = _unitOfWork.TblStudy_Repo.GetList(studyId);
-            return  _mapper.Map<List<TblStudyDTO>>(recs);
+        public List<TblStudyListDTO> GetList() {
+            var recs = _unitOfWork.TblStudy_Repo.GetList();
+            return  _mapper.Map<List<TblStudyListDTO>>(recs);
         }
    
         

@@ -76,3 +76,6 @@ dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g Study -sg Departme
 
 dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g Study -sg Study -m TblStudy
 
+04Oct2023:
+
+dotnet new listeditlazy -fn study -m Study -c TblStudy

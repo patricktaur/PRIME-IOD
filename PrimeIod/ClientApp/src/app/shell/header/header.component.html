@@ -20,10 +20,10 @@
           <a
             id="user-dropdown"
             class="nav-link"
-            routerLink="/prism-home"
+            routerLink="/studies"
             routerLinkActive="active"
-            Title="Studies-Seaexh"
-            appMenuAccessLink
+            Title="Studies-Seaech"
+            
           >
             <span>Search</span>
           </a>
@@ -33,10 +33,10 @@
           <a
             id="user-dropdown"
             class="nav-link"
-            routerLink="/study"
+            routerLink="/study-details"
             routerLinkActive="active"
             Title="Studies"
-            appMenuAccessLink
+            
           >
             <span>Details</span></a
           >
@@ -46,10 +46,10 @@
           <a
             id="user-dropdown"
             class="nav-link"
-            routerLink="/cds-trackers"
+            routerLink="/fte-demand"
             routerLinkActive="active"
-            Title="CDS & Coding Trackers"
-            appMenuAccessLink
+            Title="FTE Demaind"
+            
           >
             <span>Demand</span></a
           >
@@ -64,10 +64,10 @@
           <a
             id="user-dropdown"
             class="nav-link"
-            routerLink="/imi-ra-trackers"
+            routerLink="/fte-assignment"
             routerLinkActive="active"
-            Title="IMI R&A Trackers"
-            appMenuAccessLink
+            Title="FTE Assignment"
+           
           >
             <span>Assignment</span></a
           >
@@ -81,42 +81,42 @@
           <a
             id="user-dropdown"
             class="nav-link"
-            routerLink="/process-improvement-trackers"
+            routerLink="/fte-milestones"
             routerLinkActive="active"
-            Title="Process Improvement Trackers"
-            appMenuAccessLink
+            Title="Milestones"
+           
           >
             <span>Milestones</span></a
           >
         </div>
 
-          Resources
+        Resources
         <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
           <a
             id="user-dropdown"
             class="nav-link"
-            routerLink="/crm-trackers"
+            routerLink="/resources-search"
             routerLinkActive="active"
-            Title="CRM"
-            appMenuAccessLink
+            Title="Search"
+            
           >
             <span>Search</span></a
           >
         </div>
-
-        <div class="nav-item dropdown position-static" ngbDropdown display="dynamic" 
-        placement="bottom-left"
-        *ngIf="reportsMenuVisible"
-        >
-          <a id="reports-dropdown" class="nav-link" ngbDropdownToggle Title="Reports" role="button">
+        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/resources-assignment"
+            routerLinkActive="active"
+            Title="Search"
+            
+          >
             <span>Assignment</span></a
           >
-
-
-          <div ngbDropdownMenu aria-labelledby="reports-dropdown" class="shadow-lg">
-            <app-reports-menu></app-reports-menu>
-          </div>
         </div>
+
+      Uploads  
 
         
 
@@ -124,24 +124,24 @@
           <a
             id="user-dropdown"
             class="nav-link"
-            routerLink="/requests"
+            routerLink="/uploads-study"
             routerLinkActive="active"
             Title="Requests"
-            appMenuAccessLink
+            
           >
-            <span>Uploads</span></a
+            <span>Study</span></a
           >
         </div>
-       ---
+
         <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
           <a
             id="user-dropdown"
             class="nav-link"
-            routerLink="/admin"
+            routerLink="/uploads-employee"
             routerLinkActive="active"
-            appMenuAccessLink
+            
           >
-            <span>Reports</span></a
+            <span>Employee</span></a
           >
         </div>
         
@@ -149,17 +149,37 @@
           <a
             id="user-dropdown"
             class="nav-link"
-            routerLink="/admin"
+            routerLink="/uploads-timesheet"
             routerLinkActive="active"
-            appMenuAccessLink
+           
           >
-            <span>App Admin</span></a
+            <span>Timesheet</span></a
           >
         </div>
-        
+        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/uploads-demand"
+            routerLinkActive="active"
+           
+          >
+            <span>Demand</span></a
+          >
+        </div>
+        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a
+            id="user-dropdown"
+            class="nav-link"
+            routerLink="/uploads-assignment"
+            routerLinkActive="active"
+           
+          >
+            <span>Assignment</span></a
+          >
+        </div>
         
 
-        
 
         <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
           <a id="user-dropdown" class="nav-link" ngbDropdownToggle data-toggle="tooltip" title="{{ userEmail }}" role="button">

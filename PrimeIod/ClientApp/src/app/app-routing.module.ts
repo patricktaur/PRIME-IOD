@@ -35,6 +35,10 @@ const routes: Routes = [
  
   Shell.childRoutes([{ path: 'resources-search', component: NotReadyComponent }]),
   Shell.childRoutes([{ path: 'resources-assignment', component: NotReadyComponent }]),
+  Shell.childRoutes([{ path: 'employee', 
+  
+  loadChildren: () => import('@app/prime-iod/employee/employee.module').then(m => m.EmployeeModule), }]),
+  
  
   Shell.childRoutes([{ path: 'uploads-study', component: NotReadyComponent }]),
   Shell.childRoutes([{ path: 'uploads-employee', component: NotReadyComponent }]),

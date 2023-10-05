@@ -79,3 +79,10 @@ dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g Study -sg Study -m
 04Oct2023:
 
 dotnet new listeditlazy -fn study -m Study -c TblStudy
+
+PrimeIod\ClientApp\src\app\prime-iod>
+dotnet new listeditlazy -fn employee -m Employee -c TblEmployee
+
+Todo:
+new item: name??? required:
+dotnet new prismStudy -o C:\Development\Prime-IOD\PrimeIod -g Study -sg Study -m TblStudy

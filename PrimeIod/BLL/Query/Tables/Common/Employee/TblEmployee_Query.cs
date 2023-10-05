@@ -22,8 +22,8 @@ namespace BLL.Query {
 
         
         
-        public List<TblEmployeeDTO> GetList(int studyId) {
-            var recs = _unitOfWork.TblEmployee_Repo.GetList(studyId);
+        public List<TblEmployeeDTO> GetList() {
+            var recs = _unitOfWork.TblEmployee_Repo.GetList();
             return  _mapper.Map<List<TblEmployeeDTO>>(recs);
         }
    

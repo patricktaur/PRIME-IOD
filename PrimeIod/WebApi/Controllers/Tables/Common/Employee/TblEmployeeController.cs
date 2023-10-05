@@ -24,15 +24,15 @@ namespace WebApi.Controllers
         }
         // [Authorize (Authorization.Policies.TblStudyTimelineInterimLocksViewPolicy)]
         
-        [HttpGet("records/{studyId}")]
+        [HttpGet("records")]
         public IActionResult List (int studyId) {
-             return Ok (_bizLogic.TblEmployee_Query.GetList(studyId));
+             return Ok (_bizLogic.TblEmployee_Query.GetList());
         }
        
-       [HttpGet("new/{studyId}")]
+       [HttpGet("new")]
         public IActionResult New (int studyId) {
             
-             return Ok (_bizLogic.TblEmployeeCommands.GetRecordNew(studyId));
+             return Ok (_bizLogic.TblEmployeeCommands.GetRecordNew());
         }
        
         // [Authorize (Authorization.Policies.TblStudyTimelineInterimLocksViewPolicy)]

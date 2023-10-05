@@ -12,7 +12,7 @@ namespace BLL.Command
         }
         
 
-        public TblEmployee GetRecordNew (int studyId) {
+        public TblEmployee GetRecordNew () {
             var rec = new TblEmployee();
             // rec.StudyId = studyId;
             return rec;

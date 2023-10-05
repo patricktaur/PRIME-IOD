@@ -16,21 +16,9 @@ namespace DAL.Repositories
         public TblEmployeeRepository(DbContext context) : base(context)
         { }
 
-        public List<TblEmployee> GetPaginatedSearchResults(Expression<Func<TblEmployee, bool>> predicate, int pageNumber, int pageSize)
-        {
-            return _appContext.TblEmployee
-            .Where(predicate)
-            //.OrderBy(x => x.DeliverableDate)
-            .Skip((pageNumber-1) * pageSize).Take(pageSize)
-            .Select(x => new TblEmployee() //todo : Replace TblStudyTimelineInterimLocks with ViewModel
-            {
-                Id = x.Id
-                // DeliverableDate = x.DeliverableDate
-            })
-            .ToList();
-        }
+        
 
-        public List<TblEmployee> GetList(int studyId){
+        public List<TblEmployee> GetList(){
            return _appContext.TblEmployee
            
             // .Where(

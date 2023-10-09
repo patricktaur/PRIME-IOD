@@ -7,7 +7,6 @@ namespace DAL.Repositories.Interfaces
 {
     public interface ITblEmployeeRepository : IRepository<TblEmployee>
     {
-        List<TblEmployee> GetPaginatedSearchResults(Expression<Func<TblEmployee, bool>> predicate, int pageNumber, int pageSize);
-        List<TblEmployee> GetList(int studyId);
+        List<TblEmployee> GetList();
     }
 }

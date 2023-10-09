@@ -37,6 +37,8 @@ import { DatePickerComponent } from './formly/types/date-picker/date-picker.comp
 import { DatePickerValueAccessor } from './formly/types/date-picker/date-picker.directive';
 import { BackgroundColorWrapperComponent } from './formly/wrappers/background-color-wrapper.component';
 import { RepeatTypeComponent } from './formly/types/repeat-type-component';
+import { RepeatHorizontalTypeComponent } from './formly/types/repeat-horzontal-type-component';
+
 import { CustomSelectTypeComponent } from './formly/types/custom-select';
 import { HelpTextWrapperComponent } from './formly/wrappers/help-text-wrapper.component';
 import { FormlyFieldTabs } from './formly/types/tabs.type';
@@ -120,6 +122,7 @@ export function emailIdValidatorMessage(err: any, field: any) {
         },
         { name: 'date-picker', component: DatePickerComponent, wrappers: ['label', 'fieldset'] },
         { name: 'repeat', component: RepeatTypeComponent },
+        { name: 'repeat-horizontal', component: RepeatHorizontalTypeComponent },
         { name: 'custom-select', component: CustomSelectTypeComponent }, //0-5-select
         { name: 'label-color', component: LabelColorComponent },
         { name: 'tabs', component: FormlyFieldTabs },
@@ -189,6 +192,7 @@ export function emailIdValidatorMessage(err: any, field: any) {
     DatePickerValueAccessor,
     BackgroundColorWrapperComponent,
     RepeatTypeComponent,
+    RepeatHorizontalTypeComponent,
     CustomSelectTypeComponent,
     LabelColorComponent,
     FormlyFieldTabs,

@@ -76,8 +76,9 @@ export class AppComponent implements OnInit, OnDestroy {
         this.authenticationService.winLogin().subscribe(
           res => {
             this.loaded = true; // router-outlet is made visible.
-            this.router.navigate(["/fte"]);
+            //  this.router.navigate([]);
 
+             this.router.navigate(["/fte-demand"]);
           },
           err => {
             this.loaded = true;

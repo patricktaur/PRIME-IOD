@@ -16,21 +16,9 @@ namespace DAL.Repositories
         public TblStudyRepository(DbContext context) : base(context)
         { }
 
-        public List<TblStudy> GetPaginatedSearchResults(Expression<Func<TblStudy, bool>> predicate, int pageNumber, int pageSize)
-        {
-            return _appContext.TblStudy
-            .Where(predicate)
-            //.OrderBy(x => x.DeliverableDate)
-            .Skip((pageNumber-1) * pageSize).Take(pageSize)
-            .Select(x => new TblStudy() //todo : Replace TblStudyTimelineInterimLocks with ViewModel
-            {
-                Id = x.Id
-                // DeliverableDate = x.DeliverableDate
-            })
-            .ToList();
-        }
+        
 
-        public List<TblStudy> GetList(int studyId){
+        public List<TblStudy> GetList(){
            return _appContext.TblStudy
            //.Include(x => x.DeliverableTypeP)
             //.Include(x => x.OutcomeP)

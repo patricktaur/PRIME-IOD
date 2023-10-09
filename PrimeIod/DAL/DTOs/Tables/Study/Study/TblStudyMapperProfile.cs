@@ -8,7 +8,7 @@ namespace DAL.DTOs
     public class TblStudyMapperProfile : Profile
     {
         public TblStudyMapperProfile(){
-            CreateMap<TblStudy, TblStudyDTO>();
+            CreateMap<TblStudy, TblStudyListDTO>();
             
            
         }

@@ -7,7 +7,7 @@ namespace DAL.Models
     {
         public TblFteDemand()
         {
-            TblFteDemandDetails = new HashSet<TblFteDemandDetails>();
+            TblFteDemandDetail = new HashSet<TblFteDemandDetail>();
         }
 
         public int Id { get; set; }
@@ -23,10 +23,10 @@ namespace DAL.Models
         public decimal TotalActualFte { get; set; }
 
         public virtual TblStudy Study { get; set; }
-        public virtual ICollection<TblFteDemandDetails> TblFteDemandDetails { get; set; }
+        public virtual ICollection<TblFteDemandDetail> TblFteDemandDetail { get; set; }
     }
 
-    public partial class TblFteDemandDetails
+    public partial class TblFteDemandDetail
     {
         public int Id { get; set; }
         public DateTime CreatedOn { get; set; }

@@ -15,8 +15,8 @@ namespace DAL.DTOs
              .ForMember(dest => dest.TblFteDemandDetailDTO, opt => opt.MapFrom(src => src.TblFteDemandDetail))
             ;
             
-            CreateMap<TblFteDemandDetail, TblFteDemandDetailDTO>()
-                 .ForMember(dest => dest.AssignedEmployeeName, opt => opt.MapFrom(src => src.AssignedEmployee.Name))
+            CreateMap<TblFteDemandDetail, TblFteDemandDetailDTO>();
+                //  .ForMember(dest => dest.AssignedEmployeeName, opt => opt.MapFrom(src => src.AssignedEmployee.Name))
                 // .ForMember(dest => dest.AssignedEmployeeId, opt => opt.MapFrom(src => src.AssignedEmployee.Id))
                 ;
         }

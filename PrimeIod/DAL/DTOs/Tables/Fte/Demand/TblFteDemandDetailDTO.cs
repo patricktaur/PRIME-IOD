@@ -12,9 +12,9 @@ namespace DAL.DTOs
         public decimal? DemandFte { get; set; }
         public decimal? AssignedFte { get; set; }
         public decimal? ActualFte { get; set; }
-        public int AssignedEmployeeId { get; set; }
+        // public int AssignedEmployeeId { get; set; }
 
-         public string AssignedEmployeeName { get; set; }
+        //  public string AssignedEmployeeName { get; set; }
         
         
         

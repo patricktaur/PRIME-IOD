@@ -1,9 +1,10 @@
 ﻿using System;
 using Computations.Enumerators;
 using System.Collections.Generic;
+using DAL.Models.Interfaces;
 namespace DAL.Models
 {
-    public partial class TblFteDemand
+    public partial class TblFteDemand : IAuditableEntity
     {
         public TblFteDemand()
         {
@@ -26,7 +27,7 @@ namespace DAL.Models
         public virtual ICollection<TblFteDemandDetail> TblFteDemandDetail { get; set; }
     }
 
-    public partial class TblFteDemandDetail
+    public partial class TblFteDemandDetail: IAuditableEntity
     {
         public int Id { get; set; }
         public DateTime CreatedOn { get; set; }
